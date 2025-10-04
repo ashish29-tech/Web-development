@@ -3,6 +3,8 @@ import Person from './Components/Person'
 import Logout from './Components/Logout'
 import Counter from './Components/Counter'
 import Maverick from './Components/Maverick'
+import Tida from './Components/Tida'
+import Memo from './Components/Memo'
 
 function App() {
   return (
@@ -16,7 +18,9 @@ function App() {
         {/* logout */}
         {/* <Logout/> */}
         {/* <Counter/> */}
-        <Maverick/>
+        {/* <Maverick/> */}
+        {/* <Tida/> */}
+        <Memo/>
     </>
   )
 }

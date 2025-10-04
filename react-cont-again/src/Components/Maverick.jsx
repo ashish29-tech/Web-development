@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 function Maverick() {
 
-  let [titl, setTitl] = useState();//jab varible create karna hai toh uske liye useState..useState ki default/initial value "bhau bhau"
+  let [titl, setTitl] = useState("bhau bhau");//jab varible create karna hai toh uske liye useState..useState ki default/initial value "bhau bhau"
 
 
   function handleTodo(){ //iska kaam hai jo pehle wala MaveKeTodo hai uska title badal de..."bhau bhau"
@@ -13,7 +13,7 @@ function Maverick() {
     <div>
       {/* call kar liya yha...call kiya toh kya require/import ki jarurat hai ? No, cuz 1 hi file m hai. Yha se title bhej diya and niche catch kar liya props m */}
       {/* <MavKeTodo title="bhau bhau"/>  */}
-      <MavKeTodo title={titl}/> {/* faltu ki rerendering ho rahi hai...tit; ke sath baki sare bhi rerender ho rahe. Isse bachne ke liye.. */}
+      <MavKeTodo title={titl}/> {/* faltu ki rerendering ho rahi hai...tit; ke sath baki sare bhi rerender ho rahe. Isse bachne ke liye..let's see in new component Tida.jsx */}
       <button onClick= {handleTodo}>Click</button> {/* click karne se event trigger hoga onClick...jise handleTodo keh rahe hai. */}
       
       <MavKeTodo title="eat treat"/>
