@@ -2,11 +2,12 @@ import React from 'react'
 import Person from './Components/Person'
 import Logout from './Components/Logout'
 import Counter from './Components/Counter'
+import Maverick from './Components/Maverick'
 
 function App() {
   return (
-    <div>
-      <h1>hello react</h1>
+    <>
+      {/* <h1>hello react</h1> */}
       {/* yha include karenge Person component. And jab kisi component ko call karte hai toh args bhej sakte hai */}
       {/* <Person name="ashish" age="21" fav="red"/>
       <Person name="bhaskar" age="24" fav="green"/>
@@ -14,8 +15,9 @@ function App() {
 
         {/* logout */}
         {/* <Logout/> */}
-        <Counter/>
-    </div>
+        {/* <Counter/> */}
+        <Maverick/>
+    </>
   )
 }
 

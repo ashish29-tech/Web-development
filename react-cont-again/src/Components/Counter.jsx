@@ -12,14 +12,17 @@ function Counter() {
   }
 
   return ( //jo bhi chiz return karte hai that is basically a part of jsx...toh jsx return ho rha hai. We can return only 1 parent if more than 1 return karna hai toh wrap
-    <div> {/* Aproach1: 1 se jyada element return karna tha toh div m dal diya... */}
+    //age empty div nai dena chahte toh react provides...React Fragment syntax. Sirf fragment bhi likh sakte hai...but iske liye destructure karna zaruri hai.
+    // <> {/* Aproach1: 1 se jyada element return karna tha toh div m dal diya... */}
+      <React.Fragment> 
       <div>
-      <button onClick={handleIncrement}>Increase - {count}</button> {/* evaluate karna hai isliye curly braces m. onClick se ek event handle karte hai...handleIncrement(kuch bhi naam de sakte hai) */}
+        <button onClick={handleIncrement}>Increase - {count}</button> {/* evaluate karna hai isliye curly braces m. onClick se ek event handle karte hai...handleIncrement(kuch bhi naam de sakte hai) */}
       </div>
-    <h1>hello</h1>
-    
-    </div>
-  )
+      <h1>hello</h1>
+      </React.Fragment>
+    // </>
+
+  );
 }
 
 export default Counter;
