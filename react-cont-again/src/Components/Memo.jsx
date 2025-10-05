@@ -1,3 +1,9 @@
+////ye isko karne ka tarika ek aur hai jise we call...memoization
+//memoization is not use memo.
+//memoization means...apne changes ko yaad rakhna
+//memoization works by tracking the props...if the props have changed...toh rerendering hogi. 
+//if props are not changed...then no rerendering
+
 import React, { Fragment, memo, useState } from 'react'
 
 function Memo() {
