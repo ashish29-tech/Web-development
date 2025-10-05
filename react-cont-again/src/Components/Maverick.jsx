@@ -19,6 +19,7 @@ function Maverick() {
       <MavKeTodo title="eat treat"/>
       <MavKeTodo title="hi five"/>
       <MavKeTodo title="sit"/>
+      <MavKeTodo title="woof-woof"/>
     </div>
   )
 }

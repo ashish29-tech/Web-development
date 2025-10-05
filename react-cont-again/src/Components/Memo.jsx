@@ -48,4 +48,6 @@ const Mymemo = memo(function ({titl}){  //memo is a function. naam de diya..Myme
   )
 }) 
 
+
+
 export default Memo
