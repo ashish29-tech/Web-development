@@ -5,6 +5,7 @@
 
 // let user1 = user();
 // console.log(user1); //when nothing is returned from function by default undefined is returned
+// console.log(user());
 
 //--------------------------------------------
 //constructer function: jab kisi function ko new keyword se call karte hai then it's not normal function it becomes constructor function.
@@ -73,25 +74,25 @@
 //-----------------------------------
 //Prototype is a simple object. When we create a object and us object ke andar koi method ya proprty nahi hoti to kya kaam khtm ho jata hai ? No. Wo uske fallback source m jata hai..agr object ki baat kare to uska fallback source hota hai object.prototype
 //Similarly array ki baat kare to..array ka prototype hota hai array.prototype..means array m koi method na mile to wo array ke prototype m jayega..usme bhi na mila to object ke prototype m jayega...sam goes with string, boolean, number, normal function
-function User (naam, umar, rang){ 
-  this.username = naam;
-  this.age = umar;
-  this.color = rang;
+// function User (naam, umar, rang){ 
+//   this.username = naam;
+//   this.age = umar;
+//   this.color = rang;
 
-  //iski jarurat nai hai ⬇
-  // this.desc = function(){ //method add kar diya. Object ke andar method bhi to hote hai.
-  //   return `my name is ${this.username}`
-  // }
-}
+//   //iski jarurat nai hai ⬇
+//   // this.desc = function(){ //method add kar diya. Object ke andar method bhi to hote hai.
+//   //   return `my name is ${this.username}`
+//   // }
+// }
 
-//description function baar-baar store ho rha tha. Ise object ke andar store nai karana hai.Ise iske prototype m bhed dena hai...iska prototype hai...User.prototype...toh ye function ko user ke prototype m fek denge
-User.prototype.description = function(){ //user ke prototype ke andar gaye and ek new method banayenge jise description kahenge...and wo ek function hai
-  return `my name is ${this.username}`
-}
+// //description function baar-baar store ho rha tha. Ise object ke andar store nai karana hai.Ise iske prototype m bhed dena hai...iska prototype hai...User.prototype...toh ye function ko user ke prototype m fek denge
+// User.prototype.description = function(){ //user ke prototype ke andar gaye and ek new method banayenge jise description kahenge...and wo ek function hai
+//   return `my name is ${this.username}`
+// }
 
-let user3 = new User('Ashish', 25, 'Black'); 
-// console.log(user3);
-console.log(user3.description()); 
+// let user3 = new User('Ashish', 25, 'Black'); 
+// // console.log(user3);
+// console.log(user3.description()); 
 
 // let user4 = new User('Abhishek', 225, 'laal'); 
 // console.log(user4);
