@@ -9,7 +9,6 @@
 // function Person(naam, umar){
 //   this.username = naam;
 //   this.age = umar;
-  
 // }
 
 // Person.prototype.getFullName = function(){ //person naam ka hai isliye person.prototype...ab isko ek function bna denge
