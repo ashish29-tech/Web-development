@@ -1,0 +1,51 @@
+🔥 What is Prototype in JavaScript?
+Prototype = JavaScript ka inheritance system.
+Har function, har object ke paas prototype chain hoti hai jiske through wo properties aur methods inherit karta hai.
+
+Prototype = ek hidden object jisme shared properties/methods stored hote hain.
+Prototype = hidden object that allows JavaScript objects to share methods and enables inheritance.
+
+Prototype is another obejct. Prototype acts like a fallback source of property. 
+Object m nai milita toh object ke prototype m. Is prototype m toString, __proto.. etc chize hoti hai. 
+Agr object ke prototype m bhi nai mila toh null....
+
+Har ek object ka prototype hota hai...to check... __proto__(underscore underscore proto underscore underscore)
+
+----------------------------------------------------------------------------------
+
+Constructor Function: Function used to create objects
+new keyword: Creates new object + binds this
+this: points to newly created object
+prototype: Shared methods store karne ke liye
+
+📌 Rules of a Constructor Function
+1. Function ka naam Capital Letter se start hota hai
+✔ Example: Person, Car, Student
+
+2. Object banate waqt new keyword use hota hai
+✔ let s1 = new Student("Ashish", 25)
+
+3. this keyword se new object ke properties set hote hain.
+
+function Student(name, age) {
+  this.name = name;
+  this.age = age;
+
+  this.sayHello = function () {
+    console.log("Hello " + this.name);
+  };
+}
+// You call it using new:
+// Ab new kya karta hai?
+// ✔ Step 1: Ek empty object {} banata hai
+// ✔ Step 2: us object ko this ke andar daal deta hai
+// ✔ Step 3: this.name = name → object me property add karta hai
+// ✔ Step 4: object ko return kar deta hai
+let s1 = new Student("Ashish", 23); 
+let s2 = new Student("Rohan", 25);
+
+s1.sayHello();
+s2.sayHello();
+
+
+
