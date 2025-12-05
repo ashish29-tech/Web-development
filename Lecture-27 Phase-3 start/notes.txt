@@ -1,0 +1,27 @@
+
+class syntax is syntactical sugar of cf(const func).
+cf creates an object...whenever we call it with new keyword.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
