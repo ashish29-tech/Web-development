@@ -2,23 +2,23 @@
 //Class syntax is syntactical sugar(another name) of constructor function.
 //constructor function object bnata/create tha jab bhi new keyword se call karte the
 
-class Person {
-  constructor(naam, umar){
-    this.username = naam;
-    this.age = umar;
-  }
-  printName(){ //printName ka function jo console kar rha
-    console.log(`my name is ${this.username}`) //print kar rahe hai return nahi kar rahe isliye sath m undefined bhi hai
-  }
-  getName(){
-    return `naam is ${this.username}`
-  }
-}
+// class Person {
+//   constructor(naam, umar){
+//     this.username = naam;
+//     this.age = umar;
+//   }
+//   printName(){ //printName ka function jo console kar rha
+//     console.log(`my name is ${this.username}`) //print kar rahe hai return nahi kar rahe isliye sath m undefined bhi hai
+//   }
+//   getName(){
+//     return `naam is ${this.username}`
+//   }
+// }
 
-let person1 = new Person('ashish', 120) //argument le liya
-console.log(person1); //Object aya
-console.log(person1.printName())
-console.log(person1.getName())
+// let person1 = new Person('ashish', 120) //argument le liya
+// console.log(person1); //Object aya
+// console.log(person1.printName())
+// console.log(person1.getName())
 
 
 //jab ham class syntax use karte hai to we call ..ki inke andar ho rahi hai inheritance. In other words class syntax se inheritance use kar sakte hai
@@ -27,34 +27,35 @@ console.log(person1.getName())
 //-------------------------------------------------
 // Example: We have student class. Is class m jo person naam ki class thi wahi same 
 //Not one of the good way but correct
-// class Person{
-//   constructor(naam, umar){
-//     this.username = naam;
-//     this.age = umar;
-//   }
-//   printName(){
-//     console.log(`my name is ${this.username}`) //isme se kuch bhi return nai ho rha isliye sath m undefined bhi aa rha
-//   }
-//   getName(){
-//     return (`naam is ${this.username}`)
-//   }
-// }
+class Person{
+  constructor(naam, umar){
+    this.username = naam;
+    this.age = umar;
+  }
+  printName(){
+    console.log(`my name is ${this.username}`) //isme se kuch bhi return nai ho rha isliye sath m undefined bhi aa rha
+  }
+  getName(){
+    return (`naam is ${this.username}`)
+  }
+}
 
-// class Student{
-//   constructor(naam, umar){
-//     this.username = naam;
-//     this.age = umar;
-//   }
-//   printName(){
-//     console.log(`my name is ${this.username}`) //isme se kuch bhi return nai ho rha isliye sath m undefined bhi aa rha
-//   }
-//   getName(){
-//     return (`naam is ${this.username}`)
-//   }
-// }
+class Student{
+  constructor(naam, umar){
+    this.username = naam;
+    this.age = umar;
+  }
+  printName(){
+    console.log(`my name is ${this.username}`) //isme se kuch bhi return nai ho rha isliye sath m undefined bhi aa rha
+  }
+  getName(){
+    return (`naam is ${this.username}`)
+  }
+}
 
-// let person2 = new Student ('akash', 23); //class ko call kiya argument bheja...jo bhi object milega use person2 m dala and niche print kar diya
-// console.log(person2); //console m check...getName and printName prototype m hai
+
+let person2 = new Student ('akash', 23); //class ko call kiya argument bheja...jo bhi object milega use person2 m dala and niche print kar diya
+console.log(person2); //console m check...getName and printName prototype m hai
 
 //----------------------------------------------------
 // efficient way
