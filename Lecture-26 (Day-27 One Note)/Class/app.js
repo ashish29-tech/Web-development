@@ -3,7 +3,6 @@
 //class syntax nahi hota tha to private members kaise bnate the...with the help of closure
 //class syntax is a syntactical sugar(lepa poti/makhan lagana/easier way/another way of writing) of constructor function...so class syntax wahi constructor function hai
 
-
 //Constructor function
 // function Person(naam, umar){
 //   this.username = naam;
