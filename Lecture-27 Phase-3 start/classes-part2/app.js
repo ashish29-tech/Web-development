@@ -53,7 +53,6 @@ class Student{
   }
 }
 
-
 let person2 = new Student ('akash', 23); //class ko call kiya argument bheja...jo bhi object milega use person2 m dala and niche print kar diya
 console.log(person2); //console m check...getName and printName prototype m hai
 
