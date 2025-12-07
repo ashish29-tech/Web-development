@@ -26,6 +26,16 @@
 // }, 3000)
 
 
+console.log("1");
+
+setTimeout(() => { 
+  console.log("2"); 
+}, 2000);
+
+console.log("3");
+
+
+
 //setTimeout isn't a method..not a part of js.
 //It's a part of browser...It's called webAPI.
 //It's a webAPI jo ki browser ke paas hai.
