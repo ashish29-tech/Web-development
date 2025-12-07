@@ -1,5 +1,7 @@
 
 //JS: Interpreted, Single Threaded, Weakly Typed, Dynamically, Synchronous
+//single threaded means ek baar m ek kaam..multiple statemanets ek baar m execute nai kar sakta...cuz 1 hi call stack hota hai.
+//synchronous mtlb statements ko order wise run karenge. 
 //JS engine waits for nobody..chalta jata hai code...it executes line by line
 //But whai if I have to wait ?
 
@@ -17,6 +19,12 @@
   
 // }, 4000)
 // console.log('end');
+
+// console.log('start')
+// setTimeout(function(){
+//   console.log('run after 3 seconds')
+// }, 3000)
+
 
 //setTimeout isn't a method..not a part of js.
 //It's a part of browser...It's called webAPI.
@@ -55,12 +63,12 @@
 
 //------------------------------------
 
-console.log('start');
+// console.log('start');
 
-setTimeout(function(){
-  console.log('after 0 seconds');
-}, 0)
-console.log('end');
+// setTimeout(function(){
+//   console.log('after 0 seconds');
+// }, 0)
+// console.log('end');
 //Total time ?
 //0 second why ? cuz jab tak callstack empty nai hoga tab tak callback queue wala nai chalega
 
