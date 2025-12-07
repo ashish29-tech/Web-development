@@ -1,5 +1,5 @@
 
-//Arrow functions is also asyntactical sugar.
+//Arrow functions is also a syntactical sugar.
 //Use in writing functions efficient/alag tarike se lihne m.
 //Ye bhi ES6 m aya hai
 
@@ -15,12 +15,17 @@
 //Way 1 Arrow function
 //function naam ka keyword nai hota isme
 
+// const sum =(a,b)=>{
+//   return a+b;
+// }
+
+// console.log(sum(5,6));
+
 const sum =(a,b)=>{
   return a+b;
 }
 
-console.log(sum(5,6));
-
+console.log(sum(3,7));
 //---------------------------------------------
 //way2 
 

@@ -60,37 +60,37 @@
 //----------------------------------------------------
 // efficient way
 //constructor and method dono inherit ho rahe hai
-class Person{
-  constructor(naam, umar){
-    this.username = naam;
-    this.age = umar;
-  }
-  printName(){
-    console.log(`my name is ${this.username}`) //isme se kuch bhi return nai ho rha isliye sath m undefined bhi aa rha
-  }
-  getName(){
-    return (`naam is ${this.username}`)
-  }
-}
+// class Person{
+//   constructor(naam, umar){
+//     this.username = naam;
+//     this.age = umar;
+//   }
+//   printName(){
+//     console.log(`my name is ${this.username}`) //isme se kuch bhi return nai ho rha isliye sath m undefined bhi aa rha
+//   }
+//   getName(){
+//     return (`naam is ${this.username}`)
+//   }
+// }
 
-class Student extends Person{ //person wali sari property extract kar li using extends. Mtlb ek student class bnai aur wo person wali class ki sari property ko apne andar inherit kar rahi hai
-  constructor(naam, umar, rollNo){ //naam and umar upar person class se aa rahe hai..ho sakta hai class ke paas ek extra property ho .ie rollNo
-    // this.username = naam; //upar likha hai isliye nai likhenge instead super use karenge
-    // this.age = umar; //upar likha hai isliye nai likhenge instead super use karenge 
-    super(naam, umar) //super mtlb iske(student) parent wali class m jao and jo-jo chiz chahiye use mention kar do
-    this.rollNumber = rollNo; //jo nai value add karni thi uske liye this.
-  }
-  printName(){ //print naam ka function upar defined hai. kya yha pe same naam ka function create kar sakte hai ?
-    console.log(`ka hua ${this.username}`) //function ki value ko vhange kar diya
-  }
-  alag(){ //alag se chahe to method bna sakte hai
-    console.log('mai hu alag');
+// class Student extends Person{ //person wali sari property extract kar li using extends. Mtlb ek student class bnai aur wo person wali class ki sari property ko apne andar inherit kar rahi hai
+//   constructor(naam, umar, rollNo){ //naam and umar upar person class se aa rahe hai..ho sakta hai class ke paas ek extra property ho .ie rollNo
+//     // this.username = naam; //upar likha hai isliye nai likhenge instead super use karenge
+//     // this.age = umar; //upar likha hai isliye nai likhenge instead super use karenge 
+//     super(naam, umar) //super mtlb iske(student) parent wali class m jao and jo-jo chiz chahiye use mention kar do
+//     this.rollNumber = rollNo; //jo nai value add karni thi uske liye this.
+//   }
+//   printName(){ //print naam ka function upar defined hai. kya yha pe same naam ka function create kar sakte hai ?
+//     console.log(`ka hua ${this.username}`) //function ki value ko vhange kar diya
+//   }
+//   alag(){ //alag se chahe to method bna sakte hai
+//     console.log('mai hu alag');
     
-  }
-}
+//   }
+// }
 
-let person3 = new Student ('mani', 23, 73); //class ko call kiya argument bheja...jo bhi object milega use person2 m dala and niche print kar diya
-console.log(person3); //console m...object create hua and see...prototype class student and us student ka bhi ek prototype hai jisme class person aa rakha hai 
+// let person3 = new Student ('mani', 23, 73); //class ko call kiya argument bheja...jo bhi object milega use person2 m dala and niche print kar diya
+// console.log(person3); //console m...object create hua and see...prototype class student and us student ka bhi ek prototype hai jisme class person aa rakha hai 
 // console.log(person3.printName()); //Override kar liya aur niche wala printName chala hai. Hence same naam se method override ho jata hai. kuch return nai kar rahe isliye sath m undefined
 // console.log(person3.alag()); //kuch return nai kar rahe isliye sath m undefined
 
