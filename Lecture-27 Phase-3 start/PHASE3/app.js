@@ -26,13 +26,13 @@
 // }, 3000)
 
 
-console.log("1");
+// console.log("1");
 
-setTimeout(() => { 
-  console.log("2"); 
-}, 2000);
+// setTimeout(() => { 
+//   console.log("2"); 
+// }, 2000);
 
-console.log("3");
+// console.log("3");
 
 
 
@@ -82,7 +82,54 @@ console.log("3");
 //Total time ?
 //0 second why ? cuz jab tak callstack empty nai hoga tab tak callback queue wala nai chalega
 
+//CHeck notion for notes
 
+console.log("1");
+
+setTimeout(() => {
+  console.log("2");
+}, 2000);
+
+console.log("3");
+// ### STEP 1:
+
+// `console.log("1")` → Call Stack me jata hai → execute hota hai → stack se remove.
+
+// ### STEP 2:
+
+// `setTimeout(...)` → Call Stack me jata hai →
+
+// Browser ke Web API ko de diya jata hai (timer chalane ke liye)
+
+// **JS aage badh jaata hai.**
+
+// ### STEP 3:
+
+// `console.log("3")` → Call Stack me jata hai → execute hota hai → remove.
+
+// Output: **3**
+
+// ### STEP 4:
+
+// Timer complete → callback `"2"` **Callback Queue** me aa jata hai.
+
+// But **event loop** tab tak queue se nahi uthayega
+
+// jab tak **Call Stack empty na ho**.
+
+// ### STEP 5:
+
+// Call Stack empty → Event Loop callback Queue se function utha ke
+
+// Stack me daalta hai.
+
+// ### STEP 6:
+
+// Callback execute → output: 6
+
+// Event Loop = JS me asynchronous code ko handle karne ka mechanism.
+
+// Call Stack empty hota hi, queue me padhe callbacks ko execute karwa deta hai.
 
 
 
