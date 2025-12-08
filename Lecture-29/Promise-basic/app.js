@@ -21,37 +21,86 @@
 //   }
 // })
 
+//Practice
+// function getData(cb){ //niche cb function call kiya toh hona bhi chahiye...toh yha paas kar diya
+//   setTimeout(function(){
+//     let data = 'Hello my family'; //4 second baad ye data milega. Ise comment kar de toh data nahi dega server mtlab...toh data not defined ayega
+//     // cb(data, null) //data chahiye hoga toh kisi function ke andar send kar diya. Maan liya ki data lane m dikkat aa rahi thi toh.. null aa gya
+//       cb( null) //ek baar data nahi bhejte...sirf null bhejte hai
+//   } ,4000) //server thora time le sakta hai toh we are assiming it takes 4 second time.
+// }
 
-function getData(cb){ //niche cb function call kiya toh hona bhi chahiye...toh yha paas kar diya
-  setTimeout(function(){
-    let data = 'Hello my family'; //4 second baad ye data milega. Ise comment kar de toh data nahi dega server mtlab...toh data not defined ayega
-    // cb(data, null) //data chahiye hoga toh kisi function ke andar send kar diya. Maan liya ki data lane m dikkat aa rahi thi toh.. null aa gya
-      cb( null) //ek baar data nahi bhejte...sirf null bhejte hai
-  } ,4000) //server thora time le sakta hai toh we are assiming it takes 4 second time.
-}
-
-getData(function(data, error){ //function accept kar liya...data catch kar liya. Yha null mtlab kuch error aya toh use error naam se catch kar liya
-  if(error){ //Agr error aya toh
-    console.log(error, 'if')
-  }
-  else{
-    console.log(data, 'else') //error nahi aya toh data console kar do
-  }
-})
+// getData(function(data, error){ //function accept kar liya...data catch kar liya. Yha null mtlab kuch error aya toh use error naam se catch kar liya
+//   if(error){ //Agr error aya toh
+//     console.log(error, 'if')
+//   }
+//   else{
+//     console.log(data, 'else') //error nahi aya toh data console kar do
+//   }
+// })
 
 //---------------------------------------------------
 
 //Promise
 //Why use Promise ? To tackle the problem caused by callback hell. error handling muskil hoti hai callback m
 
-//Promise is a constructor function.
+// Promise is a constructor function.
 //1st letter of Constructor function is always capital.
 //Promise use karenge to 1st letter capital hoga.
-//Promise use hoga to new keyword ka istemal hoga
+//Promise use hoga to new keyword ka istemal hoga cuz promise constructor function hai and cf uses new keyword
 //jaise constructor function ki call ke liye new keyword ko use kiya tha..same goes with promise.
 //It's a inbuilt constructor
 
 // let promise1 = new Promise() //new create karta hai object...new object ka name hoga promise1
+
+//----------------------------------------------------------------------
+//Practice
+// let promise1 = new Promise()
+// let promise1 = new Promise(function(){ //promise constructor always accepts a cb function. This cb function always accepts 2 args.. resolve and reject. These resolve and reject are basically a function.
+
+// }) 
+// let myPromise = new Promise(function(resolve, reject){ //promise constructor always accepts a cb function. This cb function always accepts 2 args.. resolve and reject. These resolve and reject are basically a function.
+//   setTimeout(function(){ //we want server 5 second baad data dede toh setTimeout
+//     // let data = 'Hello my promise family' //data de diya
+//     let err = 'mai server hu data nahi de rha' //if data nai diya toh
+//     // resolve(data) //toh resolve chal gya and data de diya
+//     reject(err) //reject hua toh usme phir err jayega
+//   } ,3000)
+// }) 
+
+// // myPromise.then().catch() //actually m aise likha hota hai.. .then and .catch
+
+// //data bheja hai toh yha catch kar liya. Jab bhi resolve karte hai toh sari chize milengi .then ke andar.
+// myPromise.then(function(data){ //jab bhi promise resolve hota hai toh data .then m bhejta hai. .then always accepts a cb
+//   console.log(data);
+// }) 
+// //jab bhi reject karte hai toh sari chize milti hai catch ke andar...
+// .catch(function(errr){ // .catch always accepts a cb fn. errr naam se catch kar liya..kuch bhi naam ho sakta hai
+//   console.log(errr)
+// })
+
+//--------------------------------------------------------
+
+let myPromise = new Promise(function(resolve, reject){ //promise constructor always accepts a cb function. This cb function always accepts 2 args.. resolve and reject. These resolve and reject are basically a function.
+  setTimeout(function(){ //we want server 5 second baad data dede toh setTimeout
+    //dono chalaye toh ? Promise chalega cuz Promise pehle ya toh reolve ho chuka hoga ya toh reject ho chuka hoga...
+    let data = 'Hello my promise family' //data de diya
+    let err = 'mai server hu data nahi de rha' //if data nai diya toh
+    resolve(data) //toh resolve chal gya and data de diya
+    reject(err) //reject hua toh usme phir err jayega
+  } ,3000)
+}) 
+
+// myPromise.then().catch() //actually m aise likha hota hai.. .then and .catch
+
+//data bheja hai toh yha catch kar liya. Jab bhi resolve karte hai toh sari chize milengi .then ke andar.
+myPromise.then(function(data){ //jab bhi promise resolve hota hai toh data .then m bhejta hai. .then always accepts a cb
+  console.log(data, 'resolve');
+}) 
+//jab bhi reject karte hai toh sari chize milti hai catch ke andar...
+.catch(function(errr){ // .catch always accepts a cb fn. errr naam se catch kar liya..kuch bhi naam ho sakta hai
+  console.log(errr, 'reject')
+})
 
 //promise constructor always accaepts a callback function as it's argument.
 //Meaning..jab bhi promise ka use karenge to jo promise constructor bnaya hai 
