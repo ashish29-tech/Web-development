@@ -41,6 +41,9 @@
 
 //--------------------------------
 //WRONG WAY
+//setTimeout asynchronous hai → isliye return function ke bahar nahi jaata.
+// Asynchronous results sirf callback / promises / async-await se hi milte hain.
+
 function step1(){
   console.log('selecting the image from gallery');
   setTimeout(function(){ //delay dene ke liye setTimeout webAPI. setTimeout m 2 parameter..pehle hota hai callback fn and 2nd is delay in milisecond  
@@ -60,20 +63,23 @@ function step1(){
 // let filteredImage = step2(image); //step2 ke sath image ko call kar liya
 // console.log(filteredImage);
 
-function step2(image){ //step2 m image yha catch kar li
-  setTimeout(function(){
-    console.log(`applying filter to the ${image} please wait`)
-  }, 2000)
-}
+// function step2(image){ //step2 m image yha catch kar li
+//   console.log(`applying filter to the ${image} please wait`)
+//   setTimeout(function(){
+//     return 'filter applied'
+//   }, 2000)
+// }
 
-let image = step1()
+// let image = step1()
 // console.log(image)
-// step2(image)// step2 ko call kar liya image ke sath
-let filterdError = step2(image)
+// // step2(image)// step2 ko call kar liya image ke sath. And since step2 return kar rha hai toh we have stored in a var.
+// let filterdImage = step2(image)
+// console.log(filterdImage)
 
 //----------------------------------------------------
 //Right Way
 //setTimeout delay chalta hai to step2 m hi step1 ko call kar dete hai taki step 1 chal jaye tabhi step2 chale.
+//Aise hi step 2 m step 3 ko call kar denge and so on...
 
 //step1 call ho jaye uske baad step2 call karna hai
 // function step1(fn){ //
@@ -104,6 +110,51 @@ let filterdError = step2(image)
 //     console.log('Image uploaded successfully');
 //   }, 5000)
 // }
+
+//-------------------------------------------------------------------
+// Tum ek asynchronous flow bana rahe ho jisme:
+// Step1 = image select
+// Step2 = filter lagana
+// Aur kyunki Step1 asynchronous hai (setTimeout),
+// isliye tum callback function pass kar rahe ho Step1 ko.
+
+// function step1(fn){ //HOF hai yha cuz accepting a function as an argument. step2 ka function hona chahiye step1 m wrna use kabhi call nahi kar payenge...
+//   console.log("please wait image is being slelcted...")
+//   setTimeout(function(){
+//     // return 'image selected'
+//     fn('image selected');  //fn which is step2 here...we called it here with argument
+//   },4000)
+// }
+
+// function step2(image){ //niche ste2 ko call karte waqt argument bheja hai....toh yha catch kar liya
+//   console.log(`applying filter to the ${image}`)
+// }
+
+// // console.log(step1()) //undefined cuz... return karne se pehle hi print ho rahi hai...toh let's remove console statement
+// //Ye function step1 ke andar execute hota hai, but fir bhi apne surrounding variables (yaha image) ko remember karta hai. So yes — closure exist kar raha hai
+// step1(function(image){ //upar argument m hai..jha function bnaya step1 ka... toh yha parameter m bhejna padega...
+//   step2(image); //step2 m..step2 ko call kiya and step2 m image ka access toh hoga hi toh image ke sath call kar diya
+// });
+
+
+
+function steps1(fn){
+  console.log("selecting images from the gallery")
+  setTimeout(function(){ //setTImeout accepts 2 things... 1st is cb fn and 2nd is delay.
+    console.log('image is selected now')
+    fn('selected image') //step2 ka function...cuz we wanted jab tak step1 na khtm ho tab tak step2 call nahi hoga. But yha fn call ke liye is function m hona bhi toh chahiye...toh upar parameter m dal denge..
+  }, 3000)
+}
+
+function step2(image){
+  console.log(`applying filter to the ${image}`)
+}
+
+steps1(function (image){ //yha as an argument bhi toh bhej sakte hai. Upar fn call karte waqt we are sending with argument...toh us argument ko yha catch kar liya with name as an image.
+  // console.log(image)
+  //step1 ke andar step2 ko call kiya
+  step2(image) //step2 ko bhi image naam ke variable ke sath call kar sakte hai..taki use 'image selected' mil jaye and then upar step2 function m paramater m chale jaye.
+})
 
 
 // //code horizontally grow kar rha hai -> pyramid of DOOM. Aka callback hell.
