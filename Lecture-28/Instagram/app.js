@@ -146,14 +146,39 @@ function steps1(fn){
   }, 3000)
 }
 
-function step2(image){
+function step2(image, fn){ //
   console.log(`applying filter to the ${image}`)
+  setTimeout(function(){
+    console.log(`filter applied to the ${image}`)
+    fn('filtered image') //step3 ka function
+  }, 2000)
+}
+
+function step3(filter, fn){
+  console.log(`ading caption to the image ${filter}`)
+  setTimeout(function(){
+    console.log('Caption done')
+    fn('image with caption')
+  },3000)
+}
+
+function step4(caption){
+  console.log(`uploading your final ${caption}`)
+  setTimeout(function(){
+    console.log('image uploaded successfully')
+  } , 5000)
 }
 
 steps1(function (image){ //yha as an argument bhi toh bhej sakte hai. Upar fn call karte waqt we are sending with argument...toh us argument ko yha catch kar liya with name as an image.
   // console.log(image)
   //step1 ke andar step2 ko call kiya
-  step2(image) //step2 ko bhi image naam ke variable ke sath call kar sakte hai..taki use 'image selected' mil jaye and then upar step2 function m paramater m chale jaye.
+  step2(image, function(filter){
+    // console.log(filter)
+    step3(filter, function(caption){
+      // console.log(caption)
+      step4(caption)
+    });
+  }) //step2 ko bhi image naam ke variable ke sath call kar sakte hai..taki use 'image selected' mil jaye and then upar step2 function m paramater m chale jaye.
 })
 
 
