@@ -4,26 +4,40 @@
 //callback hell m ye sab itna confusion
 
 //server se data manga rahe hai
-function getData(cb){ //niche cb call karna tha isliye cb chahiye tha
-  setTimeout (function(){
-    // let data = 'Hello to my family';
+// function getData(cb){ //niche cb call karna tha isliye cb chahiye tha
+//   setTimeout (function(){
+//     // let data = 'Hello to my family';
 
-    // cb(data, null); //jo data chahiye use kisi function ke andar send kar diya. Man lete hai koi error bhi chala gya sath m jab data aa rha hai..us error wali chiz ko null man lete hai
-    cb(null) //data nahi sirf null bhej ke dekhte hai
-  }, 4000)
+//     // cb(data, null); //jo data chahiye use kisi function ke andar send kar diya. Man lete hai koi error bhi chala gya sath m jab data aa rha hai..us error wali chiz ko null man lete hai
+//     cb(null) //data nahi sirf null bhej ke dekhte hai
+//   }, 4000)
+// }
+
+// getData(function(data, error){ //getData function m ek function accept kar liya jo data ko catch karega..mtlb getData ko call kiya and usme pura function as a callback bhej diya. null wala paramter ko error ne catch kar liya
+//   if(error){
+//     console.log(error, 'if'); //error hoga to error ko console
+//   }else{
+//     console.log(data, 'else'); //error nahi aya to data 
+//   }
+// })
+
+
+function getData(cb){ //niche cb function call kiya toh hona bhi chahiye...toh yha paas kar diya
+  setTimeout(function(){
+    let data = 'Hello my family'; //4 second baad ye data milega. Ise comment kar de toh data nahi dega server mtlab...toh data not defined ayega
+    // cb(data, null) //data chahiye hoga toh kisi function ke andar send kar diya. Maan liya ki data lane m dikkat aa rahi thi toh.. null aa gya
+      cb( null) //ek baar data nahi bhejte...sirf null bhejte hai
+  } ,4000) //server thora time le sakta hai toh we are assiming it takes 4 second time.
 }
 
-getData(function(data, error){ //getData function m ek function accept kar liya jo data ko catch karega..mtlb getData ko call kiya and usme pura function as a callback bhej diya. null wala paramter ko error ne catch kar liya
-  if(error){
-    console.log(error, 'if'); //error hoga to error ko console
-  }else{
-    console.log(data, 'else'); //error nahi aya to data 
+getData(function(data, error){ //function accept kar liya...data catch kar liya. Yha null mtlab kuch error aya toh use error naam se catch kar liya
+  if(error){ //Agr error aya toh
+    console.log(error, 'if')
+  }
+  else{
+    console.log(data, 'else') //error nahi aya toh data console kar do
   }
 })
-
-
-
-
 
 //---------------------------------------------------
 
@@ -51,31 +65,31 @@ getData(function(data, error){ //getData function m ek function accept kar liya 
 
 //----------------------------
 
-let myPromise = new Promise(function(resolve, reject){ //jab bhi promise ka use karenge to jo promise constructor bnaya hai wo hamesha callback function accept karega apne argument m. cb function yha 2 arguments leta hai..resolve and reject...ye naam change ho sakta hai
-  setTimeout(function(){
-    let data = 'Hello my promise family' //server dega 
-    let err = 'mai server hu data nahi de rha' //maan lo server data nai de rha and error de rha
-    // resolve(data); //wada pura karega to data dega. Resolve ho jayega pehle to reejct ke sw
-    // reject(err); //wada tootna...mtlb error de rha server
-    reject(err);
-    resolve(data);
-  }, 4000)
-})
-// .then m hamesha resolve wala data ata hai.
-// jab bhi ham resolve karte hai to sari chize milti hai .then ke andar
+// let myPromise = new Promise(function(resolve, reject){ //jab bhi promise ka use karenge to jo promise constructor bnaya hai wo hamesha callback function accept karega apne argument m. cb function yha 2 arguments leta hai..resolve and reject...ye naam change ho sakta hai
+//   setTimeout(function(){
+//     let data = 'Hello my promise family' //server dega 
+//     let err = 'mai server hu data nahi de rha' //maan lo server data nai de rha and error de rha
+//     // resolve(data); //wada pura karega to data dega. Resolve ho jayega pehle to reejct ke sw
+//     // reject(err); //wada tootna...mtlb error de rha server
+//     reject(err);
+//     resolve(data);
+//   }, 4000)
+// })
+// // .then m hamesha resolve wala data ata hai.
+// // jab bhi ham resolve karte hai to sari chize milti hai .then ke andar
+// // myPromise.then( function(data){//agr data mil rha hai to..mtlb jab promise resolve hota hai to wo data apne .then m bhejta hai. And ye .then accept karta hai cb function. function bna diya and send kara diya. Upae se data bheja hai to uske argument m catch kar lete hai
+// //   console.log(data, 'resolve');
+// // }); 
+
+// //myPrimise.then().catch()   niche wala actual m aise likha hua hai
 // myPromise.then( function(data){//agr data mil rha hai to..mtlb jab promise resolve hota hai to wo data apne .then m bhejta hai. And ye .then accept karta hai cb function. function bna diya and send kara diya. Upae se data bheja hai to uske argument m catch kar lete hai
-//   console.log(data, 'resolve');
-// }); 
+//   console.log(data );
+// })
 
-//myPrimise.then().catch()   niche wala actual m aise likha hua hai
-myPromise.then( function(data){//agr data mil rha hai to..mtlb jab promise resolve hota hai to wo data apne .then m bhejta hai. And ye .then accept karta hai cb function. function bna diya and send kara diya. Upae se data bheja hai to uske argument m catch kar lete hai
-  console.log(data );
-})
-
-//jab bhi reject karte hai to sari chize milti hai catch ke andar
-.catch(function(errr){ //.catch hamesha callback function accept karta hai. Kisi bhi naam...err...se catch kar liya
-  console.log(errr, 'reject');
-})
+// //jab bhi reject karte hai to sari chize milti hai catch ke andar
+// .catch(function(errr){ //.catch hamesha callback function accept karta hai. Kisi bhi naam...err...se catch kar liya
+//   console.log(errr, 'reject');
+// })
 
 //---------------------------------------
 //step-1: Promise use hoga to new keyword ka istemal hoga
