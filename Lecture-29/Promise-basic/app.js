@@ -159,18 +159,25 @@
 //---------------------------------------------------
 //Random chatGPT se practice
 
-//callback
-function greet(name, callback) {
-  console.log("Hello " + name);
-  callback();
+// //callback
+// function greet(name, callback) {
+//   console.log("Hello " + name);
+//   callback();
+// }
+
+// greet("Ashish", function () { //Function call — yaha callback ACTUAL me pass hota hai. YAHI line me callback argument ke roop me pass ho raha hai.
+//   console.log("Welcome!");
+// });
+
+
+constructor function
+function Person(name, age) {   // constructor function
+  this.naam = name;
+  this.umar = age;
 }
 
-greet("Ashish", function () { //Function call — yaha callback ACTUAL me pass hota hai. YAHI line me callback argument ke roop me pass ho raha hai.
-  console.log("Welcome!");
-});
-
-
-
+const p1 = new Person("Ashish", 25);
+console.log(p1); 
 
 
 
