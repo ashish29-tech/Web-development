@@ -1,0 +1,31 @@
+
+Callback hell aka pyramid of doom.
+Horizontally grow karta hai code..which is not a good thing.
+To avoid this problem... promise was introduced.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

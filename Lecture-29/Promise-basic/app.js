@@ -81,26 +81,26 @@
 
 //--------------------------------------------------------
 
-let myPromise = new Promise(function(resolve, reject){ //promise constructor always accepts a cb function. This cb function always accepts 2 args.. resolve and reject. These resolve and reject are basically a function.
-  setTimeout(function(){ //we want server 5 second baad data dede toh setTimeout
-    //dono chalaye toh ? Promise chalega cuz Promise pehle ya toh reolve ho chuka hoga ya toh reject ho chuka hoga...
-    let data = 'Hello my promise family' //data de diya
-    let err = 'mai server hu data nahi de rha' //if data nai diya toh
-    resolve(data) //toh resolve chal gya and data de diya
-    reject(err) //reject hua toh usme phir err jayega
-  } ,3000)
-}) 
+// let myPromise = new Promise(function(resolve, reject){ //promise constructor always accepts a cb function. This cb function always accepts 2 args.. resolve and reject. These resolve and reject are basically a function.
+//   setTimeout(function(){ //we want server 5 second baad data dede toh setTimeout
+//     //dono chalaye toh ? Promise chalega cuz Promise pehle ya toh reolve ho chuka hoga ya toh reject ho chuka hoga...
+//     let data = 'Hello my promise family' //data de diya
+//     let err = 'mai server hu data nahi de rha' //if data nai diya toh
+//     resolve(data) //toh resolve chal gya and data de diya
+//     reject(err) //reject hua toh usme phir err jayega
+//   } ,3000)
+// }) 
 
-// myPromise.then().catch() //actually m aise likha hota hai.. .then and .catch
+// // myPromise.then().catch() //actually m aise likha hota hai.. .then and .catch
 
-//data bheja hai toh yha catch kar liya. Jab bhi resolve karte hai toh sari chize milengi .then ke andar.
-myPromise.then(function(data){ //jab bhi promise resolve hota hai toh data .then m bhejta hai. .then always accepts a cb
-  console.log(data, 'resolve');
-}) 
-//jab bhi reject karte hai toh sari chize milti hai catch ke andar...
-.catch(function(errr){ // .catch always accepts a cb fn. errr naam se catch kar liya..kuch bhi naam ho sakta hai
-  console.log(errr, 'reject')
-})
+// //data bheja hai toh yha catch kar liya. Jab bhi resolve karte hai toh sari chize milengi .then ke andar.
+// myPromise.then(function(data){ //jab bhi promise resolve hota hai toh data .then m bhejta hai. .then always accepts a cb
+//   console.log(data, 'resolve');
+// }) 
+// //jab bhi reject karte hai toh sari chize milti hai catch ke andar...
+// .catch(function(errr){ // .catch always accepts a cb fn. errr naam se catch kar liya..kuch bhi naam ho sakta hai
+//   console.log(errr, 'reject')
+// })
 
 //promise constructor always accaepts a callback function as it's argument.
 //Meaning..jab bhi promise ka use karenge to jo promise constructor bnaya hai 
@@ -112,7 +112,7 @@ myPromise.then(function(data){ //jab bhi promise resolve hota hai toh data .then
   
 // })
 
-//----------------------------
+//------------------------------------------------------
 
 // let myPromise = new Promise(function(resolve, reject){ //jab bhi promise ka use karenge to jo promise constructor bnaya hai wo hamesha callback function accept karega apne argument m. cb function yha 2 arguments leta hai..resolve and reject...ye naam change ho sakta hai
 //   setTimeout(function(){
@@ -155,6 +155,19 @@ myPromise.then(function(data){ //jab bhi promise resolve hota hai toh data .then
 
 
 
+
+//---------------------------------------------------
+//Random chatGPT se practice
+
+//callback
+function greet(name, callback) {
+  console.log("Hello " + name);
+  callback();
+}
+
+greet("Ashish", function () { //Function call — yaha callback ACTUAL me pass hota hai. YAHI line me callback argument ke roop me pass ho raha hai.
+  console.log("Welcome!");
+});
 
 
 
