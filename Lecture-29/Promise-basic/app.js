@@ -3,24 +3,24 @@
 
 //callback hell m ye sab itna confusion
 
-function setData(fn){ //fn pass kar diya. fn ek placeholder/variable hai jisme callback aayega
-  setTimeout(function(){
-    let data = "Hello my family"
-    fn(data) //function m data send kar diya. Closure (indirectly)...Inner function (inside setTimeout) has access to fn and data.
-  }, 4000)
-}
+// function setData(fn){ //fn pass kar diya. fn ek placeholder/variable hai jisme callback aayega
+//   setTimeout(function(){
+//     let data = "Hello my family"
+//     fn(data) //function m data send kar diya. Closure (indirectly)...Inner function (inside setTimeout) has access to fn and data.
+//   }, 4000)
+// }
 
-//Higher-Order Function (HOF)
-// setData → accepts a function (fn) as argument
-setData(function(data){ //Yaha tum callback ko argument ke roop me pass kar rahe hox
-  console.log(data)
-})
+// //Higher-Order Function (HOF)
+// // setData → accepts a function (fn) as argument
+// setData(function(data){ //Yaha tum callback ko argument ke roop me pass kar rahe hox
+//   console.log(data)
+// })
 
 
 //server se data manga rahe hai
 // function getData(cb){ //niche cb call karna tha isliye cb chahiye tha
 //   setTimeout (function(){
-//     // let data = 'Hello to my family';
+//     let data = 'Hello to my family';
 
 //     // cb(data, null); //jo data chahiye use kisi function ke andar send kar diya. Man lete hai koi error bhi chala gya sath m jab data aa rha hai..us error wali chiz ko null man lete hai
 //     cb(null) //data nahi sirf null bhej ke dekhte hai
@@ -56,14 +56,14 @@ setData(function(data){ //Yaha tum callback ko argument ke roop me pass kar rahe
 //---------------------------------------------------
 
 //Promise
-//Why use Promise ? To tackle the problem caused by callback hell. error handling muskil hoti hai callback m
+// Why use Promise ? To tackle the problem caused by callback hell. error handling muskil hoti hai callback m
 
 // Promise is a constructor function.
-//1st letter of Constructor function is always capital.
-//Promise use karenge to 1st letter capital hoga.
-//Promise use hoga to new keyword ka istemal hoga cuz promise constructor function hai and cf uses new keyword
-//jaise constructor function ki call ke liye new keyword ko use kiya tha..same goes with promise.
-//It's a inbuilt constructor
+// 1st letter of Constructor function is always capital.
+// Promise use karenge to 1st letter capital hoga.
+// Promise use hoga to new keyword ka istemal hoga cuz promise constructor function hai and cf uses new keyword
+// jaise constructor function ki call ke liye new keyword ko use kiya tha..same goes with promise.
+// It's a inbuilt constructor
 
 // let promise1 = new Promise() //new create karta hai object...new object ka name hoga promise1
 
@@ -75,20 +75,20 @@ setData(function(data){ //Yaha tum callback ko argument ke roop me pass kar rahe
 // }) 
 // let myPromise = new Promise(function(resolve, reject){ //promise constructor always accepts a cb function. This cb function always accepts 2 args.. resolve and reject. These resolve and reject are basically a function.
 //   setTimeout(function(){ //we want server 5 second baad data dede toh setTimeout
-//     // let data = 'Hello my promise family' //data de diya
+//     let data = 'Hello my promise family' //data de diya
 //     let err = 'mai server hu data nahi de rha' //if data nai diya toh
-//     // resolve(data) //toh resolve chal gya and data de diya
+//     resolve(data) //toh resolve chal gya and data de diya
 //     reject(err) //reject hua toh usme phir err jayega
 //   } ,3000)
 // }) 
 
-// // myPromise.then().catch() //actually m aise likha hota hai.. .then and .catch
+// // // myPromise.then().catch() //actually m aise likha hota hai.. .then and .catch
 
-// //data bheja hai toh yha catch kar liya. Jab bhi resolve karte hai toh sari chize milengi .then ke andar.
+// // //data bheja hai toh yha catch kar liya. Jab bhi resolve karte hai toh sari chize milengi .then ke andar.
 // myPromise.then(function(data){ //jab bhi promise resolve hota hai toh data .then m bhejta hai. .then always accepts a cb
 //   console.log(data);
 // }) 
-// //jab bhi reject karte hai toh sari chize milti hai catch ke andar...
+// // //jab bhi reject karte hai toh sari chize milti hai catch ke andar...
 // .catch(function(errr){ // .catch always accepts a cb fn. errr naam se catch kar liya..kuch bhi naam ho sakta hai
 //   console.log(errr)
 // })
@@ -144,7 +144,7 @@ setData(function(data){ //Yaha tum callback ko argument ke roop me pass kar rahe
 // //   console.log(data, 'resolve');
 // // }); 
 
-// //myPrimise.then().catch()   niche wala actual m aise likha hua hai
+// //myPromise.then().catch()   niche wala actual m aise likha hua hai
 // myPromise.then( function(data){//agr data mil rha hai to..mtlb jab promise resolve hota hai to wo data apne .then m bhejta hai. And ye .then accept karta hai cb function. function bna diya and send kara diya. Upae se data bheja hai to uske argument m catch kar lete hai
 //   console.log(data );
 // })
@@ -161,7 +161,7 @@ setData(function(data){ //Yaha tum callback ko argument ke roop me pass kar rahe
 // resolve and reject are functions
 
 //----------------------------------
-//callback hell ki wjah se pyramid of doom ban rha tha/
+//callback hell ki wjah se pyramid of doom ban rha tha.
 //cb hell se bachne ke liye promise hai.
 //Toh ab purane wale code ko promise m convert karenge..mtlb cb hell se jo insta ka code likha tha wo code
 
