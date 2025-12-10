@@ -3,6 +3,20 @@
 
 //callback hell m ye sab itna confusion
 
+function setData(fn){ //fn pass kar diya. fn ek placeholder/variable hai jisme callback aayega
+  setTimeout(function(){
+    let data = "Hello my family"
+    fn(data) //function m data send kar diya. Closure (indirectly)...Inner function (inside setTimeout) has access to fn and data.
+  }, 4000)
+}
+
+//Higher-Order Function (HOF)
+// setData → accepts a function (fn) as argument
+setData(function(data){ //Yaha tum callback ko argument ke roop me pass kar rahe hox
+  console.log(data)
+})
+
+
 //server se data manga rahe hai
 // function getData(cb){ //niche cb call karna tha isliye cb chahiye tha
 //   setTimeout (function(){
@@ -169,15 +183,14 @@
 //   console.log("Welcome!");
 // });
 
+// constructor function
+// function Person(name, age) {   // constructor function
+//   this.naam = name;
+//   this.umar = age;
+// }
 
-constructor function
-function Person(name, age) {   // constructor function
-  this.naam = name;
-  this.umar = age;
-}
-
-const p1 = new Person("Ashish", 25);
-console.log(p1); 
+// const p1 = new Person("Ashish", 25);
+// console.log(p1); 
 
 
 
