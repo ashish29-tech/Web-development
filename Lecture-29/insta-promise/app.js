@@ -75,6 +75,7 @@ step1()
 .catch(function(err){ //sirf ek hi baar .catch. Cuz resolve agr upar kahi bhi nahi chla to catch chal jaeyga
   console.log(err);
 }); 
+
 //sara code vertically ja rha hai..and code error handle karna asan ho gya.
 //.then ki chaining ho rahi...ye bhi to redundant ho rha hai..
 //isse bachne ke liye ek tarika hota hai...Async-await.
