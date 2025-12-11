@@ -359,24 +359,92 @@
 
 //------------------------------------------------------
 
-let obj3 = {
-  fn: function(){
-    console.log(this)
-  }
-}
+// let obj3 = {
+//   fn: function(){
+//     console.log(this)
+//   }
+// }
 
-function fn3(){
-  console.log(this) //ye this ka reference niche ke 100 ko point kar raha hoga...cuz niche bind kar diya...
-}
+// function fn3(){
+//   console.log(this) //ye this ka reference niche ke 100 ko point kar raha hoga...cuz niche bind kar diya...
+// }
 
-// fn3(); //direct calling ho rahi hai toh window
-//this ki value ab ko refer kar rahi hogi....and ye fn4 ko assign kar diya...
-let fn4 = fn3.bind(100); //fn3 ko bind kar diya 100 ke sath...bind assign karta hai toh fn4 m kar diya assign
-fn4(); //fn m function aa gya...100 number ko point kar raha hai..
+// // fn3(); //direct calling ho rahi hai toh window
+// //this ki value ab ko refer kar rahi hogi....and ye fn4 ko assign kar diya...
+// let fn4 = fn3.bind(100); //fn3 ko bind kar diya 100 ke sath...bind assign karta hai toh fn4 m kar diya assign
+// fn4(); //fn m function aa gya...100 number ko point kar raha hai..
 
 
 
 //-------------------------------------------------------------------------------------------------------
+//Sabse jyada ye pucha jata hai...so understand ache se
+//5. arrow function.... ()=>{ }
+
+// let obj5 = {
+//   fn: function(){
+//     console.log(this)
+//   }
+// }
+
+//Console me print hoga: { fn: f } Yani poora obj5 object.
+//"Function ko jis object ke through call kiya jaye, this usi object ko refer karta hai."
+// obj5.fn(); //object ko point kar raha hai. this kiski taraf point karega? Jis object ne function call kiya — yani obj5. Method invocation.
+
+
+//-------------------------------
+//Ex2:
+// let obj5 = {
+//   fn: function(){
+//     function ash(){
+//       console.log(this)
+//     }
+//     ash()
+//   }
+// }
+
+//Normal function call → default this = window (browser). Normal function call → default this = global (node)
+// obj5.fn(); //Why did this become window? Because: Inside obj5.fn(), this = obj. Kyuki ye method call tha.But…❌ Inside ash(), this does NOT remain obj5...Kyuki ash() ko simple function ki tarah call kiya:
+
+
+//-----------------------------------------
+//Ex3:
+//In case of arrow function... this refers to the lexical environment/parent.
+//arrow function ka this uske lexical parent pe depend karta hai.
+// let obj5 = {
+//   fn: function(){
+//     console.log(this) ///ye this obj5 ko point kar rha hai toh arrow function wala this bhi obj5 ko point karega.
+//     let ash = ()=>{ //arrow function bna diya.
+//       console.log(this) //jab arrow function hoga toh ye this...iske parent ke this pe depend karega...iska parent upar wala function hai..toh upar wale function ka this hoga..wahi is arrow function ka bhi hoga
+//     }
+//     ash()
+//   }
+// }
+
+
+// obj5.fn();
+
+//-------------------------------------
+//Ex4:
+
+//arrow func ka this apne parent ke this ko point karega...jo upar ka arrow function func hai wo apne parent ke this ko point karega...upar ke arrow func ka parent obj5 hai...and obj5 ka this depend karta hai window pe.
+let obj5 = {
+  fn: ()=> { //isko bhi arrow function de diya
+    console.log(this) 
+    let ash = ()=>{ 
+      console.log(this) 
+    }
+    ash()
+  }
+}
+
+obj5.fn();
+
+
+
+
+
+
+
 
 
 
