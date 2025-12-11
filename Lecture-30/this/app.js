@@ -311,20 +311,21 @@
 
 //Isme 3 types ate hai..call, bind, apply
 
-//call and apply
+//call()..call m args are comma separated and apply(). Both call and apply are same...bcoz they both change the context of this. Diff sirf args m aa jata hai...
 
-let obj = {
-  a: 20,
-  fn: function(a,b,c){ //function 3 args accepts kar rha hai
-    console.log(this, a,b,c)
-  }
-}
+// let obj = {
+//   ash: 20,
+//   fn: function(a,b,c){ //function 3 args accepts kar rha hai
+//     console.log(this, a,b,c)
+//   }
+// }
 
-let obj2 = {
-  a: 50
-}
+// //obj m jo function hai use obj2 m use karna hai...toh upar wale object se udhar mang lete hai
+// let obj2 = {
+//   ash: 50
+// }
 
-obj.fn(1,2,3)
+// obj.fn(1,2,3) //obj ke andar fn hai use directly call kar diya...
 //obj2 m fn nahi hai but can we call it ? Yes. How ? call()
 
 //call methiod ke through calling ki 
@@ -332,8 +333,50 @@ obj.fn(1,2,3)
 // obj.fn.call(obj2) //obj ke andar jo fn hai...use direct call nahi kiya...call likh diya...and call method hai toh ()parenthesis se call kar liya...
 // obj.fn.call(obj2, 1,2,3)  //args bhej diye
 
-
 // obj.fn() //ye direct calling hai
+
+//----------------------------------------
+//apply
+//obj ke andar jo fn hai use apply...and 1st chiz hoti hai this ka refernce
+// obj.fn.apply(obj2)
+// obj.fn.apply(obj2, 1, 2, 3) //❌
+// obj.fn.apply(obj, [1, 2, 3]) //apply ke case m args are in the form of array
+
+//-----------------------------------------------------------
+//bind
+
+// let obj3 = {
+//   fn: function(){
+//     console.log(this)
+//   }
+// }
+
+// //call and apply se function run ho raha tha. Bind run nahi karta. Bind creates copy of function...and use assign kar dega...
+
+// let myFun = obj3.fn.bind(obj3); //obj3 ke andar jo fn hai use bind kar do obj3 ke sath. Yha call nahi ho raha...assign kar raha....toh depend function pe hi karega
+// console.log(myFun)
+// myFun() //object ko point kar rha hai
+
+//------------------------------------------------------
+
+let obj3 = {
+  fn: function(){
+    console.log(this)
+  }
+}
+
+function fn3(){
+  console.log(this) //ye this ka reference niche ke 100 ko point kar raha hoga...cuz niche bind kar diya...
+}
+
+// fn3(); //direct calling ho rahi hai toh window
+//this ki value ab ko refer kar rahi hogi....and ye fn4 ko assign kar diya...
+let fn4 = fn3.bind(100); //fn3 ko bind kar diya 100 ke sath...bind assign karta hai toh fn4 m kar diya assign
+fn4(); //fn m function aa gya...100 number ko point kar raha hai..
+
+
+
+//-------------------------------------------------------------------------------------------------------
 
 
 
