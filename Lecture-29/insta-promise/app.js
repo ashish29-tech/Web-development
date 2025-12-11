@@ -92,8 +92,141 @@
 
 //-------------------------------------------
 
+//Image selection
+// let step1 = function(){
+//   console.log("Selecting image");
+//   return new Promise(function(resolve, reject){ //ye cf apne andar 2 args accept karta hai. Ye pbject bnata hai..so rahther than object bnane ke we return
+//     setTimeout(function(){ //setTimeout accepts a cb fn as well as delay.
+//       resolve('image.jpg')
+//     }, 4000)
+//   });
+// }
+
+// let step2 = function(image){ //image naam se catch kar liya
+//   console.log(`Applying filters to ${image}`)
+//   return new Promise(function(resolve, reject){
+//     setTimeout(function(){
+//       resolve("filter applied image");
+//     }, 2000)
+//   })
+// }
+
+// let step3 = function(filter){
+//   console.log(`Adding caption to the ${filter}`)
+//   return new Promise(function(resolve, reject){
+//     setTimeout(function(){
+//       resolve("caption added")
+//     }, 3000)
+//   })
+// }
+
+// let step4 = function(comment){
+//   console.log(`image uploading plz wait...`)
+//   return new Promise(function(resolve, reject){
+//     setTimeout(function(){
+//       resolve("all done, image uploaded plz like and share")
+//     } , 5000)
+//   })
+// }
+
+// //Yha ham promise ki chaining karte hai 
+// step1()
+// .then(function(image){ //upar resolve hua hai toh image.jpg ko yha image se catch kar liya
+//   console.log('image selected')
+//   // console.log(image)
+//   return step2(image) //step2 ko call kar liya and return kara diya. step2 ko call karte waqt image bhej diya
+// })
+// .then(function(filter){ //upar resolve hua to yha catch
+//   console.log("filter applied")
+//   // console.log(filter)
+//   return step3(filter);
+// })
+// .then(function(comment){
+//   console.log(`${comment} to the image`)
+//   return step4(comment)
+// })
+// .then(function(final){ //Yha naam diya
+//   console.log(final)
+// })
 
 
+
+
+//---------------------------------------
+//Practice
+
+// console.log(foo());
+// var foo = function() {
+//   return "Function Expression";
+// };
+// function foo() {
+//   return "Function Declaration";
+// }
+
+
+// console.log("Start");
+
+// setTimeout(() => {
+//     console.log("setTimeout Callback");
+// }, 0);
+
+// Promise.resolve().then(() => {
+//     console.log("Promise Resolved");
+// });
+
+// console.log("End");
+
+
+
+//var has functional scope and let has...let (block scope)
+// for (var i = 0; i < 3; i++) {
+
+//   setTimeout(function() { //setTimeout callback baad me run hota hai
+
+// console.log(i); }, 100);
+
+// }
+
+//-----------------------
+
+// function step1() {
+//   return Promise.resolve("A");
+// }
+
+// function step2(data) {
+//   return Promise.resolve(data + "B");
+// }
+
+// function step3(data) {
+//   return Promise.resolve(data + "C");
+// }
+
+// step1()
+//   .then(step2)
+//   .then(step3)
+//   .then(console.log);   // ABC
+
+//-------------------------
+
+new Promise(function(resolve){
+    resolve(10);
+})
+.then(function(n){
+    console.log("Step 1:", n);  // 10
+    return n * 2;
+})
+.then(function(n){
+    console.log("Step 2:", n);  // 20
+    return n * 3;
+})
+.then(function(n){
+    console.log("Final:", n);  // 60
+})
+
+//Output:     
+// Step 1: 10
+// Step 2: 20
+// Final: 60
 
 
 
