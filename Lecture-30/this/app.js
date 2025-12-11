@@ -223,7 +223,7 @@
 //--------------------------------------------------------------------------------------------------------
 //practice:
 
-//1. Regular function invocation
+//1. Regular/Direct function invocation
 
 // let obj = {
 //   number: 200,
@@ -245,6 +245,69 @@
 
 //---------------------------------------------------------------------------
 //2. Method invocation
+
+// let obj = {
+//   number: 200,
+//   fun: function(){
+//     console.log(this)
+//   }
+// }
+
+// //function ki calling ki wjah se this chal rha hai...and function ki calling obj ki wjah se ho rahi hai.. toh this..obj ko point karega. And pura object dega.
+// obj.fun() //object ki help se function ko call kiya...function ki calling object pe depend hai...toh ye direct calling nahi hai...it's called method invocation.
+
+//Ex1:
+// let obj2 = {
+//   a: 100,
+//   ash: function(){
+//     console.log(this) //this usko point karega jiski wjah se chal rha hai.
+//   }
+// }
+// obj2.ash() //Is this a direct function invoaction ? No. Method invocation ? Yes
+
+//Ex2:
+let obj2 = {
+  a: 100,
+  ash: function(){
+    console.log(this) //this usko point karega jiski wjah se chal rha hai.
+    console.log(this === window)
+  }
+}
+
+let bhaukaal = obj2.ash
+bhaukaal() //bhaukaal ko call kiya. Kya bhaukaal kisi pe depend hai ? No. Toh ye direct calling ho gai. And in direct function calling...this points to the window object.
+
+//Ex3:
+let obj3 = {
+  a: 10,
+  fn: function(){
+      console.log(this)
+      function ash(){
+        console.log(this)
+      }
+      ash(); //call kar diya. Direct function calling hai isliye this will point to the window obje
+  }
+}
+
+obj3.fn(); //method invocation
+
+//-------------------------------------------------------------------------
+//constructor function...new keyword se chalte hai, 1st letter capital hota hai, new objects create karta hai cf, cf ka syntactical sugar class syntax, 
+//3. constructor invocation(calling)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
