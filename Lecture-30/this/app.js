@@ -266,48 +266,74 @@
 // obj2.ash() //Is this a direct function invoaction ? No. Method invocation ? Yes
 
 //Ex2:
-let obj2 = {
-  a: 100,
-  ash: function(){
-    console.log(this) //this usko point karega jiski wjah se chal rha hai.
-    console.log(this === window)
-  }
-}
+// let obj2 = {
+//   a: 100,
+//   ash: function(){
+//     console.log(this) //this usko point karega jiski wjah se chal rha hai.
+//     console.log(this === window)
+//   }
+// }
 
-let bhaukaal = obj2.ash
-bhaukaal() //bhaukaal ko call kiya. Kya bhaukaal kisi pe depend hai ? No. Toh ye direct calling ho gai. And in direct function calling...this points to the window object.
+// let bhaukaal = obj2.ash
+// bhaukaal() //bhaukaal ko call kiya. Kya bhaukaal kisi pe depend hai ? No. Toh ye direct calling ho gai. And in direct function calling...this points to the window object.
 
-//Ex3:
-let obj3 = {
-  a: 10,
-  fn: function(){
-      console.log(this)
-      function ash(){
-        console.log(this)
-      }
-      ash(); //call kar diya. Direct function calling hai isliye this will point to the window obje
-  }
-}
+// //Ex3:
+// let obj3 = {
+//   a: 10,
+//   fn: function(){
+//       console.log(this)
+//       function ash(){
+//         console.log(this)
+//       }
+//       ash(); //call kar diya. Direct function calling hai isliye this will point to the window obje
+//   }
+// }
 
-obj3.fn(); //method invocation
+// obj3.fn(); //method invocation
 
 //-------------------------------------------------------------------------
 //constructor function...new keyword se chalte hai, 1st letter capital hota hai, new objects create karta hai cf, cf ka syntactical sugar class syntax, 
 //3. constructor invocation(calling)
+//This always points to the newly crated object
+
+// function CreateObj(){
+//   this.X = 200;
+// }
+
+// //upar wala this..yha obj ko point kar raha hai.
+// let obj = new CreateObj(); //object create karega and use variable m assign kar liya
+// // console.log(obj)
+// console.log(obj.X) //value mil jayegi.
 
 
+//---------------------------------------------------------------
+//4. indirect invocation
+
+//Isme 3 types ate hai..call, bind, apply
+
+//call and apply
+
+let obj = {
+  a: 20,
+  fn: function(a,b,c){ //function 3 args accepts kar rha hai
+    console.log(this, a,b,c)
+  }
+}
+
+let obj2 = {
+  a: 50
+}
+
+obj.fn(1,2,3)
+//obj2 m fn nahi hai but can we call it ? Yes. How ? call()
+
+//call methiod ke through calling ki 
+//call ki wjah se fn ka refernce is obj2 ke paas aa jayega...this ke reference ko obj2 m change kar diya hai. call ke andar jo bhi provide karte hai uska context change kar deta hai. call m jo likhenge this use point karega.
+// obj.fn.call(obj2) //obj ke andar jo fn hai...use direct call nahi kiya...call likh diya...and call method hai toh ()parenthesis se call kar liya...
+// obj.fn.call(obj2, 1,2,3)  //args bhej diye
 
 
-
-
-
-
-
-
-
-
-
-
+// obj.fn() //ye direct calling hai
 
 
 
