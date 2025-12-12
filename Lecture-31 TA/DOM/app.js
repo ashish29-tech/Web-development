@@ -92,17 +92,53 @@
 // console.log(k) // sare element de dega but 1st element hi dega
 // console.log(k1); //collection/array return kar ke dega
 
+//--------------------------------------------------------------------------------------------------------------------
+
+//Practice
+
+//browser..doceument return kar ke de raha hai..jo sare elements contain kar rah hai jo hamare HTML m hai
+//Tree structure like form m return karta hai. Object ke form m return kar rha hai...jiska name document hai.
+// console.log(document) //document hame ek object return karta hai..jisme pura html ka code hai
 
 
+//Selectors hote hai 5 types ke that helps in changing HTML
+
+// document.getElementById("id")
+// document.getElementsByClassName("class")
+// document.getElementsByTagName("p") .....h1, div, html elements..
+
+// document.querySelector("selector")
+// document.querySelectorAll("selector")
+
+//-----------------------------------------------------------
+//TagName ke through manipulate
+//document ke andar hote hai method...to use method .(dot) lga ke 
+// document.getElementByTagName("h1") //kuch nai ayega cuz console nahi karaya
+
+// console.log(document.getElementsByTagName("h1")) //ek collection return kar ke dega array and array m functionality hoti hai indexing ki. h1 tag ke jitne bhi element honge sab de dega
+
+let h1arr = (document.getElementsByTagName("h1")) //store kara liya
+// console.log(h1arr[0]) //h1arr ka oth element
+// console.log(h1arr[1]) //h1arr ka 1st element
+// console.log(h1arr[2]) //h1arr ka 2nd element
+
+//There can be multiple h1 tags...so we'll use loop
+// for(let item of h1arr){
+//   // console.log(item)
+//   item.style.color = "red"; //strings ki form m dena hai. 
+//   item.style.border = "2px solid black"
+// }
+
+// 1 element ho toh normal loop
+for(let i=0; i<h1arr.length; i++){
+  if(i == 0){
+    h1arr[i].style.color = "blue"; //h1arr pe apply karna hai and i = 0 hoga tab apply karna hai..uspe color apply kar diya
+    h1arr[i].style.border = "2px solid black" //
+  }
+}
 
 
-
-
-
-
-
-
-
+//
 
 
 
