@@ -117,7 +117,7 @@
 
 // console.log(document.getElementsByTagName("h1")) //ek collection return kar ke dega array and array m functionality hoti hai indexing ki. h1 tag ke jitne bhi element honge sab de dega
 
-let h1arr = (document.getElementsByTagName("h1")) //store kara liya
+// let h1arr = (document.getElementsByTagName("h1")) //store kara liya...TagName collection/array return kar ke deta hai
 // console.log(h1arr[0]) //h1arr ka oth element
 // console.log(h1arr[1]) //h1arr ka 1st element
 // console.log(h1arr[2]) //h1arr ka 2nd element
@@ -130,19 +130,51 @@ let h1arr = (document.getElementsByTagName("h1")) //store kara liya
 // }
 
 // 1 element ho toh normal loop
-for(let i=0; i<h1arr.length; i++){
-  if(i == 0){
-    h1arr[i].style.color = "blue"; //h1arr pe apply karna hai and i = 0 hoga tab apply karna hai..uspe color apply kar diya
-    h1arr[i].style.border = "2px solid black" //
-  }
-}
+// for(let i=0; i<h1arr.length; i++){
+//   if(i == 0){
+//     h1arr[i].style.color = "blue"; //h1arr pe apply karna hai and i = 0 hoga tab apply karna hai..uspe color apply kar diya
+//     h1arr[i].style.border = "2px solid black" //
+//   }
+// }
+
+//----------------------------------------------------------
+//Now let's do with id.. getElementById
+//same id de sakte hai html m alag-alag elements ko ?
+// Can you give the same id to different HTML elements?
+// Technically YES, but it is NOT valid HTML.
+// And if you do it, the DOM will only return the first element with that id.
+//sirf ek element return kar ke deta hai.
+//Jitne bhi element ko id di hui hai..unhe select karne m help karta hai
+// let idElement = document.getElementById('ash') //id jo di thi usse select kar liya and var m store kara diya
+// // console.log(idElement) //id se related jo element hoga wo ajayega
+// idElement.style.color = "green";
 
 
-//
+///----------------------------------------------------
+//getElementByClassName
+//same name ki ek se jyada classes ho sakti hai ? yes. Isliye yha collection return hoga.
+// let classDiv = document.getElementsByClassName("div1");
+// // console.log(classDiv)
 
+// classDiv[0].style.color = "purple" //0th element pe apply hua
+// //We can have multiple elements so we'll use looop
 
+// for(let Classitem of classDiv){
+//   // console.log(Classitem)
+//   Classitem.style.color = "orange";
+//   Classitem.style.border = "2px solid black"
+// }
 
-
+//-----------------------------------------------------
+//querySelector...isme id ke liye "#ahdshd"...and class ke liye ".div1"
+//2 element ko same id dedi..html m toh yha 1 hi element milega..1st wala
+// let k = document.querySelector("#ash")
+let k = document.querySelector(".div1") //print sare hoge...but return sirf 1 element hoga
+k.style.color = "blue"
+console.log(k);
+let k1 = document.querySelectorAll(".div1") 
+k1.style.color = "blue"  //error dega
+console.log(k1) //ye sare return kar ke de dega...collection/array return kar ke dega
 
 
 
