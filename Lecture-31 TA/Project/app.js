@@ -25,6 +25,7 @@
 //Project. Addition perform karna hai
 let num1 = document.getElementById("1num"); //element ko select kar liya
 let num2 = document.getElementById("2num") //element ko select kar liya
+let h3 = document.getElementById("addedContent")
 
 console.log(num1)
 // console.log(num1.value) // abhi kuch bhi nahi hai toh khai hai
@@ -41,7 +42,12 @@ button.addEventListener("click", function(){ //ye 2 parameter accept karta hai..
   //num1.value ka type kya hota hai? ALWAYS STRING
   // console.log(num1.value + num2.value) //string return kar diya...isliye yha concatinate ho gya
   // console.log(+num1.value + +num2.value)//  Using Unary +
-  console.log(`this is the putput of ${num1.value} ${num2.value} ` + (+num1.value + +num2.value))
+  // console.log(`this is the putput of ${num1.value} ${num2.value} ` + (+num1.value + +num2.value))
+
+
+  //console m jo value likhi hai wo hame h3 m dalna hai
+  h3.textContent = `this is the putput of ${num1.value} ${num2.value} ` + (+num1.value + +num2.value)
+
 }) 
 
 
