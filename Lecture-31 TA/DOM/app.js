@@ -169,12 +169,13 @@
 //querySelector...isme id ke liye "#ahdshd"...and class ke liye ".div1"
 //2 element ko same id dedi..html m toh yha 1 hi element milega..1st wala
 // let k = document.querySelector("#ash")
-let k = document.querySelector(".div1") //print sare hoge...but return sirf 1 element hoga
-k.style.color = "blue"
-console.log(k);
-let k1 = document.querySelectorAll(".div1") 
-k1.style.color = "blue"  //error dega
-console.log(k1) //ye sare return kar ke de dega...collection/array return kar ke dega
+// let k = document.querySelector(".div1") //print sare hoge...but return sirf 1 element hoga
+// k.style.color = "blue"
+// console.log(k);
+// let k1 = document.querySelectorAll(".div1") 
+// // k1.style.color = "blue"  //error dega..cuz ye collection return kar ke de rha na ki element
+// k1[3].style.color = "yellow" 
+// console.log(k1) //ye sare return kar ke de dega...collection/array return kar ke dega
 
 
 
