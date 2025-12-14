@@ -1,0 +1,38 @@
+
+NO NEED TO CRAM THIS DOM...CUZ IT'S NOT ASKED IN INTERVIEW OR MAYBE VERY BASIC ASKED.
+
+DOM: Document Object Model. 
+Document means HTML.
+Everything inside js is object. So object se matlab hua js ko refer karna chah rahe hai.
+Model means to change/manipulate... 
+
+DOM..html ke andar jakar just with the help of js usse change kar pao.
+
+DOM allows JavaScript to modify HTML dynamically without directly editing the HTML file.
+The browser converts HTML into a DOM tree, which JavaScript can access and manipulate.
+
+
+First appraoch is to select the element which needs to be manipulated.
+We have many ways to select. We'll be seeing 5 ways.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
