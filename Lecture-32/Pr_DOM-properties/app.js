@@ -17,7 +17,15 @@ let p = document.querySelector("p");
 // console.log(p.innerHTML)
 
 
+//---------------------------------
+//can they act like a setter ? Yess
+//setter....try these in browser console
+console.log(p.innerText)
+p.innerText = "Hello I am powerful" //try this in browser console
 
+p.textContent = "Hello I am powerful" 
+
+p.innerHTML = "Hello I <h1>am</h1> powerful" 
 
 
 
