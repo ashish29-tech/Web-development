@@ -50,4 +50,37 @@
 //   `;
 // }
 
+//-----------------------------------------------------------------
+//way3 -> getElementsByClassName -> 
+
+// let classEle = document.getElementsByClassName("ash") //we'll get array..
+// //classEle..ye type in browser console...we'll get array...
+
+// for(let elem of classEle){
+//   elem.style.textDecoration = "line-through"
+// }
+
+//--------------------------------------
+//Way4 --> querySelector...3 in 1 kaam karta haia and only 1 element ko select karta hai
+//baar-baar selection ke way ko badal rahe the...
+//isliye we'll use querySelector
+//id ka alternative
+// let qs1 = document.querySelector("#ashish") //id ke liye #....1st occurence mtlb 1st element jise id di hai ashish wo mil jayega..check in broser console. single selector
+
+// className ka alternative
+// let qs2 = document.querySelector(".ash") //class ke liye .(dot). single selector
+
+//tagName ka alternative
+// let qs3 = document.querySelector("p") //bina kisi hash ya dot ke likhenge...1 hi select hota hai querySelector m isliye 1 ayega..check in console..type qs3
+
+//-----------------------------------------------------------------
+//Way5 --> querySelectorAll
+
+let qs1 = document.querySelectorAll("#ashish") //2 ko id di hui hai ashish ke naam se..toh dono ko select kar lega
+
+// className ka alternative
+let qs2 = document.querySelectorAll(".ash") //class ke liye .(dot). 
+
+// tagName ka alternative
+let qs3 = document.querySelectorAll("p") //bina kisi hash ya dot ke likhenge..
 
