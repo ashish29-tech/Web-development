@@ -1,5 +1,5 @@
 // setTimeout() --> it's a web API...delay provide karne ka kaam karti hai
-// setInterval() --> repeat karne ke kaam ata hai after aparticular interval of time
+// setInterval() --> repeat karne ke kaam ata hai after a particular interval of time
 
 
 //setInterval()... returns an ID. setInterval ko rokne ke liye clear method ka use karenge..

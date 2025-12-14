@@ -24,16 +24,16 @@
 //value nikal ke change karni hai toh setter ka kaam
 //setAttribute karega
 
-let anchor = document.querySelector('a');
+// let anchor = document.querySelector('a');
 
-//setAttributes accepts 2 args. 1st jisko change karna hai... 2nd jis value se change karna hai
-anchor.setAttribute('href' , 'http://facebook.com') //pehle href se google khul rha tha ab fb khulega
+// //setAttributes accepts 2 args. 1st jisko change karna hai... 2nd jis value se change karna hai
+// anchor.setAttribute('href' , 'http://facebook.com') //pehle href se google khul rha tha ab fb khulega
 
-let inp = document.querySelector("input");
+// let inp = document.querySelector("input");
 
-inp.setAttribute("type" ,"color") //jha text fill kar sakte the ab wha color aa jayega
-inp.setAttribute("type" ,"date")  //now it changes to date
-inp.setAttribute("type" ,"checkbox") 
+// inp.setAttribute("type" ,"color") //jha text fill kar sakte the ab wha color aa jayega
+// inp.setAttribute("type" ,"date")  //now it changes to date
+// inp.setAttribute("type" ,"checkbox") 
 
 
 
