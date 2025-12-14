@@ -76,11 +76,11 @@
 //-----------------------------------------------------------------
 //Way5 --> querySelectorAll
 
-let qs1 = document.querySelectorAll("#ashish") //2 ko id di hui hai ashish ke naam se..toh dono ko select kar lega
+// let qs1 = document.querySelectorAll("#ashish") //2 ko id di hui hai ashish ke naam se..toh dono ko select kar lega
 
-// className ka alternative
-let qs2 = document.querySelectorAll(".ash") //class ke liye .(dot). 
+// // className ka alternative
+// let qs2 = document.querySelectorAll(".ash") //class ke liye .(dot). 
 
-// tagName ka alternative
-let qs3 = document.querySelectorAll("p") //bina kisi hash ya dot ke likhenge..
+// // tagName ka alternative
+// let qs3 = document.querySelectorAll("p") //bina kisi hash ya dot ke likhenge..
 
