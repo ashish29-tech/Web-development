@@ -88,16 +88,16 @@ let section = document.querySelector('section')
 
 //prepend...starting m add karane ke liye. multiple, string...allow karta hai
 
-section.prepend("Hi ashish") //start m add kar diya
-section.prepend(p) //can we append and prepend paragraph at the same time ? N0. 
-section.prepend(h2) //ye pehle ayega cuz prepend top m add karta hai
-section.prepend(p, h2) //can we prepend multiple things ? Yes
+// section.prepend("Hi ashish") //start m add kar diya
+// section.prepend(p) //can we append and prepend paragraph at the same time ? N0. 
+// section.prepend(h2) //ye pehle ayega cuz prepend top m add karta hai
+// section.prepend(p, h2) //can we prepend multiple things ? Yes
 
 //--------------------------------------------
 //before and after bhi hote hai hamare paas
 
 // section.before(h2) //section se pehle
-section.after(h2) //section ke baad
+// section.after(h2) //section ke baad
 
 
 
