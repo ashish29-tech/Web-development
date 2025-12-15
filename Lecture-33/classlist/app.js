@@ -34,17 +34,17 @@
 
 //sabse pehle select karna hai toh...
 
-let h1 = document.querySelector("h1")
-let h2 = document.querySelector("h2")
-let h3 = document.querySelector("h3")
+// let h1 = document.querySelector("h1")
+// let h2 = document.querySelector("h2")
+// let h3 = document.querySelector("h3")
 
 //now we want h1 pe class add karu..and with the help of that class...style wgr change karna chah rahe
 //css m classes bna di
 
 //class pe kaam karna hai toh classList likha...and add kana hai toh add...class1 ko karna hai
-h1.classList.add('class1') //heading ka color red ho jayega toh mtlbb class1 add ho gayi
-h1.classList.add('class2') //
-h1.classList.add('class3')
+// h1.classList.add('class1') //heading ka color red ho jayega toh mtlbb class1 add ho gayi
+// h1.classList.add('class2') //
+// h1.classList.add('class3')
 // //teeno add ho gaye...par kya teeno alag-alag karna ?
 
 // //-----------------------------------------
@@ -72,9 +72,9 @@ h1.classList.add('class3')
 //Class hai ya nahi...
 
 //h3 ke paas class1 hai ? jo bhi ayega use console kaar liya
-console.log(h3.classList.contains('class1'))
+// console.log(h3.classList.contains('class1'))
 
-h3.classList.toggle('class3') //add kar di
-console.log(h3.classList.contains('class3')) //h3 ke pass class3 hai...toh true aa jayega
+// h3.classList.toggle('class3') //add kar di
+// console.log(h3.classList.contains('class3')) //h3 ke pass class3 hai...toh true aa jayega
 
 
