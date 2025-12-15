@@ -76,11 +76,11 @@
 
 //niche wala html jo commented hai
 
-let art = document.querySelector('article')
+// let art = document.querySelector('article')
 
-console.log(art.nextElementSibling) //article ke baad next element sibling div hai...
-console.log(art.nextElementSibling.nextElementSibling) //uska next element sibling
-console.log(art.nextElementSibling.nextElementSibling.previousElementSibling) //uska previous dekhne ke liye
+// console.log(art.nextElementSibling) //article ke baad next element sibling div hai...
+// console.log(art.nextElementSibling.nextElementSibling) //uska next element sibling
+// console.log(art.nextElementSibling.nextElementSibling.previousElementSibling) //uska previous dekhne ke liye
 
 
 
