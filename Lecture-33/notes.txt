@@ -1,0 +1,27 @@
+
+We either add, remove...
+toggle and contains...
+
+these 4 are properties of classlist....we are talking about classes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

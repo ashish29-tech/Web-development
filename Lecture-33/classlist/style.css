@@ -1,0 +1,27 @@
+/* .class1{
+  color: red;
+}
+.class2{
+  font-size: 70px;
+}
+.class3{
+  border: 10px solid black;
+} */
+
+/* 3 alag-alag classes di hai...and kahi pe bhi koi class add nahi ki hai. Now on the bases of these classes we want
+to see js ki help se ye classes add ya remove kar sakte hai ya nahi */
+
+.class1{
+  color: red;
+}
+
+.class2{
+  font-size:  70px;
+}
+
+.class3{
+  border: 10px solid black;
+}
+
+
+

@@ -1,0 +1,61 @@
+
+
+//can we create new element with the help of DOM ?
+// Yes
+
+
+let section = document.querySelector("section") //section select kar liya
+
+
+
+let h2 = document.createElement("h2"); //document ke andar hi create hoga...createElement method se. h2 bna diya but isme koi content nai hai.
+let p  = document.createElement("p");
+
+h2.innerText = "ashish" //create kar diya but DOM ke andar show bhi to karna hai
+p.innerText = "galori bina chutney kaise bani"
+
+
+//DOM m show karne ke liye
+//appendChild
+
+// section.appendChild(h2); //section ke andar h2 child ko append kar do
+// section.appendChild(h2, p); //appendChild multiple chize append nai karne deti
+// section.appendChild("h1"); //wrong...string not allowed
+
+//------------------------------------------
+//multiple chize, string append karne ke liye append method
+//append()....method
+
+// section.append(h2); //append ho gya
+// section.append(h2, p);//ab dono ya multiple chize append ho sakti hai
+// section.append("hello from chamgadar");// string bhi append ho jati hai
+// section.append("<h1>hello from chamgadar</h1>");//tag ko string smjh lega...so tag wali chize nai hogi
+
+
+//both appendChild() and append()...last m jakr add karte hai
+
+//-----------------------------------------------------
+//startng m add karne ke liye
+//Prepend...s
+
+// section.prepend(`<h1>hello from chamgadar</h1>`); //ye pehle ayega
+// section.prepend(p); //paragraph prepend hoga ? No....ek chiz ya to append ya prepend...dono chize ek sath nahi ho sakti
+// section.prepend(p, h2);// multiple chize prepend ? No
+
+
+//------------------------------------------------------
+
+section.before(h2);
+section.after(h2);
+
+
+
+
+
+
+
+
+
+
+
+
