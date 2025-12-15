@@ -4,15 +4,15 @@
 // Yes
 
 
-let section = document.querySelector("section") //section select kar liya
+// let section = document.querySelector("section") //section select kar liya
 
 
 
-let h2 = document.createElement("h2"); //document ke andar hi create hoga...createElement method se. h2 bna diya but isme koi content nai hai.
-let p  = document.createElement("p");
+// let h2 = document.createElement("h2"); //document ke andar hi create hoga...createElement method se. h2 bna diya but isme koi content nai hai.
+// let p  = document.createElement("p");
 
-h2.innerText = "ashish" //create kar diya but DOM ke andar show bhi to karna hai
-p.innerText = "galori bina chutney kaise bani"
+// h2.innerText = "ashish" //create kar diya but DOM ke andar show bhi to karna hai
+// p.innerText = "galori bina chutney kaise bani"
 
 
 //DOM m show karne ke liye
@@ -45,17 +45,33 @@ p.innerText = "galori bina chutney kaise bani"
 
 //------------------------------------------------------
 
-section.before(h2);
-section.after(h2);
+// section.before(h2);
+// section.after(h2);
 
 
+//---------------------------------------------------------------------------------------------------
+//Practice
+//can we create new element with the help of DOM ?
+// Yes... with the help of createElement..and arg m pass kar diya jo bnana hai
+let h2 = document.createElement('h2'); //h2 create karna hai
+let p = document.createElement('p')
 
+//h2 m content add karne ke liye
+h2.innerText = 'ashish' //innerText ki help se content add kar diya h2 m... but ye DOM m show bhi to karna hai
+p.innerText = "lagan lagi tumse man ki lagan..."
 
+//create kar diya and now DOM m add karne ke liye...2 method hote hai
+//1. appendChild()
+//2. append()
 
+//khali section bnaya index.html m and use select kara
+ 
+let section = document.querySelector('section')
 
-
-
-
+//we want h2 hamara section ke andar aye
+//section ke andar appendChild kar do...h2 ko. bachhe ko append kar liya
+section.appendChild(h2)
+section.appendChild(h2, p) //multiple child append nai karne deti appendChild..sirf single child append hota hai
 
 
 
