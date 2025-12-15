@@ -70,8 +70,47 @@ let section = document.querySelector('section')
 
 //we want h2 hamara section ke andar aye
 //section ke andar appendChild kar do...h2 ko. bachhe ko append kar liya
-section.appendChild(h2)
-section.appendChild(h2, p) //multiple child append nai karne deti appendChild..sirf single child append hota hai
+// section.appendChild(h2)
+// section.appendChild(h2, p) //multiple child append nai karne deti appendChild..sirf single child append hota hai
+// section.appendChild("hi mera naam hai ashish") //string nahi de sakte
+
+//--------------------------------------------------
+//append().. for multiple
+
+// section.append(h2)
+// section.append(h2, p) //more than 1 things can be added at a time
+// section.append("Hi ashish") //yes we can append 
+// section.append("<h1>Hi ashish</h1>") //tag wali chiz is wrong
+
+//Both append() amd appendChild()...last m jakr add karte hai.
+
+//--------------------------------------------------------
+
+//prepend...starting m add karane ke liye. multiple, string...allow karta hai
+
+section.prepend("Hi ashish") //start m add kar diya
+section.prepend(p) //can we append and prepend paragraph at the same time ? N0. 
+section.prepend(h2) //ye pehle ayega cuz prepend top m add karta hai
+section.prepend(p, h2) //can we prepend multiple things ? Yes
+
+//--------------------------------------------
+//before and after bhi hote hai hamare paas
+
+// section.before(h2) //section se pehle
+section.after(h2) //section ke baad
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
