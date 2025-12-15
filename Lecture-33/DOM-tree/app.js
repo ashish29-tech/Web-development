@@ -21,7 +21,7 @@
 // console.log(div.parentElement); //div ka parent article
 // console.log(div.parentElement.parentElement);//article ka parent section
 // console.log(div.parentElement.parentElement.parentElement); //section ka parent body
-// console.log(div.parentElement.parentElement.parentElement.parentElement); // null
+// console.log(div.parentElement.parentElement.parentElement.parentElement); // html
 
 
 //----------------------------------------------
@@ -40,7 +40,7 @@
 
 
 //div ko select kar rahe hai
-let div = document.querySelector('div')
+// let div = document.querySelector('div')
 
 //children pe ja rahe....
 // console.log(div) //div mil gya
@@ -49,13 +49,46 @@ let div = document.querySelector('div')
 // console.log(div.children[0])
 // console.log(div.children[1])
 
+
+// let art = document.querySelector("article")
+
+// console.log(art)
+// console.log(art.children) //ye to array hai hmare liye
+// console.log(art.children.children) //undefined cuz hamne btaya nahi kon sa children
+// //child kitne bhi ho sakte hai isliye hame indexing ke sath khelna padega
+// console.log(art.children[0].children) //0 of children...ab uske andar ka bachha mil gya
+// console.log(art.children[0].children[0].children)
+// console.log(art.children[0].children[0].children[0].children) //paragrpah m kuch nahi aa rha
+
+//----------------------------------------------------------------------
+//parent
 //can we go to parent..yes
 
-console.log(div.parentElement) //div ka parent article hai
-console.log(div.parentElement.parentElement) 
-console.log(div.parentElement.parentElement.parentElement) 
-console.log(div.parentElement.parentElement.parentElement.parentElement) 
-console.log(div.parentElement.parentElement.parentElement.parentElement.parentElement) 
+// console.log(div.parentElement) //div ka parent article hai
+// console.log(div.parentElement.parentElement) 
+// console.log(div.parentElement.parentElement.parentElement) 
+// console.log(div.parentElement.parentElement.parentElement.parentElement) 
+// console.log(div.parentElement.parentElement.parentElement.parentElement.parentElement) 
+
+
+//-----------------------------------------------------------
+
+
+//niche wala html jo commented hai
+
+let art = document.querySelector('article')
+
+console.log(art.nextElementSibling) //article ke baad next element sibling div hai...
+console.log(art.nextElementSibling.nextElementSibling) //uska next element sibling
+console.log(art.nextElementSibling.nextElementSibling.previousElementSibling) //uska previous dekhne ke liye
+
+
+
+
+
+
+
+
 
 
 
