@@ -44,15 +44,15 @@
 //------------------------------------
 //interview question
 
-let btn = document.querySelector("button");
+// let btn = document.querySelector("button");
 
-function naacho(){
-  console.log("naatu naatu naatu...")
-}
+// function naacho(){
+//   console.log("naatu naatu naatu...")
+// }
 
-function gaao(){
-  console.log("sa re ga ma pa dha ni sa")
-}
+// function gaao(){
+//   console.log("sa re ga ma pa dha ni sa")
+// }
 
 //yha overriding ho rahi hai...ek event par 1 kaam...toh pehle naacho pe event chala phir gaaon pe chala toh ultmately gaao chalega
 //mtlb ek event pe 1 se jyada kaam nai kara sakta
@@ -71,9 +71,9 @@ function gaao(){
 //----------------------------------------
 //multiple functions trigger ho rha yha par
 //naacho function hai hmara...click karne pe naacho
-btn.addEventListener("click", naacho); //addEventListener ek function hai jo 2 argument accept karta hai..1st is type and 2nd is listener
-//gaao function hai hmara...click karne pe gaao
-btn.addEventListener("click", gaao);
+// btn.addEventListener("click", naacho); //addEventListener ek function hai jo 2 argument accept karta hai..1st is type and 2nd is listener
+// //gaao function hai hmara...click karne pe gaao
+// btn.addEventListener("click", gaao);
 
 // btn.addEventListener("click", naacho)
 
@@ -87,6 +87,43 @@ btn.addEventListener("click", gaao);
 // btn.addEventListener("click", function(){ //button pe addEventListener...jab bhi button pe click ho to ye function chal jaye...button pe ek listener lga diya "click"...
 //   body.style.backgroundColor = "red"; //function..body ko uthayega and style ki help se backgroundColor change kar dega
 // });
+
+
+
+let butn = document.querySelector("button")
+// let body = document.querySelector("body") //body bhi ek element hai toh body ko select kar liya
+
+//button pe ek listenet lga diya..click..and jaise hi click hoga toh ye function chal jayega
+butn.addEventListener("click" , function(){
+  // body.style.backgroundColor = "red"
+  document.body.style.backgroundColor = "red" //isme body ko select karne ki jarurat nahi hai
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
