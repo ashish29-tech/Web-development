@@ -103,26 +103,47 @@
 //Practice from chatGPT
 //multiple colors
 
-document.getElementById("laal").addEventListener("click", function(){
-  document.body.style.backgroundColor = "red"
-});
+//Beginner way
+// document.getElementById("laal").addEventListener("click", function(){
+//   document.body.style.backgroundColor = "red"
+// });
 
-document.getElementById("hara").addEventListener("click", function(){
-  document.body.style.backgroundColor = "green"
-});
+// document.getElementById("hara").addEventListener("click", function(){
+//   document.body.style.backgroundColor = "green"
+// });
 
-document.getElementById("peela").addEventListener("click", function(){
-  document.body.style.backgroundColor = "yellow"
-});
-
-
-
+// document.getElementById("peela").addEventListener("click", function(){
+//   document.body.style.backgroundColor = "yellow"
+// });
 
 
+//smart way... better way
+
+let buttons = document.querySelectorAll(".color-btn")
+
+//forEach se 
+// buttons.forEach(function (button){
+//   button.addEventListener("click", function(){
+//     document.body.style.backgroundColor = button.innerText;
+//   })
+// })
+
+//bina forEach ke... normal for loop ke
+// for(let i = 0; i < buttons.length; i++){ //buttons ek list hai....i se ek-ek button access kar rahe ho
+//   buttons[i].addEventListener("click", function(){ //Har button pe event attach
+//     document.body.style.background = buttons[i].innerText;
+//   })
+// }
 
 
+//industry way
+let container = document.getElementById("container")
 
-
+container.addEventListener("click", function(event){
+  if(event.target.classList.contains("color-btn")){
+    document.body.style.backgroundColor = event.target.innerText
+  }
+})
 
 
 
