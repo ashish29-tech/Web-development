@@ -90,18 +90,30 @@
 
 
 
-let butn = document.querySelector("button")
-// let body = document.querySelector("body") //body bhi ek element hai toh body ko select kar liya
+// let butn = document.querySelector("button")
+// // let body = document.querySelector("body") //body bhi ek element hai toh body ko select kar liya
 
-//button pe ek listenet lga diya..click..and jaise hi click hoga toh ye function chal jayega
-butn.addEventListener("click" , function(){
-  // body.style.backgroundColor = "red"
-  document.body.style.backgroundColor = "red" //isme body ko select karne ki jarurat nahi hai
-})
+// //button pe ek listenet lga diya..click..and jaise hi click hoga toh ye function chal jayega
+// butn.addEventListener("click" , function(){
+//   // body.style.backgroundColor = "red"
+//   document.body.style.backgroundColor = "red" //isme body ko select karne ki jarurat nahi hai
+// })
 
+//--------------------------------------------------------
+//Practice from chatGPT
+//multiple colors
 
+document.getElementById("laal").addEventListener("click", function(){
+  document.body.style.backgroundColor = "red"
+});
 
+document.getElementById("hara").addEventListener("click", function(){
+  document.body.style.backgroundColor = "green"
+});
 
+document.getElementById("peela").addEventListener("click", function(){
+  document.body.style.backgroundColor = "yellow"
+});
 
 
 
