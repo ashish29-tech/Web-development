@@ -12,15 +12,15 @@
 
 //------------------------------------------------------------
 
-let inpEl = document.querySelector("input")
-let h1 = document.querySelector("h1");
+// let inpEl = document.querySelector("input")
+// let h1 = document.querySelector("h1");
 
-inpEl.addEventListener("input" , function(event){ //cb function chala diya. Event trigger hua toh 1 object aya use Event naam diya and use is function m rakh liya
-  // console.log(event)
-  // h1.innerText = event.target.value //❌ (avoid mostly) Sirf visible text set karta hai...CSS (display, visibility) ko consider karta hai
-  // h1.textContent = event.target.value //✅ (RECOMMENDED)....Plain text set karta hai....HTML tags ko text ki tarah treat karta hai
-  // h1.innerHTML = event.target.value //❌❌ Text ko HTML ke tarah parse karta hai
-})
+// inpEl.addEventListener("input" , function(event){ //cb function chala diya. Event trigger hua toh 1 object aya use Event naam diya and use is function m rakh liya
+//   // console.log(event)
+//   // h1.innerText = event.target.value //❌ (avoid mostly) Sirf visible text set karta hai...CSS (display, visibility) ko consider karta hai
+//   // h1.textContent = event.target.value //✅ (RECOMMENDED)....Plain text set karta hai....HTML tags ko text ki tarah treat karta hai
+//   // h1.innerHTML = event.target.value //❌❌ Text ko HTML ke tarah parse karta hai
+// })
 
 
 

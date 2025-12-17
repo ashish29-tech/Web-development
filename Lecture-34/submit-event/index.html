@@ -9,13 +9,26 @@
   
   <h1>Submit Event</h1>
 
-  <!-- form m 2 attribute hote hai..action and method.Action mtlb form submit hoke kha jayega. By default form pe get method hota hai. Form pe 2 method hote hai get, post -->
-  <form action="#" method="GET"> <!--# means same page-->
+  <!-- submit event ke liye form hona chahiye...form m 2 attribute hote hai..action and method.Action mtlb form submit hoke kha jayega. By default form pe get method hota hai. Form pe 2 method hote hai get, post -->
+   <!--# means same page-->
+  <!-- <form action="#" method="GET"> 
     <input type="text" name="username">
     <input type="password" name="password">
     <button type="reset">Reset</button>
     <button type="submit">Submit</button>
+  </form> -->
+
+  <!-- form ke andr generally 2 attribute hote hai action and method -->
+   <!-- action le liye # likh diya...hash means same page -->
+  <form action="#" method="GET">
+    <input type="text" name="username">
+    <input type="password" name="password">
+    <button type="reset">Reset</button>
+    <!--button ka by default type submit hota hai...toh chahe likho na likho koi fark nai padta -->
+    <button type="submit">Submit</button>
   </form>
+
+
 
   <script src="app.js"></script>
 </body>
