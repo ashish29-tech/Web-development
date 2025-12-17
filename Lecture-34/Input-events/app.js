@@ -23,7 +23,7 @@
 //jab bhi event triggger karate hai, toh us event ka pura ka pura instance hame milta hai
 //jis element pe hua hai uska pura instance(uske bare m...puri info) mil jata hai...inside the function
 
-const inpEl = document.querySelector("input") //input select kiya
+// const inpEl = document.querySelector("input") //input select kiya
 
 //event ki jgah kuch bhi name aa sakta hai naam
 // inpEl.addEventListener("input" , (event)=>{ //input element pe event lagana hai. Jab bhi event trigger hota hai..ye function apne andar..ek object bhej deta hai jise kisi bhi name se catch kar sakte hai..so event ek object hai yha
