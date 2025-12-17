@@ -1,0 +1,40 @@
+
+when we login on facebook and somewhere else..we write...our name...or login id when we try to login in insta...all these are inputs
+inputs ke upar ke events ke bare m we'll be learning.
+
+Jaise click event tha waise hi input bhi hamara event hai....
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
