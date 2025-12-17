@@ -34,15 +34,15 @@ const inpEl = document.querySelector("input") //input select kiya
 // })
 
 
-inpEl.addEventListener("input" , function(event){ //event object...event ek object bhej deta hai jise kisi bhi name se catch kar sakte hai
-  // console.log(event); //browser m check karenge...kuch bhi type karenge toh pura ka pura object mil jata hai...expand karenge toh ayega...target hoga usme. 
-  //jo event ka object hai...toh ham event.target kar sakte hai
-  //event.target refers to the element on which the event actually occurred....by chatGPT
-  //target is jis bhi element pe hamara event trigger hua hai
-  // console.log(event.target); //browser m kuch bhi type karenge box m toh input milega...toh kya input ke andar se uski value utha sakte hai ? Yess
-  console.log(event.target.value)//event kon se target...pe trigger ho raha hai uski value chahiye hame
-  console.log(event.data)
-})
+// inpEl.addEventListener("input" , function(event){ //event object...event ek object bhej deta hai jise kisi bhi name se catch kar sakte hai
+//   // console.log(event); //browser m check karenge...kuch bhi type karenge toh pura ka pura object mil jata hai...expand karenge toh ayega...target hoga usme. 
+//   //jo event ka object hai...toh ham event.target kar sakte hai
+//   //event.target refers to the element on which the event actually occurred....by chatGPT
+//   //target is jis bhi element pe hamara event trigger hua hai
+//   console.log(event.target); //browser m kuch bhi type karenge box m toh input milega...toh kya input ke andar se uski value utha sakte hai ? Yess
+//   // console.log(event.target.value)//event kon se target...pe trigger ho raha hai uski value chahiye hame
+//   // console.log(event.data)
+// })
 
 
 
