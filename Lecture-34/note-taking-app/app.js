@@ -3,7 +3,8 @@
 // let btnEl= document.querySelector("button");
 // let list= document.querySelector("#list"); //list ko id de di
 
-// //Jab add pe click kare to add ho jaye notes..
+
+// //Jab add pe click kare to add ho jaye notes...
 // //so btnEl pe event trigger hoga
 
 // btnEl.addEventListener("click" , function(e){ //jab bhi event trigger hota hai toh event/e/kuchbhi naam ka object ata hai
@@ -27,6 +28,7 @@
 //   e.target.remove(); //indirect remove
 // }) 
 // })
+
 
 
 
