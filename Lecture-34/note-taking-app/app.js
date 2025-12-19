@@ -69,8 +69,9 @@ btnEl.addEventListener("click", function(e){ //li ka scope isi scope tak hai isk
   //li pe kaam karenge remove ke liya
 
   //li pe jab addEventListener lgaya...click...
-  li.addEventListener('click', function(){ //li ka scope upar wale function tak hi hai...isliye ye event upar wale block m hi karna padega
-  li.remove();
+  li.addEventListener('click', function(e){ //li ka scope upar wale function tak hi hai...isliye ye event upar wale block m hi karna padega
+  // li.remove();
+  e.target.remove();
 })
 })
 
@@ -79,7 +80,6 @@ btnEl.addEventListener("click", function(e){ //li ka scope isi scope tak hai isk
 // li.addEventListener('click', function(){ //li ka scope upar wale function tak hi hai...isliye ye event upar wale block m hi karna padega
 //   li.remove();
 // })
-
 
 
 
