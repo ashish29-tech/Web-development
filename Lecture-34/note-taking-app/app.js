@@ -30,14 +30,55 @@
 // })
 
 //------------------------------------------------------------------------------------------------
+//practice
+
+//ul bna diya index.html m...
+//isme jo bhi elements ayenge...unko list item m create karna hai...append karna hai. 
+//Kaise karenge ?
+//input, button, ul ko slect karna padega
 
 
 
+let inpEl = document.querySelector("input")
+let btnEl = document.querySelector("button")
+let list = document.querySelector("#list") //unordered list(ul) ko select kiya..use list id thi index.html m...toh # use kar ke select kar liya
 
+//Look at the browser live server....
+//jab bhi add button pe click kare tabhi niche list append ho jayegi
+//that means hmara event button Element pe trigger hoga.
 
+//button pe addEventListener add kar diya click...click event add kar diya...and we know jab bhi event trigger hota hai toh ek event ka object ata hai..use e naam se catch kar liya
+btnEl.addEventListener("click", function(e){ //li ka scope isi scope tak hai iske bhr nahi
+  //jaise hi button click ho jayega toh input ke andar se value chahiye
+  //event button pe trigger hua hai..and value hame inpEl ki chahiye...toh e.target nahi ayega
+  let noteText = inpEl.value  //inpEl ki value...use noteText var m store kar liya
 
+  //ul m...list items hote hai. Toh we have to create it
+  let li = document.createElement('li') //crate kya ho rha hai ? li. Use var li m store kar liya.
 
+  //li toh empty hai. We want hamare li m noteText wali value aa jaye..
+  li.innerText = noteText; //isse text aa jayega li m
 
+  //ab text ko append karna hai list ke andar...
+  list.appendChild(li); //list m appendChild...kisko karna hai ? li ko. Now whatever we write inside inputbox it will be appended below in li. But jab bhi add karte hai toh input khali ho jata hai na ? input mil raha hai inpEl(input ke element se)
+
+  //toh inpEl ko empty bhi toh set kar sakte hai...inpEl ki value ko set kar ke use empty kar diya.
+  inpEl.value = "" //ye getter and setter dono ka kaam karti hai
+
+  //Jab bhi kisi ek list item pe click karte hai toh kaam ho jata hai toh delete ho jata hai
+  //li pe kaam karenge remove ke liya
+
+  //li pe jab addEventListener lgaya...click...
+  li.addEventListener('click', function(){ //li ka scope upar wale function tak hi hai...isliye ye event upar wale block m hi karna padega
+  li.remove();
+})
+})
+
+// ❌
+// //li pe jab addEventListener lgaya...click...
+// li.addEventListener('click', function(){ //li ka scope upar wale function tak hi hai...isliye ye event upar wale block m hi karna padega
+//   li.remove();
+// })
 
 
 
