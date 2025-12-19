@@ -2,7 +2,7 @@
 //Another important event...submit
 //Ye submit event...form pe lagta hai...toh ye submit event tab trigger hoga jab form hoga
 
-//form k jab submit karenge toh hi submit event trigger hoga...
+//form ko jab submit karenge toh hi submit event trigger hoga...
 
 // let formEL = document.querySelector("form"); //form select kar liya
 
