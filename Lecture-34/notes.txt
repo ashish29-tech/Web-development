@@ -5,8 +5,16 @@ inputs ke upar ke events ke bare m we'll be learning.
 Jaise click event tha waise hi input bhi hamara event hai....
 
 
+//Apple calculator
 
+-Row kitni hai ? 5
+-And 4 column hai
+-Har ek row m kitne button chahiye ? 4
+-Grid
+- First 3 button hai grey and last ka hai yellow...that means grey and yelow button chahiye hoga
+- Dono zero ko merge karna hai...pic m bottom left m 0..2 row le rha hai.
 
+- sabse pehle basic template khada karte hai.
 
 
 
