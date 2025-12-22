@@ -226,7 +226,7 @@ let songs = [
 ]
 
 //jaise promise() ek constructor tha...waise hi Audio() bhi hai. Google and read mdn..HTMLAudioElement: Audio constructor()
-// Audion constructor use kaise karte hai ? new audio and uske andar url dal dete hai
+// Audio constructor use kaise karte hai ? new audio and uske andar url dal dete hai
 //variable m store karna hai...and .play()...naam ka method hai...
 
 //link asset ke andar hai na
@@ -238,7 +238,7 @@ let audio = new Audio('./assets/song1.mp3') // ./assts/song1.mp3 .....ye new aud
 for(let song of songs){ //ye song naam ka iterator hai ye ek-ek kar ke upar songs ke pure object ko point kar rha hai
   //har ek gane ke liye ek new li bnana padega cuz song ki list hai
   let li = document.createElement('li') //create element list item create karta hai
-  //now we want jo list item hai hamara uspe gane ka naam nazar aye...toh li ke andar texr bharna padega
+  //now we want jo list item hai hamara uspe gane ka naam nazar aye...toh li ke andar text bharna padega
   //  //ye for loop m song naam ka iterator hai ye ek-ek kar ke upar songs ke pure object ko point kar rha hai and koi property chahiye hogi toh .name, .id .......
   li.innerText = song.name
   //id bhi set karni hai...iske liye setAttribute prop. 
@@ -290,11 +290,89 @@ progress.addEventListener('change' , function(){
   audio.currentTime = updatedTime;
 })
 
+//now we want jonse gaane pe click kare wo gaana chal jaye..songList pe click kare wo gaana chal jaye
+//toh event songList pe lagega
+songList.addEventListener('click' , function(event){ //jab bhi function trigger hota hai to event naam ka object hota hai
+  //event naam ke object se uska target nikal lete hai...ab target se element mil jayega...ab element ke andar se uska attribute nikal sakte hai..id
+  //gane pe click karte hi id nikal jayegi...1
+  let songId = event.target.getAttribute('id') //isse gaane ki id mil jayegi. Upar hamne song1 ko id1 di hai...asong2 ko id2 and so on. Id pta chal gyi toh pta chal jayega kon sa song chal rha hai
+  //now id ka source change kar sakte hai... html audio element mdn m dekhnge toh...src naam ki ptoperty hai
+  //click karte hi src badal denge with the help of id....2
+  audio.src = `./assets/song${songId}.mp3` //gaane ka src badal diya...song 1,2,3,4 toh varible hai..toh ye songId se ayega
+  //jab gana change hota hai toh staring se chalta hai toh uska currentTime 0 hota hai..
+  //current time 0 kar do and play kar do...3
+  audio.currentTime = 0; 
+  audio.play(); //gaane ko start bhi toh karna hai toh play kar do
+  //gaana badla toh play-pause shi ho jane chahiye...classList m pla
+  //play ho jaye toh pause ka option dikhana hai and play ka hatana hai...4
+  playBtn.children[0].classList.add('fa-pause') //add ho jayega play cuz gana toh chal raha hai
+  playBtn.children[0].classList.remove('fa-play')
+
+})
+
+//carousal bnaya tha image 4 ke baad phir se 1 pe aa rahi thi...waise hi is music player m bhi karna hai...
+//4 ke baad phir se 1st song chale....dono button se chalana hai...back wale pe click kare toh 4,3,2,1 is order m chale...
+//previous and next functionality ko implement karna hai
+// using a modulus
+//shiffle bhi bna lena... suppose 4 gane hai...toh 0 se 4 tak ki array ki length hai wha tak ka ek random number generate kar do...and us gane ko src m dal do...toh song random number se chal jayega
+//song(rn).mp3
 
 
+/*
+let playBtn = document.getElementById("play-btn");
+let songList = document.getElementById("song-list");
+let progress = document.getElementById("progress");
 
+let songs = [
+  { name: "song1", id: 1 },
+  { name: "song2", id: 2 },
+  { name: "song3", id: 3 },
+  { name: "song4", id: 4 }
+];
 
+let audio = new Audio("./assets/song1.mp3");
 
+for (let song of songs) {
+  let li = document.createElement("li");
+  li.innerText = song.name;
+  li.setAttribute("id", song.id);
+  li.classList.add("song-item");
+  songList.append(li);
+}
+
+playBtn.addEventListener("click", function () {
+  audio.paused ? audio.play() : audio.pause();
+
+  if (playBtn.children[0].classList.contains("fa-play")) {
+    playBtn.children[0].classList.remove("fa-play");
+    playBtn.children[0].classList.add("fa-pause");
+  } else {
+    playBtn.children[0].classList.remove("fa-pause");
+    playBtn.children[0].classList.add("fa-play");
+  }
+});
+
+audio.addEventListener("timeupdate", function () {
+  let currentProgress = (audio.currentTime * 100) / audio.duration;
+  progress.value = currentProgress;
+});
+
+progress.addEventListener("change", function () {
+  let updatedTime = (audio.duration * progress.value) / 100;
+  audio.currentTime = updatedTime;
+});
+
+songList.addEventListener("click", function (event) {
+  let songId = event.target.getAttribute("id");
+  audio.src = `./assets/song${songId}.mp3`;
+  audio.currentTime = 0;
+  audio.play();
+
+  playBtn.children[0].classList.remove("fa-play");
+  playBtn.children[0].classList.add("fa-pause");
+});
+
+*/
 
 
 

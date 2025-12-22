@@ -5,14 +5,10 @@ button{
 
 i{
   font-size: 1.6rem;
-}
-
-#progress{
   cursor: pointer;
 }
 
-i{
-  font-size: 1.6rem;
+#progress{
   cursor: pointer;
 }
 
@@ -21,7 +17,8 @@ i{
   height: 500px;
   margin: 50px auto;
   text-align: center;
-  position: relative;
+  /* Ye reference point banata hai...Neeche jo play-section hai..Wo absolute hai...Absolute child parent ke relative move karega */
+  position: relative; 
   border: 2px solid black;
 }
 
@@ -44,7 +41,7 @@ i{
   border: 1px solid black;
   width: 60%;
   margin: 10px auto;
-  padding: 5px 10p;
+  padding: 5px 10px;
   border-radius: 20px;
   cursor: pointer;
   list-style: none;
@@ -53,16 +50,4 @@ i{
 .song-item:hover{
   background-color: rgb(151, 148, 148);
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
