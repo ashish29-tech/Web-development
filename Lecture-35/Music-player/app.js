@@ -280,7 +280,15 @@ audio.addEventListener('timeupdate', function(){
 })
 
 
-
+//now aisa karna hai jaise gaana aage kiss point pe click kare toh wha se chale...means drag karne se chale
+//Toh input pe event laga rahe hai..input ko change kar rahe hai..aage-peeche kar rahe hai ye change hai.
+//progress jo input hai uspe event add kar rahe hai...change. 
+progress.addEventListener('change' , function(){
+  //change ho raha hai toh formula... total duration hai and jo change karne se progress ki value hai..divided by 100...isse current time aa jayega aur gana chala sakte hai
+  let updatedTime = audio.duration * progress.value / 100 //isse updated time mil jayega
+  //now updated time ko current time ke barabar kar do
+  audio.currentTime = updatedTime;
+})
 
 
 
