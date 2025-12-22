@@ -269,8 +269,15 @@ playBtn.addEventListener('click', function(){
   }
 })
 
-
-
+//now we want jaise gaana starting se chalta hai waise ye range/progress bar bhi chale
+//toh yha ek event hota hai time update...google mdn time update
+//time update event trigger ho rha hai gaane ke upar..and gaana kya hai audio...
+audio.addEventListener('timeupdate', function(){
+  //google input range and open w3school. Html m hamne input m hamne range le rakha hai na....iski range 0 to 100 hoti hai...
+  let currentProgress =  audio.currentTime * 100 / audio.duration  //ex: 200sec ho gaye kisi gane ke out of 600sec(10min) m se toh mtlb 200 divided by 600 and mutiply by 100 toh approx 33% ho gya duration. Isse current progress pta chal jayega
+  //currentProgress input ki value pe lagegi....progress ko ek value dedi
+  progress.value = currentProgress; 
+})
 
 
 
