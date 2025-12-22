@@ -1,7 +1,6 @@
 
 button{
   background: none;
-
 }
 
 i{
@@ -14,6 +13,7 @@ i{
 
 i{
   font-size: 1.6rem;
+  cursor: pointer;
 }
 
 #container{
@@ -40,8 +40,19 @@ i{
   padding: 10px 0;
 }
 
+.song-item{
+  border: 1px solid black;
+  width: 60%;
+  margin: 10px auto;
+  padding: 5px 10p;
+  border-radius: 20px;
+  cursor: pointer;
+  list-style: none;
+}
 
-
+.song-item:hover{
+  background-color: rgb(151, 148, 148);
+}
 
 
 

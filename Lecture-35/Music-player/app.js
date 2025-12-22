@@ -225,14 +225,49 @@ let songs = [
   }
 ]
 
+//jaise promise() ek constructor tha...waise hi Audio() bhi hai. Google and read mdn..HTMLAudioElement: Audio constructor()
+// Audion constructor use kaise karte hai ? new audio and uske andar url dal dete hai
+//variable m store karna hai...and .play()...naam ka method hai...
 
+//link asset ke andar hai na
+let audio = new Audio('./assets/song1.mp3') // ./assts/song1.mp3 .....ye new audio ek object return karega use var m store kar liya
 
+//now the task is to show the song list in the UI
 
+//array hai toh array ke upar loop kar sakte hai
+for(let song of songs){ //ye song naam ka iterator hai ye ek-ek kar ke upar songs ke pure object ko point kar rha hai
+  //har ek gane ke liye ek new li bnana padega cuz song ki list hai
+  let li = document.createElement('li') //create element list item create karta hai
+  //now we want jo list item hai hamara uspe gane ka naam nazar aye...toh li ke andar texr bharna padega
+  //  //ye for loop m song naam ka iterator hai ye ek-ek kar ke upar songs ke pure object ko point kar rha hai and koi property chahiye hogi toh .name, .id .......
+  li.innerText = song.name
+  //id bhi set karni hai...iske liye setAttribute prop. 
+  //id attribute lagana chahte hai...songId pe
+  li.setAttribute('id', song.id) //1st ye kon sa attribute lega and 2nd attribute set kar deta hai
+  //song list ki styling nai kari toh...dynamic class add kar dete hai...and class ke base pe use style kar denge
+  li.classList.add('song-item')
+  //song list m list item ko append kar diya
+  songList.append(li);
+}
 
-
-
-
-
+//jab play pe click kare toh pause karna ka symbol aye and jab pause pe cick kare toh play ka symbol bna jaye. Mtlb ek event listen karna padega merko
+//play btn ka icon badlo and song chalao
+playBtn.addEventListener('click', function(){
+  //ya toh audio pause hogi ya fir nahi hogi. Paused hai toh play kar do...wrna ultimately pause kar do.
+  audio.paused ? audio.play() : audio.pause();
+  //sath-sath iske icon bhi badalne hai. icon hai fa-play(html dekh wha hai). Button ke upar event ho rha hai..button ka child hai i...toh hame i ki class badalni hai
+  //playBtn ka children 0th node pe..agr wo classList contain karta hai..fa-play
+  //mtlb jis button pe maine click kiya hai..uske andar ek child hai i...i ke andar ek class hai...toh we want to check if that is class..
+  if(playBtn.children[0].classList.contains('fa-play')){
+    //playbtn ke children ke class m jao and remove kar do fa-play ko..and add kar do fa-pause ko
+    playBtn.children[0].classList.remove('fa-play');
+    playBtn.children[0].classList.add('fa-pause')
+  }
+  else{
+    playBtn.children[0].classList.remove('fa-pause')
+    playBtn.children[0].classList.add('fa-play');
+  }
+})
 
 
 
