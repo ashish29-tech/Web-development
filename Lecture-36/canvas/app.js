@@ -48,7 +48,13 @@ ctx.fillStyle = "red";
 ctx.fillText('ashish' , 50 , 75 ,); //accepts 4 arguments. string, x, y, undefines optional hota hai
 
 
+//--------------------------------------------------------
+//random
 
+ctx.font = "28px serif"
+ctx.fillStyle = "red";
+//Alag-alag text bhi draw kar sakte hai
+ctx.fillText('ashish' , 50 , 75 ,); //accepts 4 arguments. string, x, y, undefines optional hota hai
 
 
 
