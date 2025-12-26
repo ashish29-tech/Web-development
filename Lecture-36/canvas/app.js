@@ -73,22 +73,28 @@ let ctx = canvas.getContext('2d'); //ctx naam rakh diya brush ka. Paint brush ko
 
 //now path bnana hai...brush ko pick karenge and move karenge starting point pe...phir jha tak karna chahte hai wha tak ki line draw karenge.
 //phir uske leke jani hai toh line to...then phir se toh line to...fir fill kar denge...then close kar denge path ko.
-ctx.beginPath();
-ctx.moveTo(20,30); //brush utha ke is coorinates pe move kar diya
-ctx.lineTo(120,130);
-ctx.lineTo(20,130);
-ctx.lineTo(20,30);
-ctx.lineTo(120,30);
-ctx.lineTo(120,130);
-ctx.strokeStyle = 'red'
-ctx.stroke(); //stroke m line aa rahi hai
-ctx.fillStyle = 'green'
-ctx.fill() //
-ctx.closePath()
+// ctx.beginPath();
+// ctx.moveTo(20,30); //brush utha ke is coorinates pe move kar diya
+// ctx.lineTo(120,130);
+// ctx.lineTo(20,130);
+// ctx.lineTo(20,30);
+// ctx.lineTo(120,30);
+// ctx.lineTo(120,130);
+// ctx.strokeStyle = 'red'
+// ctx.stroke(); //stroke m line aa rahi hai
+// ctx.fillStyle = 'green'
+// ctx.fill() //
+// ctx.closePath()
 
 
 //--------------------------------------------
 
+ctx.font = '28px sans-serif'
+ctx.fillStyle = 'red'
+//If we want alag-alag text bhi draw kar sakte hai...
+
+//it accepts 4 things...hower over it and see. 4th is optional
+ctx.fillText('ashish', 50, 75)
 
 
 
