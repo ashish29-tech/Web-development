@@ -1,0 +1,27 @@
+
+Canvas is a HTML element.
+
+HTML m koi webAPI hoti hai ? Yes
+HTML ki 2 webAPI hoti hai. 1. canvas 2. svg . Although they work as tags.
+
+Canvas work is to draw/display graphics on your webpage. Graphics here means showing lines, square, rectangle..etc. Graphics
+made by canvas.
+
+Whenever use canvas use inline css in HTML cuz external ke sath ye height and width cater nahi karta.
+
+
+Brush ko we call it context.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
