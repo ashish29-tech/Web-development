@@ -279,4 +279,90 @@
 // //toh find karenge... purana point 100,50 + 50(cell size)...toh agr purane head m 50 add kar de toh new head ban jayega
 // //Toh new head = head + 50
 
+//-------------------------------STEP 3------------------------------------------------------------
+
+//sbse pehle canvas ko select
+let canvas = document.querySelector('canvas');
+//brush select
+let ctx = canvas.getContext('2d'); //canvas ke andar getContext milta hai
+
+//aage jata hai toh peeche jgah khali chut jat haogi...
+//phir kuch seconds baad aage badhega...means update hoga...
+//Update hone ke baad draw bhi toh ho rha 
+//toh mtlb we can make 2 functions...update and draw...
+//aur peeche wale gayab
+//snake can be of any size
+//we are assuming snake is a rectangle
+//starting m sirf 1 hi length ka hota hai. Mtlb 1 rectangle ka. Iski width and height...ke liye hamne cell size ka variable le rakha hai...50 hai 1 cell ka size..
+//so height bhi 50 and length bhi 50..1 cell/rectangle ki....
+//Toh if 1 rectangle draw kare toh...x,y coordinates ke aage...50,50 ki jgah...we can use variable...cell size
+//Agr snake 3 length ka hai toh....coordinates honge...(x1,y1), (x2,y2), (x3,y3)...toh 3 rectangle bnane hai.
+//Toh agr 1 rectangle ko bnane ke liye uska starting point chahiye..uska x,y..baki height and width toh cell size ke variable se define kar rakhi hai...
+//
+
+let cellSize = 50;
+let boardHeight = 600;
+let boardWidth = 1000;
+
+//If snake 3 length ka hai toh coordinates honge..(x1,y1) (150,50), (x2,y2)(200,50), (x3,y3)(250,50)...toh hame ye teeno point sambhal ke rakhne hai..
+//Toh ham array m sambhal ke rakh sakte hai... [150,50] [200,50] [250,50]..in sare points se snake ka rectangle banega...toh in sabko jodna padega
+//Toh ham 2d array bna sakte hai....toh snake ke cells will be a 2d array....jo start hoga bilkul starting se[[0,0]]
+//And uski initial length 1 hai
+let snakeCells = [ [0,0]] //snake ki length initially 1 hai toh coordinates honge 0,0
+// let snakeCells = [ [0,0], [50,0], [100,0]]  //if snake ki length 3 hoti toh 3 coorsinates hote
+
+
+//snake draw
+function draw(){
+  //draw karne se pehle erase kar dena chahiye...pure board ko for draw karna chahiye..erase karne ke liye we have clearRect()
+  ctx.clearRect(0, 0, boardWidth, boardHeight) //0,0 se lekar 1000, 600 tak...aur ye hamne varible liya hua hai width and height name se
+  //rectangle draw karna hai...iske liye hamare paas array hai...is array ko reference leke array ko draw karna hai
+  //array ko draw karne ke liye for loop 
+  for(let cell of snakeCells){
+    //fill karne se pehle
+    ctx.fillStyle = 'brown'
+    //[ [0,0] ]..is cell ka 0th index 1st zero and first index next 0....uske baad 50,50 chahiye toh wo hame cellSize se mil rha hai
+    //isse rectangle ban raha hai..
+    ctx.fillRect(cell[0], cell[1], cellSize, cellSize); //rectangle ko fill kar dete hai. Cell se 0th se karna hai cuz 2d hai na..
+  }
+}
+
+//snake update har thori der m
+function update(){
+  //snakeCells ke andar ja and uske andar snakecells ki jo length hai...usme se 1 minus...taki hame last wala mil jaye and last wale ka jo 1st coordinate hai that will be x
+  let headX = snakeCells[snakeCells.length  - 1][0];
+  let headY = snakeCells[snakeCells.length  - 1][1]; //
+
+  let newHeadX = headX + cellSize //purane headX m jao and cellSize se plus kar do toh new headX mil jayega
+  let newHeadY = headY;
+
+  //ab jo rectangle bnana hai wo newhead se bnana hai...toh [0,0] se [50,0] ho gayi...mgr bina khana khaye nahi ho sakti toh purane coordinate [0,0] ko htana padega
+  //toh snakecells m push karna hai array ko...jo newHeadX and newHeadY store karta hai
+  snakeCells.push([newHeadX , newHeadY]);
+  //update karte hue peeche ki value hta di cuz bina khana khaye length nahi badh sakti
+  snakeCells.shift(); //and use sarting se shift bhi kar dena hai taki 0,0 wala hat jaye. Shift starting se hta deta hai.
+}
+
+//snake khana khayega and aage badh jayega...ye kaam baar-baar ho raha hai...toh iske liye we have setInterval method..
+setInterval(function(){ //it accepts a callback function..and 2nd chiz is kitni der m tunhe use chalana hai.
+  //Pehle update karega phr draw..phir update and phir draw...
+  update() //update ko call kar liya 
+  draw() //yha draw ko call kar diya
+}, 200)
+
+
+//As of now we are assuming snake is moving towards right side
+//Suppose starting m snake...50,50 pe tha...and food khaya toh 2 length ho gayi...coordinates milenge..100,50...then fir food kahaya toh 150,50 mila coordinartes..
+//toh ye coordinates baar-baar change ho rahe hai aur rectangle change ho raha hai...toh ye points baar-baar find karna padega
+//toh find karenge... purana point 100,50 + 50(cell size)...toh agr purane head m 50 add kar de toh new head ban jayega
+//Toh new head = head + 50
+
+
+
+
+
+
+
+
+
 
