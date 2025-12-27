@@ -329,6 +329,7 @@ function draw(){
 
 //snake update har thori der m
 //snake update har thori der m...
+//snake update har thori der m
 function update(){
   //snakeCells ke andar ja and uske andar snakecells ki jo length hai...usme se 1 minus...taki hame last wala mil jaye and last wale ka jo 1st coordinate hai that will be x
   let headX = snakeCells[snakeCells.length  - 1][0];
