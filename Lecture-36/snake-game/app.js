@@ -328,8 +328,6 @@ function draw(){
 }
 
 //snake update har thori der m
-//snake update har thori der m...
-//snake update har thori der m
 function update(){
   //snakeCells ke andar ja and uske andar snakecells ki jo length hai...usme se 1 minus...taki hame last wala mil jaye and last wale ka jo 1st coordinate hai that will be x
   let headX = snakeCells[snakeCells.length  - 1][0];
@@ -359,6 +357,7 @@ setInterval(function(){ //it accepts a callback function..and 2nd chiz is kitni 
 //toh find karenge... purana point 100,50 + 50(cell size)...toh agr purane head m 50 add kar de toh new head ban jayega
 //Toh new head = head + 50
 
+console.log(first)
 
 
 
