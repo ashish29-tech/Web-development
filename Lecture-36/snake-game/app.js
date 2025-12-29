@@ -286,7 +286,7 @@ let canvas = document.querySelector('canvas');
 //brush select
 let ctx = canvas.getContext('2d'); //canvas ke andar getContext milta hai
 
-//aage jata hai toh peeche jgah khali chut jat haogi...
+//aage jata hai toh peeche jgah khali chut jati haogi...
 //phir kuch seconds baad aage badhega...means update hoga...
 //Update hone ke baad draw bhi toh ho rha 
 //toh mtlb we can make 2 functions...update and draw...
@@ -308,7 +308,7 @@ let boardWidth = 1000;
 //Toh ham array m sambhal ke rakh sakte hai... [150,50] [200,50] [250,50]..in sare points se snake ka rectangle banega...toh in sabko jodna padega
 //Toh ham 2d array bna sakte hai....toh snake ke cells will be a 2d array....jo start hoga bilkul starting se[[0,0]]
 //And uski initial length 1 hai
-let snakeCells = [ [0,0]] //snake ki length initially 1 hai toh coordinates honge 0,0
+let snakeCells = [ [0,0] ] //snake ki length initially 1 hai toh coordinates honge 0,0
 // let snakeCells = [ [0,0], [50,0], [100,0]]  //if snake ki length 3 hoti toh 3 coorsinates hote
 
 
@@ -319,7 +319,7 @@ function draw(){
   //rectangle draw karna hai...iske liye hamare paas array hai...is array ko reference leke array ko draw karna hai
   //array ko draw karne ke liye for loop 
   for(let cell of snakeCells){
-    //fill karne se pehle
+    //fill karne se pehle. Canvas me pehle color set hota hai. Fir shape draw hota hai
     ctx.fillStyle = 'brown'
     //[ [0,0] ]..is cell ka 0th index 1st zero and first index next 0....uske baad 50,50 chahiye toh wo hame cellSize se mil rha hai
     //isse rectangle ban raha hai..
@@ -330,8 +330,8 @@ function draw(){
 //snake update har thori der m
 function update(){
   //snakeCells ke andar ja and uske andar snakecells ki jo length hai...usme se 1 minus...taki hame last wala mil jaye and last wale ka jo 1st coordinate hai that will be x
-  let headX = snakeCells[snakeCells.length  - 1][0];
-  let headY = snakeCells[snakeCells.length  - 1][1]; //
+  let headX = snakeCells[snakeCells.length  - 1][0]; //index = length - 1 karo and x wala chahiye toh 0. [0] → x coordinate
+  let headY = snakeCells[snakeCells.length  - 1][1]; //index = length - 1 karo and y wala chahiye toh 1st. Last wale ka 2nd coordinate hai wo y. [1] → y coordinate
 
   let newHeadX = headX + cellSize //purane headX m jao and cellSize se plus kar do toh new headX mil jayega
   let newHeadY = headY;
@@ -357,7 +357,6 @@ setInterval(function(){ //it accepts a callback function..and 2nd chiz is kitni 
 //toh find karenge... purana point 100,50 + 50(cell size)...toh agr purane head m 50 add kar de toh new head ban jayega
 //Toh new head = head + 50
 
-console.log(first)
 
 
 
