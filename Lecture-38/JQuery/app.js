@@ -36,12 +36,29 @@ para.css('background-color', 'green'); //we are using kabab case...generally lij
 // //We'll be using method
 
 //para ke andar css method chalaya usme we are giving an object...
-para.css({ //object to key:value pair hi hote hai
-  color: 'blue',
-  border: '5px solid green',
-  fontSize: '40px',
-  backgroundColor: 'pink' //here we are using camel case..Remember Objects are part of js. And js m use camel case.. kabab case isn't used. Jab bhi object format m use karte hai...
-})
+// para.css({ //object to key:value pair hi hote hai
+//   color: 'blue',
+//   border: '5px solid green',
+//   fontSize: '40px',
+//   backgroundColor: 'pink' //here we are using camel case..Remember Objects are part of js. And js m use camel case.. kabab case isn't used. Jab bhi object format m use karte hai...
+// })
+
+//----------------------------------------------------
+//innerText, innerHTML, textContent..etc.....are these things available here in jQuery ?
+//accessing text possible ?
+//acting like a getter
+// console.log(para.text()); //can we see paragraph text. Display none...wala bhi content dikh rha hau... This is brainless...and brainless is textContent
+
+//can it act like setter also ? Yess
+// para.text('FILMO KE SARE HERO HAI MERE AAGE ZERO');
+// para.text('M kar ke hi manunga..I do not have any option')
+
+//innerHTML ke liye....This works as GETTER AND SETTER AS WELL.
+// console.log(para.html());
+
+
+
+
 
 
 
