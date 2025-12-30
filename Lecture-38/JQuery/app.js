@@ -57,6 +57,38 @@ para.css('background-color', 'green'); //we are using kabab case...generally lij
 // console.log(para.html());
 
 
+//-------------------------------------------------------
+//Attributes --> attr()
+//get and set attributes property hoti hai DOM m...
+//yha get and set attribute ki jgah.. attr
+
+let inp = $('input'); //select kar liya input ko
+
+//html m input ko type and id di hui hai..
+// console.log(inp.attr('type')); //getAttribute ka kaam karega
+// console.log(inp.attr('id')); //2nd attribute ye hai 
+
+//setter ka kaam karta hai ?.....Yess...setter m 2 arguments hote hai..1st jis chiz ko set karna hai...2nd jis chiz se set karna hai
+// inp.attr('type' , 'color')
+// inp.attr('type', 'date')
+// inp.attr('type', 'checkbox')
+
+
+//--------------------------------------
+//ul bnai hai usme 3 li hai...
+//1 li select karna chahte hai
+
+//selecting first and last element
+// let lis = $('ul li') //ul ke andar jo li hai use select karo...isse li select ho gya
+// lis.css('color' , 'green') //ye sabpe hi lag rha hai we want ki 1 pe lage
+
+let lis = $('ul li').first(); //sirf pehla li select ho
+lis.css('color' , 'red')
+
+let liss = $('ul li').last();
+liss.css('color' , 'green')
+
+
 
 
 
