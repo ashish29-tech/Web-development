@@ -27,8 +27,19 @@
 
 //keyup, keydown chalana hai to
 //keyup means press karne ke baad key jab upar ati hai...keydown means ek baar jaba key niche jati hai
-$('input').keyup(function(){ //button ke upar keyup event....keyup hote hi function chalana hai
-  console.log("Hello Ashish");
+// $('input').keyup(function(){ //button ke upar keyup event....keyup hote hi function chalana hai
+//   console.log("Hello Ashish");
+// })
+
+//---------------------------------------------
+//addEventListener ki jagah on event hai yha
+
+$('button').on('click' , function(){ //button pe click kiya jaye tab 1 function chla do
+ //console.log("Hello");
+ let ans = $('input').val() //input ko select kiya aur uski value show kar di
+ console.log(ans)
+ console.log($('input').val())
 })
+
 
 
