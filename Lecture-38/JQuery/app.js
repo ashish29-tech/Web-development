@@ -112,8 +112,22 @@ para.addClass('a b c'); //Yess
 
 // para.addClass('a' , 'b'); //comma separated not possible. Multiple arguments not possible
 
+//remove 
+//  para.removeClass('a')
+//  para.removeClass('a b c')
+//  para.removeClass('a')// Yess reomove ho jayega
+  // para.removeClass('a b')
 
- 
+
+// Toggle
+para.toggleClass('a'); //print this in browser console and we'll see a nahi hai toh add ho jayega
+para.toggleClass('a b'); //Ek sath 2 class de sakte hai
+
+//jo kaam contain karta tha wahi kaam hasClass karega
+//hasClass
+
+// console.log(para.hasClass('a')) //hogi to true nai toh false
+ para.hasClass('a')
 
 
 
