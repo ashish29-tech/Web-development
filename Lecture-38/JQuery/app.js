@@ -22,15 +22,15 @@
 // //Class
 // let kilaas = $('.ashish'); //ashish naam ki class hai to .ashish
 
-let para = $('p'); 
+// let para = $('p'); 
 
 //----------------------------------------------------------
 //Manipulation
 //Yha pe direct CSS likhte hai
 
-para.css('color', 'red'); //css ek method hai...it'll accept 2 things...1st jo property change karni hai...2nd jo value ke sath change karni hai
-para.css('border' , '2px solid black');
-para.css('background-color', 'green'); //we are using kabab case...generally lijh rahe to CSS ki property use karni hoti hai
+// para.css('color', 'red'); //css ek method hai...it'll accept 2 things...1st jo property change karni hai...2nd jo value ke sath change karni hai
+// para.css('border' , '2px solid black');
+// para.css('background-color', 'green'); //we are using kabab case...generally lijh rahe to CSS ki property use karni hoti hai
 
 // //baar-baar para. karna pad rha hai...so better ke liye
 // //We'll be using method
@@ -60,9 +60,9 @@ para.css('background-color', 'green'); //we are using kabab case...generally lij
 //-------------------------------------------------------
 //Attributes --> attr()
 //get and set attributes property hoti hai DOM m...
-//yha get and set attribute ki jgah.. attr
+//yha get and set attribute ki jgah.. attr hai hamare paas
 
-let inp = $('input'); //select kar liya input ko
+// let inp = $('input'); //select kar liya input ko
 
 //html m input ko type and id di hui hai..
 // console.log(inp.attr('type')); //getAttribute ka kaam karega
@@ -82,13 +82,38 @@ let inp = $('input'); //select kar liya input ko
 // let lis = $('ul li') //ul ke andar jo li hai use select karo...isse li select ho gya
 // lis.css('color' , 'green') //ye sabpe hi lag rha hai we want ki 1 pe lage
 
-let lis = $('ul li').first(); //sirf pehla li select ho
-lis.css('color' , 'red')
+// let lis = $('ul li').first(); //sirf pehla li select ho
+// lis.css('color' , 'red')
 
-let liss = $('ul li').last();
-liss.css('color' , 'green')
+// let liss = $('ul li').last();
+// liss.css('color' , 'green')
+
+//--------------------------------------------------------------
+//Input se value chahiye
+//.val method acts like getter as well as setter also
+
+//sbse pehle select karna padega
+// let inp = $('input');
+// console.log(inp.val()); //input select kiya...val naam ka method. Getter ka kaam. Print this console statement in browser console.
+// inp.val('mai nahi btaunga'); //setter ka kaam.........ye statement browser console m run krni hai and input m value set ho jayegi..
 
 
+//-----------------------------------------------------------
+//class attributes
+//classlist.add , classlist.remove
+
+let para = $('p');
+
+// para.addClass('a'); //class ko add karna..add kiya 'a' class. Link kiya stylesheet and style.css m a,b,c bna diya.
+// para.addClass('a')
+
+// can we add multiple classes as well ?
+para.addClass('a b c'); //Yess
+
+// para.addClass('a' , 'b'); //comma separated not possible. Multiple arguments not possible
+
+
+ 
 
 
 
