@@ -14,10 +14,12 @@
 //In the case of AJAX request...the request is parsed(layer hoti request and resoonse ke beech m js ki) with the help of js and is being sent to the server and once the server accepts the requests
 // and understand the type of request it needs to send back then it only sends the data or we'd say the js..and that js parses through the js layer and ultimately send back to the client/browser where it could be used.
 //Isme sirf JS hoti hai...HTML and CSS nai hoti.
+//Tradiitional request jisme reloading takes place...is called MPA(Multi Page Application)
 //Jisme(AJAX) reloading nai hoti use SPA(Single Page Application) kehte hai.
 //Isme data ate hai 2 types ke...XML and JSON...and even in these...XML 1% and 99% JSON(JS object Notation).
 //Isme SEO thora poor hota hai. But faster hoti hai.
 
+//Traditional req m reloading, good SEO, slow website
 
 //JSON...object ki trah hoga. But isme jo keys hongi wo double inverted comma m hongi...values maybe or not ho skti hai "" m.
 //XML(Xtensible Markup Language)..ye HTML
@@ -36,7 +38,7 @@
 //Samarth vohra sir's favorite API...tvmaze API............https://www.tvmaze.com/api
 
 
-//Call js karega hamare liye data ko...now the question us ye calling ham kis-kis tarike se kar sakte hai ? 
+//Jo data API dega use Call js karega hamare liye data ko...now the question us ye calling ham kis-kis tarike se kar sakte hai ? 
 //How can we send request using JS ? 
 //several ways...some are...XML HTTPS request, fetch(), axios(), jQuery, 
 
