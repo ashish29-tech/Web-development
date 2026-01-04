@@ -27,8 +27,10 @@ req.onerror = function(){ //onerror ho tab kya karna hai...tab function bana den
 req.onload = function(response){
   // console.log(response)
   console.log(this)
+  console.log(this)
   console.log(this.response)
 }
+
 //onload ho tab bhi ek function bna denge. onload means jab sab successful ho gya..
 // req.onload = function(response){ //error nai aya to koi na koi resonse ayega...us response ko dekhne ke liye
 //   console.log(this); //dekhne ke liye this
