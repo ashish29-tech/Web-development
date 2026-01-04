@@ -6,8 +6,9 @@
 
 // XML HTTP Request...it's a cf.
 
- let req =  new XMLHttpRequest() //It'll give us a new object. Now we have request naam ka object...
+//  let req =  new XMLHttpRequest() //It'll give us a new object. Now we have request naam ka object...
 
+let req =  new XMLHttpRequest()
 //  //Ab request open karni hai. API(kisi website) se data mangwana hai toh getMethod
 // //  https://api.tvmaze.com/search/shows?q=girls
 
