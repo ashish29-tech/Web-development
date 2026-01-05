@@ -4,11 +4,9 @@
 //Ex: we need to send a request to some remote server..
 //XMLhttprequest is a constructor function. And cfunc ke aage new keyword lagta hai. And function hai toh run karna padega.
 
-// XML HTTP Request...it's a cf.
+// XML HTTP Request...it's a cf. CF ke aage new keyword lagta hai. cf m..Convention: function ka naam Capital letter
+let req =  new XMLHttpRequest() //It'll give us a new object. Now we have request naam ka object...
 
-//  let req =  new XMLHttpRequest() //It'll give us a new object. Now we have request naam ka object...
-
-let req =  new XMLHttpRequest()
 //  //Ab request open karni hai. API(kisi website) se data mangwana hai toh getMethod
 // //  https://api.tvmaze.com/search/shows?q=girls
 
@@ -28,9 +26,9 @@ req.onerror = function(){ //onerror ho tab kya karna hai...tab function bana den
 req.onload = function(response){
   // console.log(response)
   console.log(this)
-  console.log(this)
   console.log(this.response)
 }
+
 
 //onload ho tab bhi ek function bna denge. onload means jab sab successful ho gya..
 // req.onload = function(response){ //error nai aya to koi na koi resonse ayega...us response ko dekhne ke liye
