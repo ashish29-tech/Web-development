@@ -11,7 +11,7 @@
 fetch('https://api.tvmaze.com/search/shows?q=girls') //promise return karti hai...uspe ham
 .then(function(response){ // .then, .catch  ki chaining lgate hai. Ye response accept karega.
   // console.log(response , 'ash') //response ke aage 'ash' likh diya taki pta chal jaye response hai ya nai. Ye complete data nai deta.
-  //Thsi json also returns a promise. Promise return kara rahe..toh .then ki chaining kar sakte
+  //Thsi json method also returns a promise. Promise return kara rahe..toh .then ki chaining kar sakte
   return response.json() //complete data nai deta isliye json...json parses(mtlb jo bhi data hoga wo json format m convert ho jayega) the data and returns a promise(returns a promise means data ke sare packets ka intzaar)...ye resolve ya reject karega and usko return kar dega.
 })
 .then(function(data){ //.then ki chaining. Upar se jo bhi(data) return karega json use catch kar liya....Data aya
@@ -24,6 +24,7 @@ fetch('https://api.tvmaze.com/search/shows?q=girls') //promise return karti hai.
 
 
 //json promise return karta hai(wait karta hai pura data ane ka) and parses the data.
+//fetch returns a promise. By default get method.
 
 
 
