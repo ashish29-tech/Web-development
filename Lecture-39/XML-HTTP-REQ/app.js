@@ -16,17 +16,20 @@ console.log(req); //we'll see massive object in browser console. Isme kai method
 //Hover over open word and we'll see 1st method puch rha hai...and 2nd arg is url..ki kon si api se data chahiye
 req.open('GET' , 'https://api.tvmaze.com/search/shows?q=girls') //request open kiya..get method ki help se is wale API ko call karenge... Abhi call nai kiya...abhi to connection open kiya
 //ek method hota hai..req.send()
+//connection ko send karna padta hai
 req.send(); // req ko actually m bhejna. Open live server and check wha response m data dikhega. And now when we check above console method in browser console..we'll see response mil rha hai pehle empty tha.
 
 //error bhi aa sakta hai...
+//koi error aye toh onerror
 req.onerror = function(){ //onerror ho tab kya karna hai...tab function bana dena hai
 
 }
 
-req.onload = function(response){
-  // console.log(response)
-  console.log(this)
-  console.log(this.response)
+//jab request chali gayi and sab kuch successful ho gya tab ham onload method ka use karte hai
+req.onload = function(response){ //koi response ayega
+  console.log(response)
+  console.log(this) //response ko dekhne ke liye
+  // console.log(this.response) //response ke andar jo data tha wo dikh raha...now we can manipulate this data with the help of DOM.
 }
 
 
