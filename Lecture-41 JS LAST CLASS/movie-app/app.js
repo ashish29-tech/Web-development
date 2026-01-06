@@ -91,19 +91,18 @@ btn.addEventListener('click', function(){ //button pe addEventListener chala hai
 //api ko call karne ke liye ek function bna rahe hai
 function fetchData(searchText){ //is function ko upar call kar lenge..
   //fetch tarike se
-  fetch(`https://api.tvmaze.com/search/shows?q=${searchText}`) //api ka link dal diya
-  //fetch ek promise return karta hai
-  .then(function(res){ //.then ek cb function accept karta hai. Jo bhi dena hai wo res m..
-    console.log(res); //par koi data nahi ayega..sirf meta data ayega...cuz single packet ata hai pura data mahi ata
-    //isliye response ko json dena padta hai
-    return res.json(); //return kara diya taki ispe fir se promise lga sake..cuz json method also returns a promise
-  })
-  .then(function(data){//jo return hoke aya use data naam de diya
-    console.log(data); //jo array aya hai data name se hai
-
-    manipulateDom(data); //toh yha niche jo function bnaya hai use call kar liya..data name se
-  })
-
+  
+//--------------------------------
+  // //axios wale tarike se
+  // axios.get(`https://api.tvmaze.com/search/shows?q=${searchText}`) //url paste kiya and since ham aur search kar paye isliye girls hta ke searchText
+  // //axios returns a promise
+  // .then(function(response){ //resolve hoga toh .then... and it accepts a callback func...jo bhi milega wo response
+  //   console.log(response) //response print. Type girls or anything and we'll get data...iske andar bhi property hai toh .data lga denge. And kisi ek data ko open karenge toh usme bhi hai..show
+  //   console.log(response.data) //ab pura ka pura data ayega...array ara hai. Now array ko iterate karenge and DOM ko manipulate karenge..
+  //   //yahi se manipulate ko call kar liya...response ke sath data toh hai hi
+  //   manipulateDom(response.data)// manipulate. array(jo browser console m mil rha tha) toh hai hi hamare paas. Niche function bna lete hai 
+  // })
+  // // .catch()
 }
 
 
