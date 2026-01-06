@@ -1,0 +1,53 @@
+
+search karna hoga...1 input chahiye hoga
+And ek button chahiye...jab bhi button press hoga uske corresponding input uthayenge...and data ke sath kaam karna start karenge
+
+
+We'll call api. tv maze api. Why ? Cuz html, css, js do not contain movie info...we need data source.
+That data lives on a server. 
+
+API = Bridge between frontend & server
+
+API (Application Programming Interface) is like a waiter 🍽️
+
+You (frontend) → request movies
+
+API → talks to database
+
+API → sends movie data back (JSON)
+
+
+ https://api.tvmaze.com/search/shows?q=girls
+
+
+3 ways to call APIs.
+fetch, axios, xmlhttp.
+Here we'll be using Axios.. axios is a 3rd party libr. 
+
+
+input box hai. and search button hai. When we press search button...and event will be triggered. 
+This event..will take value from input...
+
+ https://api.tvmaze.com/search/shows?q=girls  ...api ke last m ?(question mark hai..means query)...yha query by default girls hai. But ye kabhi change hoga..like superman, ironman etc.
+ and ye change input ki value pe depend karegi...so we need to make our API bit dynamic.
+
+so...button ka kaam ayega, input ka kaam ayega, and ultimately jitni bhi movies milti jayengi..use list m store karenge...
+toh us div ka kaam ayega jo hamne bnaya hai...
+
+so select...input, button
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
