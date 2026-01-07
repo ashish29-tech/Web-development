@@ -1,15 +1,15 @@
 
-const person = { //object bnaya
-  first: "ashish",
-  favColor: "blue",
-  last: "ranjan"
-}
+// const person = { //object bnaya
+//   first: "ashish",
+//   favColor: "blue",
+//   last: "ranjan"
+// }
 
-console.log(person);
+// console.log(person);
 
-// //can I add a property in above object ? YESSSSSS
-person.age = 49; //jo bhi property add karni hai uska naam
-console.log(person); //ab new property add ho jayegi
+// // //can I add a property in above object ? YESSSSSS
+// person.age = 49; //jo bhi property add karni hai uska naam
+// console.log(person); //ab new property add ho jayegi
 
 // //------------------------------------------
 // //can I change the existing value ? YESSSSSSSSSS
@@ -19,16 +19,16 @@ console.log(person); //ab new property add ho jayegi
 // //--------------------------------------------
 // //can I delete a property ? YESSSSSSSSSSSS
 // delete person.age; //delete object name and jo property delete karni hai
-delete person.favColor;
-// delete person.last;
-console.log(person);
+// delete person.favColor;
+// // delete person.last;
+// console.log(person);
 
 // //---------------------------------------
 // //spread operator
 //It works on both the arrays and objects.
 
-let arr = [10, 20, 30, 40, 50, 60];
-let arr2 = [80, 90, 100];
+// let arr = [10, 20, 30, 40, 50, 60];
+// let arr2 = [80, 90, 100];
 
 // //concatination
 // let ans = arr.concat(arr2); //concat method...isme arr2 ko dal diya...output ko variable m le liya
@@ -40,8 +40,30 @@ let arr2 = [80, 90, 100];
 // // arr2 = [...arr, 80, 90, 100]; //spread operator array ke andar aa gya. It's a concatination in a modern way
 // console.log(arr2);
 
-let anss = [...arr, ...arr2];
-console.log(anss)
+// let anss = [...arr, ...arr2];
+// console.log(anss)
+
+// //--------------------------------------
+// //Object par spread operator
+
+let obj = {
+  l: "ash",
+  m: "ran",
+  n: 10
+}
+
+let obj1 = {
+  ...obj, //upar ka object add kar diya yha
+  age: 45 //new property dedi
+}
+console.log(obj);
+console.log(obj1);
+
+obj1.l = 200;
+
+console.log(obj); //kya change ayega ? Noo. Cuz uska(upar wale obj ka) reference paas nai hua..uski sari chize uth ke yha aa gyi
+console.log(obj1); //kya change ayega ? Yess
+
 
 
 
