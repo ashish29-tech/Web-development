@@ -46,24 +46,121 @@
 // //--------------------------------------
 // //Object par spread operator
 
-let obj = {
-  l: "ash",
-  m: "ran",
-  n: 10
+// let obj = {
+//   l: "ash",
+//   m: "ran",
+//   n: 10
+// }
+
+// let obj1 = {
+//   ...obj, //upar ka object add kar diya yha
+//   age: 45 //new property dedi
+// }
+// console.log(obj);
+// console.log(obj1);
+
+// obj1.l = 200;
+
+// console.log(obj); //kya change ayega ? Noo. Cuz uska(upar wale obj ka) reference paas nai hua..uski sari chize uth ke yha aa gyi
+// console.log(obj1); //kya change ayega ? Yess
+
+//------------------------------------------------
+//Destructuring(todna)
+//It happens in both array and object
+
+//Destructuring in array
+
+// let fruits = ['apple', 'mango', 'pineapple', 'strawberry']
+
+
+
+//bekar tarika
+// console.log(fruits[2]); //pineapple ki value access karna hai
+// console.log(fruits[0]);
+
+//modern way...array ki destructuring
+// let [a,b,c,d] = fruits; //4 fruits hai to 4 variable. Since array is a ordered data structure...isliye 1st(a) wale ko 1st value mil gyi and so on
+// let [a,b, ,d] = fruits; //c ki jgah khali kar diya to output kya hoga....bachi hui jgah pineapple ne occupy kar li
+
+// console.log(a);
+// console.log(b);
+// // console.log(c); //iski jgah kuch nai ayega...
+// console.log(d);
+
+//-------------------------------
+
+// let fruits = ['apple', 'mango', 'pineapple', 'strawberry']
+
+// let [a,b,c,d,e] = fruits; //Yha destructure 5 ko kar diya
+// let [a,b,c,d,e="banana"] = fruits; //this is called default value. e ki value mil gyi to theek wrna banana se kaam chalana padega
+// console.log(a);
+// console.log(b);
+// console.log(c); 
+// console.log(d);
+// console.log(e); //something is there par nai pta...isliye undefined
+//------------------------------------------
+// 
+// let fruits = ['apple', 'mango', 'pineapple', 'strawberry', 'litchi']
+
+// let [a,b,c,d,e="banana"] = fruits; //this is called default value. e ki value mil gyi to theek wrna banana se kaam chalana padega. Yha e ko mil gyi value
+// console.log(a);
+// console.log(b);
+// console.log(c); 
+// console.log(d);
+// console.log(e); //value mil gyi litchi...wrna banana ata
+
+//----------------------------------------------
+//Destructuring in object
+//objects are unordered data structure
+
+// const car = {
+//   name: 'bmbabloo',
+//   price: 150
+// }
+
+//normal way
+// console.log(car.name);
+// console.log(car.price);
+
+//modern way is destructuring
+
+//Correct way
+// let {n, p} = car; //wrong cuz since objects are unordered data structure toh ham ise kisi bhi name se nahi bula sakte
+// let {name , price} = car; //objects ko destructure karte hai to key ka naam same hona chahiye..key ke naam se destructure karna hoga
+// console.log(name); //undefined
+// console.log(price); //undefined
+
+//-------------------------
+// const car = {
+//   name: 'bmbabloo',
+//   price: 150
+// }
+
+// let {name:badlahuanaam , price} = car; //name change kar diya
+// console.log(price)
+// console.log(name); //ye chalega. Isse kuch nai ayega cuz pta hi nai hai kya hai
+// console.log(badlahuanaam); // ya ye chalega. Ye chalega..new naam wala chalega
+// console.log(price); //undefined
+
+//--------------------------------
+const car = {
+  // name: 'bmbabloo', //agr koi value na de...
+  price: 150
 }
 
-let obj1 = {
-  ...obj, //upar ka object add kar diya yha
-  age: 45 //new property dedi
-}
-console.log(obj);
-console.log(obj1);
 
-obj1.l = 200;
+let {name:badlahuanaam="ashishkicar" , price} = car; //koi value nai de upar...to yha default value de sakte hai.
+console.log(name); //ye chalega. Isse kuch nai ayega cuz pta hi nai hai kya hai
+console.log(badlahuanaam); // ya ye chalega. Ye chalega
+console.log(price); //undefined
 
-console.log(obj); //kya change ayega ? Noo. Cuz uska(upar wale obj ka) reference paas nai hua..uski sari chize uth ke yha aa gyi
-console.log(obj1); //kya change ayega ? Yess
+//------------------------------------------------------------
 
+//Advance topic of js asked by big companies
+//Event bubbling, Event delegation, Throttling, Debouncing, Polyfill
+//Read docs for these topics
+
+//Go to youtube..and learn and download Node.js
 
 
 
