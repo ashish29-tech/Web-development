@@ -1,0 +1,43 @@
+
+node -v to check node install hua ya nai
+
+npm -v to check 
+
+type node in terminal/cmd...
+
+console was our REPL. Same goes here...terminal is REPL here..
+
+and then try 
+1+1
+
+'ashish'.toUpperCase()
+
+window naam ki koi chiz nahi hoti yha... type window in terminal and enter.
+
+global...type and enter in terminal. We'll see object.
+
+
+mac and linux ki sari commands git bash pe chal jati hai ? No 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
