@@ -5,7 +5,8 @@ const PI = 3.145;
 //   return num*num;
 // }
 //               or
-const ans1 = num => num*num; //same as above...it's arrow function. When their is one argument we can remove (), {}, return
+
+const ans1 = num => num*num; //same as above...it's arrow function. When there is one argument we can remove (), {}, return
 
 const ans2 = (a,b) => a+b; //2 parameter hai to...() ye gayab nai kar sakte.
 
@@ -16,14 +17,21 @@ console.log(ans2(3,8));//call kar liya..and 2 argument hai isliye...3,8
 //When u don't export anything from ur file by default empty object is being sent. 
 
 //Agr bhejna hota toh..
+
 // module.exports = {}; //By default empty object ja rha tha...isliye ise likhe ya na likhe output same ayega.
 
+//PI, ans1, ans2 bhej diya...
 // module.exports = {  //object cuz key:value pair
+//   //right side wala value hai...
 //   Pi : PI, 
 //   ans1 : ans1, //ye function hai isliye function aa rha hai terminal m
 //   ans : ans2 //ye function hai isliye function aa rha hai terminal m
 // }
+//now if we run node app.js we'll see an object...it's not empty it's have value of PI, ans1 function, ans2 function
+
+
 //or
+//if key and value are the same then we can ignore writing our (: value) part
 // module.exports = { 
 //   PI, //key and value same hote hai toh colon and value ko hta sakte hai
 //   ans1, 
@@ -39,10 +47,19 @@ console.log(ans2(3,8));//call kar liya..and 2 argument hai isliye...3,8
 //---------------------------------------
 //Kya object ki jgah kuch aur bhi bhej sakte hai ? Yess. But generally object bhejte hai
 
-module.exports = "ashish" //string bhej diya hai
+// module.exports = "ashish" //string bhej diya hai
 
 
+//random proactice
+//arrow function
 
+// const add = (a,b)=>{
+//   return a + b;
+// }
+// console.log(add(2,3))
+//         //or
+// const addd = (a,b) => a+b;
+// console.log(addd(2,6))
 
 
 
