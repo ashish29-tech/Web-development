@@ -7,6 +7,7 @@
 // module.exports = { cat:cat } //cat ki jgah cat likha hai
 // module.exports = { cat }
 
+
 const cat = ()=>{
   console.log("meow meow")
 }
