@@ -19,20 +19,25 @@
 //When u don't export anything from ur file by default empty object is being sent. 
 
 //---------------------------------------
-let math = require('./index'); // terminal m run hoga to ye automatically run hoti hai.
-console.log(math); //this is an object. We can destructure it. 
+// let math = require('./index'); // terminal m run hoga to ye automatically run hoti hai.
+// console.log(math); //Baar-baar math likhna pad rha hai...math yha ek object hai. We can destructure it. 
+//math ke andar object aa rha tha toh math ke andar ki property .(dot) lga ke access
+// console.log(math.PI)
+// console.log(math.ans1(6)) //run kiya 6 value ke sath
+// console.log(math.ans2(6,7)); //run kiya 6 and 7 ke sath
 
-// let {PI, ans1, ans2} = math; //object destructure. PI, ans, ans2 naam se bna hua hai
+// let {PI, ans1, ans2} = math; //object destructure. PI, ans, ans2 naam se object bna hua hai usi naam se..
 
 //Math m ek object aa raha tha
 // // console.log(math.PI); //objects ke andar ki property ko access
-// console.log(PI);
-// // console.log(math.ans1(6));
-// console.log(ans1(6));
-// // console.log(math.ans2(6,7));
-// console.log(ans2(6,7));
+// console.log(PI); //destructure karne baad sidha ye likh sakte hai
+// // // console.log(math.ans1(6));
+// console.log(ans1(6)); //destructure karne baad sidha ye likh sakte hai
+// // // console.log(math.ans2(6,7));
+// console.log(ans2(6,7)); //destructure karne baad sidha ye likh sakte hai
 
 //---------------------------------------------------------
+//upar m math ko pehle require kiya and then ek line aur likhi destructure kiya
 //Sidha destructure kiya
 
 // let {PI, ans1, ans2} = require('./index'); //jo bhi index se mila use sidha desructure kiya
@@ -56,9 +61,9 @@ console.log(math); //this is an object. We can destructure it.
 
 //------------------------------------------------------
 
-// let {PII:hello, ans1, ans2} = require('./index'); //kisi aur naam se bhi destructure ho sakta hai
+// let {PII:hello, ans1, ans2} = require('./index'); //kisi aur naam se bhi destructure ho sakta hai... hello naam de diya
 
-// console.log(PII); //isse nai chalega cuz name changed
+// // console.log(PII); //isse nai chalega cuz name changed
 // console.log(hello); //hello se chalega cuz name change kar diya
 // // console.log(math.ans1(6));
 // console.log(ans1(6));
@@ -66,7 +71,7 @@ console.log(math); //this is an object. We can destructure it.
 // console.log(ans2(6,7));
 
 //-------------------------------------------------------------
-
+//string ko variable m le liya rather than destructuring cuz object nahi hai yha
 // let naam = require('./index'); //variable m daal diya jo bhi index se mil rha hai...string mil rha hai use variable m dal diya
 // console.log(naam) //terminal m naam(ashish jo dusri file se bhej rahe hai wo aa jayega)
 
