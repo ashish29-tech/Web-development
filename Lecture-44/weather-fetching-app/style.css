@@ -1,0 +1,44 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(93, 111, 111);
+}
+body{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container{
+  background-color: antiquewhite;
+  height: max-content;
+  padding: 30px;
+}
+.container div{
+  border-radius: 8px;
+}
+input,
+button{
+  height: 28px;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+button{
+  background-color: rgb(210, 119, 73);
+  padding: 10px;
+}
+
+
+
+
+
+
+
+
+
