@@ -16,7 +16,7 @@ module.exports = "ash"
 //----------------------------------------------------------
 //now dog and cat ko export karte hai
 
-// module.exports = {cat, dog} //object ke andar object ayega isse 
+module.exports = {cat, dog} //object ke andar object ayega isse 
 
 
 

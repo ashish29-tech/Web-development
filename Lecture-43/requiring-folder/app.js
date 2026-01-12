@@ -1,8 +1,8 @@
 //yha animal naam ke folder ko require karenge
 
-let jaanwar = require('./animal') //yha animal naam ke folder ko require kar rahe hai toh by default index.js joki animal folder m bnai hai wo ja rha hai
+// let jaanwar = require('./animal') //yha animal naam ke folder ko require kar rahe hai toh by default index.js joki animal folder m bnai hai wo ja rha hai
 
-console.log(jaanwar); //now run karenge toh empty object ayega
+// console.log(jaanwar); //now run karenge toh empty object ayega
 
 // let jaanwar = require('./animal') //folder hai
 
@@ -12,8 +12,17 @@ console.log(jaanwar); //now run karenge toh empty object ayega
 
 // let jaanwar = require('./animal')
 
+//sidha destructure
+let {cat, dog} = require('./animal');
+// console.log(cat) //ye bhi object dega...isse run nahi hoga
+// console.log(dog) //ye bhi object dega...isse run nahi hoga
+
+console.log(cat.cat()) //function hai cat toh run kiya ab chal jayega meoww
+console.log(dog.dog()) //function hai dog toh run kiya ab chal jayega woof
+
 // let {cat, dog} = jaanwar; //destructure
 // console.log(jaanwar);
+
 
 // let {cat:catty, dog:doggy} = require('./animal'); //destructure
 
