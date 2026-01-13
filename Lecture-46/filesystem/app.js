@@ -85,18 +85,35 @@ let data = "my name is Ashish Ranjan thanks alot"; //This is the data which I ne
 
 //---------------------------------------
 //Step 2 to improve
-//Prefer anyone either step 1 or step 2.
-fs.readFile('def.txt', 
-  { //This is optional part so we commented.
-    encoding:"utf-8", //kya buffer data encoding ki wjah se apne aap string m convert ho jayega ? Yess
-    flag: 'r' //flag yha read(r) hai
-  },
-  (err, data)=>{ //Call back error accept karega..
-    if(err){throw err} //agr error hua to throw kar do
-    console.log(data); 
+//Prefer anyone either step 1..toString method or step 2 optional part encoding
+// fs.readFile('def.txt', 
+//   { //This is optional part so we commented.
+//     encoding:"utf-8", //kya buffer data encoding ki wjah se apne aap string m convert ho jayega ? Yess
+//     flag: 'r' //flag yha read(r) hai
+//   },
+//   (err, data)=>{ //Call back error accept karega..
+//     if(err){throw err} //agr error hua to throw kar do
+//     console.log(data); 
     
-  }
-)
+//   }
+// )
+
+//-----------------------------------------------------------------
+//We have to update an existing data..
+//update--> Update krne ke liye we have appendFile() method
+//we have 4 arguments...
+// fs.appendFile('abc.txt', ' bhaukaali', {}, ()=>{} ) //data ko txt m convert, data jise change karna hai, optional part, callback function...
+
+fs.appendFile('abc.txt', ' bhaukaali', //abc file m changes honge
+  //  { //This is optional isliye leave it
+
+  //  }, 
+   (err)=>{
+    if(err){throw err} //if error aya to err 
+    console.log("file edited successfully") //else console. Run terminal...file edited successfully ayega...and abc file m last m bhaukaali add ho jayega 
+   } 
+  )
+
 
 
 
