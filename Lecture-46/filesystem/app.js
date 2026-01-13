@@ -71,16 +71,31 @@ let data = "my name is Ashish Ranjan thanks alot"; //This is the data which I ne
 //---------------------------------------------------------------------
 //Step 1 to improve....
 
+// fs.readFile('def.txt', 
+// // { //This is optional part so we commented.
+// //   encoding:"utf-8",
+// //   flag: 'r' //flag yha read(r) hai
+// // },
+// (err, data)=>{ //Call back error accept karega..
+//   if(err){throw err} //agr error hua to throw kar do..
+//   console.log(data.toString()); //data hota hai uske liye we have toString method...isse buffer data string m convert ho jayega. Use terminal now we can see the data in terminal.
+//   //terminal m ise run karenge...cd filesystem...node app.js....toh buffer data ayega...we are not able to read it but our system can. Jo chize nazar aa rahi hai they are in buffer memory.
+// }
+// )
+
+//---------------------------------------
+//Step 2 to improve
+//Prefer anyone either step 1 or step 2.
 fs.readFile('def.txt', 
-// { //This is optional part so we commented.
-//   encoding:"utf-8",
-//   flag: 'r' //flag yha read(r) hai
-// },
-(err, data)=>{ //Call back error accept karega..
-  if(err){throw err} //agr error hua to throw kar do
-  console.log(data.toString()); //data hota hai uske liye we have toString method...isse buffer data string m convert ho jayega. Use terminal now we can see the data in terminal.
-  //terminal m ise run karenge...cd filesystem...node app.js....toh buffer data ayega...we are not able to read it but our system can. Jo chize nazar aa rahi hai they are in buffer memory.
-}
+  { //This is optional part so we commented.
+    encoding:"utf-8", //kya buffer data encoding ki wjah se apne aap string m convert ho jayega ? Yess
+    flag: 'r' //flag yha read(r) hai
+  },
+  (err, data)=>{ //Call back error accept karega..
+    if(err){throw err} //agr error hua to throw kar do
+    console.log(data); 
+    
+  }
 )
 
 
