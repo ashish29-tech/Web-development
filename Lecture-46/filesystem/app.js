@@ -104,18 +104,29 @@ let data = "my name is Ashish Ranjan thanks alot"; //This is the data which I ne
 //we have 4 arguments...
 // fs.appendFile('abc.txt', ' bhaukaali', {}, ()=>{} ) //data ko txt m convert, data jise change karna hai, optional part, callback function...
 
-fs.appendFile('abc.txt', ' bhaukaali', //abc file m changes honge
-  //  { //This is optional isliye leave it
+// fs.appendFile('abc.txt', ' bhaukaali', //abc file m changes honge
+//   //  { //This is optional isliye leave it
 
-  //  }, 
-   (err)=>{
-    if(err){throw err} //if error aya to err 
-    console.log("file edited successfully") //else console. Run terminal...file edited successfully ayega...and abc file m last m bhaukaali add ho jayega 
-   } 
-  )
+//   //  }, 
+//    (err)=>{
+//     if(err){throw err} //if error aya to err 
+//     console.log("file edited successfully") //else console. Run terminal...file edited successfully ayega...and abc file m last m bhaukaali add ho jayega 
+//    } 
+//   ) //now if we run by node app.js we'll see last m bhaukaali add ho jayega abc.txt m...
 
+//------------------------------------------------------------------------------------------------
 
-
+//Existing file ko delete karna hai... def.txt ko delete kar denge
+// delete--> Delete ke liye we have a method called unlink()
+// Accepts 2 arguments...file ka name and callback function
+fs.unlink('def.txt', 
+  (err)=>{
+    if(err){ //if error hai to error throw kar do
+      throw err
+    }
+    console.log("file deleted successfully") //else 
+  }
+)
 
 
 
