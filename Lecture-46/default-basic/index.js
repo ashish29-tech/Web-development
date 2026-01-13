@@ -18,8 +18,25 @@
 //now we want to know figlet mere package m aya ki nai...we'll check package.json...and see dependencies m...figlet and give me a joke 
 //now ise use karne ke liye require kaenge
 
-const figlet = require("figlet"); //figlet npm website se copy paste kar diya. 
+// const figlet = require("figlet"); //figlet npm website se copy paste kar diya. 
 
+// figlet("ASHISH", function (err, data) { //yha mujhe ash word ko change karana hai...
+//   if (err) {
+//     console.log("Something went wrong...");
+//     console.dir(err);
+//     return;
+//   }
+//   console.log(data);
+// });
+
+//------------------------------------
+//now npm colors package
+//search npm colors and open...https://www.npmjs.com/package/colors
+//ye chizo ko color provide karne ke kaam ata hai.
+//install karne ke liye type...npm i colors...terminal m
+//require karna hoga use karne ke liye
+
+const colors = require('colors'); //copy-pasted from..https://www.npmjs.com/package/colors
 
 figlet("ASH", function (err, data) { //yha mujhe ash word ko change karana hai...
   if (err) {
@@ -27,9 +44,15 @@ figlet("ASH", function (err, data) { //yha mujhe ash word ko change karana hai..
     console.dir(err);
     return;
   }
-  console.log(data);
+  //data pe rainbow method
+  console.log(data.rainbow); //rainbow method....ye chalane ke liye figlet and jokes ki const line ko uncomment
 });
 
+
+//Difference b/w package.json, package-lock-json, and node_modules 
+//package.json: This keeps the basic info of our project...ex: ki kon-kon si dependencies hai..kya scripts hai...etc. In short provides overview.
+//package-lock-json: It have the detailed info....kon sa package kispe dependent hai...like figlet..colors pe dependent hai..kon sa version hai. 
+//node_modules: jo actual code hai...baba ne likha hai..cloud pe hai jo...wo ata hai node_modules m
 
 
 
