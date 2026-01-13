@@ -56,16 +56,31 @@ let data = "my name is Ashish Ranjan thanks alot"; //This is the data which I ne
 //read--> Read ke liye readFile() method. We have 3 arguments here...hover and see. New file bna lete hai.
 
 // fs.readFile('def.txt', {}, ()=>{}) //Hover and see it accepts 3 arg. Since we are reading the data that's why 3 argument and not 4 like in create,
+// fs.readFile('def.txt', 
+//   // { //This is optional part so we commented.
+//   //   encoding:"utf-8",
+//   //   flag: 'r' //flag yha read(r) hai
+//   // },
+//   (err, data)=>{ //Call back error accept karega..... read file se data read kar rahe hai...
+//     if(err){throw err} //agr error hua to throw kar do
+//     console.log(data); //if not then throw data. 
+//     //terminal m ise run karenge...cd filesystem...node app.js....toh buffer data ayega...we are not able to read it but our system can. Jo chize nazar aa rahi hai they are in buffer memory.
+//   }
+// )
+
+//---------------------------------------------------------------------
+//Step 1 to improve....
+
 fs.readFile('def.txt', 
-  // { //This is optional part so we commented.
-  //   encoding:"utf-8",
-  //   flag: 'r' //flag yha read(r) hai
-  // },
-  (err, data)=>{ //Call back error accept karega..... read file se data read kar rahe hai...
-    if(err){throw err} //agr error hua to throw kar do
-    console.log(data); //if not then throw data. 
-    //terminal m ise run karenge...cd filesystem...node app.js....toh buffer data ayega...we are not able to read it but our system can. Jo chize nazar aa rahi hai they are in buffer memory.
-  }
+// { //This is optional part so we commented.
+//   encoding:"utf-8",
+//   flag: 'r' //flag yha read(r) hai
+// },
+(err, data)=>{ //Call back error accept karega..
+  if(err){throw err} //agr error hua to throw kar do
+  console.log(data.toString()); //data hota hai uske liye we have toString method...isse buffer data string m convert ho jayega. Use terminal now we can see the data in terminal.
+  //terminal m ise run karenge...cd filesystem...node app.js....toh buffer data ayega...we are not able to read it but our system can. Jo chize nazar aa rahi hai they are in buffer memory.
+}
 )
 
 
