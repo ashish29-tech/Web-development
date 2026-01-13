@@ -29,11 +29,24 @@ let data = "my name is Ashish Ranjan thanks alot"; //This is the data which I ne
 
 // fs.writeFile('abc.txt' , data, {}, ()=>{}) //fs is an object which is giving me some method...one of them is writeFile(). Hover over this method and see it's accepting 4 arguments. 1st is kon si file ?. 2nd is data naam ka vaiable. 3rd thing is optional..we'll denote it by {}. 4th is callback function.
 
+// fs.writeFile('abc.txt' , data, 
+//   {//this entire object is optional. You can write or ignore it.
+//     encoding: 'utf-8', //we use UTF 8 when it comes to web dev. Here Encoding is a property which is having a value utf-8.
+//     flag:'w' //Yha write kar rahe hai isliye w flag...for reading we have r flag
+//  },
+//  (err)=>{ //Catches an error which comes in the picture
+//   if(err){throw err} //if error toh throw kar do error
+//   console.log('file written successfully') //if no error then
+//  }
+// )
+
+//-----------------------------------------------
+//Optional part ko comment kar diya
 fs.writeFile('abc.txt' , data, 
-  {//this entire object is optional. You can write or ignore it.
-    encoding: 'utf-8', //we use UTF 8 when it comes to web dev. Here Encoding is a property which is having a value utf-8.
-    flag:'w' //Yha write kar rahe hai isliye w flag...for reading we have r flag
- },
+//   {//this entire object is optional. You can write or ignore it.
+//     encoding: 'utf-8', //we use UTF 8 when it comes to web dev. Here Encoding is a property which is having a value utf-8.
+//     flag:'w' //Yha write kar rahe hai isliye w flag...for reading we have r flag
+//  },
  (err)=>{ //Catches an error which comes in the picture
   if(err){throw err} //if error toh throw kar do error
   console.log('file written successfully') //if no error then
