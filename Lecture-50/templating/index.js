@@ -75,12 +75,49 @@
 
 //-----------------------------------------------------------------------------------------
 // Array bna lete hai...
+// const express = require('express');
+// const app = express();
+// const path = require('path');
+
+// let arr = ['hi', 'hello', 'bye']; //is array ko star wali file m chalana chahte hai...jis bhi file ke sath bhejna chahte..in this case star m bhejna chahte hai toh niche star wale route m ,(comma) dal ke object 
+// let arr2 = ['hi', 'hello', 'bye']; 
+
+// // //express m..website.
+// app.set('view engine', 'ejs'); //templating engine ka naam ejs hai...usko set app.set se...'view engine' 1st peoperty..i.e the key and right side(ejs) m uski value
+// app.set('views', path.join(__dirname, 'views')); //'views'..pehle wala key argument hai...and dusra wala view folder name hai. path.join use karne ke liye path ko require karna padta hai. With the helo of __dirname join karate hai rather than process.cwd...kyoki ham kahe bhi khade ho sakte hai.
+
+
+// //Home route
+// //we want ki jab hamara koi 1 route hit ho. For ex: route route(roout) hi ho rah hai...and ye route, roout slash(/) pe hota hai
+// app.get('/', (req, res)=>{ //route..roout....2 chizo ka access milta hai...req and res ke object ka
+//   res.render('app')  //Template/page ko show karane ke liye render karte hai...app.ejs ko. But ejs ko likhne ki jarurat nai hai..cuz views tak ka path upar de rakha hai.
+// })
+
+
+// // //star
+// app.get('/star' , (req,res)=>{// star pe hit hoga...req and res ko object dega
+// //views ke andar ek new file bnana hai
+// //star wale page ko show karana hai index ki help se
+//   res.render('star', {arr, arr2} )//is file ke sath bhejna chahte hai(upar ke arr2)...yha pe ,(comma) dal ke object. Is object m arr dal denge...jo bhi bhejna hai. Ye arr star naam ki file m aa jayega
+// })
+
+// app.listen(8080, ()=>{
+//   console.log("server connected at port 8080")
+// })
+
+//----------------------------------------------------------------------------------------
+//index.js m Random no. generate karna hai 6 to 31 and then send karna hai random.ejs m and show karana hai
+
 const express = require('express');
 const app = express();
 const path = require('path');
 
-let arr = ['hi', 'hello', 'bye']; //is array ko star wali file m chalana chahte hai...jis bhi file ke sath bhejna chahte..in this case star m bhejna chahte hai toh niche star wale route m ,(comma) dal ke object 
+let arr = ['hi', 'hello', 'bye']; //is array ko star wali file m chalana chahte hai
 let arr2 = ['hi', 'hello', 'bye']; 
+
+//Random...math object ki help se banta hai
+let rn = Math.floor(Math.random()* (25) + 6); //Math.random()...isse random no. generate hua...then hamara multiplication factor 31-6 hoga..cuz isi ki range m karna hai...i.e 25(isse multiplication factor)...and then +6 cuz 6 se start karna hai..then in sabka Math.floor. Now jo ayrga use route(rooouuutt) m bhejenge
+
 
 // //express m..website.
 app.set('view engine', 'ejs'); //templating engine ka naam ejs hai...usko set app.set se...'view engine' 1st peoperty..i.e the key and right side(ejs) m uski value
@@ -88,24 +125,27 @@ app.set('views', path.join(__dirname, 'views')); //'views'..pehle wala key argum
 
 
 // //Home route
-// //we want ki jab hamara koi 1 route hit ho. For ex: route route(roout) hi ho rah hai...and ye route, roout slash(/) pe hota hai
+//we want ki jab hamara koi 1 route hit ho. For ex: route route(roout) hi ho rah hai...and ye route, roout slash(/) pe hota hai
 app.get('/', (req, res)=>{ //route..roout....2 chizo ka access milta hai...req and res ke object ka
   res.render('app')  //Template/page ko show karane ke liye render karte hai...app.ejs ko. But ejs ko likhne ki jarurat nai hai..cuz views tak ka path upar de rakha hai.
 })
 
 
-// //star
+// // //star
 app.get('/star' , (req,res)=>{// star pe hit hoga...req and res ko object dega
-//views ke andar ek new file bnana hai
-//star wale page ko show karana hai index ki help se
+// // //views ke andar ek new file bnana hai
+// // //star wale page ko show karana hai index ki help se
   res.render('star', {arr, arr2} )//is file ke sath bhejna chahte hai(upar ke arr2)...yha pe ,(comma) dal ke object. Is object m arr dal denge...jo bhi bhejna hai. Ye arr star naam ki file m aa jayega
 })
+
+app.get('/random' , (req, res)=>{
+  res.render('random' , {rn}) //rn ko bhejna hai. Now 
+})
+
 
 app.listen(8080, ()=>{
   console.log("server connected at port 8080")
 })
-
-
 
 
 
