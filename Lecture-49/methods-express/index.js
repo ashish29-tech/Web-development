@@ -116,7 +116,50 @@
 //   console.log(`server is connectd to port: ${PORT}`) //string template literals kar liya
 // })
 
+//-------------------------------------------------------------------------------
 
 
+//Middleware m ham kbhi bhi response ko send nai karte...res.send()❌(we can but nai bhejte). Middleware is a function. Middleware is a middleman ye 2 chizo ko apas m judwata hai. 
 
 
+const express = require('express'); //require kar liya...and ye function return karta hai
+//now function ke andar jane ke liye function ko run karna padega
+const app = express()//app name ke instance ke sath function ko run kar rha hai. Run karne baad object milega. And since app naam ka object hai hamare paas...this object is the instance of my application
+
+//middleware is simply a function...jo har incoming request par chalta hai...dilfek ashiq ki trah hai..har kisi pe chal jata hai. Ye har ek path ke har ek request pe chal jayega.
+// app.use( (req, res)=>{ //1st ya to path de sakte the ya to optional tha...yha nai de rahe isliye sabpe chal rha...2nd was my callback function...is callback function m on every incoming request we have two objects..1st. req ka...2nd req ka 
+//   res.send('<h1>Hi I am middleware</h1>') //response send karne ke liye.
+// })
+
+// //Middleware advance...
+// //Jab bhi middleware use karenge...should I send the response ? No. Instead we'll console it.
+app.use('/cat' ,(req, res, next)=>{ //Jab is cat pe request gayi...Toh niche path chal jaye. Middleware ke paas 3 argument hote hai....path, cb fun, next
+  //yha ham response send nai karte...middleware ke andar response send nai karte
+  console.log('Hi I am a cat middleware') //terminal m "Hi I am a cat middleware" aa jayega. 
+  next(); //Next means jab upar ka sara kaam...means ye upar ka console ho jaye uske baad agle middleware(function) pe bhej do. And agla function.../cat se match hogi toh niche /cat wale function pe chla jayega and 'get request from /cat aagyi'
+})
+
+// //Ye sirf GET request pe chalega means jab bhi get request bhejenge tab ye chalega
+app.get('/ashish', (req, res)=>{ //GET m jo 1st parameter hai...path wo compulsory hai.
+  res.send("<h2>Hi I am Ashish Ranjan</h2>")
+})
+
+app.get('/cat', (req, res)=>{ //upar /cat route pe hit kare...To yeh path chal jaye
+  res.send('get request from /cat aagyi'); //tab ye send kara denge but still result..ab "get request from /cat aagyi" ye chal jayega
+})
+
+
+// //Ye error ke liye last m hi rakhna hai..cuz code ka flow top to bottom hota hai...upar rakhenge to error sabme show karne lagega.
+// //for all the left over path..jo path hamne nai define kiya uske alawa kisi aur path pe...404 error....with the help of 'use'...not 'get' as taught by samarth bhaiya
+app.use((req, res)=>{ //Jab bhi get method ke upar. Req and Res ka object hota hai hamare paas
+  res.status(404).send('Page 404 Not Found');
+})
+
+// //is app ko kisi ek port number pe listen kar sakte hai
+const PORT = 8080; //8080 port ko PORT var m dal diya and niche use kar liya.
+app.listen(PORT, ()=>{ //
+  console.log(`server is connectd to port: ${PORT}`) //string template literals kar liya
+})
+
+
+//path chahe same ho but if method(GET,POST etc) alag-alag hai toh alag request hai....
