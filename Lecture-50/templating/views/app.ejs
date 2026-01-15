@@ -1,0 +1,41 @@
+<!-- view engine ejs file ko read kar paa rha hai to file ki extension hamesha .ejs hogi-->
+ <!-- Isme HTML likhenge -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <h1>hello from app.ejs</h1>
+  <!-- <h2>12+5+8</h2>  is case m output nahi ayega...cuz output dikhane ke liye tags hote hai  -->
+  <h2> <%= 12+5+8 %> </h2> <!--output wala tag lga diya...ejs.co m tags m -->
+
+  <!-- Ya nahi chalega...cuz flow control ki trah chalega -->
+  <!-- if(true){
+    <h1>hello</h1>
+  }else{
+    <h1>byee</h1>
+  } -->
+
+  <!-- Flow control...har ek line pe logical flow hai use khtm karna hai...aisa nahi ki 1 baar shuru m aur 1 last m -->
+
+
+  <% if(true){ %>
+    <h1>hello</h1>
+  <% }else{ %>
+    <h1>byee</h1>
+  <% } %>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
