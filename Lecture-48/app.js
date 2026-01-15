@@ -27,11 +27,11 @@ app.use("/cat",function(req, res){ //route bna rahe hai. app.use m function bnan
  res.send('<h1>cat route hit</h1>') //isse sirf cat route pe chalega
 })
 
-// app.use("/dog",function(req, res){ //dog ke liye route bna diya. app.use m function bnana padega and ism hame req and res...series m parameter dena padega. Ye request sabke liye hit hogi...browser m localhost:4000/a,localhost:4000/ashish etc sab chal jayenge and terminal m route hit aa jayega.....ise ham chahte hai kisi particular ke liya hi hit ho...toh ek path dena padega.../cat
-//   console.log("route hit") //server se response ke liye
-//   // res.send('<h1>route hit</h1>')
-//   res.send('<h1>dog route hit</h1>')
-// })
+app.use("/dog",function(req, res){ //dog ke liye route bna diya. app.use m function bnana padega and isme hame req and res...series m parameter dena padega. Ye request sabke liye hit hogi...browser m localhost:4000/a,localhost:4000/ashish etc sab chal jayenge and terminal m route hit aa jayega.....ise ham chahte hai kisi particular ke liya hi hit ho...toh ek path dena padega.../dog
+  console.log("route hit") //server se response ke liye
+  // res.send('<h1>route hit</h1>')
+  res.send('<h1>dog route hit</h1>')
+})
 
 
 // //Server chalane ke liye hame port use karna padta hai...jiske through ham listen karte hai...
