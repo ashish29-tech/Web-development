@@ -65,6 +65,36 @@
 //----------------------------------------------------------------
 //can we destructure object ? destructure with the help of string.....
 
+// const express = require('express'); //express ko require kiya 
+// const app = express(); //express require kiya to app milegi
+
+// app.get('/r/cat', (req,res)=>{ // /r/get request ayegi to req,res ka object hoga
+//   res.send('cat')
+// })
+
+// app.get('/r/dog', (req,res)=>{ // /r/get request ayegi to req,res ka object hoga
+//   res.send('dog')
+// })
+
+
+// //this is path parameter...jha temporary path picture m ata hai..ye req.params naam ke object ke andar milta hai...which is an object
+// app.get('/r/:machhar', (req,res)=>{ //machhar ki jgah any router. Niche terminal m...machhar key hai..and 'kanpuriyababu' is value jo chrome m url m likhi thi
+//   // console.log(req);
+//   console.log(req.params); //object hota hai. Jo vast object terminal m dikh rha tha use console
+//   //Object aya toh Yha destructure karenge
+//   //can we destructure object ? destructure with the help of template literal
+//   //Destructuring = extracting values from arrays or objects into variables in a clean, short way. Instead of accessing properties one by one, you “unpack” them.
+//   let{machhar} = req.params; //jis naam se key hai usi naam se destructure kar lete hai....req.params ko
+//   res.send(`req sent at: ${machhar}`) //destructure karne baad use use literals ki trah use kar rahe hai. Response ek output show karega...jha pe request gayi hai...http://localhost:8080/r/baba-ka-gyaan
+// })
+
+// app.listen(8080, ()=>{
+//   console.log("server connected at 8080")
+// })
+
+//-------------------------------------------------------------------------------
+//now let's see query parameter
+
 const express = require('express'); //express ko require kiya 
 const app = express(); //express require kiya to app milegi
 
@@ -77,20 +107,36 @@ const app = express(); //express require kiya to app milegi
 // })
 
 
-// //this is path parameter...jha temporary path picture m ata hai..ye req.params naam ke object ke andar milta hai...which is an object
-app.get('/r/:machhar', (req,res)=>{ //machhar ki jgah any router. Niche terminal m...machhar key hai..and 'kanpuriyababu' is value jo chrome m url m likhi thi
-  // console.log(req);
-  console.log(req.params); //object hota hai. Jo vast object terminal m dikh rha tha use console
-  //Object aya toh Yha destructure karenge
-  //can we destructure object ? destructure with the help of template literal
-  //Destructuring = extracting values from arrays or objects into variables in a clean, short way. Instead of accessing properties one by one, you “unpack” them.
-  let{machhar} = req.params; //jis naam se key hai usi naam se destructure kar lete hai....req.params ko
-  res.send(`req sent at: ${machhar}`) //destructure karne baad use use literals ki trah use kar rahe hai. Response ek output show karega...jha pe request gayi hai...http://localhost:8080/r/baba-ka-gyaan
+
+//jha bhi url m question mark dikhe just know that...that is a query parameter... search in reddit and see ?
+//https://www.reddit.com/search/?q=dogs&cId=5f3c57d3-4dbc-44f4-a482-6dbda139ab2a&iId=e8f5a209-8033-4814-9e16-df9e940b5e31 .........isme ? matlab query parameter...and aage q=dogs...q is key and dogs is value..jo search karte hai wo value hoti hai
+//path parameter(:..mtlb colon)...jha temporary path picture m ata hai..ye req.params naam ke object ke andar milta hai...which is an object
+// app.get('/r/:machhar', (req,res)=>{ //machhar ki jgah any router. Niche terminal m...machhar key hai..and 'kanpuriyababu' is value jo chrome m url m likhi thi
+//   // console.log(req);
+//   console.log(req.params); //object hota hai. Jo vast object terminal m dikh rha tha use console
+//   //Yha destructure karenge
+//   //can we destructure object ? destructure with the help of template literal
+//   let{machhar} = req.params; //jis naam se key hai usi naam se destructure kar lete hai....req.params ko
+//   res.send(`req sent at: ${machhar}`) //destructure karne baad use use literals ki trah use kar rahe hai. Response ek output show karega...jha pe request gayi hai
+// })
+
+//query parameter(?)...req.params..object. ? mtlb query parameter
+app.get('/search', (req,res)=>{ //get request bhej rahe hai.../sesrch pe....request gayi hai to req,res ka oject hoga mere paas
+  // console.log(req); //request console kar liya hai ki bhejenge to kya ayega.
+  console.log(req.query);//request ke andar mil rha hai to req.query
+  let {bhagwan, wife} = req.query; //we can destructure it well with the values jo mujhe wha mil rahi hai.....key: bhagwan, wife. 
+  res.send(`query parameter aa gya ${bhagwan} and ${wife}`) //http://localhost:8080/search?bhagwan=krishna&wife=radha ye nai chal rha...mtlb niche terminal m empty aa rha hai object
 })
 
 app.listen(8080, ()=>{
   console.log("server connected at 8080")
 })
+
+
+//--------------------------------------------------------------------------
+//Node chalta rahega
+//infinite route se bachne ke liye path parameter ki help lete hai...
+//and jab kuch search kar rahe hote hai...firstName, lastName...in sabke sath ? hota hai...tab ham use query parameter kehte hai
 
 
 
