@@ -1,0 +1,32 @@
+<!-- yha ye nai chalega cuz comment m  -->
+
+<!-- Yha se header and footer utha ke header.ejs and footer.ejs m daal denge. Cuz we want to follow DRY principle-->
+
+<!-- Now we want ki yha header jud jaye For this...we'll use ejs ka third tag. Visit ejs.co and scroll down and see tags and read "Outputs the unescaped value into the template"...mtlb as it is copy kar dega kuch bhi escape nai karega-->
+ <!--Yha symbol use karenge..and include karna hota hai uska path...right now we are at horro.ejs and we want to go to partials ke folder ke andar..so ham ./ likhenge-->
+
+<!-- html ka head wala part common hoga...means stylesheet add karni hai..bootstrap add karni...and botttom bhi common hoga... -->
+ <!-- views ke andar partials folder bna diya...partials ke andar header.ejs bna diya...and footer.ejs -->
+<!-- header wala part header.ejs m rakh diya and footer wala part footer.ejs m -->
+
+<!-- yha we want header jud jaye..iske liye we'll use ejs ka 3rd tag use karenge... < %- Outputs the unescaped value into the template...as it is hissa output kar dega kuch bhi miss nahi karega-->
+<!-- https://ejs.co/#docs ......tags m -->
+
+<!-- include karna hai...jis chiz ko karna hai uska path...sibling hai toh ./ -->
+ 
+ <%- include('./partials/header') %> 
+
+  <h1>Horror page</h1>
+  <p>Lorem ipsum dolor sit amet.</p>
+  
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+
+  
+  <!-- and yha footer jud jaye -->
+ <%- include('./partials/footer') %>
+
