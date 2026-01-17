@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+    <!-- Form ke andar ek action and ek method hota hai. -->
+    <form action="/comments" method="POST"> <!-- Form submit ke baad array m add karna hai..POST request ke sath and plural m hai comments(see table)  -->
+      <!-- Label ko input se jodne ke liye for and id same honi chahiye isliye we wrote...naam dono jgah -->
+      <label for="naam">Username</label>
+      <input type="text" name="username" id="naam"> <!-- name value hold karta hai...isliye username. And yha username and niche comment isliye diya cuz js m array m username and comment diya hai -->
+
+      <label for="content">comment</label> <!-- label and input ke liye for and id m same naam so...content dono jagah  -->
+      <textarea name="comment" id="content" cols="" rows=""></textarea>
+
+      <button type="submit">Add comment</button> <!-- button ka by default type submit hota hai. Jaise hi submit hit karenge form submit ho jayega. Form submit ke baad array m add karna hai..POST request ke sath-->
+    </form>
+    
+</body>
+</html>
+
+
+
+
+
+

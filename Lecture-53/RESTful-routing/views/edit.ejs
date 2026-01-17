@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="vie wport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Page</title>
+</head>
+<body>
+
+    <!-- _method karte hi bta diya ki method override karne wala hu PATCH m-->
+    <form action="/comments/<%=foundComment.id%>?_method=PATCH" method="POST"> 
+      
+      <!-- Ye niche ke label and input line hta bhi sakte hai...cuz we don't want ki author ka naam and other chize koi aur change kar sake -->
+      <!-- <label for="naam">Username</label> 
+      <input type="text" name="username" id="naam">  -->
+
+      <!-- kisi input ke andar se koi content chahiye hota tha toh...input ko console karte the...input ki value ko. So set karne ke liye bhi to wahi kaam ayega. -->
+
+      <label for="content">comment</label>
+      <textarea name="comment" id="content" cols="30" rows="10"> <%= foundComment.comment %></textarea> <!-- found comment ke andar jo comment hai use set kar sakte hai..ejs stack use kar liya -->
+
+      <button type="submit">Edit comment</button>
+    </form>
+    
+</body>
+</html>
+
+
+
+
+
+
