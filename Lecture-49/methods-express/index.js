@@ -118,9 +118,7 @@
 
 //-------------------------------------------------------------------------------
 
-
 //Middleware m ham kbhi bhi response ko send nai karte...res.send()❌(we can but nai bhejte). Middleware is a function. Middleware is a middleman ye 2 chizo ko apas m judwata hai. 
-
 
 const express = require('express'); //require kar liya...and ye function return karta hai
 //now function ke andar jane ke liye function ko run karna padega
@@ -148,7 +146,6 @@ app.get('/cat', (req, res)=>{ //upar /cat route pe hit kare...To yeh path chal j
   res.send('get request from /cat aagyi'); //tab ye send kara denge but still result..ab "get request from /cat aagyi" ye chal jayega
 })
 
-
 // //Ye error ke liye last m hi rakhna hai..cuz code ka flow top to bottom hota hai...upar rakhenge to error sabme show karne lagega.
 // //for all the left over path..jo path hamne nai define kiya uske alawa kisi aur path pe...404 error....with the help of 'use'...not 'get' as taught by samarth bhaiya
 app.use((req, res)=>{ //Jab bhi get method ke upar. Req and Res ka object hota hai hamare paas
@@ -160,6 +157,5 @@ const PORT = 8080; //8080 port ko PORT var m dal diya and niche use kar liya.
 app.listen(PORT, ()=>{ //
   console.log(`server is connectd to port: ${PORT}`) //string template literals kar liya
 })
-
 
 //path chahe same ho but if method(GET,POST etc) alag-alag hai toh alag request hai....
