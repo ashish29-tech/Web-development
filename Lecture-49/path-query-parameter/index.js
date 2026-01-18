@@ -95,8 +95,8 @@
 //-------------------------------------------------------------------------------
 //now let's see query parameter
 
-const express = require('express'); //express ko require kiya 
-const app = express(); //express require kiya to app milegi
+// const express = require('express'); //express ko require kiya 
+// const app = express(); //express require kiya to app milegi
 
 // app.get('/r/cat', (req,res)=>{ // /r/get request ayegi to req,res ka object hoga
 //   res.send('cat')
@@ -105,7 +105,6 @@ const app = express(); //express require kiya to app milegi
 // app.get('/r/dog', (req,res)=>{ // /r/get request ayegi to req,res ka object hoga
 //   res.send('dog')
 // })
-
 
 
 //jha bhi url m question mark dikhe just know that...that is a query parameter... search in reddit and see ?
@@ -121,16 +120,16 @@ const app = express(); //express require kiya to app milegi
 // })
 
 //query parameter(?)...req.params..object. ? mtlb query parameter
-app.get('/search', (req,res)=>{ //get request bhej rahe hai.../sesrch pe....request gayi hai to req,res ka oject hoga mere paas
-  // console.log(req); //request console kar liya hai ki bhejenge to kya ayega.
-  console.log(req.query);//request ke andar mil rha hai to req.query
-  let {bhagwan, wife} = req.query; //we can destructure it well with the values jo mujhe wha mil rahi hai.....key: bhagwan, wife. 
-  res.send(`query parameter aa gya ${bhagwan} and ${wife}`) //http://localhost:8080/search?bhagwan=krishna&wife=radha ye nai chal rha...mtlb niche terminal m empty aa rha hai object
-})
+// app.get('/search', (req,res)=>{ //get request bhej rahe hai.../sesrch pe....request gayi hai to req,res ka oject hoga mere paas
+//   // console.log(req); //request console kar liya hai ki bhejenge to kya ayega.
+//   console.log(req.query);//request ke andar mil rha hai to req.query
+//   let {bhagwan, wife} = req.query; //we can destructure it well with the values jo mujhe wha mil rahi hai.....key: bhagwan, wife. 
+//   res.send(`query parameter aa gya ${bhagwan} and ${wife}`) //http://localhost:8080/search?bhagwan=krishna&wife=radha ye nai chal rha...mtlb niche terminal m empty aa rha hai object
+// })
 
-app.listen(8080, ()=>{
-  console.log("server connected at 8080")
-})
+// app.listen(8080, ()=>{
+//   console.log("server connected at 8080")
+// })
 
 
 //--------------------------------------------------------------------------
