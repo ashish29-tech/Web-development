@@ -76,7 +76,6 @@
 //   res.send('dog')
 // })
 
-
 // //this is path parameter...jha temporary path picture m ata hai..ye req.params naam ke object ke andar milta hai...which is an object
 // app.get('/r/:machhar', (req,res)=>{ //machhar ki jgah any router. Niche terminal m...machhar key hai..and 'kanpuriyababu' is value jo chrome m url m likhi thi
 //   // console.log(req);
