@@ -49,17 +49,19 @@ app.get('/comment/new', (req, res)=>{ //singular m comment as in table m hai blo
   res.render('new') //form ko show karna hai means new page ko show karna hai...
 })
 
-
-
+//TASK-3: To actually add the comment in the DB/ARRAY
+//GET vs POST ke diff m btaya tha ki "jab post request hoti hai to sara data kha nazar ata hai ? request ki body m."
+app.post('/comments', (req, res)=>{ //post method pe request hai...and comments path hai
+  //POST request me data URL me nahi hota, balki request ki BODY me hota hai
+  // console.log(req.body); //by default req ki body undefined hoti hai...toh default value ko change karne ke liye we use middlewares. Change karne baad object ayega...toh object ko destructure kar sakte hai.
+  
+  // res.send(req.body); //http://localhost:5050/comment/new isse form dikhega. Username and comment(kuch bhi dal ke) dal ke submit karenge toh...path change and terminal m undefined. Visit https://expressjs.com/en/5x/api.html#req.body.... Written there...req ki body bhi ek object hui..by default defined means req ki body m pehle se kuch defined rehta hai....undefined ko change karne ke liye 2 middleware ate hai....inhe kehte hai body parse(dekhna)...1 hai express.json and another is express.urlencoded()
+})
 
 
 let PORT = 5050;
 app.listen(PORT, ()=>{ //listener
   console.log(`Server connected at port: ${PORT}`)
 })
-
-
-
-
 
 
