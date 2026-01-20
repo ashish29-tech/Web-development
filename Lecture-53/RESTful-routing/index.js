@@ -73,9 +73,9 @@ app.post('/comments', (req, res)=>{ //post method pe request hai...and comments 
 })
 
 
-//Task 4: To show a particular comment in the DB/ARRAY -> req.params
-//Complete Flow...URL se ID aayi → req.params me mili → number me convert hui → array me comment mila → show.ejs me render ho gaya
-//path diagram m.../blogs/:id...colon ham tab lagate hai jab hamara path fixed nahi hota tha...and id can be 1,2,3.../blogs/:1.../blogs/:2...and so on...kitna bada bhi ho sakta hai...infinte routes bnana possible nahi hai...toh iske liye subreddit wala concept...1 hi route bnayenge alag-alag id ke liye...and according to the request...ye request ke params m se alag-alag chize le payenge...and show.ejs banega..check diagram by sir
+// Task 4: To show a particular comment in the DB/ARRAY -> req.params
+// Complete Flow...URL se ID aayi → req.params me mili → number me convert hui → array me comment mila → show.ejs me render ho gaya
+// path diagram m.../blogs/:id...colon ham tab lagate hai jab hamara path fixed nahi hota tha...and id can be 1,2,3.../blogs/:1.../blogs/:2...and so on...kitna bada bhi ho sakta hai...infinte routes bnana possible nahi hai...toh iske liye subreddit wala concept...1 hi route bnayenge alag-alag id ke liye...and according to the request...ye request ke params m se alag-alag chize le payenge...and show.ejs banega..check diagram by sir
 
 app.get('/comments/:commentId', (req, res)=>{ // /comments/:id path pe jayegi..jab bhi request karte hai kisi path pe toh we have 2 things req, res ka object
   // console.log(req.params); //console kar ke dekh rahe hai...ki id ki value mil rahi hai ya nai. Value(ID) mil jayegi..jo ki object hai..now id ki help se different comments dikha sakte hai. Is object ko destructure karenge.
@@ -99,6 +99,22 @@ app.get('/comments/:commentId', (req, res)=>{ // /comments/:id path pe jayegi..j
     //yha se foundComment aya which is an object... toh uske upar .(dot)
     res.render('show', {foundComment}); //show.ejs pe bhejna hai according to the table...show ka page bnate hai and render kara denge show ke page m...and foundComment ko render...we'll be sending it with the help of an object. View kw andar show ka page bna diya...
 })
+
+
+//Task 5: To show the edit form of one comment
+//comment pehle se hona chahiye tabhi edit kar payenge....wrna nahi kar pate...
+//existing comment m se kisi ek comment ko edit karenge...toh we need to first find that product/comment
+//edit karte time ek form ayega...and us form m kya pura ka pura comment phir se likhenge ? no it's not the right way. Toh whie editing content comment ka us time pte-filled hona chahiye
+//toh ek form create karna hai and ye form get method se nazar ayeg...kis path pe nazar ayega... /comment/:id/edit and edit.ejs file banegi.....check diagram
+app.get('/comments/:commentId/edit', (req, res)=>{ //get method...id yha pe commentId hai...
+  let {commentId} = req.params; //req.params se comment id mil jayegi. commentId mil gyi to kya isse pura product find kar sakte hai ? Yess
+  let foundComment = comments.find((comment)=>{ //Ye found comment ko edit page pe bhejna hai..cuz us comment ke andar ki id uska username and uska comment actually m kya hai wo chahiye....wo kaise milega ? jab mujhe pura ka pura comment milega that's why yha pura ka pura comment liya and use sending like an object..kis page pe ? edit page pe
+    return comment.id === parseInt(commentId); 
+  })
+  res.render('edit', {foundComment}); //edit wale page pe...foundComment taki ham uski id, username, comment utha pau. Ab edit.ejs bna lenge
+})
+
+
 
 
 
