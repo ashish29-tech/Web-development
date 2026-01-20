@@ -41,7 +41,8 @@ app.use(express.static(path.join(__dirname, 'public'))); //public..static file k
 // app.use(express.json()) // for parsing application/json.....ye json data ke liye
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded....ye form ke liye. We are working with form. 
 
-
+//middleware ki trah use bhi kiya gya hai
+//yha name change kar diya..docs m kuch aur hai.... _method kar diya and ye jo _method hai ise jab bhi use karenge...toh method-override istemal hoga...and ye method-override upar variable se mila hai jise install kiya hai
 app.use(methodOverride('_method')); //https://www.npmjs.com/package/method-override Ye task 6 ke liye hai...for method overriding. Uska name change kar diya..and _method rakh diya...iska mtlb jab bhi _method ko use karenge toh methodOverride use hoga mtlb POST se kisi aur m change karna chah rahe hai...and ye methodOverride mila methodOverride variablle se mila(upar)..jise install kiya tha
 
 
@@ -116,8 +117,37 @@ app.get('/comments/:commentId/edit', (req, res)=>{ //get method...id yha pe comm
 
 
 
+//TASK 6: TJp comment edit liya tha use actually change it in the DB/ARRAY...iske liye put request and iske sath option m ata hai patch... /comments/:commentId...pe request jayegi
+//read put and patch difference...put tab jab sab ka sab change karna hota hai...and when partial change like here we are making...sire edit karna hai...username and id ko change nahi karna...toh patch request
+//we have read that form ke andar GET and POST request hoti hai...so how'll patch come ? Post ka method ko override karenge...and ye override karenge with the help of a package...method-override..... npm install method-override
+
+app.patch('/comments/:commentId' , (req,res)=>{
+  //Pehle comment id nikalni hai...phir pura ka pura comment kar diya
+  let {commentId} = req.params; 
+  let foundComment = comments.find((comment)=>{ 
+    return comment.id === parseInt(commentId); 
+  })
+  //Edit form ke andar se form submit hoga...jab form submit hoga to sara ka sara data request ki body m ata hai...comment naam se edit kiya hai
+  let {comment} = req.body; //comment naam se destructure kar sakte hai..request ki body se. Jo id mili usse jo find comment kiya...mtlb jo pura object hai uske andar comment naam ki property hai..us comment naam ki property m change karenge
+  foundComment.comment = comment; //jo foundComment ke andar comment naam ki property hai...use comment kar do....isse array m change hua...but ye request ki body m tab jayga jab ye post request hogi(just upar wali line m). So edit(edit.ejs m method m)
+  res.redirect('/comments');// redirect kar denge /comments pe so that ham sare comments ek sath dikha sake...
+})
 
 
+//TASK 7: To actually delete from the DB/ARRAY
+//DELETE method ko bhi override kar ke lana padega
+app.delete('/comments/:commentId', (req,res)=>{
+  let {commentId} = req.params;
+  comments = comments.filter((comment)=>{return comment.id != commentId})
+  res.redirect('/comments');
+})
+
+// app.delete('/comments/:commentId', (req, res)=>{ //ye delete method override kar ke ayega..override POST ko karna padega and POST available form m hota hai...toh kya hamne koi form bnaya delete karne ke liye ? No. So index.ejs ke andar...sabke andar alag se form bnana padega to delete it
+//   let {commentId} = req.params; //id chahiye to id ko find kar liya
+//   //array m se particular id hta lenge...filter
+//   comments = comments.filter((comment)=>{return comment.id != commentId}) //comments naam ka array hai uspe filter method lga lenge...and it'll accept a callback function...filter method kispe lagega ? 1 iterator de rahe hai...comment...agr comment ki id match ho gyi commentId se...and we know ki filter truthy value store karta hai and hame ise htana hai to false karna padega taki wo store na ho...and ise comments ke andar store kaar dete hai. Ek =(equals to) hta doya wo apne aap typecasting kar lega..
+//   res.redirect('/comments');
+// })
 
 
 

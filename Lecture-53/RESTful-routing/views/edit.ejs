@@ -8,6 +8,8 @@
 <body>
 
     <!-- _method karte hi bta diya ki method override karne wala hu PATCH m-->
+     <!-- foundComment ki id leli yha..us path ke aage special word.. _method in our case....and PATCH m override karne wale hai -->
+      <!-- /comment/:id pe request bhejni thi...to id mili foundComment se..and hame post request se nai bhejna tha..use override karna tha.... ? mtlb query likha isme _method likha and btaya ki patch request jayegi -->
     <form action="/comments/<%=foundComment.id%>?_method=PATCH" method="POST"> 
       
       <!-- Ye niche ke label and input line hta bhi sakte hai...cuz we don't want ki author ka naam and other chize koi aur change kar sake -->

@@ -8,20 +8,16 @@
 <body>
   <h1>List all the comments:</h1>
   <!-- comments. And comments array hai..toh ispe loop -->
-  <!-- <% for(let item of comments){ %>
+  <% for(let item of comments){ %>
     <h2> <%=item.id%> </h2>
     <h3> <%=item.username%> </h3>
     <p> <%=item.comment%> </p>
     <form action="/comments/<%=item.id%>?_method=DELETE" method="POST">
       <button>Delete</button>
     </form>
-  <% } %> -->
+  <% } %> 
   
-  <% for(let item of comments){ %>
-    <h2> <%=item.id%> </h2>
-    <h3> <%=item.username%> </h3>
-    <p> <%=item.comment%> </p>
-  <% } %>
+  
 
 </body>
 </html>
