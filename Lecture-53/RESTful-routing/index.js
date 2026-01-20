@@ -136,19 +136,12 @@ app.patch('/comments/:commentId' , (req,res)=>{
 
 //TASK 7: To actually delete from the DB/ARRAY
 //DELETE method ko bhi override kar ke lana padega
-app.delete('/comments/:commentId', (req,res)=>{
-  let {commentId} = req.params;
-  comments = comments.filter((comment)=>{return comment.id != commentId})
+app.delete('/comments/:commentId', (req, res)=>{ //ye delete method override kar ke ayega..override POST ko karna padega and POST available form m hota hai...toh kya hamne koi form bnaya delete karne ke liye ? No. So index.ejs ke andar...sabke andar alag se form bnana padega to delete it
+  let {commentId} = req.params; //id chahiye to id ko find kar liya
+  //array m se particular id hta lenge...filter
+  comments = comments.filter((comment)=>{return comment.id != commentId}) //comments naam ka array hai uspe filter method lga lenge...and it'll accept a callback function...filter method kispe lagega ? 1 iterator de rahe hai...comment...agr comment ki id match ho gyi commentId se...and we know ki filter truthy value store karta hai and hame ise htana hai to false karna padega taki wo store na ho...and ise comments ke andar store kaar dete hai. Ek =(equals to) hta doya wo apne aap typecasting kar lega..
   res.redirect('/comments');
 })
-
-// app.delete('/comments/:commentId', (req, res)=>{ //ye delete method override kar ke ayega..override POST ko karna padega and POST available form m hota hai...toh kya hamne koi form bnaya delete karne ke liye ? No. So index.ejs ke andar...sabke andar alag se form bnana padega to delete it
-//   let {commentId} = req.params; //id chahiye to id ko find kar liya
-//   //array m se particular id hta lenge...filter
-//   comments = comments.filter((comment)=>{return comment.id != commentId}) //comments naam ka array hai uspe filter method lga lenge...and it'll accept a callback function...filter method kispe lagega ? 1 iterator de rahe hai...comment...agr comment ki id match ho gyi commentId se...and we know ki filter truthy value store karta hai and hame ise htana hai to false karna padega taki wo store na ho...and ise comments ke andar store kaar dete hai. Ek =(equals to) hta doya wo apne aap typecasting kar lega..
-//   res.redirect('/comments');
-// })
-
 
 
 let PORT = 5050;
