@@ -4,7 +4,7 @@
 
 const express = require('express'); // Now products ke routes banane hai. Toh kya iske liye...express ki jarurat padti hai ? Yes. So express ko require karna padega...product.js m.
 const Product = require('../models/Product');
-
+//app toh puri ki puri application hoti hai toh use ek jagah se dusre jagah export nai kar sakte...toh we hace mini application
 const router = express.Router();//Puri ki puri application ko yha export nai kar sakte...iske liye we have...mini application naam ki chiz...jise router kehte hai...aur wo express ke andar hota hai. Jo kaam app kar pa rha tha..app.get, app.post, app.listen..wo sara kaam ab router kar payega..bcoz this is mini application..ye Router naam ka method expres ke andar available hai..
 //so ultimately router ko export karna padega 
 
@@ -25,12 +25,13 @@ router.get('/product/new', (req,res)=>{
 
 //actually adding to the DB..POST request
 router.post('/products', async(req,res)=>{
-  let {name, img,  price, desc} = req.body;//jo bhi chize POST request ke through jati hai wo request ki body m ati hai..and use destructure kar diya and ye by default undefined hoti hai....and iske liye middleware hoga..name,img,price,desc...naam se ayega...and isko dekhne ke liye app.js m middleware lagana padega..
+  let {name, img,  price, desc} = req.body;//jo bhi chize POST request ke through jati hai wo request ki body m ati hai..and use destructure kar diya and ye by default undefined hoti hai....and iske liye middleware hoga..name,img,price,desc...naam se ayega...and isko dekhne ke liye app.js m middleware lagana padega..app.use()
   //ek new product create karna hai..uske liye mongoose m ek method hota hai..create ke liye..go to mongooseejs docs -> read docs -> Models...await Tank.create({size: 'small'})...tank model hai..iski help se ek new object create kiya..so we'll be using this method to create single entity.
   await Product.create({name, img,  price, desc});//product hamare model ka naam hai..and ye create upar object({name,img..}) ki help se karega...so as it is copy kar diya...and ye create method apne mongodb ke upar chal rha hai..toh it'll be returning a new promise..so async function bna diya. Create..db ke andar automatically save bhi kar leta hai...so alg se save ki reqrmnt nai hai. 
-  //last step is to redirect...redirect /blog pe
+  //last step is to redirect...redirect /blog pe...see diagram
   res.redirect('/products');
 })
+
 
 //show particular product....Ab hame ek product ke bare m information deni hai..show and then edit karna hai..refer table.
 router.get('/products/:id' , async(req, res)=>{ //ye id chahiye toh req.params se mil jayega
@@ -48,9 +49,10 @@ router.get('/products/:id/edit', async(req,res)=>{
 })
 
 //actually changing the product
-router.patch('/products/:id', async (req,res)=>{
+router.patch('/products/:id', async (req,res)=>{ //'/products/:id' ko hit kar rha hai
   let {id} = req.params; //id nikal li
-  let {name, img,  price, desc} = req.body;//since post request ke through form bhra hai..toh hamare paas request ki body ka pura data aa sakkta hai
+  let {name, img,  price, desc} = req.body;//since post request ke through form bhra hai..toh hamare paas request ki body ka pura data aa sakkta hai...data ko as it is nikal liya
+  //id ki madad se find kar ke...name,img,price,desc..is data ke sath change karna hai
   await Product.findByIdAndUpdate(id, {name, img,  price, desc} );//mongooseejs docs pe..Queries m..Model.findByIdAndUpdate(). Id(params wali id) do find karo and 2nd argument is update karo..pura ka pura object in chizo ke sath update karo. And since it's a mongoDB method it'll return a promise...
   res.redirect('/products')
 

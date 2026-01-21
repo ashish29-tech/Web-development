@@ -4,7 +4,7 @@ const app = express(); //it's an instance.
 const path = require('path'); // path require
 const mongoose = require('mongoose');
 const seedDB = require('./seed') //seed.js m function export kara yha require kar liya
-const productRoutes = require('./routes/product') //yha require kar liya
+const productRoutes = require('./routes/product') //yha require kar liya...producr.js jo routes folder m bnaya hai wha se module export kiya hai yha toh require kar lenge
 const methodOverride = require('method-override')
 
 //connect method returns a promise.
@@ -18,17 +18,17 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views') ) //views ka folder set kara...path.join..and path hame __dirname...views ke folder ke sath.
 app.use(express.static(path.join(__dirname, 'public'))) //static folder ke liye middleware use karte hai
 
-
-app.use(express.urlencoded({extended:true})) //dekhne ke liye yha...middleware lagana padega. Ye object lega. Form data ke liye body parser...
-app.use(methodOverride('_method')) //ye middleware hai
+app.use(express.urlencoded({extended:true})) //routes folder m..actually adding a product wale ke time pe dekhne ke liye yha...middleware lagana padega. Ye object lega. Form data ke liye body parser...
+//upar require kar liya
+app.use(methodOverride('_method')) //ye middleware hai... edit.ejs m edit ke baad actually m editing honi chahiye...toh our next task is to actually update and then redirect..see diagram...toh put/patch...toh edit.ejs m form ka method change karna padega...and wha _method tab ata jab ham method override ko install kar lete
 
 
 // seedDB() //seedDB function ko run karna padega...seed.js m function paas kiya tha..and yha require(upar kara) kiya toh yha run kiya
 //nodemon server ko baar-baar start kar deta hai...toh baar-baar seed ho raha hai...isliye ek baar seedDB kar ke use comment kar dena hai wrna DB m baar-baar store ho jayega.
 //open cmd..mongosh. Then here in terminal start server by npm start and then in cmd show dbs...we'll see our db(julybatch). cmd m...use julybatch...show collections...db.products.find()(abhi khali ayega)...then uncomment and save seedDB() in app.js for 1 time and then...cmd.. db.products.find()..we'll see hamare DB m sari ki sari chize store ho gyi hai.
 
-app.use(productRoutes); //har incoming request check karo ki kya ye /products, /products/new hai...isliye middleware m bhejna pada.
-
+//upar require kar rakha hai now
+app.use(productRoutes); //we want...har incoming request check karo ki kya ye /products, /products/new hai...isliye middleware m bhejna pada.
 
 const PORT = 8080;
 app.listen(PORT, ()=>{

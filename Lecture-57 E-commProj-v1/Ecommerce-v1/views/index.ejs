@@ -9,7 +9,7 @@
   
   <h1>Displaying all the products</h1>
 
-  <!-- product.js se product ko bheja hai and index m catch kiya hai...so that's an array...so ispe loop laga sakte hai -->
+  <!-- product.js(routes wala) se product ko bheja hai and index.ejs m catch kiya hai...so that's an array...so ispe loop laga sakte hai -->
   <!-- is for loop ko chalane ke liye ejs tags lagane padenge -->
   <% for(let item of products){ %>
     <h1> <%=item.name%> </h1>
@@ -18,8 +18,9 @@
     <p> <%=item.desc%> </p>
     <!-- kisi ek pe jane ke liye uski id chahiye...wo yahi mil jayegi... -->
      <!-- open mongosh in cmd..use julybatch...show collections...db.products.find()..har ek product ke paas ek unique id(_id) -->
-     <a href="/products/<%=item._id%>">Show this</a> <!-- ._id se hit kar denge /products pe--> 
+     <a href="/products/<%=item._id%>">Show this</a> <!-- ._id se hit kar denge /products pe...now server(localhost:8080/products) pe show wale button pe click karenge toh upar url m uski id aa jani chahiye--> 
      <a href="/products/<%=item._id%>/edit">Edit this</a>
+     <!-- Delete ke liye post ko override karna padega...toh form bnaya and button bnaya taki button hit karte hi..delete ho jaye -->
      <form action="/products/<%=item._id%>?_method=DELETE" method="POST">
         <button>Delete</button>
      </form>
