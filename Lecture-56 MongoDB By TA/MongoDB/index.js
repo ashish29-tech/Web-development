@@ -27,7 +27,7 @@ const students = new Schema({ //schema ek function hai and ise hame object dena 
 
 
 //Model create karenge. Model convert ho gya collection m. Ye convert middleware ne kiya...jo ki mongoose hai.
-// const student = mongoose.model("Student", students); //model create...'Student' name ka model...schema name 'students'..
+const student = mongoose.model("Student", students); //model create...'Student' name ka model...schema name 'students'..
 let student1 = new student({name:"ram",rollNo: 1}); //data bhej diya
 student1.save(); //data save command
 
