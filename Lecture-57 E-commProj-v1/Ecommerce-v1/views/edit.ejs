@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Edit Product Form</h1>
+  
+   <!-- foundProduct ke andar se id mil jayegi....<%=foundProduct.name%>..iske aage ?_method=PATCH..but ye method tab ana tha jab ham method override ko install karte hai. Google "npm method override"..open npmjs.com wala link and see kaise install karna hai.."npm i method-override". -->
+  <form action="/products/<%=foundProduct._id%>?_method=PATCH" method="POST">
+    <div>
+      <label for="naam">Name: </label>
+      <!-- Ye form m pehle se value bhi dikhni chahiye....means jab edit karenge toh sara thori na likhne baithenge -->
+      <input type="text" name="name" id="naam" value="<%=foundProduct.name%>"> <!-- foundProduct m pehle se kuch pre-written value nazar ati hai. Input ke andar ek attribute hota hai value(jab DOM kar rahe the tab btaya tha bhaiya ne)...toh isme set kar diya foundProduct.name toh pehle se value mil jayegi-->
+    </div>
+    <div>
+      <label for="pic">Image: </label>
+      <input type="text" name="img" id="pic" value="<%=foundProduct.img%>">
+    </div>
+    <div>
+      <label for="daam">Price: </label>
+      <input type="text" name="price" id="naam" value="<%=foundProduct.price%>">
+    </div>
+    <div>
+      <label for="des">Description: </label>
+      <textarea name="desc" id="des" rows="3"> <%=foundProduct.name%> </textarea>
+    </div>
+    <button type="submit">Edit Product</button>
+  </form>
+  
+</body>
+</html>
