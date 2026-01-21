@@ -1,4 +1,5 @@
-//sara ka sara product.js routes se copy kar liya
+//sara ka sara product.js routes routes se copy kar liya
+
 
 const express = require('express'); // Now products ke routes banane hai. Toh kya iske liye...express ki jarurat padti hai ? Yes. So express ko require karna padega...product.js m.
 const Product = require('../models/Product');

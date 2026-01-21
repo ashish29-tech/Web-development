@@ -41,6 +41,6 @@ app.listen(PORT, ()=>{
 //2. mongoose connection
 //3. model -> seed data
 //4. routes bnaye hai and routes ko views ke sath joda hai
-//5. rating schema -> Product change -> form to add the rating and comment(show.ejs m milega)
+//5. rating schema bnana hai-> Product schema m change karna hai -> form to add the rating and comment(show.ejs m milega)
 
 

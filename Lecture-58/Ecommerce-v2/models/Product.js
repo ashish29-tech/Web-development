@@ -26,6 +26,7 @@ const productSchema = new mongoose.Schema({ //Yha destructure nai kiya..docs m d
   },
   reviews:[
    //yha add karenge reviews ka array..isme object jayega but 2 thing...type and refernce
+   //pura ka pura comment toh jayegga nahi toh object jayga...
     {
       type: mongoose.Schema.Types.ObjectId, //Mongoose bhai mujhe dusre ke schema m jakr..uska type m objectId wala lakr store kar de
       ref: 'Review' //refernce kya hai...review ka array
