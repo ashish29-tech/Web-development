@@ -27,7 +27,7 @@ app.use(methodOverride('_method')) //ye middleware hai
 //open cmd..mongosh. Then here in terminal start server by npm start and then in cmd show dbs...we'll see our db(julybatch). cmd m...use julybatch...show collections...db.products.find()(abhi khali ayega)...then uncomment and save seedDB() in app.js for 1 time and then...cmd.. db.products.find()..we'll see hamare DB m sari ki sari chize store ho gyi hai.
 
 app.use(productRoutes); //har incoming request check karo ki kya ye /products, /products/new hai...isliye middleware m bhejna pada.
-app.use(reviewRoutes); //yha middleware m run kiya to check ye karta hai ya nai
+app.use(reviewRoutes); //review.js routes m require kiya and yha middleware m run kiya to check ye karta hai ya nai
 
 const PORT = 8080;
 app.listen(PORT, ()=>{

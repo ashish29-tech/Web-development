@@ -37,7 +37,8 @@ router.post('/products', async(req,res)=>{
 router.get('/products/:id' , async(req, res)=>{ //ye id chahiye toh req.params se mil jayega
   let {id} = req.params; //ise destructure kar liya req.params se
   // let foundProduct = await Product.findById(id) //find karna hai pure ke pure product ko on the basis of id..iske liye find by id method hota hai..mongoosejs.com docs m..Queries m..Model.findById()...direct id ke base pe pura ka pura object mil jayega...and since it is a mongoDB method..it'll return a promise..toh await and async function...varible m store kar liya..
-   let foundProduct = await Product.findById(id).populate('reviews')////populate lagaya. Ye dusre collection m jayega and wha se sara data lake de dega...but product ke andar reviews ke basis pe populate karna hai...taki reviews ke andar id ke hisab se lake de...isliye yha reviews likhenge...passed as a string.
+   let foundProduct = await Product.findById(id).populate('reviews')////populate lagaya. Ye dusre collection m jayega and wha se sara data lake de dega...but product ke andar reviews ke basis pe populate karna hai...taki reviews ke andar id ke hisab se lake de...isliye yha reviews likhenge...passed as a string. show wale page m dekhna chahte hai reviews isliye yahi populate kara diya
+   //jab ham kisi particular route ko dekhenge toh wo product mujhe dikhega
   // console.log(foundProduct); //ek baar print kara kar dekh lete hai....mtlb before populate aise hai
   res.render('show', {foundProduct})//found product ko send to the showpage pe dikha dete hai..res.render kar denge show page ke sath..and pura ka pura foundProduct as an object. Ab show page bnana padega.
 
