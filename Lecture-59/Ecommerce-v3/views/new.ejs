@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+
+  <h1>New Product Form</h1>
+  <!-- Add product to the DB...refer table karenge. Toh POST request bhejni padti hai -->
+
+  <form class="needs-validation" action="/products" method="POST" novalidate> <!-- POST request jayegi... /products.    required likhne pe by default action na perform kare uske liye...novalidate attribute-->
+    
+    <div>
+       <label for="naam">Name: </label>
+      <input type="text" name="name" id="naam" required>
+    
+    <div class="valid-feedback"> <!-- this div is copeied from bootstrap -->
+      Looks good!
+    </div>
+     <div class="invalid-feedback">
+        Please choose a Product Name.
+     </div>
+    </div>
+    <div>
+      <label for="pic">Image: </label>
+      <input type="text" name="img" id="pic">
+    </div>
+    <div>
+      <label for="daam">Price: </label>
+      <input type="text" name="price" id="daam" required> <!-- jo-jo field m chahta hu ki bina us field na bhare use required kar dunga... -->
+    
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+    <div class="invalid-feedback">
+        Please choose a Product Price.
+    </div>
+    </div>
+    <div>
+      <label for="des">Description: </label>
+      <textarea name="desc" id="des" rows="3"></textarea>
+    </div>
+    <button type="submit">Add Product</button>
+  </form>
+  
+  <!-- pura js bootstrap...form...validation se copy kiya hai...isse validation -->
+  <script>
+    (() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+  </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
