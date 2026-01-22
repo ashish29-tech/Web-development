@@ -18,7 +18,7 @@ const mongoose = require('mongoose'); //Mongoose require kar liya so that we can
 //productSchema ki jagah review schema
 const reviewSchema = new mongoose.Schema({ //Yha destructure nai kiya..docs m destrcture m kiya hai. Always accept an object
   rating: {
-    type: Number,
+    type: Number, //rating 1,2,3,4,5 hota hai na the number
     min: 0,
     max: 5
   },
