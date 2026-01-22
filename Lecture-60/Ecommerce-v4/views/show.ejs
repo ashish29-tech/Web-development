@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/star.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+
+  <%-include('./flash')%>
+
+  <section class="row">
+  
+  
+  <h1>Displaying a paarticular product</h1>
+  
+   <div class="col-6 border">
+  
+    <h1><%=foundProduct.name%></h1>
+    <img src="<%=foundProduct.img%>"  >
+    <h3><%=foundProduct.price%></h3>
+    <p><%=foundProduct.desc%></p>
+    
+  </div>
+
+  <div class="col-6 border">
+      <h1>Rating Form</h1>
+      <form action="/products/<%=foundProduct._id%>/rating" method="POST"> <!-- We want ki rating mil jaye toh rating ko kon se method ke sath request bhejunga ? POST. Jab submit karni hoti hai to POST. Patha ham apne according decide kar sakte hai.."/products/:id/rating...har ek product ki jo id hai uspe hit kar ke jab m rating karta hu tab ye route hit ho. And ye id..foundproduct ki help se milegi. Is method pe POST method ke sath ek route bnana hai...review.js"-->
+        <label for="star">Rating:</label>
+        <!-- <input type="range" min="0" max="5" name="rating" id="star"> -->
+  <fieldset class="starability-basic">
+    <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="0" checked aria-label="No rating." />
+    <input type="radio" id="first-rate1" name="rating" value="1" />
+    <label for="first-rate1" title="Terrible">1 star</label>
+    <input type="radio" id="first-rate2" name="rating" value="2" />
+    <label for="first-rate2" title="Not good">2 stars</label>
+    <input type="radio" id="first-rate3" name="rating" value="3" />
+    <label for="first-rate3" title="Average">3 stars</label>
+    <input type="radio" id="first-rate4" name="rating" value="4" />
+    <label for="first-rate4" title="Very good">4 stars</label>
+    <input type="radio" id="first-rate5" name="rating" value="5" />
+    <label for="first-rate5" title="Amazing">5 stars</label>
+  </fieldset>
+
+        <br>
+        <label for="textt">Rating:</label>
+        <textarea name="comment" id="textt" rows="3"></textarea>
+        <br>
+        <button type="submit">ADD REVIEW</button> <!-- by default button ka type submit hota hai... -->
+      </form>
+
+  </div>
+  <div class="border">
+    <% for(let review of foundProduct.reviews){ %> <!-- foundProduct ke andar jo reviews hai...cuz foundProduct toh ek product hai isme reviews naam ka array hai-->
+        <!-- <h2>Rating: <%=review.rating%></h2> --> 
+         <!-- ye copy kiya gitHub starability se -->
+          <h2>Rating: </h2>
+          <h2 class="starability-result" data-rating="<%=review.rating%>"> <!-- Rating vary karegi isliye 3 star hta diy and review rating lga diya -->
+              Rated: <%=review.rating%> stars
+          </h2>
+        <h5>Comment: <%=review.comment%></h5>
+        <!-- <h3>Time: <%=review.createdAt%></h3> -->
+         <!-- yha .createdat and .updatedat use karenge. And puri date nai chahiye toh uske liye .toDateString method-->
+         <% if(review.createdAt){ %>
+          <h5>Time: <%=review.createdAt.toDateString()%></h5>
+         <% } %>
+        
+         
+    <% } %>
+  </div>
+
+</section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
