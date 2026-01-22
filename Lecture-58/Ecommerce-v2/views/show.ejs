@@ -65,7 +65,9 @@
         <h5>Comment: <%=review.comment%></h5>
         <!-- <h3>Time: <%=review.createdAt%></h3> -->
          <!-- yha .createdat and .updatedat use karenge. And puri date nai chahiye toh uske liye .toDateString method-->
+          <!-- agr review.createdAt hai toh hi isko display karo -->
          <% if(review.createdAt){ %>
+          <!-- puri date nahi chahiye toh iske liye we have method called toDateString() -->
           <h5>Time: <%=review.createdAt.toDateString()%></h5>
          <% } %>
         

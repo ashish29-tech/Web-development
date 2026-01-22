@@ -63,7 +63,8 @@ router.patch('/products/:id', async (req,res)=>{
 //DELETE is homework... Product.findByIdAndDelete...ye use karna hai
 router.delete('/products/:id', async(req,res)=>{
   let {id} = req.params;
-  let foundProduct = await Product.findById(id); //product ko delete karne se pehle reviews delete karu...toh id ki help se pura product find kar lete hai.
+  //jab product delete kare toh reviews bhi delete ho jaye
+  let foundProduct = await Product.findById(id); //product ko delete karne se pehle reviews delete karu...toh id ki help se pura product find kar lete hai. Is foundProduct ke paas reviewa naam ka array hai toh for loop lga dete hai
    //Deleting reviews before deleting product...ab is product ke paas reviews naam ka array hai..toh for loop
    for(let ids of foundProduct.reviews){ //ye reviews ki id hai...toh in id ke basis pe ham delete karna chahte hai
       await Review.findByIdAndDelete(ids)//ye jo id hai inko rreview ke collection m se hta do...Review type kar ke enter...upar require ho jayega. And since it's a mongoDB operation toh it'll return a promise..

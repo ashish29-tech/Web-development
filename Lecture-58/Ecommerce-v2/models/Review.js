@@ -26,7 +26,7 @@ const reviewSchema = new mongoose.Schema({ //Yha destructure nai kiya..docs m de
     type: String,
     trim: true,
   }
-}, { timestamps: true}) //jab bhi new reviews ayegi toh 2 new entries add ho jayegi....1st created at and 2nd updated at
+}, { timestamps: true}) //jab bhi new reviews ayegi toh 2 new entries add ho jayegi....1st created at and 2nd updated at....db.reviews.find()..run this in mongosh and see dono created and updated at show hongi
 
 //model/collection..schema ki help se model banega. Model is a Js class. And class syntax se objects bante hai. So model/collection is a Js class jiski help se objects bante hai. And object every single entity hue and every single entity is a document...so objects/document
 
