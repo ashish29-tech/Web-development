@@ -13,7 +13,6 @@ mongoose.connect('mongodb://127.0.0.1:27017/julybatch') //connect method returns
 .catch((err)=>{console.log("error is: " , err)}) //in case catch m error aya toh use alag se dikha sakte hai. .catch(callback) → executes if the Promise is rejected. Example: You stopped MongoDB service or wrong port → prints "error is: <details>"
 
 
-
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views') ) //views ka folder set kara...path.join..and path hame __dirname...views ke folder ke sath.
 app.use(express.static(path.join(__dirname, 'public'))) //static folder ke liye middleware use karte hai

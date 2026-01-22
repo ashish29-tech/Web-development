@@ -4,6 +4,8 @@
 // schema.js file bna lete hai...so that uske andar chizo ko sambhal saku
 //joi install kiya... npm i joi
 
+//server side pe chizo ko validate kar sake isliye joi use karte hai
+
 const Joi = require('joi'); //use karne ke liye require karna padega
 
 const productSchema = Joi.object({ //joi ka object jata hai. Ye hamare product ka schema hai...

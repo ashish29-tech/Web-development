@@ -10,16 +10,19 @@
 
   <h1>New Product Form</h1>
   <!-- Add product to the DB...refer table karenge. Toh POST request bhejni padti hai -->
-
-  <form class="needs-validation" action="/products" method="POST" novalidate> <!-- POST request jayegi... /products.    required likhne pe by default action na perform kare uske liye...novalidate attribute-->
+<!-- client side validation ke liye we'll use Bootstrap...https://getbootstrap.com/docs/5.3/forms/validation/ -->
+  <form class="needs-validation" action="/products" method="POST" novalidate> <!-- POST request jayegi... /products.    required likhne pe by default action means validation hota hai toh ye na perform kare browser uske liye...novalidate attribute-->
     
     <div>
        <label for="naam">Name: </label>
+       <!-- jis-jis field ke aage ham chahte hai uske bina form na bhare toh required likh diya... -->
+        <!-- jab code fatne wali chize client ki traf se ho rahi hoti hai toh use we call it client side validation and hamara required lkhne se aage nahi badega -->
       <input type="text" name="name" id="naam" required>
     
-    <div class="valid-feedback"> <!-- this div is copeied from bootstrap -->
+    <div class="valid-feedback"> <!-- this div is copeied from bootstrap.... https://getbootstrap.com/docs/5.3/forms/validation/ -->
       Looks good!
     </div>
+    <!-- https://getbootstrap.com/docs/5.3/forms/validation/ copy kiya div -->
      <div class="invalid-feedback">
         Please choose a Product Name.
      </div>
@@ -35,6 +38,7 @@
     <div class="valid-feedback">
       Looks good!
     </div>
+    <!-- https://getbootstrap.com/docs/5.3/forms/validation/  copied -->
     <div class="invalid-feedback">
         Please choose a Product Price.
     </div>
@@ -46,7 +50,7 @@
     <button type="submit">Add Product</button>
   </form>
   
-  <!-- pura js bootstrap...form...validation se copy kiya hai...isse validation -->
+  <!-- pura js bootstrap...form...validation se copy kiya hai and script tag laga kar paste...isse validation.....https://getbootstrap.com/docs/5.3/forms/validation/ -->
   <script>
     (() => {
   'use strict'
