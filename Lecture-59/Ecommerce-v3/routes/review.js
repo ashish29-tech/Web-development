@@ -9,7 +9,7 @@ const router = express.Router();//Puri ki puri application ko yha export nai kar
 
 //review route likhenge jisse review dikhe
 router.post('/products/:id/rating', validateReview, async (req,res)=>{ //post request se jab bhi hit karte hai toh..toh sara data request ki body m milta hai. validateReview pe click kiya upar require ho gya.
-  try{
+  try{ 
     // console.log(req.body); //toh request ki body ko console kar liya
   // res.send(req.body); //and kuch bhi response bhej dete hai taki server na fate.
   //now isko destructure kar ke kaam kar sakte hai.
@@ -28,7 +28,7 @@ router.post('/products/:id/rating', validateReview, async (req,res)=>{ //post re
   res.redirect(`/products/${id}`); //redirect kar denge show wale page pe.
 
   }
-  catch(e){
+  catch(e){ //error aye toh error page dikha do
     res.render('error', {err : e.message})
   }
   })

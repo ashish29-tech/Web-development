@@ -60,15 +60,15 @@ router.post('/products', validateProduct, async(req,res)=>{ //jab bhi product ad
 
 //show particular product....Ab hame ek product ke bare m information deni hai..show and then edit karna hai..refer table.
 router.get('/products/:id' , async(req, res)=>{ //ye id chahiye toh req.params se mil jayega
-  try{
+  try{ //routes bhi to fat sakte hai
     let {id} = req.params; //ise destructure kar liya req.params se
   // let foundProduct = await Product.findById(id) //find karna hai pure ke pure product ko on the basis of id..iske liye find by id method hota hai..mongoosejs.com docs m..Queries m..Model.findById()...direct id ke base pe pura ka pura object mil jayega...and since it is a mongoDB method..it'll return a promise..toh await and async function...varible m store kar liya..
    let foundProduct = await Product.findById(id).populate('reviews')////populate lagaya. Ye dusre collection m jayega and wha se sara data lake de dega...but product ke andar reviews ke basis pe populate karna hai...taki reviews ke andar id ke hisab se lake de...isliye yha reviews likhenge...passed as a string.
   // console.log(foundProduct); //ek baar print kara kar dekh lete hai....mtlb before populate aise hai
   res.render('show', {foundProduct})//found product ko send to the showpage pe dikha dete hai..res.render kar denge show page ke sath..and pura ka pura foundProduct as an object. Ab show page bnana padega.
   }
-  catch(e){
-    res.render('error', {err : e.message})
+  catch(e){ //error aye toh error page pe chale jaye
+    res.render('error', {err : e.message}) //sath m error message dikha de
   }
 })
 
