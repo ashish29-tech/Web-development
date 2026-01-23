@@ -36,11 +36,13 @@ app.get('/setcookies', (req,res)=>{ //ye /setcookies route hit karenge browser m
 //https://expressjs.com/en/5x/api.html#req.cookies
 
 //ek route bna lete hai to actually see the cookies
-app.get('/getcookies', (req,res)=>{ //
-  // console.log(req.cookies); //req.cookies from expressjs docs. get karne ke liye...request se mangenge and sari cookies mangenge isliye plural hoga. and store client side pe hoti hai and client request bhejta hai isliye req.cookies
+app.get('/getcookies', (req,res)=>{ // now hit the route...http://localhost:5050/getcookies...sari cookies nazar ayengi in thr format of object..toh we can destructure it
+  //When using cookie-parser middleware, this property is an object that contains cookies sent by the request. If the request contains no cookies, it defaults to {}.
+  //in the format of object mil sakta hai toh ise dekhne ke liye...req.cookies ko access karne ke liye console
+  console.log(req.cookies); //req.cookies from expressjs docs. get karne ke liye...request se mangenge and sari cookies mangenge isliye plural hoga toh s hoga cookies m. and store client side pe hoti hai and client request bhejta hai isliye req.cookies
   // let {username, age} = req.cookies; //jo bhi chahiye use destructure kar diya...like hame username and age chcahiye
-  // // res.send(req.cookies)
-  //   res.send(`hi I am ${username} and my age is ${age}`)
+  // res.send(req.cookies)
+  res.send(`hi I am ${username} and my age is ${age}`) //destructure kar liya tph we can send something like this
 
 })
 
