@@ -17,8 +17,6 @@ let configSession = { // ek configSession varible m pura object hold ho rha hai.
 }
 
 
-
-
 //Why does .connect() return a Promise? Connecting to a database is an asynchronous task (it takes some time). Instead of blocking the entire program, Mongoose gives you back a Promise. A Promise represents a “future value”: Resolved → connection success. Rejected → connection failed (wrong URI, server down, etc.).
 mongoose.connect('mongodb://127.0.0.1:27017/julybatch') //connect method returns a promise. And promise ko resolve karne ke liye...then and .catch ki chaining. DB name is julybatch.
 .then(()=>{console.log('db connected')}) //You handle Promises using .then() and .catch(). .then(callback) → executes if the Promise is resolved...Example: MongoDB connection succeeded → "db connected" will print. 
