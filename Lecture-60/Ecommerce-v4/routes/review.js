@@ -26,8 +26,11 @@ router.post('/products/:id/rating', validateReview, async (req,res)=>{ //post re
   await product.save(); //save method mongoDB ka hai toh await lga denge..cuz save method returns the promise
   await review.save();
 
+  //adding flash messages
   //redirect karne se pehle...flash require..and since it's a middleaware toh har jgah access ho jayega
+  //2 args...
   req.flash('success', 'Review Added Successfully'); ///Now we have to think ye message ka use kha karna hai...jha redirect ho rha hai waha...ek show product pe redirect ho rha hai
+  //ek show product pe redirect ho rha hai toh...id aa rahi hai toh....flash message jo bheja hai use show m istemal karna hai
   res.redirect(`/products/${id}`); //redirect kar denge show wale page pe...show pe redirect ho rha. Toh views m show.ejs m..use karenge.
 
   }

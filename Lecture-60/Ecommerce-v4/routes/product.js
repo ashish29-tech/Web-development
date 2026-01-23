@@ -50,6 +50,7 @@ router.post('/products', validateProduct, async(req,res)=>{ //jab bhi product ad
   //ek new product create karna hai..uske liye mongoose m ek method hota hai..create ke liye..go to mongooseejs docs -> read docs -> Models...await Tank.create({size: 'small'})...tank model hai..iski help se ek new object create kiya..so we'll be using this method to create single entity.
   await Product.create({name, img,  price, desc});//product hamare model ka naam hai..and ye create upar object({name,img..}) ki help se karega...so as it is copy kar diya...and ye create method apne mongodb ke upar chal rha hai..toh it'll be returning a new promise..so async function bna diya. Create..db ke andar automatically save bhi kar leta hai...so alg se save ki reqrmnt nai hai. 
   //last step is to redirect...redirect /blog pe
+  req.flash('success', 'product added successfully')
   res.redirect('/products');
   }
   catch(e){
@@ -65,6 +66,8 @@ router.get('/products/:id' , async(req, res)=>{ //ye id chahiye toh req.params s
   // let foundProduct = await Product.findById(id) //find karna hai pure ke pure product ko on the basis of id..iske liye find by id method hota hai..mongoosejs.com docs m..Queries m..Model.findById()...direct id ke base pe pura ka pura object mil jayega...and since it is a mongoDB method..it'll return a promise..toh await and async function...varible m store kar liya..
    let foundProduct = await Product.findById(id).populate('reviews')////populate lagaya. Ye dusre collection m jayega and wha se sara data lake de dega...but product ke andar reviews ke basis pe populate karna hai...taki reviews ke andar id ke hisab se lake de...isliye yha reviews likhenge...passed as a string.
   // console.log(foundProduct); //ek baar print kara kar dekh lete hai....mtlb before populate aise hai
+  //isi route pe redirect hua tha..flash wala
+  //ultimately show wale templae pe render ho rha hai toh we'll go to show template
   res.render('show', {foundProduct, success:req.flash('msg')})//found product ko send to the showpage pe dikha dete hai..res.render kar denge show page ke sath..and pura ka pura foundProduct as an object. Ab show page bnana padega. Message ke format m jo request.flash ke andar mila tha..with the 'msg'(variable). And ultimately show wale template pe render ho rha hai...toh show template pe jayenge.
   
   }
@@ -92,6 +95,7 @@ router.patch('/products/:id', validateProduct, async (req,res)=>{
     let {id} = req.params; //id nikal li
     let {name, img,  price, desc} = req.body;//since post request ke through form bhra hai..toh hamare paas request ki body ka pura data aa sakkta hai
     await Product.findByIdAndUpdate(id, {name, img,  price, desc} );//mongooseejs docs pe..Queries m..Model.findByIdAndUpdate(). Id(params wali id) do find karo and 2nd argument is update karo..pura ka pura object in chizo ke sath update karo. And since it's a mongoDB method it'll return a promise...
+    req.flash('success', 'product edited successfully')
     res.redirect('/products')
   }
     catch(e){
@@ -109,6 +113,7 @@ router.delete('/products/:id', async(req,res)=>{
       await Review.findByIdAndDelete(ids)//ye jo id hai inko rreview ke collection m se hta do...Review type kar ke enter...upar require ho jayega. And since it's a mongoDB operation toh it'll return a promise..
    }
      await Product.findByIdAndDelete(id);
+     req.flash('success', 'product deleted successfully')
     res.redirect('/products') //route ko hit karne ke liye DELETE chahiye and DELETE ke liye POST ko override karna padega...index.ejs m jake form bnanyenge
   }
   catch(e){

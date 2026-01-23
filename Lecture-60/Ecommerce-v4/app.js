@@ -9,6 +9,7 @@ const reviewRoutes= require('./routes/review'); //review wale route ko..product 
 const flash = require('connect-flash'); //yha se require kar liya...https://www.npmjs.com/package/connect-flash
 const session = require('express-session'); // session ko bhi require kar liya...session = require('express-session')
 
+//session ke andar object tha use copy-paste kar liya..
 let configSession = { // ek configSession varible m pura object hold ho rha hai...jo session ke andar object tha wo wala copy-paste kar diya...so that is middlewaare ko better use kar pau
   secret: 'keyboard cat', //middleware copy kar liya...https://www.npmjs.com/package/express-session
   resave: false,
@@ -38,18 +39,22 @@ app.use(methodOverride('_method')) //ye middleware hai
 //nodemon server ko baar-baar start kar deta hai...toh baar-baar seed ho raha hai...isliye ek baar seedDB kar ke use comment kar dena hai wrna DB m baar-baar store ho jayega.
 //open cmd..mongosh. Then here in terminal start server by npm start and then in cmd show dbs...we'll see our db(julybatch). cmd m...use julybatch...show collections...db.products.find()(abhi khali ayega)...then uncomment and save seedDB() in app.js for 1 time and then...cmd.. db.products.find()..we'll see hamare DB m sari ki sari chize store ho gyi hai.
 
-//flash wala middleware pehle chalega..flash wala baad m cuz flash is deppendent on session.
+//Session wala middleware pehle chalega..flash wala baad m cuz flash is deppendent on session.
 app.use(session(configSession)); //object ki jgah configSession use kar liya cuz upar variable m store kara diya object. 
 //and make sure flash iske baad hoga cuz flash is dependent on the session
 app.use(flash());//copy-paste from...npmjs.com/package/connect-flash 
 
-//locals ke liye...middleware bnana hai...and middleware is a function
+//locals bna lenge...cuz har template pe jake ek flash message dena hai toh uski jgah locals bna lenge...
+//toh locals bna lenge toh to har file m jake req.flash nai bhejna padega...baar-baar karne se bach jayenge...
+//ek middleware bnayenge and locals ki chiz ko set karenge...jo bhi chiz locals m set ho jati hai use throughout the app kahi bhi accessible ho jati hai...
+//locals ke liye...middleware bnana hai....toh ye har incoming request ke liye chal jayega...and middleware is a function
 // (req,res,next)=>{} //ye middleware
 app.use( (req,res,next)=>{ //middleware is a function which can have 3 states
   //response hamara locals ke andar ke present hota hai. 2 type ke message aa sakte hai...success and error..toh locals ke andar dono honge.
+  //locals hamara response ke andar present hota hai
   res.locals.success = req.flash('success'); //request ke flash ke andar...jab bhi 'success' key se mile message...toh usko res.locals.success m store kar do.
-  res.locals.error = req.flash('error');
-  next(); //jab upar ke don(success and error) apna kaam kar de to ye next function ko chala do. We'll create a file jo mujhe flash message lake dega.
+  res.locals.error = req.flash('error'); //jha error dena hoga wha error ke corresponding key mil jaeygi
+  next(); //jab upar ke dono(success and error) apna kaam kar de to ye next function ko chala do. We'll create a file jo mujhe flash message lake dega.
 } ) //
 
 

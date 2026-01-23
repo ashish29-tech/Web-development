@@ -1,8 +1,9 @@
 <!-- We'll create a file jo mujhe flash message lake dega. -->
 
-
+<!-- success ka alert -->
 <!-- success hua to success wala message -->
-<% if(success & success.length){ %>
+ <!-- success and success ki koi length hai toh ye show kar denge -->
+<% if(success && success.length){ %>
   <div class="alert alert-success alert-dismissible fade show" role="alert">
     <strong> <%=success%> </strong>
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -11,7 +12,7 @@
 
 
 <!-- Error hua toh error wala message -->
-<% if(error & error.length){ %>
+<% if(error && error.length){ %>
   <div class="alert alert-warning alert-dismissible fade show" role="alert">
     <strong> <%=error%> </strong>
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
