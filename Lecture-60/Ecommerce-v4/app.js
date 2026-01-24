@@ -57,7 +57,6 @@ app.use( (req,res,next)=>{ //middleware is a function which can have 3 states
   next(); //jab upar ke dono(success and error) apna kaam kar de to ye next function ko chala do. We'll create a file jo mujhe flash message lake dega.
 } ) //
 
-console.log(first)
 
 app.use(productRoutes); //har incoming request check karo ki kya ye /products, /products/new hai...isliye middleware m bhejna pada.
 app.use(reviewRoutes); //yha middleware m run kiya to check ye karta hai ya nai
