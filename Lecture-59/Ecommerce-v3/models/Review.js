@@ -2,7 +2,7 @@
 const mongoose = require('mongoose'); //Mongoose require kar liya so that we can use it. Mongoose is an object.
 
 //Schema.
-// import mongoose from 'mongoose'; //copied from docs
+// import mongoose from 'mongoose'; //copied from docs mongoose
 // const { Schema } = mongoose; //copied from docs. Yha mongoose ke andar se schema naam ki chiz ko destructure ki hai...so rather than destructuring can we usi it like mongoose.schema
 // const blogSchema = new Schema({ //copied. Yha new schema ki jgah...new mongoose.schema likh sakte hai.
 const reviewSchema = new mongoose.Schema({ //Yha destructure nai kiya..docs m destrcture m kiya hai. Always accept an object
