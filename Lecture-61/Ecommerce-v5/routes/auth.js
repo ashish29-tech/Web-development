@@ -28,6 +28,7 @@ router.get('/login' , (req,res)=>{ //login ka route
 
 //login DB m jayega..DB m chizo ko check akrega...password ko match karega...
 router.post('/login', //path sirf login hai..isi pe hit karaya hai
+    //copy-pasted from passport... passport pe click karenge toh upar require ho jayega
   passport.authenticate('local', //local strategy ke sath jana  hai. Passport ka use kar rahe hai toh ise reaquire karna padega.
   { 
     failureRedirect: '/login', //authentication fail ho gya toh firse login pe jana hai
@@ -35,13 +36,14 @@ router.post('/login', //path sirf login hai..isi pe hit karaya hai
   }),
   function(req, res) { //else ye function run kar denge
     req.flash('success' , 'Welcome Back')
-    res.redirect('/products');
+    res.redirect('/products'); //sab kuc ho jaye toh /product pe jaye
 });
 
 router.get('/logout' , (req,res)=>{
+    //hover over logout..we'll see it shows callback function
     req.logout(()=>{ //call back function bnaya jo automatically call ho rha hoga
-        req.flash('success' , 'Logged out successfully')
-        res.redirect('/login');
+        req.flash('success' , 'Logged out successfully') //log out hoga toh message dikha dete hai
+        res.redirect('/login'); //dobara tph login karayenge na toh redirect kar dete hai login pe
     });
 })
 
