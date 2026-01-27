@@ -41,7 +41,7 @@ app.use(flash());
 
 
 // use static serialize and deserialize of model for passport session support...https://www.npmjs.com/package/passport-local-mongoose
-//passport m jo serialize and deserialize karte hai
+//passport m jo serialize and deserialize karte hai...iske liye passport pe bhi session ko karna padta hai..taki passport session ko ustemal kar paye...session and passport do alag-alag package
 app.use(passport.initialize()); //passport ko hamare session ka acces mil jaye taki use use kar paye...passport initialise and upar require kar liya.
 app.use(passport.session()); //pass. session is a different package and passport is a different package...so we want our passport to get the access of session....passport ab mere session ka bhi use kar sakta hai.
 passport.serializeUser(User.serializeUser()); //passport command...ye passport ke andar serialise iske liye passport ke session ko 

@@ -13,9 +13,11 @@ router.get('/register' , (req,res)=>{ //register kar rahe user ko
 //POST request se data...request ki body m se milta hai.
 router.post('/register' , async (req,res)=>{ //jab signup pe click karega toh DB m aa jana chahiye...so DB m changes hote hai to POST request and /register path pe hi kara rahe hai.
     // console.log(req.body);
+    //destructure kar liya request ki body m se jo ayega
     let { username , password , email , gender} = req.body; //npm passport local mongoose m...static method m register naam ka method. Yha destructure kar liya...request ki body m se jo ayega.
     // res.send('hi')
-    let user = new User({ username , email , gender}); //object
+    //user create karne ke liye 
+    let user = new User({ username , email , gender}); //object 
     let newUser = await User.register(user , password);//register is a static method which means ye hamare model pe seedha lag jayega. register 2 chize accept kar rha...1st is user and 2nd is password. And since it's a DB operation...it'll take timea amd return a promise...so async and await. Ye register apne aap hi sare kaam karega...DB m store, username ko unique and password ko hash etc.
     res.send(newUser);
 })
