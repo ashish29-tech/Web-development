@@ -34,8 +34,9 @@ let configSession = { //ye session ka middleware hai.
     secret: 'keyboard cat',
     resave: false,
     saveUninitialized: true,
+    //hame time and user ka session yahi store karna hai....
     cookie: { //cookie ke andar 1 object bheja
-        httpOnly: true, //abhi secure itna nai rakhna toh isrf http...and sessionId hp hi rahe....and ye seesion id 
+        httpOnly: true, //abhi secure itna nai rakhna toh isrf http...and sessionId hp hi rahe....and ye seesion id ...toh true
         expires: Date.now() + 7*24*60*60*1000, //abhi time ka pta lag rha hai Date.now() se...7 days * 24 ghante * 60 minute * 60 seconds * 1000 millisecond in 1 minute....itni der baad expire ho jaye
         maxAge: 7*24*60*60*1000 //yahi iski umr hui...7 days. This is how we manage session ka time. Expire ya maxAge dono m se jo pehle aa jaye..isliye ham dono ko same likhte hai
     }

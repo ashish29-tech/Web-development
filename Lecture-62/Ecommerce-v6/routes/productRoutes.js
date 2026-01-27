@@ -18,7 +18,7 @@ router.get('/products' , async(req,res)=>{
 })
 
 
-// adding a fomr for  anew product
+// adding a fomr for  anew product.... agr new product add karna hai toh login hona chahiye..isliye isLoggedIn meddileware use kar lete hai yha
 router.get('/products/new' , isLoggedIn, isSeller, (req,res)=>{ //agr new product add kar rahe hai toh mujhe login hona chahiye
     try{
         res.render('products/new');
@@ -32,7 +32,7 @@ router.get('/products/new' , isLoggedIn, isSeller, (req,res)=>{ //agr new produc
 router.post('/products' , isLoggedIn, isSeller, validateProduct , async (req,res)=>{ //post karna hai tab bhi loggedin hona jaruri hai...uske baad product ko validate karenge.
     try{
         let {name,img,price,desc} = req.body;
-
+        //jo create karega prodcut ko wahi author hoga...
         await Product.create({name,img,price,desc, author:req.user._id}); //jab banda log in hota hai toh req.user ka access toh mil hi jata hai...author ke andar us user ki id store kar di
         req.flash('success' , 'Product added successfully');
         res.redirect('/products');
