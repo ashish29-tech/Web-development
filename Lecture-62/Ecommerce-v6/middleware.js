@@ -51,11 +51,14 @@ const isSeller = (req,res,next)=>{ //if seller nai hai toh wo na add, delete, ed
     next();//agr sab shi hai toh..permission hogi toh next kar dete hai
 }
 
+//product ka author hai ya nahi...
 const isProductAuthor = async (req,res,next)=>{ //if seller hai..toh kya wo us product ka author hai..author nai hai toh edit, delete nai kar sakta...toh middleware bnayenge kya wo product ka author hai ya nai hai
     let {id} = req.params;//product ka author hai ya nai iske liye sabse pehle product ki id chaiye hogi
-    let product = await Product.findById(id) //product id mil gyi toh product mil sakta hai..findById se pura product mil jayega...and since it's a DB command to it'll return us a promise...and promise works with async and await
+    let product = await Product.findById(id) //product id mil gyi toh product mil sakta hai..findById se pura product mil jayega...and since it's a DB command to it'll return us a promise...and promise works with async and await...jis product ki baat kar rahe hai wo mil jayega pura ka pura
     console.log(product.author, 'author');// jo bande ne product bnaya hai. This is an object id.
-    console.log(req.user , 'user'); //jabnda logged in hai. This is also an object id.
+    console.log(req.user , 'user'); //jo bnda logged in hai. This is also an object id.
+    //jab 2 object id ko compare karte hai toh directly nahi kar sakte...tab method hota hai .equals().... so == ya === se compare nahi kar sakte
+    //jo banda logged in hai and jo banda us product ka author hai agr dono ki id match kar tabhi toh uska author mana jayega
     if(!product.author.equals(req.user._id)){ //product author...req.user._id ke equal nai hua toh. 2 object id(product.author, req.user._id) ko cpmapre directly nai kar sakte...uske liye .equals method.
         req.flash('error', 'You are not the owner of this product'); 
         return res.redirect(`/products/${id}`) 

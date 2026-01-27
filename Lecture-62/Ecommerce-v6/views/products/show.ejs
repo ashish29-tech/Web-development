@@ -13,7 +13,7 @@
                   <p class="card-text"> <%= foundProduct.desc %> </p>
                   <a href="#" class="btn btn-success">Buy</a>
                   <a href="#" class="btn btn-secondary">Add to Cart</a>
-                  <% if(currentUser && currentUser.role === "seller"){ %> <!-- if current user hai and current user ki value seller hai toh hi nazar aye --> 
+                  <% if(currentUser && currentUser.role === "seller"){ %> <!-- if current user hai and current user ki value seller hai toh hi nazar aye edit and delete ka button --> 
                     <a href="/products/<%=foundProduct._id%>/edit" class="btn btn-info">Edit</a>
                     <form class="d-inline-block" action="/products/<%=foundProduct._id%>?_method=DELETE" method="POST">
                     <button class="btn btn-danger btn-sm">Delete</button>
