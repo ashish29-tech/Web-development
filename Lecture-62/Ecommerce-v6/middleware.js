@@ -41,14 +41,14 @@ const isLoggedIn = (req,res,next)=>{ //isLoggedIn naam se bna liya middleware
 const isSeller = (req,res,next)=>{ //if seller nai hai toh wo na add, delete, edit kar payega...toh ek middleware..seller ka bnana padega..
     let {id} = req.params; //destructure
     if(!req.user.role){ //seller ke liye....user ka role hona jaruri hai..now role kha milega ? request hai toh req.user ka bhi access hoga and us user ke andar role naam ki chiz toh hogi hi...pehle check kar lete hai role hi nai hua toh
-        req.flash('error', 'You do not have the permission'); 
+        req.flash('error', 'You do not have the permissions'); 
         return res.redirect('/products')
     }
     else if(req.user.role !== "seller"){ // seller ke barabar nai hua toh
-        req.flash('error', 'You do not have the permission'); 
+        req.flash('error', 'You do not have the permissions'); 
         return res.redirect(`/products/${id}`) //id yha slash m lga di destructure kar ke
     }
-    next();//agr sab shi hai toh
+    next();//agr sab shi hai toh..permission hogi toh next kar dete hai
 }
 
 const isProductAuthor = async (req,res,next)=>{ //if seller hai..toh kya wo us product ka author hai..author nai hai toh edit, delete nai kar sakta...toh middleware bnayenge kya wo product ka author hai ya nai hai
@@ -64,4 +64,4 @@ const isProductAuthor = async (req,res,next)=>{ //if seller hai..toh kya wo us p
 }
 
 
-module.exports = {validateProduct ,validateReview, isLoggedIn, isSeller, isProductAuthor} ; //ye teeno export kar diye yha se...and require kar diya productRoute.js m
+module.exports = {validateProduct ,validateReview, isLoggedIn, isSeller, isProductAuthor} ; //ye teeno export kar diye yha se...and require kar diya productRoute.js m...ab isSeller ko bhi bhej diya
