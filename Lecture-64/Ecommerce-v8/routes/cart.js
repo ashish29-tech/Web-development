@@ -5,7 +5,7 @@ const User = require('../models/User');
 const Product = require("../models/product");
 const router = express.Router();
 
-
+//
 router.get('/user/cart', isLoggedIn, async (req,res)=>{ //yha bhi banda loggedIn chahiye isliye middleware lga ke check kara liya...
   let userId = req.user._id; //
   let user = await User.findById(userId).populate("cart"); //user bhi find kar lete hai...and logged in hai to user mil jayega
@@ -21,6 +21,8 @@ router.get('/user/cart', isLoggedIn, async (req,res)=>{ //yha bhi banda loggedIn
 })
 
 //agr koi banda cart naam ke array m add kar pa raha hai that means wo bnda logged in ho. Middleware lagega.
+////agr cart naam ke andar kuch dal pa raha hai toh firstly we'll have to make sure...ki wo banda loggedin ho...toh middleware lagega
+//db ke andar add karna hai means change karna hai toh post request...
 router.post('/user/:productId/add' , isLoggedIn, async (req,res)=> { //isLoggedIn ko use kar lenge and upar require kar lenge
   let { productId } = req.params //product ki id chahiye hogi isliye req.params se kar lete hai...
   let userId = req.user._id; //agr banda loggedIn hai toh req.user ka access toh hoga...id ko isliye find kiya so that user ko find kar pau and pure user ke andar jo cart naam ka array hoga...uske andar productId ko fek sakte hai
