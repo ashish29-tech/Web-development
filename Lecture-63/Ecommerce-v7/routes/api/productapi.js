@@ -20,7 +20,7 @@ router.post('/products/:productId/like', isLoggedIn, async (req,res)=>{//yha hit
   //now user ki wishlist ke andar add ya check karana hai
   //id ke base pe us product ko find kar sakte hai...and is id ko user ke paas jo wishlist hai usko directly push kar sakte hai
   let {productId} = req.params; //destructure. User ko sirf id de rahe hai instead 0f req.params.id. Is id se product bhi find kar sakte hai and wishlist ke andar add/push(array ke andar) bhi kar sakte hai
-  let user = req.user; //req.user ka access hota hai hmare paas
+  let user = req.user; //req.user ka access hota hai hmare paas use variable m store kar liya
   let isLiked = user.wishlist.includes(productId)//now check user ke andar jo wishlist naam ka array hai usme include hai id...ye ya to true return karega ya false
   // console.log(isLiked);//pta chal jayega true hua ya false. Abhi include nai hai toh false ayega...
   //now task is...if id is not inside the array...it should get pushed...and if the id is already present insided it should be pulled out...mongoDB m kuch method hote hai jisse check kar ke pull ya push kar sakte hai...

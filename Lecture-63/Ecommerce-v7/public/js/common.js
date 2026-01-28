@@ -34,8 +34,9 @@ async function likeButton(productId){ //Niche argument bheja hai usey yha catch 
   }); 
     console.log(response); //let's see kya hame response mil rha hai ya nai...
   }
-  catch(e){
-    window.location.replace('/login'); //agr error aa rha hai to login kara dete hai...redirect jaise karte hai waise hi window se bhi wahi kiya
+  catch(e){ 
+    //window ke andar location hoti hai...
+    window.location.replace('/login'); //agr error aa rha hai to login kara dete hai...redirect jaise karte hai waise hi window se bhi wahi kiya..login page pe leke jayega
     console.log(e.message , 'error hai ye window wali line ka') //error ka message dikha do
   }
 }
