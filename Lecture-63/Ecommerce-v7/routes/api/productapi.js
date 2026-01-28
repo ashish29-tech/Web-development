@@ -5,7 +5,7 @@
 
 
 //jaise baki routes ko require karna padta hai waise hi ise bhi karna padega..app.js m
-
+//jaise review route ko har incoming request pe check karna chahte waise hi is productapi.js route ko bhi check karenge
 
 const express = require('express');
 const { isLoggedIn } = require('../../middleware');

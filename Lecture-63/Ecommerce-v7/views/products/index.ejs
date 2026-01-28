@@ -16,6 +16,7 @@
                 <div class="card-body">
                   <h3 class="card-title"> <%= item.name %> </h3>
                   <!-- item._id...ye hoga. self defined attribute(product-id) bna denge..us attribute m  DOM manipulation kar ke....get attribute(method hota hai DOM mnipulation m) ke through us attribute ki value nikal sakte hai cuz brpwser ko ye self-defined attribute ka mtlb nai pta-->
+                   <!-- btn is bootstrap class -->
                   <span class="btn like-btn" product-id="<%=item._id%>"> <!-- yha self defined attribute bna diya -->
                     
                     <% if(currentUser && currentUser.wishlist.includes(item._id)){ %>
@@ -35,7 +36,7 @@
         
     <% } %>
 </div>
-
+<!-- sabme lagane se acha index m laga de isliye yha script file -->
 <script src="/js/common.js"></script> 
 
 <%-include('../partials/footer')%>
