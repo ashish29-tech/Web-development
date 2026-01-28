@@ -59,12 +59,13 @@ const isProductAuthor = async (req,res,next)=>{ //if seller hai..toh kya wo us p
     console.log(req.user , 'user'); //jo bnda logged in hai. This is also an object id.
     //jab 2 object id ko compare karte hai toh directly nahi kar sakte...tab method hota hai .equals().... so == ya === se compare nahi kar sakte
     //jo banda logged in hai and jo banda us product ka author hai agr dono ki id match kar tabhi toh uska author mana jayega
+    //product ka author..req.user ki id ke equal nahi hua toh
     if(!product.author.equals(req.user._id)){ //product author...req.user._id ke equal nai hua toh. 2 object id(product.author, req.user._id) ko cpmapre directly nai kar sakte...uske liye .equals method.
         req.flash('error', 'You are not the owner of this product'); 
-        return res.redirect(`/products/${id}`) 
+        return res.redirect(`/products/${id}`) //
     }
     next();
-}
+} //isProductAuthor...ko export kar diya niche and jha chahiye wha add kar diya...routes m productRoutes.js m edit and delete m 
 
 
 module.exports = {validateProduct ,validateReview, isLoggedIn, isSeller, isProductAuthor} ; //ye teeno export kar diye yha se...and require kar diya productRoute.js m...ab isSeller ko bhi bhej diya
