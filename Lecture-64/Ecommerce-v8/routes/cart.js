@@ -23,20 +23,18 @@ router.get('/user/cart', isLoggedIn, async (req,res)=>{ //yha bhi banda loggedIn
 //agr koi banda cart naam ke array m add kar pa raha hai that means wo bnda logged in ho. Middleware lagega.
 ////agr cart naam ke andar kuch dal pa raha hai toh firstly we'll have to make sure...ki wo banda loggedin ho...toh middleware lagega
 //db ke andar add karna hai means change karna hai toh post request...
-router.post('/user/:productId/add' , isLoggedIn, async (req,res)=> { //isLoggedIn ko use kar lenge and upar require kar lenge
+router.post('/user/:productId/add' , isLoggedIn, async (req,res)=> { //isLoggedIn(middleware hai) ko use kar lenge and upar require kar lenge
   let { productId } = req.params //product ki id chahiye hogi isliye req.params se destructure kar lete hai...
   let userId = req.user._id; //agr banda loggedIn hai toh req.user ka access toh hoga...id ko isliye find kiya so that user ko find kar pau and pure user ke andar jo cart naam ka array hoga...uske andar productId ko fek sakte hai
   let user = await User.findById(userId); //user find karna hai..use kar rahe hai toh...User pe click kar ke upar require kar lenge and since itls a momgoDB method...it'll give me a promise...and promise works with async. populate lagayenge taki cart ke array se..sari chize utha ke user ko de denge
   // console.log(user, "ashish");
   let product = await Product.findById(productId); //product ko bhi find kar lete hai. 
-  user.cart.push(product); //user ki cart m push kar rahe hai pura ka pura product jo ultimately..productId hi bhejega 
-  await user.save(); //user ko save kara lete hai...and since it's a DB method..
+  user.cart.push(product); //user ke andar cart hogi and us ki cart m push kar rahe hai pura ka pura product jo ultimately..productId hi bhejega 
+  await user.save(); //user ko save kara lete hai...and since it's a DB method..toh await
   //ye upar ke sare kaam ho jaye to user ko new page pe leke jana chahte hai..jha use sara cart dikhe
   res.redirect('/user/cart'); // /user/cart pe GET request jayegi...
 
 });
-
-
 
 
 
