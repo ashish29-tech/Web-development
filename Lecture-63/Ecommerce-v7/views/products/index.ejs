@@ -19,6 +19,7 @@
                    <!-- btn is bootstrap class -->
                   <span class="btn like-btn" product-id="<%=item._id%>"> <!-- yha self defined attribute bna diya -->
                     
+                    <!-- if current user and uski wishlist ke andar...array ke andar includes check kar sakte hai and check karenge item ki id hai ki nahi  -->
                     <% if(currentUser && currentUser.wishlist.includes(item._id)){ %>
                       <i class="fa-solid fa-heart"></i>
                     <% } else{ %>
