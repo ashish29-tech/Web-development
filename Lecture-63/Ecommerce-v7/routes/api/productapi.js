@@ -23,15 +23,18 @@ router.post('/products/:productId/like', isLoggedIn, async (req,res)=>{//yha hit
   let user = req.user; //req.user ka access hota hai hmare paas use variable m store kar liya
   let isLiked = user.wishlist.includes(productId)//now check user ke andar jo wishlist naam ka array hai usme include hai id...ye ya to true return karega ya false
   // console.log(isLiked);//pta chal jayega true hua ya false. Abhi include nai hai toh false ayega...
-  //now task is...if id is not inside the array...it should get pushed...and if the id is already present insided it should be pulled out...mongoDB m kuch method hote hai jisse check kar ke pull ya push kar sakte hai...
+  //now task is...if id is not inside the array...it should get pushed...and if the id is already present insided it should be pulled out...mongoDB m kuch method hote hai jisse check kar ke pull ya push kar sakte hai.....google addToSet mongodb...search pull mongodb
   //now check condition...if liked hai to mujhe pull karna hai...and liked nai hai toh addtoset karna hai...
-  if(isLiked){ //if true hai. 
+  if(isLiked){ //if isLiked ki value true hai. 
       //1 updation karna hai...pura user update karna padega cuz user change bhi ho raha hai toh user ke andar save bhi hona chahiye...findById ka use kae ke,,,user ko find kar lenge uski id se...qur fir usko change
       //if array ko change kar diya...toh wo db ke andar reflect nai hoga...We want to reflect in the db as well...cuz since the wishlist is chaned...wishlist of the user changed...so the user needs to be saved
+      //user ki find kar liye uski id se and usko phir change kar rahe hai..
+      //https://www.mongodb.com/docs/manual/reference/operator/update/addtoset/
       await User.findByIdAndUpdate(req.user._id , {$pull: {wishlist : productId} }) //2 argument accept karta hai..1st field hai....2nd wo jo change leke ana hai..pehle seliked hai toh pull karna hai..wishlist ke andar se uski id. Rad docs for more info...https://www.mongodb.com/docs/manual/reference/operator/update/pull/
   }
   else{
-      await User.findByIdAndUpdate(req.user._id , {$addToSet: {wishlist : productId} })
+    //https://www.mongodb.com/docs/manual/reference/operator/update/pull/
+      await User.findByIdAndUpdate(req.user._id , {$addToSet: {wishlist : productId} }) //pull ki jagah addToSet
   }
 }) 
 
