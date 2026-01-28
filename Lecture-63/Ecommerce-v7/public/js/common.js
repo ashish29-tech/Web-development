@@ -27,8 +27,9 @@ async function likeButton(productId){ //Niche argument bheja hai usey yha catch 
     //POST request axios se le lenge..axios docs se.
     //jo bhi output miilega wo response hoga
     let response = await axios({//axios returns a promise isliye await and axios. Jo bhi output milega wo mera response hoga. Axios ke andar object
-    method: 'post', //method define kar diya
-    url: `/products/${productId}/like`, //kon se url pe bhejni hai wo define kar denge. Is route pe hit karana hai hame. Is url ke corresponding ek route bhi bnana padega...productapi m.
+    method: 'post', //method define kar diya..kon se method pe bhejni hai
+    url: `/products/${productId}/like`, //kon se url pe bhejni hai wo define kar denge. Is route pe hit karana hai hame. Is url ke corresponding ek route bhi bnana padega...productapi.js m.
+    //header ko specify kar ke explicitly hamne btaya hai ki ye xhr request hi hai... now this xhr value gives us true value which means ab ye hamari AJAX request complete hui hai
     headers: {'X-Requested-With' : 'XMLHttpRequest'} //https://www.tutorialspoint.com/express-js-req-xhr-property  headers m object daldiya...object ke andar key:value. Ab hame terminal m true dikhega..ab ye hamari ajax request complete hui hai.
   }); 
     console.log(response); //let's see kya hame response mil rha hai ya nai...

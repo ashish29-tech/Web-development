@@ -29,7 +29,8 @@ const validateReview = (req,res,next)=>{
 //- Jab user login na ho toh wo products dekh sake sirf...comment ya details wgr na dekh sake...iske liye login naam ka middleware bna sakte hai cuz ye route hit karne se pehle check karna hai..toh middleware toh for sure banega.....isLoggedin naam de dete hai. isLoggedin hoga toh hi ye next() next middleware pe ja payega wrna return ho jayega. Middleware ke liye page bna hi rakha hai.
 const isLoggedIn = (req,res,next)=>{
 
-         if(req.xhr && !req.isAuthenticated()){
+    //isLoggedIn pe check laga lete hai...
+         if(req.xhr && !req.isAuthenticated()){ //agr ye ek xhr request hui and banda ek authenticated user nahi hai toh...
             // return res.error({msg : 'you need to login first'}) //error dikha denge or something like this...
             return res.status(401).send('unauthorised');
          //jaise hi api hit hoga toh isLoggedIn check hoga..
