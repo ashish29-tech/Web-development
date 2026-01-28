@@ -11,10 +11,12 @@ router.get('/user/cart', isLoggedIn, async (req,res)=>{ //yha bhi banda loggedIn
   let user = await User.findById(userId).populate("cart"); //user bhi find kar lete hai...and logged in hai to user mil jayega
   // console.log(user, "ashish");
   //yha total amount calculate kar ke bhej sakte hai
-  let totalAmount = user.cart.reduce( (sum, curr) => sum + curr.price, 0) //this reduce method accepts a callback function..1 hi hai toh ham {}ye ignore karenge. curr is the item. user.cart m pura product hai.
+  //sum ko curr val m add karo and usme bhi price m add karo and 2nd args has to be 0....ye automatically return kar dega totalAmount m...
+  let totalAmount = user.cart.reduce( (sum, curr) => sum + curr.price, 0) //this reduce method accepts a callback function..1 hi hai toh ham {}ye ignore karenge...and isme 2 chize ati hai sum kya hai and current value kya hai... curr is the item. user.cart m pura product hai.
   // console.log(totalAmount);
    
   //cart ke andar cart.ejs hai...jisme sath m user ki sari information lelo
+  //total amount ko yha bhej diya
   res.render("cart/cart", { user, totalAmount }); //jis pagae pe render kar rahe us cart wale page pe user ko bhi bhej dunga...page bna lenge....views ke andar cart and isme cart.ejs
   ///user/:productId/add ye route tab hit karana hai jab koi add to cart pe click kare 
   ///user/cart ye wale route jab navbar m bhi bnda cart pe click kar de...mtlb agr kisi ko apni cart check karni hai to wo click kar ke dekh sake...so partials -> navbar. Ye wala route tab hit hoga...jab ham add to cart button pe click kare...par kya ham button se koi post request bhej sakte hai ? No..toh hame ise form m convert karna padega...product m shows.ejs m 

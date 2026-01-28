@@ -27,9 +27,11 @@
       <!-- price bhi dikhana hai -->
       <ul>
         <!-- multiple list item bane oadenge...har ek item ke naam ke corresponding uska price dikha sake isliye loop -->
+         <!-- Array kya hai user.cart..and cart m kya hai pura ka pura product...tabhi niche item.name..item.price kar pa rahe hai -->
         <% for(let item of user.cart){ %>
         <li><span> <%=item.name%> --&gt; $ <%=item.price%> </span></li>
         <% } %>
+        <!-- total amount cart.js se bhej diya hai toh yha access kar sakte hai -->
         <li>Total Amount: $ <%=totalAmount%></li>
       </ul>
       <button class="btn btn-sm btn-success">Checkout</button>
