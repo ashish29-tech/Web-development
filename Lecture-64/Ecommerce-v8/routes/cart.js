@@ -23,6 +23,7 @@ router.get('/user/cart', isLoggedIn, async (req,res)=>{ //yha bhi banda loggedIn
 //agr koi banda cart naam ke array m add kar pa raha hai that means wo bnda logged in ho. Middleware lagega.
 ////agr cart naam ke andar kuch dal pa raha hai toh firstly we'll have to make sure...ki wo banda loggedin ho...toh middleware lagega
 //db ke andar add karna hai means change karna hai toh post request...
+//jab banda add to cart button pe click kare toh we want ki..ye request hit ho...and post method ke sath hit ho...bina form ke toh post nahi bhej sakte...toh post method bnana padega iske liye..show.ejs m...wha form create kar lenge
 router.post('/user/:productId/add' , isLoggedIn, async (req,res)=> { //isLoggedIn(middleware hai) ko use kar lenge and upar require kar lenge
   let { productId } = req.params //product ki id chahiye hogi isliye req.params se destructure kar lete hai...
   let userId = req.user._id; //agr banda loggedIn hai toh req.user ka access toh hoga...id ko isliye find kiya so that user ko find kar pau and pure user ke andar jo cart naam ka array hoga...uske andar productId ko fek sakte hai
@@ -32,7 +33,7 @@ router.post('/user/:productId/add' , isLoggedIn, async (req,res)=> { //isLoggedI
   user.cart.push(product); //user ke andar cart hogi and us ki cart m push kar rahe hai pura ka pura product jo ultimately..productId hi bhejega 
   await user.save(); //user ko save kara lete hai...and since it's a DB method..toh await
   //ye upar ke sare kaam ho jaye to user ko new page pe leke jana chahte hai..jha use sara cart dikhe
-  res.redirect('/user/cart'); // /user/cart pe GET request jayegi...
+  res.redirect('/user/cart'); // /user/cart pe GET request jayegi...upar likh lenge get request
 
 });
 

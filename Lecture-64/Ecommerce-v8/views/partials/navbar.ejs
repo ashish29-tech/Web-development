@@ -25,7 +25,8 @@
         <%} else{%>
           <a href="#" class="nav-link text-capitalize">Hello <%=currentUser.username%></i> 
             <a href="/user/cart" class="nav-link"><i class="fas fa-shopping-cart"></i> 
-            <sup><span class="badge bg-danger"><%=currentUser.cart.length%></span></sup>  <!-- jo mera user hai...uske paas jo cart ki length hai wo ajaye yha -->
+              <!--no. of item in cart ko dynamic bnana hai toh cart ki length..array ki length... -->
+            <sup><span class="badge bg-danger"><%=currentUser.cart.length%></span></sup>  <!-- jo mera current user hai...uske paas jo cart ki length hai wo ajaye yha -->
           </a>
           <a href="/logout" class="nav-link">Logout</a>
         <%}%>
