@@ -10,10 +10,9 @@
 // //root element ke andar is h1 element ko append karna hai
 // rootEl.append(h1);
 
-
 //-----------------------------------------------------
 
-//Now do the task with the help of React
+//Now do the task with the help of React..
 
 //-----------------------------------------------------------
 //React 17
