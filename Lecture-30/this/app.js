@@ -427,17 +427,17 @@
 //Ex4:
 
 //arrow func ka this apne parent ke this ko point karega...jo upar ka arrow function func hai wo apne parent ke this ko point karega...upar ke arrow func ka parent obj5 hai...and obj5 ka this depend karta hai window pe.
-let obj5 = {
-  fn: ()=> { //isko bhi arrow function de diya
-    console.log(this) 
-    let ash = ()=>{ 
-      console.log(this) 
-    }
-    ash()
-  }
-}
+// let obj5 = {
+//   fn: ()=> { //isko bhi arrow function de diya
+//     console.log(this) 
+//     let ash = ()=>{ 
+//       console.log(this) 
+//     }
+//     ash()
+//   }
+// }
 
-obj5.fn();
+// obj5.fn();
 
 
 
