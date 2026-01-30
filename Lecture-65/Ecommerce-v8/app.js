@@ -14,8 +14,9 @@ const productApi = require("./routes/api/productapi"); //api
 const passport = require("passport"); //pass
 const LocalStrategy = require("passport-local"); //pass
 const User = require("./models/User"); //pass
-const dotenv = require('dotenv').config()
+const dotenv = require('dotenv').config() //main folder m hai isliye path dene ki jarurat nahi hai...kisi aur folder m hota toh path dena hota
 mongoose.set("strictQuery", true);
+//mongoDb atlas ke through connected hai
 let url = 'mongodb+srv://vshalsha1234:12345adt@cluster0.um5diam.mongodb.net/shopretryWrites=true&w=majority'
 mongoose
   .connect(url)
@@ -81,6 +82,5 @@ app.use(productApi);
 
 
 app.listen(process.env.PORT, () => {
-  console.log(`server connected at port : ${process.env.PORT}`);
-  // console.log(first)
+  console.log(`server connected at port : ${process.env.PORT}`)
 });

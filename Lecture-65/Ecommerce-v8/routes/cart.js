@@ -3,7 +3,8 @@ const { isLoggedIn } = require("../middleware");
 const User = require("../models/User");
 const Product = require("../models/product");
 const router = express.Router();
-const stripe = require('stripe')('sk_test_tR3PYbcVNZZ796tH88S4VQ2u')
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+
 
 router.get("/user/cart", isLoggedIn, async (req, res) => {
   let userId = req.user._id;

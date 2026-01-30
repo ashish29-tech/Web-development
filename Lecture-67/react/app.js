@@ -12,7 +12,7 @@
 
 //-----------------------------------------------------
 
-//Now do the task with the help of React..
+//Now do the task with the help of React...
 
 //-----------------------------------------------------------
 //React 17

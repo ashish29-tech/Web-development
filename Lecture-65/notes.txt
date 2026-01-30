@@ -1,0 +1,33 @@
+
+Payment Gateway
+With the help of stripe. It provides a gateway...apne app ko payment ke sath link karne ke liye.
+IDs provide karta hai jo hame connection create karne m help karti hai.
+
+stripe.com...signin
+
+npm install stripe --save
+
+secret key
+
+
+Bhr se access karna hai toh Mongo Atlas use karna hoga...joki server pe dala hota hai..use kahi se bhi access kar sakte hai
+
+Jab mongoDB ka local use karte hai toh sirf local system m use karte hai
+MongoDB Atlas kahi se bhi use kar sakte hai
+
+
+Jab ham host karte hai kisi server pe.. .env file ka use karna hot hai..ye ham jitne bhi secret key hai...wo ham .env m store karte hai
+dotenv nodejs....ye install karenge
+
+
+
+mongodb atlas and Render
+AKash kumar
+ropoce8776@protonza.com
+mongoDB@25
+
+-------------------------------------------
+
+user hamara local database m tha
+new user create kiya atlas m 
+
