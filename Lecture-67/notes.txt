@@ -1,0 +1,55 @@
+https://legacy.reactjs.org/ This is old docs of react js
+
+-React
+. Library
+. SPA (SEO ⬇  Faster ⬆)
+. Virtual DOM
+. Reuse of component
+. Component based architecture
+. 2 types of components...class & function. React suggest using function based component not class based component. Class is stateful and finction based component is stateless. 
+Functional Components...Lekin React 16.8 me Hooks aaye, aur ab functional components bhi state aur lifecycle handle kar sakte hain.
+
+
+
+//--------------------------------------------
+
+Babel is a compiler which converts JSX into pure js(vanilla js..jo ab tak js ham likhte aye hai)...and then send it to browser.
+babeljs.io official docs
+babel third party chiz hai to ise use karne ke liye..babel ka code chahiye hoga...isliye babel cdn google kiya.
+
+
+
+kya ham kai sare js file bna sakte hai ? yes
+cat.js, index.js, dog,js...in sabme actually m jsx likha hoga...un sari file ko jsx m convert kon karega...Babel.
+But ho sakta hai in sab js file ke corresponding hamare paas css file bhi ho...so in sabko and js ki sari files ko convert kar ke ultimately js m convert karna and then browser ko bhejna...
+Ye sara convert ka kaam...webpacks/bundlers karte hai..
+Bundlers ka kaam hota hai..sari file ko bundle kar ke..ek single usable js file m convert...
+Bundlers are of many types...webpacks, vite, parcel.. etc. 
+webpacks is not a good bundler...vite and parcel are good.
+Jab ham create-react-app jab use karte hai to bundler hamara webpack hota hai...
+
+
+https://legacy.reactjs.org/ This is old docs of react js
+- Click on create react app on right side on old react docs
+npx create-react-app my-app ...npx is node package executor..ye is command ko install karne ke sath-sath chala bhi dega
+
+npx create-react-app react-basic (create-basic is folder name and basic ka b capital nai hoga)
+cd react-basic(folder name)
+npm start
+
+
+sirf ek hi HTML file hoti hai(public folder m) pure react app m...cuz react app ek hi baar render hoti hai...refreshing nai hoti cuz SPA hai...
+
+
+Since webpacks are not efficient...we'll create an app from vite
+vite is also a bundler.
+
+
+We'll use Vite. It's faster.
+
+
+
+
+
+
+
