@@ -14,7 +14,7 @@
 
 const express = require('express'); //express ka server bana diya 
 const app = express(); //app ka instance chahiye hota hai
-const path = require('path'); //path ko reaquire kar liya
+const path = require('path'); //path ko reaquire kar liyaa
 
 app.set('view engine', 'ejs'); //view engine...ejs dekh rha hai. key view engine hai...ejs which is value wo ham set kar rahe hai.
 app.set('views', path.join(__dirname, 'views'));//views ka path set kiya...isme directory name. Path ko use karne kae liye path hona chahiye...upar path bna lenge..const. __dir ke sath jo views hai wo value hai aur pehle wala views key hai
