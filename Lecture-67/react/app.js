@@ -110,7 +110,7 @@
 
 //----------------------------------------------------------------------------------------
 
-//Real react jo bheind the scene chal rha hai.
+//Real react jo behind the scene chal rha hai.
 //inefficient way
 //1 se jyada element chahiye is div m toh we can enclose in an array
 // let div = React.createElement('div', null, [ //enclose kar diya in an array
@@ -123,6 +123,7 @@
 
 // root.render(div);//render kar do mere div ko. Now check browser console and inspect on it..we'll see div ke andar h1 and p hai..
 
+//but this is not an efficient way
 //----------------------------------------------
 //new way provided by react
 //JSX SYNTAX tareeka
@@ -131,7 +132,8 @@
 //Toh js m html bhi likh sakte hai..
 
 
-//ye work nai karega cuz JS ko ham browser m bhejte hai...and yha JSX ko bhej rahe hai joki browser ko nai smjh ati..so we'll have to convert our code it into Babel..
+//ye work nai karega cuz JS ko ham browser m bhejte hai...and yha JSX ko bhej rahe hai joki browser ko nai smjh ati..so we'll have to convert our code
+// jsx in to js code and then to browser...and to convert jsx into pure (vanilla) js we'll need babel(it's a compiler)
 // let div = (
 //   <div>
 //     <h1 id="ashish">hello from h1 jsx</h1>
@@ -143,6 +145,6 @@
 
 // root.render(div);
 
-
-
-
+//google babeljs.io.... and click on try it out
+//babel 3rd party chiz hai isko use karne ke liye iska babel ka code chahiye hoga and iske liye cdn chahiye hoga...babel cdn..https://babeljs.io/docs/babel-standalone
+//copy-paste babel ka cdn in html
