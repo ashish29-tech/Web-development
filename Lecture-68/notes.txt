@@ -1,0 +1,81 @@
+
+JSX se JS m and JS se Browser m convert...Babel.
+
+Kai sare JSX se JS(kuch) and in kuch JS se single JS and single JS se Browser...ye kaam Bundler karta hai.
+
+Bundlers: webpacks, vite, parcel
+
+- Through webpack:
+npx create react app folder name
+cd folder-name
+npm start
+
+
+- Through vite
+npm create vite@latest
+cd folder
+npm i
+npm run dev
+
+//----------------------------------------------------------
+Components are of 2 types
+we'll be using functional based Component. Isliye component ko call karte hai...
+functional component...functions hi to hote hai.
+
+main file main.jsx hai
+
+
+kya hum khud ke components bna sakte hai ? Yes. Components naam ka folder bna lenge....and C capital...isse pta chalta hai ki jab file bnayenge toh first letter Capital rakhna hai.
+Whenever we work with vite...we can't create file with.. .js....It is compulsory to create with .JSX
+webpacks ke case m... Js and Jsx...kisi se bhi bnao koi dikkat nai hoti.
+Component ka 1st letter...caps m ho...ye convention hai compulsory nahi.
+Even if galti se...Hello.jsx ki wjah se... ello.jsx kar diya toh....don't try to rename it...just copy the content...and create new file...
+
+
+Go to object.vlaues mdn
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values
+
+
+//-------------------------------------------------------------------------------------------------------------------------
+
+day-3-react-again
+
+npm create vite@latest
+Project name:
+│  day-3-react-again
+Select a framework:
+│  React
+◇  Select a variant:
+│  JavaScript
+Use rolldown-vite (Experimental)?:
+│  No
+◇  Install with npm and start now?
+│  Yes
+
+//-----------------------------------------------------------------------------------
+
+Conditional Rendering: Condiotion ke hisab se show...ex: if-else...
+
+
+//--------------------------------------------------------------------
+
+let's learn how to handle events..
+
+Event trigger karne ke 2 tarike hote hai...
+
+Delete karte waqt id dete hai
+
+//----------------------------------------------------------------------------
+
+{/* par we want jitni baar use kare utni baar alag-alag values mile. Toh jaise function calling karte waqt args bhej pate hai waise hi yha bhej payenge */}
+<student ____ /> ye blank jgah pe hote hai toh ise props/attribute/args kehte hai
+
+
+
+
+
+
+
+
+
+
