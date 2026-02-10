@@ -129,7 +129,7 @@
 //JSX SYNTAX tareeka
 //JSX means JS + XML(markup language..easy way m samajhne ke liye..ye HTML hai)
 //JSX m JS and XML ek sath likh sakte hai...
-//Toh js m html bhi likh sakte hai..
+//Toh js m html bhi likh sakte hai...
 
 
 //ye work nai karega cuz JS ko ham browser m bhejte hai...and yha JSX ko bhej rahe hai joki browser ko nai smjh ati..so we'll have to convert our code
