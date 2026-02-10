@@ -43,7 +43,7 @@
 //         <button onClick={handleClick2}>Products</button>
 //       </div>
 
-
+  //    //react-router-dom m ek component type chiz milti hai jise we call BrowserRouter
 //       <BrowserRouter> {/* hamari jo app hai use we wrapped around something called..BrowserRouter. Hamare jitne bhi routes hote hai unka parent wrapper hai. */}
 //         <Routes> {/*  ab m jitne bhi routes likhne wala hu use isme wrap kar do.. */}
 //           {/* ye konsa route cherega and jo path wo bta dete hai and kon sa element/component dikhana hai wo bta de */}
