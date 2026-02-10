@@ -1,0 +1,51 @@
+npm create vite@latest
+npm run dev
+
+//-------------------------------------------------------
+
+Task 1: create -> todo component bnayenge isme..title, desc dikhega...+ inputbox bhi dikhana hai
+Task 2: array bnayenge...component ko 3 baar call(with different values) kara denge...iterate on all the values and show it
+Task 3: input ke sath button(add todo) bnayenge -> new todo create karenge...jaise hi click karenge and array m push kar denge...input m type kar ke button m press kare toh ek new todo create ho jana chahiye aur wo array ke andar chala jana chahiye
+
+For task 3 we'll make new component Add.jsx
+
+//---------------------------------------------------------------
+
+Wrapper component: We don't use it much...
+It's basically a parent component. Jo child ko wrap karta hai apne around.
+FUnctionality add kar deta hai..
+
+wrapper ke andar we can send the entire child component as a prop...apne wrapper(mtlb parent) component m...
+//-------------------------------------------------------------------------------
+
+useEffect(): Iska kaam hota hai to run for side effects..side effects means wo chize jinka component se koi lena dena nahi hai..means component
+ko render na kare...
+In other words useEffect is a hook. Which works on side effects..side effects means...api call kar li...fetch...setTimeout call kar liya..setInterval laga diya..ye hote hai set side effects
+jinse component ki rendering m fark nai padta...toh useEffect ke andar sideEffect use karte hai...
+
+//Read about this theoritically
+Lifecycle methods
+useEffect 3 lifecycle methods ko jod ke bna hai..
+class syntax time ke methods hai ye..class component...older way hai hame nai karna 
+lifecycle methods hote hai...componentDidMount() jab wo pehli baar render ho rha hai.., componentDidUpdate()...state change, componentWillUnmount()..destroy
+Read theoritically about them..no need to know syntax
+
+useEffect...teeno(upar ke lifecycle) ka kaam, ek sath kar leta hai.
+useEffect() is hook..hooks are functions...
+useEffect()...it will run. Accepts 2 args..1st call back function...2nd an array(Dependency array)... useEffect( ()=>{}, [])
+When does this run ? 1st time chalta hai jab sare component render hote hai...1st time to sare component chalte/render hote hai..so 1st time ye useEffect chalta hi hai.
+2nd time tab chalta hai...jab is dependecy array ke andar state ya prop likhta hu..and wo state, prop change hote hai...
+useEffect()=>{},[count]...count state hai yha...and agr is count(state) ki value change hui hai jo is dependecy array ke andar...toh ye useEffect phir se chalega.
+
+ek upi leke ate hai
+https://api.github.com/users/${login} ye api hai...is api m rate limiter lga hai...so use it wisely
+https://api.github.com/users/ashish29-tech ...last ka change ho rha hai
+
+
+Ctrl + D — “Select Next Same Word”
+Cursor jis word pe hai, Ctrl + D dabao
+Us word ka next occurrence bhi select ho jaata hai
+Dobara Ctrl + D → aur next
+Phir ek saath sabko edit kar sakte ho
+
+
