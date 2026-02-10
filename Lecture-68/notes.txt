@@ -1,3 +1,17 @@
+cd C:\Users\my pc\Desktop\SamarthVohraWebDev   got to root directory
+Step 3: Ab add / commit / push
+git add Lecture-68
+git commit -m "Lecture 68 added"
+git push origin main
+
+🧠 Rule yaad rakhna (EXAM POINT 🔥)
+❝ Agar kisi folder ke parent me already .git hai
+toh uske andar kabhi bhi .git nahi hona chahiye ❞
+
+
+🧠 Proof kaise milega? (1 command)
+git log --oneline -- Lecture-68/day-3-react
+Agar commits dikh gaye → done story 🎯
 
 JSX se JS m and JS se Browser m convert...Babel.
 
