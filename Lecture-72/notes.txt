@@ -70,12 +70,18 @@ ek folder hoga...
 Folder bnayenge..2 hisse honge..frontend and backend. 
 frontend ka code frontend m...backend ka code backend m.
 
+npm create vite@latest
+project name .
+npm i
+npm run dev
+
 setup kiya frontend...installation and deletion of css thing in src folder.
 
-now we know frontend ke andar hame routing karni hogi...
+first kaam...now we know frontend ke andar hame routing karni hogi...
 react ke paas khud ka router nai hai...
 toh... npm i react-router-dom 
 
+browser router ko App.jsx ya main.jsx kisi m bhi likh sakte hai
 
 //--------------------------------------------------------
 Always remember jab bhi full stack project bnate hai toh pehle backend banta hai fir frontend.
@@ -86,7 +92,7 @@ pehle ham api test karte hai...and apis ke basis pe decide karte hai...kon si ch
 now make backend
 sbse pehle.. npm init
 ham server bnate hai express m...
-
+npm i express mongoose
 npm i nodemon
 npm start
 
@@ -97,6 +103,12 @@ next class ke liye agenda...
 - DB connect karne baad...model/schema chahiye hoga na...seed karna data...apis likh denge
 
 seed ho gya now the home work is...
-get ki api bnana..isme allQuotes.
-post ki api bnana isme..addquotes
+get ki api bnana..isme allQuotes....sare quotes mil jaye.
+post ki api bnana isme..addquotes...
 
+
+open mongosh
+show dbs
+use quotes
+show collections
+db.quotes.find()

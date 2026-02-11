@@ -1,15 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom' //link ko react router dom
 
+//ye main nvaigation hame nav baar provide karega..jiski help se ham alag-alag jagah jayenge
+//
 function MainNav() {
   return (
+    // navbar bna dete hai
     <nav className="nav">
       <h2>Main Quotes App</h2>
       <ul>
         <li>
           {/* page refresh ho raha hai..we can't give anchor tags */}
           {/* <a href="/">ash</a>  */}
-          {/* toh react m anchor tag ka alternative hota hai jise link kehte hai. This link is a part of react-router-dom. Jaise anchor tag m href hota hai waise hi Link m hota hai to */}
+          {/* toh react m anchor tag ka alternative hota hai jise link kehte hai. This link is a part of react-router-dom. 
+          Jaise anchor tag m href hota hai waise hi Link m hota hai to */}
           <Link to="/"> All Quotes</Link> {/* all quote slash route pe. Now you can see despite hitting diff urls page isn't getting refreshed */}
         </li>
         <li>

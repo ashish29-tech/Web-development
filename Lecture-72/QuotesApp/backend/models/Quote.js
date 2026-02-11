@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 
 //new schema bnana hai
 let quoteSchema = new mongoose.Schema({ //object banta hai
+  //quote m author hota hai and comments hote hai toh author and text...
   author: {
     type:String,
     trim: true,
@@ -15,7 +16,5 @@ let quoteSchema = new mongoose.Schema({ //object banta hai
   }
 })
 
-
-
 const Quotes = mongoose.model('Quote', quoteSchema);
-module.exports = Quotes
+module.exports = Quotes; //yha se export

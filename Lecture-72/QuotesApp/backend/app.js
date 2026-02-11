@@ -1,12 +1,13 @@
 
 const express = require ("express"); //Express module ko import kar lo....Express ek framework hai Node.js ke upar jo web server banana easy banata hai.
 const app = express(); //Yahan express() function call hota hai jo ek app object (server instance) return karta hai...Isi app ke through hum routes, middlewares, aur server configuration karte hain.
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'); //mongoose ko connect kar lete hai
 const seedDB = require('./seed');
 
+//Ye copy kiya docs se.
 mongoose
 .connect('mongodb://127.0.0.1:27017/quotes')
-.then(function(){ //Ye copy kiya docs se. .then kar ke callback fn. lga diya. test ki jgah quotes kar diya.
+.then(function(){ // .then kar ke callback fn. lga diya. test ki jgah quotes kar diya.
   console.log("DB CONNECTED");
 })
 .catch((err)=>{ //error pakad lete hai
@@ -17,7 +18,7 @@ app.get("/", (req,res)=>{ //app.get route bna lete hai...request object (client 
   res.status(200).json({msg: "hello from root"}) //send ya json ek hi baat hai...json dena better hai. 
 });
 
-// seedDB();
+// seedDB(); //yha run kar diya seedDB ko 
 
 
 const PORT = 8000;

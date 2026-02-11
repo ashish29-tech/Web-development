@@ -8,7 +8,7 @@ import App from './App.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* ek baar App.jsx m kiya tha BrowserRouter...now yha kar ke dekhte hai. Dono m se kahi bhi kar sakte hai. */}
-    <Router> {/* browser router toh bna diya hai */}
+    <Router> {/* browser router toh bna diya hai..upar naam badal diya hai */}
       <App />
     </Router>
   </StrictMode>,
