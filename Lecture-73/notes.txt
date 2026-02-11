@@ -81,3 +81,8 @@ NewQuote.jsx m...
 
 react m routing karne se pehle and baad m ek chiz ka dhyan rakhna hota hai ki it should be a SPA... react refresh na kare
 
+
+
+
+
+useParams hook hota hai...provided by react router dom....jisse parameter ko access kar sakte hai
