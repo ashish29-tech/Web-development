@@ -30,6 +30,7 @@ function AllQuotes() {
           {quotes.map((quote, index)=>{ //map accepts a cb fn...pehli chiz mera quote kya hai dusri chiz mera text kya hai
             return (
               //key bhej dete hai...key ko unique bnane ke liye id de di
+              //props ki id bhej dete hai... 
               <Quotes id={quote._id} key={quote._id} text={quote.text} author={quote.author}/> //Quotes ko call kar diya and call karte waqt props bhejne padenge....1 prop text..1 prop author
             )
           })}

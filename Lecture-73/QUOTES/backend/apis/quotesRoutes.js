@@ -25,6 +25,7 @@ router.get('/allquotes', async (req,res)=>{ //db ke andar se sare quotes lekar a
   }
 });
 
+//form m generally ham method ko post kar dete hai
 router.post('/addquotes', async (req,res)=>{ //add karna hai..new bnana hai toh post..na ki get
   try{
     //form submit kara lete hai...form ke andar se ayega data..post req ke through jo data ata hai wo req ki body se niklta hai..and we can destructure it
@@ -41,9 +42,9 @@ router.post('/addquotes', async (req,res)=>{ //add karna hai..new bnana hai toh 
  
 })
 
-//kisi button pe click kare toh ek particular page khul jaye...uske liye hame ek route bnana padega
-router.get('/quotes/:id' , async (req,res)=>{
-  let quote = await Quotes.findById(req.params.id)//id ke basis pe karna hai find...toh findById and id req.params.id se aa jayega...and time lagega toh await
+//kisi button pe click kare toh ek particular page khul jaye..mtlb view quote pura khul jaye...uske liye hame ek route bnana padega
+router.get('/quotes/:id' , async (req,res)=>{ //ise frontend pe handle karna hai jha ham button presska rahe the....NewQuote.jsx
+  let quote = await Quotes.findById(req.params.id)//id ke basis pe karna hai find...toh findById and id req.params.id se aa jayega...and time lagega toh await...and var m store kar liya
   res.status(200).json(quote); //json bhej diya..json m quote bhej diya
 })
 

@@ -72,7 +72,12 @@ Agr kisi link pe jana hai...kisi route pe hit karna hai..toh anchor tag to hota 
 tag ka ek alternative hota hai useNavigate naam ka hook...
 useNavigate()..ye hook react-router-DOM ka hook hai....jo link ki trah same kaam karta hai...kisi url pe bhejne ke liye
 
+1st use case of useRef() hook is...to maniplate DOM.
+2nd use case of useRef()
+input lena hai us input lene ke liye useRef() hook ka use karenge...ye useRef hame use input ki value ko refer karne ke kaam ayega
+and is case m rerendering nai hogi...and useState se same kaam kare toh rerendering ho jayegi
+NewQuote.jsx m...
 
 
-
+react m routing karne se pehle and baad m ek chiz ka dhyan rakhna hota hai ki it should be a SPA... react refresh na kare
 
