@@ -1,0 +1,67 @@
+created QUOTES using mkdir
+created two folder using mkdir..namely frontend and backend. 
+installed...npm create vite@latest in frontend...Project name: frontend
+
+backend initialise...
+npm init -y
+file bna lete hai app.js..ye main file ho jayegi
+npm i express nodemon mongoose
+npm start
+
+//-----------------------------------------------------------------------
+
+Let's go to frontend...
+As we all know...frontend m routing naam ki chiz nai hoti..react-router-dom ka use karna padega
+ise use karne ke liye we'll have to install it.
+npm i react-router-dom .....is command se install kar lenge 
+
+
+//----------------------------------------------
+
+backend m apis naam ka bnayenge folder...pehle routes naam ka bnate the..we did this means routes naam ka bnaya tha..
+apis and routes m difference ?
+api se data milta hai...and routing se pages wgr milte hai..toh pages wala kaam toh frontend karega...backend se toh data bhejna hai
+
+data base connect kar lete hai..
+mongoosejs.com..
+
+
+
+google... staus code success
+
+
+cmd m check kiya...gian wale m...db m chize ja chuki hai
+now we need to show data...
+
+chahte to useEffect se bhi call kar ke...api call kar ke...bhi data ko la sakte hai
+
+
+frontend m port naam ka component bna rahe hai...port dikhega kaise uske liye...
+quotes naam ka folder bnaya component m
+
+
+CORS: CROSS ORIGIN RESOURCE SHARING...Ye error aya..means backend chal rha hai 8000 pe...frontend chal rha hai 5173 pe..so CORS policy kehti hai 2 alag-alag origin pe data nahi mangwa sakte...
+cors error resolve karne ke liye... npm cors..package install karna padega
+backend permission dega
+google npm cors..
+backend m karenge cuz backend permission dega...toh backend m install karenge...npm i cors
+
+
+
+
+//
+Now the task is to basically get a new form..and form ko load karna hai taki new quote bna paye...
+
+frontend se backend m data bhejna hai toh frontnd se api call karni padegi
+
+
+//-----------------------------------
+naviagte...
+Agr kisi link pe jana hai...kisi route pe hit karna hai..toh anchor tag to hota hi hai but..anchor 
+tag ka ek alternative hota hai useNavigate naam ka hook...
+useNavigate()..ye hook react-router-DOM ka hook hai....jo link ki trah same kaam karta hai...kisi url pe bhejne ke liye
+
+
+
+
+
