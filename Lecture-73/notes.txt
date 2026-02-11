@@ -9,6 +9,17 @@ npm i express nodemon mongoose
 npm start
 
 //-----------------------------------------------------------------------
+useMemo hook m...values ko yaad kar lete hai..to memoise values...
+useMemo( func(){}, [])...accepts 2 things...1st is function and 2nd is dependency array
+
+useCallback()...ye bhi useMemo ke jaisa hi hai bss fark hai ki ye functions ko yaad rakhte hai so that it doesn't recomputing it...
+useCallback(fun(){}, [])...it also accepts 2 things..1 is function and 2nd is dependency array.
+
+useRef()...it's also a hook used for dom manipulation...already dom m text likha hua hai and change karna chahte hai toh useRef hook ka use karta hai.
+useRef()...element(h1,h2,h3..jo bhi dom ke andar hai) ka reference provide kar deta hai...and reference aa gya toh change kar sakte hai...dom manipulation kar sakte hai.
+
+majorly 2 hi hooks use hote hai... useState, useEffect...baki sab interview perspective se important hai.
+
 
 Let's go to frontend...
 As we all know...frontend m routing naam ki chiz nai hoti..react-router-dom ka use karna padega
