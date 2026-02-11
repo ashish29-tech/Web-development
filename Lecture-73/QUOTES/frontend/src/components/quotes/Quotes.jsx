@@ -21,6 +21,7 @@ function Quotes(props) { //jha bhi quotes ko call karenge wha props bhejenge..is
       {/* direct call nai kar sakte...props ki id se args bhej diya..upar id m catch kar liya  */}
       {/* button pe click kare toh particular wala open ho jaye */}
       {/* yha arrow func bnana padega...props ki id mil jayegi...AllQuotes.jsx se id bhej di hai */}
+      {/* view full quote pe click kiya toh showQuoteHandler event chala...toh use navigate(mtlb url change kar dena)...kar diya...navigate(`/quotes/${id}`) url pe...frontend pe */}
       <button onClick={()=> showQuoteHandler(props.id)}>
         View full Quote {/* jaise hi view full quote pe click kare ye show handler chal jaye */}
       </button> 
