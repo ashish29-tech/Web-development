@@ -1,0 +1,102 @@
+Routing and hooks aa gaye toh 90% react aa gayi
+
+
+useRef(): Ek aisa hook...tab use hota hai jab DOM ke andar changes show karne ho..
+ex: predefined text ko change karna hai
+usecase1: ye hook hai..means function...DOM ke andar jitne elements(Div, h1, strong naam se bna liya etc.) hote hai..uska refernce mil jata hai..so we can manipulate it
+usecase2: state maintain karne m kaam ata hai..state hamare case m variable. state ko maintain karne ke kaam ata hai between 2 renders
+ex: 
+Render-1..App first time render hua
+And state m koi change kiya...and state ka change component catch kar leta hai
+suppose in 2 render ke beech koi state hai ham use maintain karana chahte hai...toh ye kaam ye useRef() hook kar sakta hai
+state -> preserve/maintain state..means pehle render ke time 1 thi toh render 2 ke time bhi 1 maintain rahegi
+Render-2..2nd time render hua
+
+Another scenario to understand this hook...
+Salary 50,000 but this is ctc not in hand Salary
+so...correct number display karna hai toh DOM m change karna hoga...
+so...DOM m change ke liye useRef() hook
+suppose pehle 50000 display hua and 3 second baad shi salary 33k + 17(esop) display hui
+and 3 second ka delay create karna hai toh setTimeout se karenge
+setTimeout kya sideEffect hai ? Yes...and sideEffect ko useEffect ke andar likha jata hai
+so...in order to change a thing..pehle useEffect ke hook ka use karenge..and uske andaar setTimeout ka use karenge.
+
+
+//---------------------------------------------
+useRef way-2:
+dom ke andar koi change karna hai toh:
+sbse pehle initialise...
+jis element ko change karna hai use ek referred value denge
+and us refernce se uske current element pe ayenge...current span pe ayenge..
+yha direct change nai kar rahe dom ki help se kar rahe hai
+Real time m we prefer usecase1...way-1
+
+
+//------------------------------------------------------------------------------------------------------
+Now v-important concept...
+Routing... means /products, /reviews/:id pe jana etc.
+React ke paas khud ka router nahi hai...means react ke paas aisa kuch bhi nahi hai ki ham routing perform kar sake
+React 3rd party library ka use karta hai jise...react-router-dom kehte hai... https://reactrouter.com/home
+3rd party library ka use karta hai Toh ise install karna padega
+
+
+-Routing use karne ke baad bhi SPA honi chahiye
+- Client side bundling honi chahiye
+- Client side rendering chahiye
+
+We all know react is a library. Library js ka data mang rahi hai...and data ko dom se manipulate kar dete hai. Page refresh hota hai ? No..toh sari chize page create ho rahe horahe hote hai wo client ki side pe ban rahi hogi.
+Client side bundling: Ek baar server call hota hai...and sara js bundle hoke aa jata hai..toh jaise /(slash) routing wala data...apne aap bifurcate hoke chala jata hai..dobara server call karne ki jarurat nai padti..
+
+Client side rendering: jo page create ho rha hai...wo sara page js ki madad se dom manipulate se ho rha hai...and page refresh nai hoga...
+
+3rd party ka use isliye..
+npm i react-router-dom
+
+
+useNavigate hook... It's provided by react router dom...navigate means routing. Kar ham window se bi sakte hai but usse page refresh ho ja rha hai...
+
+//-----------------------------------------------------------------------------------------
+//Project
+now let's integrate backend...
+backend + frontend
+
+bhaiya gave 2 choices for project...
+1. TodoApp with backend
+2. Quotes App with backend ✅ (We'll be procedding with this)
+
+backend hamne e-commerce ke time seekh liya...now use react m kaise integrate karna hai.
+
+ek folder hoga...
+Folder bnayenge..2 hisse honge..frontend and backend. 
+frontend ka code frontend m...backend ka code backend m.
+
+setup kiya frontend...installation and deletion of css thing in src folder.
+
+now we know frontend ke andar hame routing karni hogi...
+react ke paas khud ka router nai hai...
+toh... npm i react-router-dom 
+
+
+//--------------------------------------------------------
+Always remember jab bhi full stack project bnate hai toh pehle backend banta hai fir frontend.
+pehle backend ke routes and api bnaye jate hai...
+pehle ham api test karte hai...and apis ke basis pe decide karte hai...kon si chiz kha dikhani hai..kaise dikhani hai
+
+//-------------------------------------
+now make backend
+sbse pehle.. npm init
+ham server bnate hai express m...
+
+npm i nodemon
+npm start
+
+open mongoosejs.com docs
+
+
+next class ke liye agenda...
+- DB connect karne baad...model/schema chahiye hoga na...seed karna data...apis likh denge
+
+seed ho gya now the home work is...
+get ki api bnana..isme allQuotes.
+post ki api bnana isme..addquotes
+

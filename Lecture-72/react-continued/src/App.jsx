@@ -8,7 +8,7 @@
 // function App() {
 
 //   // function handleClick1(){
-//   //   // window.location.href="/" //kiss jgah ko change karna hai toh. Browser console m...window. window.location...ye url wgr ka access de deta hai
+//   //   // window.location.href="/" //kisi jgah ko change karna hai toh. Browser console m...window. window.location...ye url wgr ka access de deta hai....use this in browser console
 //   //   window.location.href="/" //agr kis url ko change karna chahe..toh window.location.href ya location.href. But isse page refresh ho rha hai...so it's not valid in react cuz not following spa.
 //   // }
 //   // function handleClick2(){
@@ -35,10 +35,10 @@
 //       {/* <Hookss/> */}
 //       {/* <CaseTwo/> */}
 
-//       {/* ek navbar top pe rahe..toh browser router ke upar div bna sakte hai */}
+//       {/* ek navbar top pe rahe..toh browser router ke upar div bna sakte hai and inline style de diya */}
 //       <div style={{backgroundColor: "lightgray", color:"black"}}>
 //         Navbar hu mai
-//         {/* 2 button bna dete hai 1 jo home pe leke jayega and 1 products pe leke jayega */}
+//         {/* 2 button bna dete hai 1 jo home pe leke jayega and 1 products pe leke jayega...dono button pe onClick event */}
 //         <button onClick={handleClick1}>Home</button>
 //         <button onClick={handleClick2}>Products</button>
 //       </div>
@@ -96,14 +96,14 @@ function App() {
 }
 
 
-
+//component bna diya...
 function Nav(){
-  let navigate = useNavigate();
+  let navigate = useNavigate(); //useNavigate ko call kiya and assigned it into a variable
   function handleClick1(){ 
-    navigate("/"); 
+    navigate("/"); //function ko run kiya and path diya
   }
   function handleClick2(){ 
-    navigate("/product");
+    navigate("/product"); //function ko run kiya and path diya
   }
   
   return(
@@ -120,3 +120,4 @@ function Nav(){
 
 export default App
 
+//useNavigate ko router compoonent ke andar hi istemal kar sakte hai...and the router component in our case is browser router.
