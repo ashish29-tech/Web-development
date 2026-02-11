@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useRef } from 'react'
 import { useNavigate } from "react-router-dom" //react-router-dom m se useNaviagte naam ka hook uthaya...jo kisi url pe jane ke kaam ata hai
 
+//input ke liye ham hook ka use karenge...jiska naam useRef()...
 function NewQuote() {
 
     //new quote create karne pe button hit kare toh wo hamare home route pe aa jaye...toh iske liye we have navigate
@@ -40,10 +41,12 @@ function NewQuote() {
   return (
     <div>
       {/* we can create new form. Form ultimately submit hone wala hai toh uspe onSubmit event lga dete hai...submit event pe kuch kaam kara sakte hai */}
-
+      {/* submit event pe kuch kaam kara sakte hai...kya kaam karana hai ? push kara de db m... but value bhi toh chahiye hogi...
+      toh yha useRef() ka dusra use case samjhenge...1st use case toh dom manipulatek karna hota hai */}
       <form onSubmit={addQuoteHandler}>
         
         <div>
+          {/* for ki jagah htmlFor use hota hai cuz for is reserved keyword for loops */}
           <label htmlFor="naam">Author:</label>
           <input type="text" placeholder="Author's Name" id="naam" ref={usernameInputRef} />
         </div>

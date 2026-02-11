@@ -25,7 +25,7 @@ Let's go to frontend...
 As we all know...frontend m routing naam ki chiz nai hoti..react-router-dom ka use karna padega
 ise use karne ke liye we'll have to install it.
 npm i react-router-dom .....is command se install kar lenge 
-
+npm i axios
 
 //----------------------------------------------
 
@@ -55,9 +55,9 @@ CORS: CROSS ORIGIN RESOURCE SHARING...Ye error aya..means backend chal rha hai 8
 cors error resolve karne ke liye... npm cors..package install karna padega
 backend permission dega
 google npm cors..
-backend m karenge cuz backend permission dega...toh backend m install karenge...npm i cors
+backend m karenge cuz backend se data mangwaya jata hai toh backend permission dega...toh backend m install karenge...npm i cors
 
-
+.env m bhi nai dikhega api ?
 
 
 //

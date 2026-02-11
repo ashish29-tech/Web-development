@@ -12,7 +12,8 @@ function App() {
   return (
     <React.Fragment> {/* to avoid extra nesting..React.Fragment instead of div */}
     <MainNavigation/>
-      {/* wrap karenge chizo ko inside component called Browser Router...and ye react-router-dom se ayega..upar import kar lenge...<Router></Router> ye bhi kar sakte hai. Ye browser router ka app.jsx m hona jaruri nahi hai..*/}
+      {/* wrap karenge chizo ko inside component called Browser Router...and ye react-router-dom se ayega..upar import kar lenge...<Router></Router> ye bhi kar sakte hai. 
+      Ye browser router ka app.jsx m hona jaruri nahi hai..toh main.jsx m dal denge*/}
       {/* <BrowserRouter> */}
         <Routes> {/* multiple routes likhne ke liye Routes m wrap kar dete hai */}
           {/* and ek route jo particularly specify karna hota hai */}

@@ -1,3 +1,7 @@
+//jab ham e-commerce m bna rahe the toh routes naam se bna rahe the...cuz api se hame data milta hai and routing se pages etc.
+//pages wala kaam toh frontend karega
+//backend se toh data bhejna hai isliye api naam ka folder
+
 //quote ke routes bnane hai
 //isme ab apis ka kaam likhenge
 //2 routes banane hai
@@ -17,18 +21,19 @@ router.get('/allquotes', async (req,res)=>{ //db ke andar se sare quotes lekar a
     res.status(200).json(allQuotes) //status(200 hota hai toh sab shi hota hai) bhi bhej diya...jo bhi aya hai use send kar sakte hai..send karaye ya json karaye ek hi mtlb hai...json is a better technique..allQuotes bhej diya
   }
   catch(e){
-    res.status(400).json({msg: "something went wrong..."}) //status bhej diya...400 hota hai toh galat..
+    res.status(400).json({msg: "something went wrong..."}) //status bhej diya...400 hota hai toh galat..and json us case m bhi and message bhej denge
   }
 });
 
-router.post('/addquotes', async (req,res)=>{ //add karna hai..new bnana hai toh post..
+router.post('/addquotes', async (req,res)=>{ //add karna hai..new bnana hai toh post..na ki get
   try{
     //form submit kara lete hai...form ke andar se ayega data..post req ke through jo data ata hai wo req ki body se niklta hai..and we can destructure it
     //form submit hoke post request jati hai na...
     let {author, text} = req.body; //auhor and uska text aa jayega
     let newQuote = await Quotes.create({author, text}); //new quote create kar denge with the help of author and text...and it's a DB operation...newQuote var m dal ke niche console kar ke chech
-    console.log(newQuote, "newQuote");
-    res.status(201).json({msg: "New quote created successfully"}) //201 jab koi new chiz create hoti hai
+    console.log(newQuote, "newQuote"); //newQuote dekh lenge
+    //send kara dete hai ki sab shi hua hai..... search status code success on google
+    res.status(201).json({msg: "New quote created successfully"}) //201 jab koi new chiz create hoti hai. new message bhijjwa dete hai ki new quote created successfully
   }
   catch(e){
     res.status(400).json({msg: "something went wrong while creating..."}) //status bhej diya...400 hota hai toh galat..
