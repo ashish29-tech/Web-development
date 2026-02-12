@@ -29,7 +29,7 @@ router.get('/allquotes', async (req,res)=>{ //db ke andar se sare quotes lekar a
 router.post('/addquotes', async (req,res)=>{ //add karna hai..new bnana hai toh post..na ki get
   try{
     //form submit kara lete hai...form ke andar se ayega data..post req ke through jo data ata hai wo req ki body se niklta hai..and we can destructure it
-    //form submit hoke post request jati hai na...
+    //form submit hoke post request jati hai na...toh data request ki body m ata hai na...
     let {author, text} = req.body; //auhor and uska text aa jayega
     let newQuote = await Quotes.create({author, text}); //new quote create kar denge with the help of author and text...and it's a DB operation...newQuote var m dal ke niche console kar ke chech
     console.log(newQuote, "newQuote"); //newQuote dekh lenge
