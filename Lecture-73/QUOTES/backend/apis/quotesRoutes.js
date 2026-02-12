@@ -44,7 +44,7 @@ router.post('/addquotes', async (req,res)=>{ //add karna hai..new bnana hai toh 
 
 //kisi button pe click kare toh ek particular page khul jaye..mtlb view quote pura khul jaye...uske liye hame ek route bnana padega
 router.get('/quotes/:id' , async (req,res)=>{ //ise frontend pe handle karna hai jha ham button presska rahe the....NewQuote.jsx
-  let quote = await Quotes.findById(req.params.id)//id ke basis pe karna hai find...toh findById and id req.params.id se aa jayega...and time lagega toh await...and var m store kar liya
+  let quote = await Quotes.findById(req.params.id)//id ke basis pe karna hai find...toh findById and id req.params.id se aa jayega....destructure nai kiya....and time lagega toh await...and var m store kar liya
   res.status(200).json(quote); //json bhej diya..json m quote bhej diya
 })
 
