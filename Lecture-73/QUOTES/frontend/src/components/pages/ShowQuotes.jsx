@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom'
 ///yha se api request bhejni hai...useEffect laga ke
 //ek particular element ko show karna hai isliye api call
 
+//variable create kiya and ye change hota rahega toh state create kari....author and text initially empty rahega...and jaise hi api fetch hoga toh setQuote kar denge author and text ke sath...
 function ShowQuotes() {
   //niche koi var toh hai nahi ki show kar paye..toh var crete karna pada..and var change hota rahega depending on person to person
   let [quote, setQuote] = useState({author: "", text: ""}) //variable set karna padega...ek state bna lete hai taki niche dikha paye. initailly object pe point kara dete hai..
@@ -23,6 +24,7 @@ function ShowQuotes() {
   }, []);
   return (
     <div>
+    {/* upar variable create kara taki yha dikha sake... */}
       <h2>{quote.text}</h2>
       <p>{quote.author}</p>
     </div>

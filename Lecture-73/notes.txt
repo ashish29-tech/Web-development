@@ -86,3 +86,7 @@ react m routing karne se pehle and baad m ek chiz ka dhyan rakhna hota hai ki it
 
 
 useParams hook hota hai...provided by react router dom....jisse parameter ko access kar sakte hai
+
+
+
+isme aur functionalities add kar sakte hai...edit karna and delete karna..
