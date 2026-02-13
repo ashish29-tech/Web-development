@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
-///yha se api request bhejni hai...
+///yha se api request bhejni hai...useEffect laga ke
 //ek particular element ko show karna hai isliye api call
 
 function ShowQuotes() {
