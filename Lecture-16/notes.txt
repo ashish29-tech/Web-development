@@ -1,0 +1,38 @@
+
+Js is the only programming language which is understood by our browser.
+
+PL: Where we write Logical layer. Where we write our logic using any language.
+
+Static vs. Interactive websites.
+
+Before 1995 all websites were static.
+For interactivity 1995 m js use hone lagi thi. 
+
+PL are of 2 types. Compiled and Interpreted.
+
+Compiled...c++, Java...pura code Compiled hoga and fir execute hoga.
+Interpreted...JS...line by line chalta hai...error aa gya toh uske aage nahi chalegi.
+
+In PL we work with data and data are of two types...
+Primitive and Non-primitive.
+
+Primitive: Data types which can't be broken further down into simpler data.
+
+Non-primitive: 
+
+
+How many primitives do we have ?
+Js m everything is a number.
+number, string, boolean, undefined, symbol, null, bigInt
+
+Unlike other PL js doesn't have int, float.
+
+Let, var, const are declaratives.
+
+variable: a way to store a value. 
+
+In case of js...values are not stored in the form of bucket..variable points to the value.
+
+
+
+
