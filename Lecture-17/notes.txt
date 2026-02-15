@@ -1,0 +1,21 @@
+
+int and float naam ka prmitive hote hai js m ? No
+char naam ka prmitive hota hai js m ? No
+
+Both are strings.
+let a = 'sam'
+let a = 's'
+
+
+JS is a weakly typed prog. language. Pehle number pe point karaya fir string pe fir boolean pe...means primitive data type isn't fixed.
+
+Variables are weakly typed in js.
+
+In JS the final data type is decided on the run time. Aisi type ki language ko we call it dynamically typed pl.
+C++ and Java are called statistically typed.
+
+
+
+
+
+
