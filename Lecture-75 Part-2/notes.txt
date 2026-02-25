@@ -1,0 +1,93 @@
+Git and Github by Samarth Bhaiya
+
+git cheat sheet...downloaded pdf
+
+----------------------------------------------------------------------------------
+-(minus ke sath jo ata hai wo flag)
+
+git clone repo link 
+ls -a se sari readme files pta chali 
+ls -la...pehla word directory hai ya file hai..d likha hai toh directory hai...toh uski sari information hai
+git status 
+ls -la...isse .git dikhega means git initialise ho gya hai
+rm -rf .git .....remove recursive forceful .git ....recursively delete kar deta hai. Waise rm .git bhi chal jata hai but kabhi kabhi nai chalta
+dobara ls -la kar ke dekhenge toh git hat chuka hoga
+git status se check karenge
+git init... to initialise git
+ls -la kar ke dekhenge to dikhega git initialize ho gya hai
+git add . or git add -A.... isse sari files add ho jati hai 
+cat file name(ash.js)...usme kya likha hai pta chal jayega
+git log: btata hai..abhi kon se commit pe hai and purana commit kon sa tha 
+(do remember purane commit pe jake chize kabhi change nahi karte...sirf code dekhte hai...clone kar ke dobara kaam karte hai)
+Head btata hai ki kha pe hai...jha ham khade hai
+git checkout...main file m jana hai toh...taki sare logs dekh paye
+
+repo.new: Browser m run this to create new repo ya github pe jake new pe click kar sakte hai
+git branch -M main
+git remote add origin url(git hub repo link)...remote origin set karna
+git push origin main...jitne bhi changes karenge wo main m ate rahenge
+
+git branch name...name naam se new branch ban gayi hai
+git branch...ab 2 dikhenge... ek main ek jo bnaya hai
+git checkout name...name pe jana hai toh 
+touch ashish.js....file bnai
+cat > ashish.js... means purana entity delete karo and new entity likhna start karo...
+cat >> ashish.js...means purana bhi rehne do and new bhi add karo
+cat ashish.js...sirf content dekhne/read  ke liye
+git add .
+git commit -m "ashish"
+git push origin ashish...ashish se ashish pe chala gya 
+git push origin ashish:main...agr ashish se main pe bhejna hai toh
+history...isse jitni bhi commands chalai hai wo ajayegi
+git branch -D ashish(branch name)....deelete karne ke liye
+
+
+mainly...
+-git init
+-git add .
+-git commit -m "hello"
+-2 command copy-paste
+1. branch ko naam dena...main wali
+2. remote origin set karna...git remote origin main 
+-git push origin main...jitne bhi changes honge wo main pe ate rahenge
+
+
+kisi new branch pe bhejne ke liye...
+Git checkout -b ashmia
+git add .
+git commit -m "hm"
+git push origin ashmia:main...main pe bhej diya
+git merge ashmia
+
+Main> changes...main pe jane ke baad sare changes dikh jayenge
+
+//----------------------------------------------------------------------------
+
+git ek version control system hai..git kaam karata hai track karta hai
+github ek ui hai..us VCS ko dekhne ka
+
+
+//--------------------------------------------------------------------------
+
+Lazy loading
+Ek aisa resource of a website...which we don't want...ki pehle hi aa jaye..until and unless ham use file pe gaye ho.
+
+npm create vite@latest
+project name: lazy
+javascript
+
+ls 
+lazy...dikhega
+cd lazy
+npm i
+npm run dev
+
+
+npm i react-router-dom....browser router install kar lenge
+
+
+
+Lazy loading..ek aisa resource of website jo we don't want ki pehle hi aa jaye..until unless ham us file pe gaye ho...
+Is like..jo resource tumhe chahiye...us resource ko tum lazily jab chaho tab load kara sakte ho.
+
+
