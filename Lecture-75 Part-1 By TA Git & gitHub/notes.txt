@@ -1,0 +1,68 @@
+Class taken by TA Vishal
+
+Git and gitHub
+Git introduced by Linux.
+
+Difference b/w git and github
+
+git bash...git ka ek terminal hai.
+Open terminal and click on + ke sath m down arrow wale symbol pe and anc then click on bash.
+
+git pull request...bhejte hai kisi ke already likhe hue code m changes kar ke ya add kar ke...toh ham pull request bhejenge...taki merge ho jaye
+
+version control: suppose production m hai project. And agr kuch changes kiye suppose AI integrate kiya etc. and vs code pe thik chal rha hai but live integrate ke time fat sakta hai code...isliye ham direct main par kaam nahi karte...
+isme se ek branch nikal lete hai... and branch nikal rahe hote hai toh main ka sara code is branch m aa jayega...copy nahi banate..branch create karte hai
+toh agr v2 fat gya toh wapis se v1 deploy kar denge and later on after making changes in v2 we'll deoploy it.
+Toh aise hi kuch chize changes karne hote hai toh we release versions. Is process ko version control kehte hai.
+
+commands:
+1. git init: hamare project ko github ke sath link karta hai...git hamari repository ke sath initialise ho gyi hai. Niche terminal m gitbash open karenge and git init chalayenge...isse .git file add ho jati hai.
+2. ls -a: Now is file ko dekhna ho toh...niche wahi gitbash terminal m... ls -a..ye hidden file ko dekhne m help karti hai.
+3. git status: ye dikhata/locate/track karta hai jo file mere github pe commit nai hui hai
+4. ls: list directory...jitni file hongi wo ajayegi
+5. git add . : ye sari files ko git pe dal dega...another way to add particular file... git add file1.txt...it will add this particular file
+Ab agr git status karenge toh pta chalega...sari files ab tracked hai
+6. git commit -m "v1" ..... -m is flag
+Ab karenge git status toh show karege 
+7. git log: Ye btayegi abi tak mere kitne commit hue hai...koi branch to nahi create kar rakhi hamne.
+Har commit ki unique id hoti hai...
+q to exit from log
+8. git checkout id(jis id pe jana hai wo id dal denge) : agr purane wale version pe jana hai toh. Har commit ek unique id hai(git log karne pe dikh jayegi)...
+9. git checkout d55f034fde17cf260d1384461f2e0e87b60d44f0 (ye id copy kar di)....isse
+10. git checkout main(main ya master depend karta hai jha se commit ki hai)
+git log se check kar lenge kya pehle jaisa ho gya hai
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+Branching:
+version 1 create kiya and v2 bhi kiya...
+version release karne se pehle...branch bna lete hai..and jo bhi changes karne hote hai wo is branch m karte hai...and jab complete ho jati hai toh main ke sath merge kar dete 
+hai and new version release kar dete hai.
+
+git branch v3b: branch create karne ke liye...v3b= version 3 branch naam rakh diya
+git log: branch dekhne ke liye
+git checkout v3b: us branch m jane ke liye
+ls
+git status
+git log kar ke dekhenge toh we can see..now we are on new branch
+touch file3.txt: Terminal ke through file create karne ke liye...
+
+git merge v3b(branch name): jo bhi branch m change kiye the wo reflect hone lag gaye
+git branch -d v3b: to delete branch 
+
+git log
+
+-git branch b...new branch bna lenge
+-git checkout b...Switched to branch 'b'
+-touch file4.txt...to create new file
+-ls...kar ke dekh lenge new file 
+-cat > file4. hi I'm ashish .....isme content dalna hai
+hiee brooo....ye content aa jayega is file main
+
+
+git branch h...new branch create with h name
+git checkout h...jab is branch m jana 
+git checkout master...wapis se master m gaye
+now branch and checkout wali dono ko merger karenge
+git checkout -b j ....j is file name...ab sidha j m aa gaye
+git checkout main
+git checkout -b j....ek hi baar m sidha j m aa gye
