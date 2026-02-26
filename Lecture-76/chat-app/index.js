@@ -2,11 +2,11 @@
 
 const express = require('express')
 const app = express()
-const http = require("http"); //Require kar liya. http node ka part hai..isliye ise install ki jarurat nahi hai just like path ki trah...use bhi install nahi karna padta.
+const http = require("http"); //Require kar liya. http node ka part hai..isliye ise install ki jarurat nahi hai just like path ki trah...use bhi install nahi karna padta...sirf require kar liya.
 //ek server bnaya http ka...
 const server = http.createServer(app) //nodejs m check karenge...1st chiz optional hai...2nd chiz requestListener. Toh app jo hai wo request handle kar leta hai.
-const path = require('path')
-const socketio = require('socket.io');
+const path = require('path') //path ki jarurat hogi toh path ko require kar liya
+const socketio = require('socket.io'); //socket require kar liya
 const io = socketio(server); //socketio ke andar wrap kar diya...
 
 let users = {} //empty object bnaya
@@ -15,7 +15,7 @@ let users = {} //empty object bnaya
 //sabe pehle wrapper bnana hai...
 
 
-//jab bhi koi incoming request ayegi and hamne explicitly specify nahi kiya hai...toh public ke andar index.html file hogi wo...render ho jayegi.
+//jab bhi koi incoming request ayegi and hamne explicitly specify nahi kiya hai...toh public ke andar index.html file hogi wo...render ho jayegi...localhost:3000 karenge toh Bakk Bakk ayega browser m
 app.use('/', express.static(path.join(__dirname, 'public'))); //app.use toh middleware hai.../ means sari request pe chalna chahiye...express.static se...public se path connect kiya..
 
 

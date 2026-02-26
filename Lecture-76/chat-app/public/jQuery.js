@@ -1,4 +1,6 @@
 //sara copy-paste kar diya... jQuery.com se...uncompressed version wale se.
+//jQuery ko download karna padta hai...jQuery download...https://code.jquery.com/jquery-4.0.0.slim.js ......apne code ke andar dalna padta hai..toh ctrl A ctrl C ctrl v apne jQuery.js m
+
 
 /*!
  * jQuery JavaScript Library v3.7.1 -ajax,-ajax/jsonp,-ajax/load,-ajax/script,-ajax/var/location,-ajax/var/nonce,-ajax/var/rquery,-ajax/xhr,-manipulation/_evalUrl,-deprecated/ajax-event-alias,-effects,-effects/animatedSelector,-effects/Tween

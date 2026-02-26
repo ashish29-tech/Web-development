@@ -5,12 +5,19 @@ Sockets are library of Web Sockets.
 http:// and https:// are Protocols...means set of instructions or rules
 Sockets are Protocols as well.
 
-Jo traditional requests...
+Jo traditional requests...get,post,http..ye use karte aa rahe hai...
 
 http..hyper text transfer protocol....ye traditional protocol hai
 
-user...server se baat karta hai. One way communication hai...server doesn't ask user.
+Is traditional protocol m hamare paas hota tha...user...server se baat karta hai. One way communication hai...server doesn't ask user.
 
+socket ke case m ek user server se toh connect ho rha hai aur sath m dusre user se bhi connect ho pa rha hai..and in this case data is bidirectional.
+
+
+Traditionally request karte the to wo load balancer ke through jati hai...phir ek algo run hoti hai and that algo decides
+ki kon se server se data ayeaga...users ke load ko handle karne ke liye load balancer ka use karte hai. Isse path same nahi rehta kabhi s1 pe kabhi s2 pe kabhi s3 pe hota hai...
+But mentos zindagi m..user connected hoga websocket server se and inke beech connection establish hoga toh path will remain constant
+and since the above mentioned algo won't run so latency will be reduced...cuz direct conncetion establish ho gya.
 
 Does our express server uses http protocol ? Yes
 Kya ham express ke server se routing kar sakte hai ? Yess
@@ -29,11 +36,17 @@ We wrap http servers inside sockets.
 
 chat-app:
 
+npm init -y
+npm i express nodemon
+
+
 nodejs.com...
 
 
-jQuery ko download karna padta hai...apne code ke andar dalna padta hai
+jQuery ko download karna padta hai...jQuery download...https://code.jquery.com/jquery-4.0.0.slim.js ......apne code ke andar dalna padta hai..toh ctrl A ctrl C ctrl v apne jQuery.js m
 https://www.bootstrapcdn.com/ ...
+
+index.html m jQuery ka link dal lete hai
 
 npm i socket.io .... socket install kar lete hai.
 
