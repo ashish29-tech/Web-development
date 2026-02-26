@@ -1,0 +1,47 @@
+Socket karenge and 1 project.
+
+Sockets are for real time communication.
+Sockets are library of Web Sockets.
+http:// and https:// are Protocols...means set of instructions or rules
+Sockets are Protocols as well.
+
+Jo traditional requests...
+
+http..hyper text transfer protocol....ye traditional protocol hai
+
+user...server se baat karta hai. One way communication hai...server doesn't ask user.
+
+
+Does our express server uses http protocol ? Yes
+Kya ham express ke server se routing kar sakte hai ? Yess
+Kya ham public folder ke content ko access kar sakte hai ? Yess
+Kya ham express ke anadr middleware bna sakte hai ? Yes
+
+As we all know...JavaScript is the f-block of programming languages. Jaise..It's confusing, like f-block elements in chemistry.
+Yha bhi bhar-bhar ke exceptions hai.
+
+But for sockets, we won't use express server. We'll use http servers. 
+Express is a framework of node....jo ki hame http servers ko easily likhne m help karta hai.
+We wrap http servers inside sockets.
+
+
+//--------------------------------------------------------------------
+
+chat-app:
+
+nodejs.com...
+
+
+jQuery ko download karna padta hai...apne code ke andar dalna padta hai
+https://www.bootstrapcdn.com/ ...
+
+npm i socket.io .... socket install kar lete hai.
+
+
+let socket = io() //type this in browser console
+then type.. socket.... We'll see socket connected. And socket ka object open karenge toh we'll see...id also.
+
+https://getbootstrap.com/docs/5.3/forms/floating-labels/#textareas ...yha se text area copy kar liya.
+
+bidirectional communication toh establish ho gya hai par ek dusre ko ja kyo nahi rahe dekhte hai.
+
