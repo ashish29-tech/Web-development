@@ -18,8 +18,10 @@ function Propdrilling() {
   );
 }
 
+//function bna liya
 // function Counting ({count, setCount}){ //count ko destructure
 function Counting ({setCount}){
+  //function kuch return karta hai yha div return kar rha hai
   return (
     <div>
       {/* <div>count - {count}</div> */}
