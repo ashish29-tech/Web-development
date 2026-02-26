@@ -7,7 +7,7 @@ const http = require("http"); //Require kar liya. http node ka part hai..isliye 
 const server = http.createServer(app) //nodejs m check karenge...1st chiz optional hai...2nd chiz requestListener. Toh app jo hai wo request handle kar leta hai.
 const path = require('path') //path ki jarurat hogi toh path ko require kar liya
 const socketio = require('socket.io'); //socket require kar liya
-const io = socketio(server); //socketio ke andar wrap kar diya...
+const io = socketio(server); //socketio ke andar wrap kar diya http server ko...
 
 let users = {} //empty object bnaya
 
