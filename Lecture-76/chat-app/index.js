@@ -31,7 +31,7 @@ socket.on("send-msg", (data) =>{ //it's an event based communication. Jo client 
   //received-msg lga ke ye msg frontend ko bhej diya hai...script.js m listen karna padega.
   // socket.emit('received-msg', { //socket emit means ab socket data bhejega...event based communication hai toh event banega received ka. msgs object ki form m jate hai
   //   msg: data.msg,  //data ke andar se msg ko extract kiya
-  //   id: socket.id  //har socket ki unique id hoti hai...wo bhi bhej dete hai
+  //   id: socket.id  //har socket ki unique id hoti hai...wo bhi bhej dete hai frontend pe
   // }) 
 
   //io se emit karayenge chize...cuz same pipeline m rehna jaruri hai so that client 1, client 2...sab ek dusre ke msg dekh sake.

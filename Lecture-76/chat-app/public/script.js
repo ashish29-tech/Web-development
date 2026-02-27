@@ -24,8 +24,9 @@ $("#send-btn").on('click', ()=>{ //id ke basis pe is send button ko select karna
 
 }) 
 
-socket.on('received-msg', (data) =>{ //received-msg ko listen karte hai. cb fn hoga. data ko catch kar liya.
-  // console.log(data)
+
+socket.on('received-msg', (data) =>{ //received-msg ko listen karte hai jo backend se bheja message. cb fn hoga. data ko catch kar liya.
+  // console.log(data) //print kara lete hai ki aya kya hai data backend se jo bheja hai
   //yha dom manipulation kiya.
   $("#chat").append(`<li><span>${data.id}</span> -> ${data.msg}</li>`) //index.html m ul ko id di chat and yha chat ko catch kiya and append kara liya...ul ke andar li hi hote hai...data m se id and msg ko extract kar liya.
 })
