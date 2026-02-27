@@ -24,11 +24,12 @@ app.use('/', express.static(path.join(__dirname, 'public'))); //app.use toh midd
 io.on('connection', (socket) =>{ //io event accept karta hai. it accepts a cb fn...jab connection ho jaye toh console kara do
   console.log(`connection established with ${socket.id}`);
 
+//"send-msg" kar ke event hamne frontend/client pe...bna rakha hai...toh usi event ko use karte hai....
 //kuch data aya hoga frontend se...use catch kar liya
-socket.on("send-msg", (data) =>{ //it's an event based communication. Jo client pe bna rakha hai usi event ko use karte hai. cb fn.
-  // console.log(data); //console kara ke dekh lete hai data ko...
+socket.on("send-msg", (data) =>{ //it's an event based communication. Jo client pe bna rakha hai usi event ko use karte hai. cb fn ayega isme.
+  // console.log(data); //console kara ke dekh lete hai data ko...ki aya hai ki nai
   //received-msg lga ke ye msg frontend ko bhej diya hai...script.js m listen karna padega.
-  // socket.emit('received-msg', { //event based communication hai toh event banega received ka. msgs object ki form m jate hai
+  // socket.emit('received-msg', { //socket emit means ab socket data bhejega...event based communication hai toh event banega received ka. msgs object ki form m jate hai
   //   msg: data.msg,  //data ke andar se msg ko extract kiya
   //   id: socket.id  //har socket ki unique id hoti hai...wo bhi bhej dete hai
   // }) 

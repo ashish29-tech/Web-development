@@ -16,11 +16,11 @@ $("#send-btn").on('click', ()=>{ //id ke basis pe is send button ko select karna
 
 
    //pehli baar message aya toh...event..bna tha send-msg ka...and is msg ko backend pe listen kara tha
-   socket.emit('send-msg', { // socket jo data ko send karta hai uske liye ek keyword use karta hai...isse ye keywords ko bhejta hai..and socket accepts a event...
+   socket.emit('send-msg', { // socket jo data ko send karta hai uske liye ek keyword use karta hai...isse ye keywords ko bhejta hai..and socket accepts a event...and io bhi event accept karta hai
       msg: msgTxt  //msg jo bhejte hai wo object ki form m hota hai and obj m key:value pair hota hai.
    }) 
 
-   $("#inp").val("") //bhejne ke baad khali hona chahiye textbox...toh jo input tha uski val ko kar do khali...
+   $("#inp").val("") //message bhejne ke baad textarea khali hona chahiye textbox...toh jo input tha uski val ko kar do khali...
 
 }) 
 
