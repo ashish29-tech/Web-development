@@ -1,4 +1,5 @@
 //ye recive karega msg ko..server end pe
+//ye backend ko control karega
 
 const express = require('express')
 const app = express()
@@ -19,7 +20,8 @@ let users = {} //empty object bnaya
 app.use('/', express.static(path.join(__dirname, 'public'))); //app.use toh middleware hai.../ means sari request pe chalna chahiye...express.static se...public se path connect kiya..
 
 
-io.on('connection', (socket) =>{ //io event accespt karta hai. it accepts a cb fn...jab connection ho jaye toh console kara do
+//event laga rahe hai...event hota hai conncection...
+io.on('connection', (socket) =>{ //io event accept karta hai. it accepts a cb fn...jab connection ho jaye toh console kara do
   console.log(`connection established with ${socket.id}`);
 
 //kuch data aya hoga frontend se...use catch kar liya

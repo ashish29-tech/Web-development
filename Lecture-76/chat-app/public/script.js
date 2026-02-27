@@ -2,10 +2,10 @@
 //backend ko control index.js karegi
 //client frontend hai
 //server backend hai
+//inke beech m communication to and fro handle karna hai...
 
-
-
-const socket = io()
+//handle karne ke liye and data transmit ke liye we need socket 
+const socket = io() //io ko invoke karaya
 
 //chatbox ko id di hai index.html m
 $("#chat-box").hide();

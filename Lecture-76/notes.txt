@@ -50,9 +50,9 @@ index.html m jQuery ka link dal lete hai
 
 npm i socket.io .... socket install kar lete hai.
 
-
+//browser console m f12 kar ke
 let socket = io() //type this in browser console
-then type.. socket.... We'll see socket connected. And socket ka object open karenge toh we'll see...id also.
+then type.. socket....we'll see object return kar ke de raha hai...hame clients ko bhi itna capable bnana hai ki wo ek response bhej paye..cuz ab client se bhi response ane wala hai ab toh... We'll see socket connected. And socket ka object open karenge toh we'll see...id also.
 
 https://getbootstrap.com/docs/5.3/forms/floating-labels/#textareas ...yha se text area copy kar liya.
 
