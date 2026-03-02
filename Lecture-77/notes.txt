@@ -1,0 +1,64 @@
+
+Project ka level e-commerce tak and jyada se jyada add react usme.
+
+
+LinkedIn pe: Show your work to people. Aske people what more can be done in order to shortlist your resume.
+
+Market down ka best couter hota hai to upskill yourself.
+
+Show HR ko english and Confidence...
+
+Getting into IT field was not my final decision...I took guidance from few engineers and also I'm very inquisitive person...
+and I'm always someone who think of expirimenting things and moving forward in life. Facing setbacks are part and parcel of life.
+
+
+
+Speak slowly in interview 
+
+Fake experience is valid jab tak tum use justify kar paa rahe ho.
+
+
+ABC co. jo non-tech hai...wha pe experience letter lelo...and show in your resume...ki
+ABC jo non-tech co. thi usme mera role tech ka tha...kya kaam tha us co. m ? wo kaam dikha do jo tumne is course m seekha.
+Non-tech co. se mtlb...ki aisi company jisme tum non-tech kaam kar rahe ho...
+
+
+
+Creating project is the best way to practice.
+
+//-----------------------------------------------------------------
+
+Prop-Drilling
+
+sbse pehle socho...Apko apni state ko define kha karna hai ?
+1 parent hai uske 2 child hai. Ye dono child component hai.
+child 1 m bhi state jiska name counter hai....and child 2 ke liye bhi same hai.
+Toh kya dono child ke liye alag-alag conuter bnayenge ? No
+Inka jo least common parent hota hai use dhundte hai...wha pe jake ham apna state ckounter bnate hai...Taki parent se child access kar paye...
+
+
+Context API kya karta hai ?
+Ye chizo ko teleport karta hai seedha...grandparent to child. Beech ke componet ko bother nai karta sidha upar jaha state ko define kiya hai...us state se kitne bhi level down jana ho toh wo sidha telport kar deta hai.
+Apke props ko directly teleport karne ke liye...that is kisi bhi grandparent se child ke child ya kahi tak bhi...direct bhejne ko teleport kehte hai. Ye kaam context API ka hota hai.
+
+Context API m create karne ke liye sabse pehle hame we need to create a component.
+Aisa component bnana hai toh jo prop ko directly bheje.
+new component bna lenge Context.jsx and iske andar wo component bnayenge jo prop ko directly bhejega.
+
+
+//-----------------------------------------------------
+Apply for intern/job
+Try for referral
+Have 3-4 projects...which you can explain a to z
+Make porjects and showoff
+Make personal connections..interact
+Focus on english
+Polish DSA
+Revision: make things..watch videos once..then implement the logics
+Read latest technologies...what are market demands
+Uspskill...learn new tech(first MERN then other)
+
+frelancing..3-4k se 4-5lakh..but this is risky and you'll learn alot
+
+
+css ke liye...flex, positions, boxmodel properties...
