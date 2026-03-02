@@ -45,7 +45,7 @@ $("#login-btn").on('click', ()=>{ //login button pe click karne par...1 cb fn ch
 
   //login karne baad..login ko hide kar do
   $("#login").hide()
-  $("#chat-box").show()
+  $("#chat-box").show() //chatbox ko show kar do
   
 
 

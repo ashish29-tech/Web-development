@@ -10,6 +10,7 @@ const path = require('path') //path ki jarurat hogi toh path ko require kar liya
 const socketio = require('socket.io'); //socket require kar liya
 const io = socketio(server); //socketio ke andar wrap kar diya http server ko...
 
+//store hoga backend pe
 let users = {} //empty object bnaya
 
 
@@ -39,9 +40,10 @@ socket.on("send-msg", (data) =>{ //it's an event based communication. Jo client 
   io.emit('received-msg', {
     msg: data.msg,
     // id: socket.id
-    username : users[socket.id] //is id ke corresponding m jo bhi naam pada ho...jo hamne login hone pe save karaya hai.
+    username : users[socket.id] //is id ke corresponding m jo bhi naam pada ho...jo hamne login hone pe save karaya hai....ab jaise hi koi message receive hoga toh id ki jgah uska name bhej denge
   })
 }) 
+
 
   socket.on('login', (data) =>{ //jab login ho jaye...login wale event ko frontend pe handle karna hai. cb fn chale usme data catch hoga...jo bhi us user ne bheja hoga
     users [socket.id] = data.username; //us data ko set kar do users naam ke object m. socket.id naam ki field bnao usme set kar do..data.username...
