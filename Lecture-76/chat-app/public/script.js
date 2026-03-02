@@ -8,7 +8,7 @@
 const socket = io() //io ko invoke karaya
 
 //chatbox ko id di hai index.html m
-$("#chat-box").hide();
+$("#chat-box").hide(); //hide kar diya
 
 //jQuery m documnet.querySelector ki jgah ye likhte hai.
 $("#send-btn").on('click', ()=>{ //id ke basis pe is send button ko select karna hai...uske upar event lagaya...jab ispe click ho toh ek cb fn run hoga...

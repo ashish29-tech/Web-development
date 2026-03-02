@@ -34,6 +34,7 @@ socket.on("send-msg", (data) =>{ //it's an event based communication. Jo client 
   //   id: socket.id  //har socket ki unique id hoti hai...wo bhi bhej dete hai frontend pe
   // }) 
 
+  //Abi tak jo kaam socket se kara rahe the ab...
   //io se emit karayenge chize...cuz same pipeline m rehna jaruri hai so that client 1, client 2...sab ek dusre ke msg dekh sake.
   io.emit('received-msg', {
     msg: data.msg,
