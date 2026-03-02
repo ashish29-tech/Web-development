@@ -22,7 +22,7 @@ app.use('/', express.static(path.join(__dirname, 'public'))); //app.use toh midd
 
 //event laga rahe hai...event hota hai conncection...
 io.on('connection', (socket) =>{ //io event accept karta hai. it accepts a cb fn...jab connection ho jaye toh console kara do
-  console.log(`connection established with ${socket.id}`);
+  console.log(`connection established with ${socket.id}`); //connection ho chuka hai with this id...ab index.js server side pe hai toh jo output ayega wo node.js pe ayega. Open local host 3000 in 2-3 browsers/tab we'll see diff ids...and do let socket = io() and socket in browser console...soo in 2-3 tabs se we are able to repicate client 1, 2, 3...and inki ids alag-alag hai
 
 //"send-msg" kar ke event hamne frontend/client pe...bna rakha hai...toh usi event ko use karte hai....
 //kuch data aya hoga frontend se...use catch kar liya

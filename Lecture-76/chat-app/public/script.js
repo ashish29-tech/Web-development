@@ -12,10 +12,12 @@ $("#chat-box").hide();
 
 //jQuery m documnet.querySelector ki jgah ye likhte hai.
 $("#send-btn").on('click', ()=>{ //id ke basis pe is send button ko select karna hai...uske upar event lagaya...jab ispe click ho toh ek cb fn run hoga...
+  //form floating index.html m id de rakhi hai
    const msgTxt = $("#inp").val();  //msgTxt ko index.html m jo inp id de rakhi hai wha se nikal lenge....yani ki text area ko. document.querySelector ki jgah..$()...  .val() isme function/method hote hai isliye parenthesis
 
 
    //pehli baar message aya toh...event..bna tha send-msg ka...and is msg ko backend pe listen kara tha
+   //event bnaya hai hamne 'send-msg'
    socket.emit('send-msg', { // socket jo data ko send karta hai uske liye ek keyword use karta hai...isse ye keywords ko bhejta hai..and socket accepts a event...and io bhi event accept karta hai
       msg: msgTxt  //msg jo bhejte hai wo object ki form m hota hai and obj m key:value pair hota hai.
    }) 
