@@ -8,6 +8,7 @@
 //   //This is called propdrilling. It makes the code ugly and difficult to maintain...increase our code complecity.
 //   //Isko avoid karne ke liye we have a concept...called context API.
 
+      //ek state bna rahe hai...
 //   let [count, setCount] = useState(0); //useState bna di...count hai uski inital value 0 hai. count ki value ko change karega setCount
 
 //   return (
@@ -21,7 +22,7 @@
 //     </div>
 //   )
 // }
-//   // aur components bnayenge
+//   // aur components bnayenge..ek componet hoga function jiska name counter
 //   function Counter({count, setCount}){ //count ko yha destructure kiya and setCount bhi upar se aya toh yha destructure kiya
 //     return (
 //       <div>
@@ -32,11 +33,12 @@
 //     )
 //   }
 
-//   //counter ki value increase and decrease karni hai toh wo buttons karega....toh buttons ko call kar liya
+      //components bnayenge..ek componet hoga function jiska name Buttons
+//   //counter ki value increase and decrease karni hai toh wo buttons karega....toh buttons ko call kar liya upar m
 //   function Buttons({count, setCount}){//dono ko destructure kar liya
 //     return(
 //       <div>
-//         {/* 2 button bna dete hai */}
+//         {/* 2 button bna dete hai ek increment ka ek decrement ka */}
 //         <button onClick={()=>setCount(count+1)}>Inc</button> {/* ek function chal jaye..and fn kya kare setCount ko run kar ke..ek m count + 1 kar de.. */}
 //         <button onClick={()=>setCount(count-1)}>Dec</button>
 //       </div>
@@ -81,7 +83,7 @@ function PropDrilling() {
         
         <Buttons setCount={setCount}/> {/* yha pass kar diya upar se utha kar..component hi toh hai kahi bhi call kar do */}
         
-      </div>
+      </div> 
     )
   }
 

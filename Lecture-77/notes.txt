@@ -50,7 +50,7 @@ Prop-Drilling
 sbse pehle socho...Apko apni state ko define kha karna hai ?
 1 parent hai uske 2 child hai. Ye dono child component hai.
 child 1 m bhi state jiska name counter hai....and child 2 ke liye bhi same hai.
-Toh kya dono child ke liye alag-alag conuter bnayenge ? No
+Toh kya dono child ke liye alag-alag state conuter bnayenge ? No
 Inka jo least common parent hota hai use dhundte hai...wha pe jake ham apna state ckounter bnate hai...Taki parent se child access kar paye...
 
 
