@@ -13,20 +13,37 @@ and I'm always someone who think of expirimenting things and moving forward in l
 
 
 
-Speak slowly in interview 
+Speak slowly in interview and use brain while answering and you'll be able to answer any question.
 
 Fake experience is valid jab tak tum use justify kar paa rahe ho.
 
 
-ABC co. jo non-tech hai...wha pe experience letter lelo...and show in your resume...ki
+ABC co. m jo non-tech role hai...wha pe experience letter lelo...and show in your resume...ki
 ABC jo non-tech co. thi usme mera role tech ka tha...kya kaam tha us co. m ? wo kaam dikha do jo tumne is course m seekha.
 Non-tech co. se mtlb...ki aisi company jisme tum non-tech kaam kar rahe ho...
 
+If they are asking for experience...
+I'm ready to give my time and dedication like a 3-4 years experienced person...but for the momemnt I've 1 years of experience.
 
 
 Creating project is the best way to practice.
 
+Network decides your net worth.
+
+3-4 projects. Each project description in 4-5 lines.
+
+Manifestation works.
+
+Paisa kamana hai...paisa is priority.
 //-----------------------------------------------------------------
+
+npm create Vite@latest
+project name: prop-drill
+javascript
+cd prop-drill
+npm i
+npm run dev
+
 
 Prop-Drilling
 

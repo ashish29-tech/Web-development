@@ -94,10 +94,10 @@ function PropDrilling() {
       </div>
     )
   }
-
+console.log()
   //counter ki value increase and decrease karni hai toh wo buttons karega....toh buttons ko call kar liya
   function Buttons({setCount}){//dono ko destructure kar liya
-    let count = useContext(CountContext)
+    let count =useContext(CountContext)
     return(
       <div>
         {/* 2 button bna dete hai */}
