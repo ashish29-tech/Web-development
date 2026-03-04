@@ -1,0 +1,75 @@
+Frontend: Everything which we can see in website.
+Backend: Logic that happens bts(behind the scene) which we can't see.
+
+What's web ?
+Information system which is a collection of web pages, websites that we can access. Which can be shared with the help of internet.
+
+Webpage: Static stuff. It's a single page with information...whose access is available everywhere on the internet.
+
+Website: Collection of webpages(static stuff).
+
+Webapplication: more interactive websites are Webapplications. Ex: Irctc vs Instagram.
+
+Internet: Global network of interconnected devices. Which communicates via protocol TCP/IP.
+TCP/IP: Transmission Control Protocol/Internet Protocol. When we interact with the internet, we need to follow some rules(made by organisation...) to interact with each other.
+
+Global Network: connected by wires...spread under the ocean.
+
+How does web works ?
+It contains...client, server, DNS(Domain Name System), Data Centers
+Client: Anyone who is requesting for the data.
+Server: Understands your request and sends you the desirable output.
+
+Client: browser
+Server: 
+
+
+DNS: Instagram.com, google.com..etc. these are stored by ip address. BTS Instagram.com and google.com call IP address that's why we are able to see that page. Directly IP ko bhi call kar sakte hai.
+
+Data Center: A place where your huge amount of data is stored. It has layer of security.
+
+Server and Client...it depends on situation...it is relative...both can be client and both can be server but not at the same time.
+
+
+//--------------------------------------------------------------------------------------
+Client side technology/tools:
+HTML, CSS, Js...
+
+Browser ? What does it do ?
+Every browser has engines...2 engines. 1. Layout engines 2. JS engine.
+Layout engine ka kaam hai HTML and CSS ko read karna. JS engine reads JS.
+
+
+HTML isn't a programming language. It's a markup language. Markup means structure. 
+
+
+
+Server side technology:
+Database
+Node Js
+Express (server)
+PLang (code)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
