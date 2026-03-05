@@ -1,0 +1,45 @@
+
+Q. What is a website ?
+Q. How many types of websites are present ? 3
+1. Static : All HTML content is saved on the internet and it's not changing. example: Resarch papers
+2. Dynamic : Content is generated acc to the users. Netfilx example.
+3. Responsive: Whatever we are creating that is compatible with all the screens. Ex: TV, Lap, Phone
+
+HTMML: Hypertext Markup Language
+Hypertext: Those texts which have hyperlinks in it. Ex: wikipedia
+Markup: Means Structure. Ex: Building briclks and steel
+Language: Mode of communication. Not a programming language.
+
+
+Browser has 2 engines:
+1. Layout engine: Read HTML and CSS
+2. Js engine: Read Js
+
+
+html likhte hi html 5 ya html show karta hai...it is emmet...emmet is pre written code
+
+
+meta tags: provide extra info about the particular things which we are writing...
+
+HTML(Root element) has 2 tags:
+1.Head
+2. Body
+
+Tags are elements. Elements genrally have opening and closing tag. Ex: <body> opening and closing </body>
+
+Head: User can't see the text inside your head tag except title.
+
+Body: the text/entire content which we want user to see.
+
+
+Types of tags:
+h1, h2....h6
+p...paragraph
+div...generic content...kuch bhi store
+
+nesting of tags bhi hota hai...tag ke andar tag
+
+
+
+
+
