@@ -11,13 +11,15 @@
 
   <h2>Ordered list</h2>
 
+  <!-- We generally avoid using type attribute bcoz designing is a part of css.  -->
   <!-- type is attribute. This attribute provides extra information to the browser about that specific element. -->
   <!-- <ol type="a"> -->
-  <ol type="a" start="3">
+  <ol type="a" start="3" reversed>
     <li>Ashish</li>
     <li>Ranjan</li>
     <li>John</li>
     <li>Learner</li>
+    <li>Inquisitive</li>
   </ol>
 
   <ol type="I">
@@ -28,7 +30,16 @@
   </ol>
 
   <!-- start will always accept a numeric value -->
-  <ol type="1" start="5">
+   <!-- reversed means boolean attribute. reversed likhte hi mtlb true ho gya -->
+  <ol type="1" start="3" reversed>
+    <li>Kya</li>
+    <li>haal</li>
+    <li>chal</li>
+    <li>bhai</li>
+    <li>tere ?</li>
+  </ol>
+
+  <ol type="1" reversed>
     <li>Kya</li>
     <li>haal</li>
     <li>chal</li>
@@ -39,11 +50,26 @@
   <!-- unordered list -->
 
   <h2>Unordered list</h2>
-  <ul>
+  
+  <ul type="circle">
     <li>Gangs of wasseypur</li>
     <li>Dhol</li>
     <li>Tere Naam</li>
     <li>Main Hoon Na</li>
+  </ul>
+
+  <ul type="disc">
+    <li>Frankenstein</li>
+    <li>The Big Bang Theory</li>
+    <li>Avatar</li>
+    <li>Planet of the kingdom of apes</li>
+  </ul>
+
+  <ul type="square">
+    <li>Frankenstein</li>
+    <li>The Big Bang Theory</li>
+    <li>Avatar</li>
+    <li>Planet of the kingdom of apes</li>
   </ul>
 
 </body>
