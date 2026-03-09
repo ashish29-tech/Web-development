@@ -1,0 +1,12 @@
+facebook open karte hi... id and password ka box ata hai that box is input.
+
+input is also a tag.
+input doesn't have closing. 
+
+
+
+
+
+
+
+
