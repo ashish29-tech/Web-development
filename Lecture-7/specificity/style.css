@@ -2,14 +2,15 @@
     color: green;
 }
 
-
+/* id and class dono se color diya but id ka ayega cuz id jyada powerful hoti hai */
 #samarth{
     color: red;
 }
 
+/* hi is element selector */
 h1{
     color: yellow;
 }
 
-/* id > class > element */
-/* inline > internal > external */
+/* id > class > element selectors....sabse jyada powerful id then class then element*/
+/* inline > internal > external.....inline jyada powerful hota hai internal se and internal jyada powerful hota hai external se */
