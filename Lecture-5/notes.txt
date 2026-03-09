@@ -14,5 +14,29 @@ copy image address se direct path aa jata hai.
 
 image ke aage image aa rahi hai jab live server pe dekh rahe hai toh....which means it's an inline element
 
+----------------------HTML concludes----------------------------------------
+
+CSS: Cascading style sheet
+ways of styling ? 3
+inline: ine ke andar hi.
+internal: Problem with this is html ka page bhot bada ho jata hai.
+
+external:
+
+separation of concern(html, css, js) hai toh alag-alag page hona chahiye...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
