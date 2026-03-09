@@ -1,0 +1,20 @@
+/* 2 colon hai toh pseudo element */
+p::first-letter{
+    font-size: 60px;
+    background-color: aqua;
+}
+
+/* p ki first line(view port ki line tak) ka */
+p::first-line{
+    background-color: beige;
+    font-size: 50px;
+}
+
+
+p::before{
+    content: '\1f62b'; /*unicode or entity code*/
+}
+
+p::after{
+content: 'hi i am samarth';
+}
