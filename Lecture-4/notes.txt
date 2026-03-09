@@ -12,6 +12,23 @@ GET m url m data mil jata hai. GET request se data mangte hai. Kisi se data lena
 POST m url m data milta hai ? nahi
 Ye thora secure hota hai....jab bhi data send karna hota hai toh POST request bhejenge.
 
+POST m data jyada secure hota hai and data network tab m payload m milta hai browser console m.
+
+
+HTML semantics
+what do we mean by it ? 
+Something which is meaningful. 
+Code likhe toh standardised and readable tarike se likhe....way of writing code...toh we can call we are using semantics
+
+
+semantic elements mdn.
+
+navbar
+header
+footer
+article, aside, section inme confusion hoti hai...read carefully
+aside: anything which is on the side. Jis chiz ko application m side m rakhte hai.
+
 
 
 
