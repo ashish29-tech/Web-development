@@ -10,7 +10,7 @@ p::first-line{
     font-size: 50px;
 }
 
-
+/* paragraph se pehle content add.... */
 p::before{
     content: '\1f62b'; /*unicode or entity code*/
 }
