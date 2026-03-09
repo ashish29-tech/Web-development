@@ -3,9 +3,14 @@ facebook open karte hi... id and password ka box ata hai that box is input.
 input is also a tag.
 input doesn't have closing. 
 
+form ka kaam hota hai information ko submit karna.
+submit karne ke 2 methods hote hai...
+ek hota hai post and ek hota hai get. These 2 are methods. By default get hota.
 
+GET m url m data mil jata hai. GET request se data mangte hai. Kisi se data lena hota hai toh GET.
 
-
+POST m url m data milta hai ? nahi
+Ye thora secure hota hai....jab bhi data send karna hota hai toh POST request bhejenge.
 
 
 

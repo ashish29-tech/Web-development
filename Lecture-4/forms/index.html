@@ -8,15 +8,57 @@
 <body>
   
   <h1>Forms</h1>
+  <fieldset>
+    <Legend>GET</Legend>
 
-  <form action="">
+    <!-- action decide karta hai ki form kha submit kha hoga -->
+    <!-- hash(#) likha toh jis page pe hai usi pe ruk jao -->
+    <!-- form ke andar action and method specify kar diya -->
+    <!-- method is another attribute ye 2 type ka hota hai. 1 is post and 2nd is get. GET url m ?(question mark) ke baad data ko show kar deta hai -->
+    <!-- Form by default ek method bhejta hai GET jiski help se ?(question mark) ke baad url m sara data mil jata hai -->
+  <form action="#" method="GET">
+    <!-- label m jo Email hai use input ke sath jod deta hai. -->
+    <!-- label ka for m jo value dalte hai wo input ke andar jo id hai usse dalte hai...toh ab chahe Email pe click kare ya input pe..dono apne aap ko input hi samjhenge -->
     <label for="mail">Email:</label>
-    <input type="email" name="" id="mail">
-<hr>
+    <input type="email" name="email" id="mail" placeholder="please enter email">
+<br>
     <label for="pass">Password:</label>
-    <input type="password" name="" id="pass">
+    <input type="password" name="passcode" id="pass" placeholder="enter your password">
 
+    <br>
+
+    <!-- button ka by default type submit hota hai... -->
+    <button>Login</button>
   </form>
 
+  </fieldset>
+
+  <br><hr><hr><br>
+
+  <h1>Forms</h1>
+  <fieldset>
+    <Legend>POST</Legend>
+
+    <!-- action decide karta hai ki form kha submit kha hoga -->
+    <!-- hash(#) likha toh jis page pe hai usi pe ruk jao -->
+    <!-- form ke andar action and method specify kar diya -->
+    <!-- method is another attribute ye 2 type ka hota hai. 1 is post and 2nd is get. GET url m ?(question mark) ke baad data ko show kar deta hai -->
+    <!-- Form by default ek method bhejta hai GET jiski help se ?(question mark) ke baad url m sara data mil jata hai -->
+  <form action="/" method="POST">
+    <!-- label m jo Email hai use input ke sath jod deta hai. -->
+    <!-- label ka for m jo value dalte hai wo input ke andar jo id hai usse dalte hai...toh ab chahe Email pe click kare ya input pe..dono apne aap ko input hi samjhenge -->
+    <label for="mail">Email:</label>
+    <input type="email" name="email" id="mail" placeholder="please enter email">
+<br>
+    <label for="pass">Password:</label>
+    <input type="password" name="passcode" id="pass" placeholder="enter your password">
+
+    <br>
+
+    <!-- button ka by default type submit hota hai... -->
+    <button>Login</button>
+  </form>
+
+  </fieldset>
 </body>
 </html>
