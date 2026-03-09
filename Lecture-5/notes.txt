@@ -9,6 +9,10 @@ figureCaption
 Media Elements
 Img, audio, video...these are media elements inke bhi tags hote hai.
 
+copy image address se direct path aa jata hai.
+
+
+image ke aage image aa rahi hai jab live server pe dekh rahe hai toh....which means it's an inline element
 
 
 
