@@ -9,18 +9,26 @@
   
   <h1>inputs</h1>
 
+  <!-- sari chize inside a box chale jayengi... -->
+  <fieldset>
+    <!-- box ko name de diya -->
+    <legend>Hakuna Matata</legend>
+
   <!-- type, name and id are all attributes. -->
   <!-- <input type="text" name="" id=""> -->
 
-  Name:
+  <!-- label m jo for hai and input m jo id hai....ye dono ek connection bnate hai.  -->
+  <!-- name pe click kare toh uske corresponding m value lene ke liye cursor chala jaye -->
+  <label for="naam"> Name: </label>
   <!-- type kya hai means what kind of value is it accepting. Text ko accept kar raha hai. -->
-  <input type="text">
+  <input type="text" name="" id="naam" placeholder="Please enter text">
 
   <hr>
 
-  Password:
+ 
+  <label for="pass">Password:</label>
   <!-- jo input hoga apne andar password type ki value lega -->
-  <input type="password">
+  <input type="password" id="pass" placeholder="please enter password">
 
   <hr>
 
@@ -55,5 +63,37 @@
 
   <input type="checkbox">
 
+  <hr>
+
+  Gender:
+  <br>
+  male:
+  <!-- name is an attribute. Name isliye use kar rahe hai taki use bind kar sake kisi ek value ke sath -->
+  <input type="radio" name="x">
+  <br>
+  female:
+  <input type="radio" name="x">
+  <br>
+  others:
+  <input type="radio" name="x">
+
+  <hr>
+
+  <select name="" id="">
+    <option value="">Jan</option>
+    <option value="">Feb</option>
+    <!-- by default option ke liye selected. selected is a boolean attribute. -->
+    <option selected value="">March</option>
+    <option value="">April</option>
+    <option value="">May</option>
+    <option value="">June</option>
+  </select>
+
+  <hr>
+  <!-- we can change the height and width of the box using rows and columns -->
+  <textarea cols="30" rows="10"></textarea>
+
+
+  </fieldset>
 </body>
 </html>
