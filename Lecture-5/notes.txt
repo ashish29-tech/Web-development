@@ -1,0 +1,14 @@
+
+Article and Section
+Articles multiple hote hai generally and jo sare article ko enclosed kar ke rakhta hai use we call section.
+
+figure: Jo images and caption hoti hai(ex: flipkart m) unhe ham enclose karte hai inside figure 
+figureCaption
+
+
+Media Elements
+Img, audio, video...these are media elements inke bhi tags hote hai.
+
+
+
+
