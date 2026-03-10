@@ -2,13 +2,17 @@
 Position:
 relative 
 static
-absolute...
+absolute
+fixed
 
 
 Absolute Position procide karte hi....
 Absolute m jispe middle id lagi hai uske neeche 3rd div chup gaya...
 
 
+
+--------------------------
+4th is fixed Position
 
 
 

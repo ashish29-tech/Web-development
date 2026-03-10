@@ -31,16 +31,19 @@ div{
     right: 50px;
 } */
 
+/* static position nahi dete baki koi bhi de dete hai...ab ye most recent parent position ke respect m niche jayega...and hamne parent ko position kiya tha absolute...and absolute hamara section tha..toh ab section se 100px niche ayega... */
 /* #absolute{
     position: relative;
 } */
+
+
 /* body{
     border: 5px solid green;
 }
 
 
 /* section ka naam id rakha hai...absolute and absolute m middle */
-/* body se 100px  */
+/* body se 100px liya cuz is middle ke parent ke paas nahi tha...  */
 /*
 #absolute #middle{
     position: absolute;
@@ -50,6 +53,9 @@ div{
 
 } */
 
+/* parent fixed tha ise position de dete hai....ab kiske corresponding ayega ? parent ke ? No...abhi bhi body. 
+Cuz in case of fixed..parent ko position do ya na do...wo hamesha body ke corresponding ata hai. 
+offset hamesha body ke corresoponding ata hai in case of fixed. Use case: Jab ham chahte hai scroll karne pe chize upar na jaye. */
 /* #fixed{
     position: relative;
 } */
