@@ -1,4 +1,10 @@
+/* css m bhi inheritance hoti hai */
+/* some properties are inherited and some are not */
+/* color and font-size ho jata hai inherit but border nahi hota */
+
+/* ul ka child element hai li use... */
 ul > li{
+    /* border nahi laga baki lag gaye... */
    /* not inherited */
     border-top: 2px solid black;
     

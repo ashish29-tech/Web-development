@@ -1,0 +1,35 @@
+/* ways by which we can give colors: rgb, rgba, hexadecimal */
+
+
+/* rgb */
+h1{
+  /* 0 to 255 tak ki value dal sakte hai  */
+    color: rgb(123, 34, 1);
+}
+
+
+/* rgba-> alpha channer...which is directly related to opacity/transparency*/
+h2{
+  /* alpha channel 0 to 1 tak ki value leta hai...1 mtlb bilkul clear nazar ayega and o mtlb nazar nahi ayega */
+    color: rgba(254, 12, 34, 0);
+    color: rgba(254, 12, 34, 1);
+    color: rgba(254, 12, 34, 0.5);
+}
+
+/* hexadecimal...means base 16....0,1,2,3,4,5,6,7,8,9 then a,b,c,d,e,f */
+h3{
+  /* # dekhte hi pta chal jata hai hexadecimal */
+    color: #0f6b95; /*rrggbb*/
+}
+
+
+/* p{
+    color: #ff0000;
+} */
+
+/* hexadecimal m bhi opacity dal sakte hai */
+p{
+    color: #ff0000ff; /* ff-> 1 , 00 -> 0*/
+}
+
+/* colors decide karna ho toh coolors.co */
