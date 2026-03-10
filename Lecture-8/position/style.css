@@ -1,4 +1,6 @@
+/* ye universal selector se margin and padding 0 isliye kiya cuz browser jo by default..margin and padding de raha hai wo override kar ke 0 kar de  */
 *{
+  /* 0 ke sath pixel likhna mandatory nahi hota...man hai toh likh sakte hai */
     padding: 0;
     margin: 0px;
 }
@@ -8,6 +10,7 @@ section{
     border: 1px solid red;
 }
 
+/* one after the other rahe..means ek hi row m rahe... toh inline-block */
 div{
     height: 100px;
     width: 100px;
@@ -16,17 +19,26 @@ div{
 }
 
 
-
+/* section id hai...id de rakhi hai toh # se select karenge */
+/* section ke andar descendant operator ko use kiya...middle... */
+/* static and middle ke beech m jo space hai use descendent kehte hai.. */
+/* static ke case m offset kaam nai karte...middle wala div waise hi rahega. offset hote hai 4...left, right, top, bottom */
 #static #middle{
     position: static;
     top: 5000px;
     left: 5000px
 }
 
+
+/* relative ke andar jo middle hai use catch kiya */
+/* relative ke case m offset kaam karte hai...original position se. */
 #relative #middle{
     position: relative;
+    /* upar se 50px jgah dedo..jha se shuru ho raha tha wha se 50px down hai */
     top: 50px;
+    /* original position se bottom se upar aya */
     bottom: 100px;
+    /* apni original position se 50% top se niche aya and original position se 50% left m.. */
     /* left: 50px; */
     /* right: 50px; */
 }
