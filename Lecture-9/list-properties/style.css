@@ -1,9 +1,11 @@
 
+/* list-style-position....m bulletins inside aa jaye border ke andar. And outside toh bhr. By default bahar. */
 /* li{
     list-style-type: square;
     list-style-type: circle;
     border: 1px solid red;
 
+    
     list-style-position: inside;
     list-style-position: outside; 
     list-style-image: url('https://plus.unsplash.com/premium_photo-1681433345510-5a4cf1d094d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c21hbGwlMjBpY29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60');
@@ -19,10 +21,12 @@
     border-color: aquamarine; */
 
     /* border: 10px solid aqua; */
+    /* alag-alag border chahiye...top, bottom, left and right ke liye */
     /* border-top: 2px solid red;
     border-right: 5px dashed rgb(56, 29, 29);
     border-bottom: 2px dotted darkgoldenrod;
     border-left: 10px solid orange; */
+    /* border thora curvy dikhega */
     /* border-radius: 10px; */
 /* } */
 

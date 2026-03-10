@@ -26,6 +26,17 @@ Font properties
 
 
 
+To be able to be good at web development...below are must DSA topics:
+Arrays
+stack 
+Queue
+Recursion
+Trees
+Map(if possible)
+
+Except array..if you are able to solve 4-5 questions of each topics then basic understanding is good.
+If You have basic idea then 10-15 days m do every topics.
 
 
+remotejobs.com
 
