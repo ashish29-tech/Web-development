@@ -1,0 +1,18 @@
+flex-box....for responsive behavior cator.
+
+
+
+When we talk about display...then inline-block is a child property...ye har ek element pe individually lagta hai.
+but display flex is a parent property...ye parent pe lagta hai...and sare child ko flex item bna deta hai.
+
+
+In case of flex there is no x and y thing in x axis and y axis...we have main axis and cross axis..
+Axis is not decided. 
+display flex karte hi item row m aa gaye...ye isliye hua cuz we have property flex-direction...and flex-direction by default...row hoti hai.
+
+
+Jo flex direction hai wahi hamari main axis hai...and agr hame main axis ke along chize ko move karana hai...toh we use 
+justify content. In other words justify content move karegi main axis ke along.
+
+
+Flex direction is our main axis and iske opposor

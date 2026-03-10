@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.parent{
+    height: 100vh;
+    border: 5px solid green;
+    background-color: antiquewhite;
+    /* Example: playground football ko flex kehte hai...and playground parent hai.
+    ek ke baad ek ayenge isse */
+    display: flex; /*parent property*/
+
+    /* display flex karte hi item row m aa gaye...ye isliye hua cuz we have property flex-direction...and flex-direction by default...row hoti hai. */
+    /* jo flex ki direction hoti hai wahi main axis hoti hai. Main axis is dependent on felx direction. */
+    /* Jo flex direction hai wahi hamari main axis hai...and agr hame main axis ke along chize ko move karana hai...toh we use  */
+    flex-direction: row; /* main axis */
+    /* justify content main axis pe kaam karega...row hai main axis toh row ke along center le aya. */
+    /* justify-content: center; */
+    /* stritch matlab jitni jagah hai sabme kheech diya */
+    /* justify-content: stretch; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+
+    /* default value is flex-start */
+    justify-content: flex-start; 
+    
+    /* justify-content: flex-end; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+    /* justify-content: space-between; */
+
+    /* x axis and y axis dono ke center m aa jayega */
+    /* align-items: center; */
+    /* align-items:flex-end; */
+    /* align-items:flex-start; */
+
+    /* flex-wrap: nowrap;  */
+    /* flex-wrap: wrap;  */
+    
+    /* align-content: normal;
+    align-content: flex-start;
+    align-content: flex-end; */
+
+    /* gap: 20px; */
+
+}
+
+/* har div ke liye item hai */
+.item{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    padding: 24px;
+    font-size: 30px;
+    /* sare element ek ke baad ek aye iske liye inline block */
+    /* display: inline-block; */  /* child property */
+
+}
+
+
+#item1{ background-color: crimson; }
+#item2{ 
+    background-color: #dcd914; 
+    /* flex-grow: 1; */
+    flex-shrink: 1;
+}
+#item3{ 
+    background-color: rgb(20, 213, 220); 
+    /* flex-grow: 2; */
+    flex-shrink: 2;
+    align-self: center;
+}
+#item4{ background-color: rgb(220, 20, 210); }
+#item5{ 
+    background-color: rgb(8, 99, 9); 
+    align-self: flex-end ;
+}
