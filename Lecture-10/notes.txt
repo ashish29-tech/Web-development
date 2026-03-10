@@ -15,4 +15,11 @@ Jo flex direction hai wahi hamari main axis hai...and agr hame main axis ke alon
 justify content. In other words justify content move karegi main axis ke along.
 
 
-Flex direction is our main axis and iske opposor
+Flex direction is our main axis and iske opposite pe cross axis. Main axis ko cater karne ke liye justify content. And 
+cross axis ko cater karne ke luye align-item.
+
+
+
+
+
+
