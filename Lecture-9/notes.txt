@@ -1,0 +1,20 @@
+
+Position:
+relative 
+static
+absolute...
+
+
+Absolute Position procide karte hi....
+Absolute m jispe middle id lagi hai uske neeche 3rd div chup gaya...
+
+
+
+
+
+
+
+
+
+
+
