@@ -1,0 +1,22 @@
+units...litre, kg, foot
+
+units are of 2 types...absolute and relative
+absolute m fixed chize...mostly used yahi hota hai.
+
+relative..isme respective to something.... em, %, vh, vw etc.
+
+mdn value and units
+mdn relative units
+
+
+
+
+
+
+
+
+
+
+
+
+

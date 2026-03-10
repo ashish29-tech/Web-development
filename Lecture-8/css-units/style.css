@@ -1,0 +1,47 @@
+/* absolute units */
+/* p{
+    font-size: 40px;
+} */
+
+/* relative */
+
+/* div ka parent section */
+/* % -> parent */ 
+/* section{
+    width: 500px;
+    height: 500px;
+    background-color: rgb(224, 177, 115);
+}
+
+div{
+    width: 50%;
+    height: 50%;
+    background-color: blueviolet;
+} */
+
+/* em -> parent */
+/* rem -> root....rem ke case m root */
+/* ul ke andar li item ka.... */
+/* 2em means parent ke size se 2 guna.... */
+/* snowball effect...font-size add ho-ho ke double ho ja raha hai */
+/* ul>li{
+    font-size: 2em;
+    font-size: 3rem;
+
+} */
+
+/* vw -> view width & vh- > view height */
+/* universal selector ki help se.... */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+div{
+    background-color: chartreuse;
+    /* width: 100vw; */
+    width: 50vw;
+    height: 50vh;
+}
+
+/* white screen is viewport. vh and vw...white screen ke hisab se hota hai. */
