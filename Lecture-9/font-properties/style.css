@@ -1,0 +1,30 @@
+
+
+
+h1{
+  /* size increase ho jayega */
+    font-size: 70px;
+    /* style of writing badal jayega */
+    font-family:cursive;
+    /* font-weight ki range 100 to 900 hoti hai....text ki boldness/thickness */
+    /* font-weight: 500; */
+    /* text ko beech m chahiye toh */
+    text-align: center;
+    /* text-align: end; */
+
+    /* 1st wala x se offset then y se kitna move karna hai...then blur radius/sharpness....then shadow ka color */
+    /* x se 5x right and y se 5px niche...then sharpness then color */
+    text-shadow: 5px 5px 12px red;
+    /* -(y m negative m 5px likha toh shadow upar  */
+    text-shadow: 5px -5px 12px red;
+}
+
+/* p{ */
+    /* line height se lines ke beech gap */
+    /* line-height: 100px; */
+    /* text ke beech m spacing */
+    /* letter-spacing: 10px; */
+    /* word ke beech m spacing... */
+    /* word-spacing: 20px; */
+/* } */
+

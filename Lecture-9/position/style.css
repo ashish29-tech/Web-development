@@ -65,10 +65,15 @@ offset hamesha body ke corresoponding ata hai in case of fixed. Use case: Jab ha
     top: 100px;
 } */
 
+/* parent ke andar jagah nahi hogi...toh fixed wala kaam nahi karega...height hogi toh kaam karega */
 /* #sticky{
     height: 500px;
 }
+*/
 
+
+/* isme offset bhi provide kar diya...top se 100px */
+/* 
 #sticky #middle{
     position: sticky;
     top: 100px;

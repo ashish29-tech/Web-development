@@ -4,6 +4,7 @@ relative
 static
 absolute
 fixed
+sticky..
 
 
 Absolute Position procide karte hi....
@@ -14,8 +15,14 @@ Absolute m jispe middle id lagi hai uske neeche 3rd div chup gaya...
 --------------------------
 4th is fixed Position
 
+-----------------
+sticky is a mixture of 2 properties.... relative and fixed...
+parent ke andar jagah nahi hogi...toh fixed wala kaam nahi karega...
+parent ki jgah khatm hote hi scroll up hona shuru ho jayega.
 
 
+---------------------------------------------------------------------------------------
+Font properties
 
 
 
