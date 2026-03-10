@@ -8,13 +8,30 @@ relative..isme respective to something.... em, %, vh, vw etc.
 mdn value and units
 mdn relative units
 
+-----------------------------Box Model---------------------------
+Every element in HTML is considered as a rectangular box.
+Some says there are 4 properties and some says 5. Both are correct.
+width, height, border, margin, padding....some consider width and height as one that's why they say 4 properties.
 
 
+2 element ke beech ki jgah ko margin kehte hai.
+Element ke andar wali jgah ko kehte hai padding.
+Element ki wall ko border kehte hai.
+Border element ke andar ka hissa hota hai.
+Padding 
 
 
+Box model properties are only for block elements. Inline elements pe anonymous behave karti hai. Inline pe nai lagate.
+But laga sakte hai kabi na kabhi toh jarurat padegi..iske liye we have display property.
+display: inline-block...inline mtlb nature jitni jagah chahiye utni...and block property...jisme box model lag jaye.
+
+display: inline
+display: block
+display: inline-block
+display: none....
 
 
-
+------------------------Position property-------------------------
 
 
 
