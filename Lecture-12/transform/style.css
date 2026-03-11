@@ -7,21 +7,31 @@
 }
 
 /* div{ */
+    /* translate x means...x ki traf */
     /* transform: translateX(200px) ; */
+    /* apni original position se niche aa gya...means y+ niche hai...axis pe */
     /* transform: translateY(200px) ; */
+    /* jab x and y dono m karna ho toh...translate */
     /* transform: translate(200px , 200px); */
 /* } */
 
 /* ----------------------- */
 /* hover */
 
+/* div pe hover kare tab ye properties chale...taki original position pehle kya thi pta chal jaye */
 div:hover{
     /* transform: translate(200px , 200px); */
     /* transform: rotateX(90deg); */
+    /* transform: rotateX(360deg); */
     /* transform: rotateY(180deg); */
+    /* scale means mtlb bada karo...5 here means 5 times bada */
     /* transform: scaleX(5); */
     /* transform: scaleY(2); */
+    /* scale x and y dono ko consider karega */
+    /* transform: scale(2); */
+    /* 5,2 m first property will be x and second will be y */
     /* transform: scale(5 , 2); */
+    /* skew se tilted */
     /* transform: skewX(55deg); */
     transform: skewY(25deg);
 }
