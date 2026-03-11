@@ -7,10 +7,18 @@
 /* class de rakhi hai navbar toh... .(dot) se */
 .navbar{
     background-color: rgb(116, 21, 7);
+    /* display flex is a parent property toh navbar m denge.... 1 line m lane ke liye. */
     display: flex;
+    /* kam se kam 56px height ho...responsive ke time screen reduce kare toh kam se kam itni height rahe */
     min-height: 56px;
+    /* content center m aye */
+    /* jab display flex dete hai toh default direction row hoti hai..justify content row pe kaam karega...
+    but hame toh column pe kaam karana hai toh cross means align items */
     align-items: center;
+    /* content ke beech m space */
     justify-content: space-around;
+    /* padding means element ke andar ki jgah...2 property..and offset(top, bottom, left, right) m 4....toh ye 0px...top and bottom cover karta hai...
+    baki 24px left and right se */
     padding: 0px 24px;
 }
 
@@ -18,6 +26,7 @@ a{
     cursor: pointer;
 }
 
+  
 .navlink{
     font-size: 1.5rem;
     color:white;
@@ -25,8 +34,10 @@ a{
     font-weight: bolder;
 }
 
+/* inner navbar hai isme bhi display flex kar diya...so that...Learn, practice, Get hired, IDE */
 .inner-navbar{
     display: flex;
+    /* inspect kar ke dekhenge toh we can see there is extra space... */
     flex-grow: 1;
     justify-content: space-evenly;
 }
@@ -37,6 +48,7 @@ a{
     font-size: 1.2rem;
 }
 
+/* jab bhi hover karenge anchor tag pe.. */
 a:hover{
     text-decoration: underline;
 }
@@ -50,14 +62,21 @@ a:hover{
     border-radius: 5px;
 }
 
+/* btn pe hover kare toh */
 .btn:hover{
     text-decoration: underline;
     /* background-color:rgb(116, 21, 7) ; */
     border-radius: 50px;
 }
 
-/* all -> screen + print -> default */
+
+/* screen size reduce kare toh responsive behviour ho...ek limited size pe ate hi horizontal se vertical m ho jaye...
+iske liye flex-wrap nahi karenge cuz usse 1-1 kar ke element jayenge...toh iske liye direction badal sakte hai. flex ki direction change kar denge.
+kisi particular pixel pe ane ke baad kuch karna hai toh uske liye media query. */
+/* screen nahi likhte toh by default hota hai all...a */
+/* all means-> screen + print -> default */
 @media all and (max-width:767px) {
+  /* main navbar is a class and uski direction badal denge ham */
     .navbar{
         flex-direction: column;
         /* border: 5px solid black; */
@@ -75,3 +94,5 @@ a:hover{
         width: 100%;
     }
 }
+
+
