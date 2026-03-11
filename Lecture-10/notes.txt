@@ -23,6 +23,19 @@ cross axis ko cater karne ke luye align-item.
 google css tricks flexbox.... https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 
+------------------------------------------------------------------------------------------------------
+Media Query
+Isko bhi use kiya jata hai for responsive behavior.
+We have different types of devices....so do we write diff type of css for diff screen ? no
+We make 1 css and Media Query helps in responsivity badhane m...
+screen ke sath-sath print ke liye bhi responsive behavior likhte hai..
+
+@media then device name then jo karna hai
+
+
+
+
+
 
 
 

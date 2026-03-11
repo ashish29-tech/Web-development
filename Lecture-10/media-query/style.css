@@ -14,18 +14,22 @@ div{
     border: 2px solid red;
 }
 
+/* h1 ka initial color ho jaye */
 h1{
     color: chartreuse;
 }
 
 
-
+/* h1 m jo media query likha hai wo screen choti hone pe color change ho jaye uska.. */
+/* @media ke baad device(print/printer ke liye) and jab width 700px ho jaye tab h1 ka color ho jaye... */
 /* @media print and (width:700px){
     h1{
         color: rgb(255, 0, 230);
     }
 } */
 
+/* screen ke liye */
+/* 700 tak sare ho iske liye max-width....700 pe pink and uske niche bhi pink. div and h1 dono pe chalega */
 /* @media screen and (max-width:700px){
     div , h1{
         color: rgb(255, 0, 230);
@@ -33,6 +37,7 @@ h1{
     }
 } */
 
+/* 700 px tak...uske upar change */
 /* @media screen and (min-width:700px){
     div , h1{
         color: rgb(255, 0, 230);
@@ -41,13 +46,16 @@ h1{
 } */
 
 
+/* media query landscape ke hisab se...ise kehte hai orientation...landscape m width will be bigger than the height...   */
 /* @media screen and (orientation: landscape){
 
     h1{
         font-size: 100px;
     }
-}
+}*/
 
+/* portrait m jate hi pink color */
+/* 
 @media screen and (orientation: portrait){
 
     h1{
@@ -57,7 +65,10 @@ h1{
 } */
 
 
+/* DO REMEMBER THIS JAB max-width likhte hai toh..bade wale range(900px, 700px, 600px...ye wale) upar then chote wale...then usse chote wale
+and in case of min-width...chote(600, then 700, then 800) units ko upar then usse bade wale... */
 
+/* agr screen hogi toh...and uski max-width 700 hogi toh h1 ka color purple */
 @media screen  and (max-width:700px) {
     h1{
         color: purple;
