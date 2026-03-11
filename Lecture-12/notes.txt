@@ -1,10 +1,15 @@
 Transform means element ko change kar rha hoga
 
+---------------------------------------------------------------------
+Animation
+Animation ka syntax @keyframe se start hota hai
+
+@keyframe animation ka naam {
+
+}
+
+Difference b/w animation and transition is...in animation we can cater any number of states.
 
 
-
-
-
-
-
+mdn animation fill mode
 
