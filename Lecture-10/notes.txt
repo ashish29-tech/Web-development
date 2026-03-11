@@ -1,4 +1,4 @@
-flex-box....for responsive behavior cator.
+flex-box....for responsive behavior cater.
 
 
 
@@ -10,11 +10,11 @@ In case of flex there is no x and y thing in x axis and y axis...we have main ax
 Axis is not decided. 
 display flex karte hi item row m aa gaye...ye isliye hua cuz we have property flex-direction...and flex-direction by default...row hoti hai.
 
-
+By default flex direction row hoti hai.
 Jo flex direction hai wahi hamari main axis hai...and agr hame main axis ke along chize ko move karana hai...toh we use 
 justify content. In other words justify content move karegi main axis ke along.
 
-
+Flex ki direction row hai toh row main axis hai. And agr column hai flex ki direction toh column is my main axis.
 Flex direction is our main axis and iske opposite pe cross axis. Main axis ko cater karne ke liye justify content. And 
 cross axis ko cater karne ke luye align-item.
 

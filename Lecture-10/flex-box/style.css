@@ -1,9 +1,13 @@
+/* by default har ek element ko padding and margin mili hui hai toh use hta sakte hai...
+and 0 ke sath px bhi likh sakte hai */
 *{
     padding: 0;
     margin: 0;
 }
 
+
 .parent{
+    /* parent ko height dedi */
     height: 100vh;
     border: 5px solid green;
     background-color: antiquewhite;
@@ -16,6 +20,8 @@
     /* Jo flex direction hai wahi hamari main axis hai...and agr hame main axis ke along chize ko move karana hai...toh we use  */
     flex-direction: row; /* main axis */
     /* justify content main axis pe kaam karega...row hai main axis toh row ke along center le aya. */
+    /* isse sare element beech m aa jayenge...justify content center kare toh wo main axis  */
+    /* justify content always works with the main axis */
     /* justify-content: center; */
     /* stritch matlab jitni jagah hai sabme kheech diya */
     /* justify-content: stretch; */
@@ -23,14 +29,14 @@
     /* flex-direction: column; */
     /* flex-direction: column-reverse; */
 
-    /* By default value is flex-start */
-    justify-content: flex-start; 
+    /* Agr justify-content use na kare toh...By default value is flex-start */
+    /* justify-content: flex-start;  */
     
     /* justify-content: flex-end; */
     /* justify-content: space-around; */
     /* har jgah equal-equal space */
     /* justify-content: space-evenly; */
-    /* space-between ka mtlb left and right m koi jagah nahi hai.... */
+    /* space-between ka mtlb left and right m koi jagah nahi hai....sari jgah element ke beech m dedi */
     /* justify-content: space-between; */
 
     /* x axis and y axis dono ke center m aa jayega */
@@ -45,6 +51,7 @@
     /* flex-wrap: wrap;  */
     
 
+    /* align ka mtlb hota hai cross axis...jab align pe cherna ho toh cross axis... */
     /* default value is normal */
     /* /* align-content: normal; */
     /* 2 row ke beech m space khatm ho gayi */
@@ -52,7 +59,7 @@
     /* bottom m wrap karne ke liye */
     /* align-content: flex-end; */
 
-    /* har ek ke beech m gap hai */
+    /* har ek ke beech m gap hai..gap between two elements/flex items */
     /* gap: 20px; */
 
 }
@@ -74,17 +81,22 @@
 #item2{ 
     background-color: #dcd914; 
     /* flex-grow: 1; */
+    /* flex grow extra space le rha tha...and ye flex shrink...jab extra space kam hoga toh shrink hoga kitni speed se... */
     flex-shrink: 1;
 }
 #item3{ 
     background-color: rgb(20, 213, 220); 
     /* flex ko property dedi...2 matlab jitni extra space hai use baat do  */
+    /* 3rd element ko jitn extra space mili sabme grow ho gya... */
     /* flex-grow: 2; */
+    /* flex grow extra space le rha tha...and ye flex shrink...jab extra space kam hoga toh shrink hoga kitni speed se... */
     flex-shrink: 2;
+    /* align kar le khud ko at the center */
     align-self: center;
 }
 #item4{ background-color: rgb(220, 20, 210); }
 #item5{ 
     background-color: rgb(8, 99, 9); 
+    /* align kar le khud ko at the end */
     align-self: flex-end ;
 }
