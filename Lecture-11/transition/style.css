@@ -6,9 +6,11 @@
     /* mouse ko hover kar rahe hai kisi chiz pe toh it is state2 and state 1 is jha pe hai mouse. */
     transition-duration: 2s;
     /* transition property
+    /*  */
     /* transition-property: border-radius backgroud-color; */
 }
 
+/* box pe hover kare toh */
 .box:hover{
     border-radius: 50%;
     background-color: antiquewhite;

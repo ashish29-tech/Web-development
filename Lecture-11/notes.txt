@@ -11,4 +11,7 @@ control + alt... daba ke down arrow to select multiple
 
 hover karna ek state hai 
 
+----------------------------------------------------------
+transition
+s1 se s2 states ke beech ke changes ko manage karna
 
