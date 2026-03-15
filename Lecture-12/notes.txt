@@ -13,3 +13,13 @@ Difference b/w animation and transition is...in animation we can cater any numbe
 
 mdn animation fill mode
 
+
+
+
+bouncing ball
+
+
+loading spinner
+spinning ke sath-sath bounce bhi kare
+
+
