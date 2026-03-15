@@ -7,8 +7,8 @@ cubic bezier curve
 
 
 
+control + alt... daba ke down arrow to select multiple
 
-
-
+hover karna ek state hai 
 
 

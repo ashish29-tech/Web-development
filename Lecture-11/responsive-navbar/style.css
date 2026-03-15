@@ -17,7 +17,7 @@
     align-items: center;
     /* content ke beech m space */
     justify-content: space-around;
-    /* padding means element ke andar ki jgah...2 property..and offset(top, bottom, left, right) m 4....toh ye 0px...top and bottom cover karta hai...
+    /* padding means element ke andar ki jgah...2 property..and offset(top, bottom, left, right) m 4....toh ye 0px(mtlb upar and niche se jgah nahi milegi)...top and bottom cover karta hai...
     baki 24px left and right se */
     padding: 0px 24px;
 }
@@ -26,8 +26,9 @@ a{
     cursor: pointer;
 }
 
-  
+/*  */
 .navlink{
+    /* rem kiske respect m hota hai... roor element ? rem m snowball effect nahi hota */
     font-size: 1.5rem;
     color:white;
     text-decoration: none;
@@ -44,6 +45,7 @@ a{
 
 .inner-navlink{
     color: #ffffff;
+    /* koi bhi line nahi deni toh none */
     text-decoration: none;
     font-size: 1.2rem;
 }
