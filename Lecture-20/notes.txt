@@ -1,0 +1,13 @@
+
+Diff b/w method and property ? Method ko call karna padta hai and property ko nahi.
+
+Array is DS heterogenous in js. It can contain all sort of primitives data type...num, string, boolean, undefined,null
+
+
+
+
+
+
+
+
+
