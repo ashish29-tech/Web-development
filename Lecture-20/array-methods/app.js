@@ -26,11 +26,15 @@ let arr = [10, 20, 30, 40, 50];
 // arr.pop(50);
 // arr.pop(40); //no need of argument
 
-//--------return types---------------
-// let ans = arr.pop(); //last value pop hui hai/ 
-// let ans2 = arr.push(400); //return length
+// console.log(arr);
 
-// console.log(ans);
-// console.log(ans2);
+//--------return types---------------
+let ans = arr.pop(); //last value pop hui hai....Returns that removed value
+let ans2 = arr.push(400); //return length....Returns the new length of the array
+
+// push() does NOT return the pushed value — it returns the array length.
+
+console.log(ans);
+console.log(ans2);
 
 
