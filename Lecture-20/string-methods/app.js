@@ -1,19 +1,21 @@
 
 // let str = "Maverick Ashish";
 
-// // // 1) length (property) --> no need to call
+// 1) length (property) --> no need to call
 // let len = str.length;
 // console.log(len);
-//         //or
+        //or
 // console.log(str.length);
 // console.log(str.length()); //Wrong
       
 
 
 // 2) .toUpperCase()..It's a method --> need to call it
+// Strings in JavaScript are immutable (change nahi ho sakti). 
+// toUpperCase() original string ko change nahi karta. Original string same hi rahegi.
 
 // console.log(str);
-
+//toUpperCase() → new string return karta hai
 // let ans = str.toUpperCase();
 // console.log(ans);
 // console.log(str.toUpperCase());
@@ -71,5 +73,4 @@
 // let ans = str.trim().toUpperCase();
 // let ans = str.trim().toUpperCase().length;
 // console.log(ans); 
-// console.log(and);
 
