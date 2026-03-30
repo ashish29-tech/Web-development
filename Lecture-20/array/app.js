@@ -5,7 +5,7 @@
 // let arr = []
 
 //Homogeneous
-// let arr = [10, 20, 30, 40, 50];
+let arr = [10, 20, 30, 40, 50];
 
 //Heterogenous
 // let arr2 = [10, true, "ash", "mav", null, undefined];

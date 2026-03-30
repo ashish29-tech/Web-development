@@ -51,11 +51,10 @@
 
 //0-9 chahiye toh... 9-0 +1 => 9+1 = 10
 //5-99 ke beech ka chahiye. Toh pehle range nikalenge... 99-5 + 1 => 94 + 1 = 95. And minimum value 5 thi usme se 5 add karna hai.
-console.log(Math.floor( (Math.random() * 95) + 5) ); //95 multiplication factor hai..iske output m minimum value 5 rahegi
+// console.log(Math.floor( (Math.random() * 95) + 5) ); //95 multiplication factor hai..iske output m minimum value 5 rahegi
 
 //Generate 4 digit OTP
 // console.log(Math.floor(Math.random() * 9000) + 1000); //Max: 9999, MinValue: 1000. Max-Min+1=9000
-
 
 
 
