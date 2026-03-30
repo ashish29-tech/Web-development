@@ -5,7 +5,31 @@ Array is DS heterogenous in js. It can contain all sort of primitives data type.
 
 
 
+In JavaScript, most things are objects, including:
+Arrays → []
+Functions
+Objects → {}
+Dates, Maps, etc.
 
+console.log(typeof []);        // "object"
+console.log(typeof function(){}); // "function" (but functions are objects)
+
+
+
+❌ What’s NOT an object
+
+JavaScript also has primitive types, which are not objects:
+number
+string
+boolean
+null
+undefined
+bigint
+symbol
+
+console.log(typeof 42);        // "number"
+console.log(typeof "hello");   // "string"
+console.log(typeof true);      // "boolean"
 
 
 

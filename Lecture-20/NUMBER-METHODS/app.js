@@ -59,8 +59,16 @@
 
 
 // console.log(Math.floor ( (Math.random() * 17) + 17) );
+console.log(Math.floor(Math.random() * (33 - 17 + 1)) + 17);
 
 // console.log(Math.floor( (Math.random() * 20)) )
+
+// If you wanted a different range:
+// Use this formula:
+// Math.floor(Math.random() * (max - min + 1)) + min;
+// Example (17 to 33):
+// Math.floor(Math.random() * (33 - 17 + 1)) + 17;
+// console.log(Math.floor(Math.random() * (33 - 17 + 1)) + 17)
 
 
 
