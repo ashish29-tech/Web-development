@@ -1,15 +1,15 @@
 // Creating object
-let marks = {
-  dsa : 55,
-  web : 85,
-  ml : 67,
-  totalMarks : function (){
-    return 55 + 85 + 67
-  }
-}
+// let marks = {
+//   dsa : 55,
+//   web : 85,
+//   ml : 67,
+//   totalMarks : function (){
+//     return 55 + 85 + 67
+//   }
+// }
 
-console.log(marks);
-console.log(marks.totalMarks()); //run kiya totalMarks function ko
+// console.log(marks);
+// console.log(marks.totalMarks()); //run kiya totalMarks function ko
 
 //---------------------------------------------
 
@@ -38,9 +38,8 @@ console.log(marks.totalMarks()); //run kiya totalMarks function ko
 //   }
 // }
 
-// console.log(marks);
+// // console.log(marks);
 // console.log(marks.totaMarks(50)); //207 - 50 = 157
-
 
 
 
