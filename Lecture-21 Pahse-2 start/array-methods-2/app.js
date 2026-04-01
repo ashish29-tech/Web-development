@@ -96,8 +96,8 @@
 //chatgpt
 // let arr = [10, 20, 30];
 
-// // Array → String
-// // join() (Array → String)......Used on arrays to combine elements into a string with a custom separator.
+// Array → String
+// join() (Array → String)......Used on arrays to combine elements into a string with a custom separator.
 // let str = arr.join('-->');
 // console.log(str);
 
@@ -107,8 +107,8 @@
 // console.log(backToArray);
 
 
-// // split() (String → Array)
-// // 👉 Opposite of join() — converts string into array
+// split() (String → Array)
+// 👉 Opposite of join() — converts string into array
 // Key points:
 // Works on strings
 // Breaks string into array based on separator

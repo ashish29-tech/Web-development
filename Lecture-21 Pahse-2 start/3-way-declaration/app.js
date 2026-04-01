@@ -104,12 +104,12 @@
 // console.log(person);
 
 
-const person = { name: "ashish" };
+// const person = { name: "ashish" };
 
-person.name = "rahul"; // ✅ allowed
-person.age = 25;       // ✅ allowed
+// person.name = "rahul"; // ✅ allowed
+// person.age = 25;       // ✅ allowed
 
-console.log(person);
-console.log(person.name);
-console.log(person.age);
+// console.log(person);
+// console.log(person.name);
+// console.log(person.age);
 
