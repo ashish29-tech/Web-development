@@ -94,12 +94,16 @@
 
 
 //chatgpt
-// let arr = [10, 20, 30];
+let arr = [10, 20, 30];
 
 // Array → String
 // join() (Array → String)......Used on arrays to combine elements into a string with a custom separator.
 // let str = arr.join('-->');
 // console.log(str);
+
+// let dtr = arr.join();
+// console.log(dtr);
+
 
 // String → Array
 //toString() (Array → String)....Converts array into string, but you cannot control separator
