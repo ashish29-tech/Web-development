@@ -4,7 +4,7 @@
 //
 
 
-//By ChatGPT
+// By ChatGPT
 // for(i=1; i<=10; i++){
 //   console.log(i);
 // }
@@ -22,12 +22,19 @@
 //     i++;
 // }
 
+
 //-------------FOR-OF LOOP-------------------
 
 let arr = [10, 20, 30, 40, 50];
+
 // for(let i =1; i<=10; i++){
 //   console.log(i);
 // }
+
+for(let i = 0; i<=arr.length; i++){
+  // console.log(i);
+  console.log(arr[i]);
+}
 //for of loop: Jitne bhi iterable items hote hai like..array, Linked List, Stack....unpe lagte hai for of loop.
 // //for-of
 // for(let systum of arr){ //systum => iterator name...i.e arr[i]...means element ko point kar rha na ki index ko. arr array ka name.
@@ -37,11 +44,11 @@ let arr = [10, 20, 30, 40, 50];
 //-----------FOR-IN LOOP------------
 // Objects pe use hona hai. Object ke case ma iterator key ko point karta hai.
 
-let obj = { //obj: Object ka name hai
-  english : 80,
-  hindi : 99, 
-  math : 30 
-}
+// let obj = { //obj: Object ka name hai
+//   english : 80,
+//   hindi : 99, 
+//   math : 30 
+// }
 // //i ka naam subject rakh diya. 
 // for(let subject in obj){
 //   console.log(subject); 
