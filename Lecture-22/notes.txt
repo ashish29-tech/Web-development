@@ -1,0 +1,17 @@
+Qn. What's the minimum line of code which you can write in js ?
+sol. Empty js file is the shortest program of js.
+
+
+How actually js engine works ?
+
+
+
+
+
+
+
+
+
+
+
+
