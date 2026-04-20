@@ -1,12 +1,12 @@
 
-var a = 20;
+// var a = 20;
 
-function meraFunction(){
-  console.log("inside mera function");
-}
+// function meraFunction(){
+//   console.log("inside mera function");
+// }
 
-console.log(a);
-meraFunction();
+// console.log(a);
+// meraFunction();
 
 //----------------------------------------
 //--------HOISTING-----------=
