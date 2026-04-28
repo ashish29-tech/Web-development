@@ -42,34 +42,34 @@
 
 //-----------------------------------------
 
-function outer(){
-  var b = 10;
-
-  inner();
-  function inner(){
-    var b = 1000; //The b inside inner is a separate variable (it shadows the outer one).
-    console.log(b);
-  }
-  console.log(b);
-}
-
-outer();
-
-//---------------------------------------
-
 // function outer(){
 //   var b = 10;
 
-  // inner();
-  // function inner()
-//   {
-//     var b = 1000;
+//   inner();
+//   function inner(){
+//     var b = 1000; //The b inside inner is a separate variable (it shadows the outer one).
 //     console.log(b);
 //   }
 //   console.log(b);
 // }
 
 // outer();
+
+//---------------------------------------
+
+function outer(){
+  var b = 10;
+
+  inner();
+  function inner()
+  {
+    var b = 1000; //Inside inner, a new local variable b = 1000 is created
+    console.log(b);
+  }
+  console.log(b);
+}
+
+outer();
 
 
 
