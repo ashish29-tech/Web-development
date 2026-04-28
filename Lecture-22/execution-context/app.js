@@ -28,19 +28,16 @@
 
 //-------------------------------
 
-// var naam = "ashish"; 
+var naam = "ashish"; 
 
-// function ash(){
-//   console.log("inside ash");
-//   var a = 10;
-//   console.log(a);
-// }
+function ash(){
+  console.log("inside ash");
+  var a = 10;
+  console.log(a);
+}
 
-// ash();
-// console.log(naam);
-  
-
-
-
+ash();
+console.log(a); //var is function-scoped, not global unless declared outside a function. So a exists only inside ash()
+console.log(naam);
 
 
