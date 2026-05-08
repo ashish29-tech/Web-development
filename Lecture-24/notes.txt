@@ -1,0 +1,38 @@
+HOF ka rule hi ye hota hai:
+✔ Function ko argument le
+ya
+✔ Function ko return kare
+
+function a(){
+  let count = 10;
+  function b(){
+    console.log(count);
+  }
+  return b; //→ a is a Higher-Order Function.
+}
+
+let x = a(); //Now x contains the function b. Matlab x() = b().
+x(); // closure example. Even though a() finish ho chuka, b() still remembers count = 10
+
+ 
+
+//-------------------------------------------------------------------------------------------------------------------
+Closure tab hota hai jab inner function outer function ka data use kare Aur outer function already finish ho chuka ho.
+
+
+Callback = pass function as argument.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
